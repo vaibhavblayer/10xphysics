@@ -1,0 +1,18 @@
+Q. Write a python function for simulating angular momentum of earth about the sun.
+
+def angular_momentum(mass_earth, radius_earth, velocity_earth):
+    """
+    This function simulates the angular momentum of the Earth about the Sun.
+    
+    Parameters:
+    mass_earth (float): Mass of the Earth in kg
+    radius_earth (float): Radius of the Earth in m
+    velocity_earth (float): Velocity of the Earth in m/s
+    
+    Returns:
+    angular_momentum (float): Angular momentum of the Earth about the Sun in kg m2/s
+    """
+    
+    angular_momentum = mass_earth * radius_earth * velocity_earth
+    
+    return angular_momentum

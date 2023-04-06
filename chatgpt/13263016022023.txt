@@ -1,0 +1,3 @@
+Q. What is python?
+
+Python is a high-level, interpreted, general-purpose programming language. Python features a dynamic type system and automatic memory management, making it an ideal choice for rapid application development. It can be used for web development, data analysis, game development, automation, and more.

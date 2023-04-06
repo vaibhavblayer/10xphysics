@@ -1,0 +1,6 @@
+Q. Write code in tikz for a drawing a capsule.
+
+\begin{tikzpicture}
+\draw [fill=gray!20] (0,0) circle (0.5) (1,0) circle (0.5);
+\draw (0,0) -- (1,0);
+\end{tikzpicture}

@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{v-problem}
+\usepackage{enumitem}
+\vgeometry
+
+\begin{document}
+\vtitle[KINEMATICS]
+
+\def\pn{01}
+\def\book{A.K.}
+\def\page{21}
+\def\gdrive{https://drive.google.com/drive/folders/1Q3YCDpc-SW5fjPWsmDbIYjExaSwpR9lE?usp=share_link}
+
+\def\question{
+At the moment $t = 0$ a particle is set in motion at the velocity $v_0$ where upon its velocity begins changing with time in accordance with the law \[ \vec{v} = \vec{v}_0\left( 1-\dfrac{t}{b} \right) \], where $b$ is a constant. Find the displacement $\Delta \vec{r}$ and distance $s$ covered in first $t$ seconds of its motion.
+}
+
+
+\def\option{
+
+}
+
+\def\diagram{
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\def\r{0.25}
+\tzaxes(0, 0)(6, 3){$t$}{$|\vec{v}|$}
+\tzlinks(0, 2)(3, 0)(5, 2);
+\tzticks{3/$b$}{2/$v_0$}
+\end{tikzpicture}
+\end{center}
+}
+
+\vspace*{\fill}
+\begin{tikzpicture}
+	\node[qnumber] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\book \quad \page]};
+	\node[diagram] (d) [below=1.5cm of q.south] {\diagram};
+	\node[option] (o) [below=0.1cm of d.south] {\option};
+\end{tikzpicture}	
+\vspace*{\fill}
+\pagebreak
+\vtitle[SOLUTION]
+\begin{enumerate}[label=(\alph*)]
+\item
+\addtolength{\jot}{3ex}
+\begin{align*}
+\vec{v} &= \vec{v}_0\left( 1-\dfrac{t}{b} \right) \\
+\dfrac{\d{\vec{r}}}{\d{t}} &= \vec{v}_0\left( 1-\dfrac{t}{b} \right) \\
+\int_{\vec{r}_i}^{\vec{r}_f} \d{\vec{r}} &= \int_0^t \vec{v}_0\left( 1-\dfrac{t}{b} \right) \d{t}\\
+\Delta \vec{r} &= \vec{v}_0 t\left(1-\dfrac{t}{2b} \right) \ans
+\end{align*}
+
+\pagebreak
+\item
+\begin{align*}
+s &= \int_0^t |\vec{v}| \d{t}  \\
+|\vec{v}| &= 
+	\begin{cases}  
+		v_0\left(1-\dfrac{t}{b}\right),& \texttt{if $t\leq b$}\\[3 mm]
+		v_0\left(\dfrac{t}{b} - 1\right)& \texttt{if $t>b$}
+	\end{cases} \\
+\end{align*}
+\begin{itemize}
+\item \texttt{for $t\leq b$}
+\begin{align*}
+s &= \int_0^t |\vec{v}| \d{t}  \\
+  &= \int_0^t v_0\left(1-\dfrac{t}{b} \right) \d{t}\\
+  &= v_0 t\left(1-\dfrac{t}{2b} \right) \ans
+\end{align*}
+
+\item \texttt{for $t>b$}
+\begin{align*}
+s &= \int_0^t |\vec{v}| \d{t}  \\
+  &= \int_0^b v_0\left(1-\dfrac{t}{b} \right) \d{t} + \int_b^t v_0\left(\dfrac{t}{b} - 1\right) \d{t}\\
+  &= \left[ v_0 t\left(1-\dfrac{t}{2b}\right)\right]_0^b + \left[ v_0 t\left(\dfrac{t}{2b}-1\right)\right]_b^t \\
+  &=\left[\dfrac{v_0b}{2} \right] + \left[v_0t\left(\dfrac{t}{2b}-1\right) + \dfrac{v_0b}{2}\right] \\
+  &= v_0b + v_0t\left(\dfrac{t}{2b}-1\right) \\
+  &= \dfrac{v_0}{2b} \left(2b^2+t^2-2bt\right)\\
+  &= \dfrac{v_0b}{2} \left(1+\left( 1 -\dfrac{t}{b} \right)^2\right)\ans
+\end{align*}
+\end{itemize}
+\end{enumerate}
+\pagebreak
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+[thick, scale=1.2]
+\def\Fxb{\x*(1-\x/5)}
+\def\Fxbt{1.25*(1 + (1-\x/2.5)^2)}
+\tzaxes(0, 0)(6, 3){$t$}{$s$}
+\tzfn{\Fxb}[0:2.5]
+\tzfn[dashed]{\Fxb}[0:5]{$\texttt{displacement}$}[ar]
+\tzfn{\Fxbt}[2.5:5]{$\texttt{distance}$}[r]
+\tzvXpointat{Fxb}{2.49}(A)
+%\tzvfn[<-, dashed](2.5,0)[0:2.5]{Four}[r]
+\tzprojx*[->](A){$b$}[b]
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+
+\pagebreak
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+\end{document}

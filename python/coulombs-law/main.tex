@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{v-square-equation}
+\usemintedstyle{xcode}
+\begin{document}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{ORANGE15}{$\Omega ~.$}]\textcolor{ORANGE15}{Write a python function for calculating coulombs law.}
+	\item[\textcolor{GRAY20}{$\lambda ~.$}]
+\begin{minted}[tabsize=4, breaklines, mathescape]{python}
+
+
+def coulombs_law(q1, q2, r):
+    
+    #$ \quad F = \dfrac{1}{4\pi\epsilon_0}\dfrac{q_1q_2}{r^2}, \quad\quad\quad k = \dfrac{1}{4\pi\epsilon_0}=8.99\times 10^9 $
+    
+    # Coulomb's constant
+    k = 8.99e9
+    
+    # Calculate the force
+    force = k * (q1 * q2) / (r**2)
+    
+    return force
+\end{minted}
+\end{itemize}
+\vspace*{\fill}
+\end{document}

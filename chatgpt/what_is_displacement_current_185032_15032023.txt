@@ -1,0 +1,3 @@
+Q. What is displacement current?
+
+Displacement current is an electric current that flows through a dielectric material due to the changing electric field within the material. It is an important concept in the study of electromagnetic fields, and is related to the concept of capacitance.

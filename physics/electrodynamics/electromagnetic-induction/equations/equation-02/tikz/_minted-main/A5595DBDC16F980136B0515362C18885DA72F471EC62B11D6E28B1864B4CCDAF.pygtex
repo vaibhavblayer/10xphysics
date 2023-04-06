@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}x} in \PYG{n+nb}{\PYGZob{}}0, 1, ..., 6\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}y} in \PYG{n+nb}{\PYGZob{}}0, 1, ..., 4\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}def\PYGZbs{}len}\PYG{n+nb}{\PYGZob{}}0.07\PYG{n+nb}{\PYGZcb{}}
+			\PYG{k}{\PYGZbs{}tzline}+(\PYG{k}{\PYGZbs{}x}, \PYG{k}{\PYGZbs{}y})(\PYG{k}{\PYGZbs{}len}, \PYG{k}{\PYGZbs{}len})
+			\PYG{k}{\PYGZbs{}tzline}+(\PYG{k}{\PYGZbs{}x}, \PYG{k}{\PYGZbs{}y})(\PYGZhy{}\PYG{k}{\PYGZbs{}len}, \PYGZhy{}\PYG{k}{\PYGZbs{}len})
+			\PYG{k}{\PYGZbs{}tzline}+(\PYG{k}{\PYGZbs{}x}, \PYG{k}{\PYGZbs{}y})(\PYG{k}{\PYGZbs{}len}, \PYGZhy{}\PYG{k}{\PYGZbs{}len})
+			\PYG{k}{\PYGZbs{}tzline}+(\PYG{k}{\PYGZbs{}x}, \PYG{k}{\PYGZbs{}y})(\PYGZhy{}\PYG{k}{\PYGZbs{}len}, \PYG{k}{\PYGZbs{}len})
+		\PYG{n+nb}{\PYGZcb{}}
+	\PYG{n+nb}{\PYGZcb{}};
+	\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}scope\PYG{n+nb}{\PYGZcb{}}[yshift=1.25cm, xshift=\PYGZhy{}2cm, thick]
+		\PYG{k}{\PYGZbs{}draw} (0, 0) rectangle (4, 1.5);
+		\PYG{k}{\PYGZbs{}fill}\PYG{n+na}{[pattern=north east lines]} (2, 0) rectangle (4, 1.5);
+		\PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}]} (4, 0.75)\PYGZhy{}\PYGZhy{}++(1.5, 0);
+	\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}scope\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[thick]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(0, 0)(5, 0)
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}, thick](0, 0)(1, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}u\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ar=2mm]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(0, 0)(0, \PYGZhy{}4)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}\PYGZhy{}0.5, 0\PYGZgt{}(0, 0)(0, \PYGZhy{}4)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[l=2mm, midway]
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](0, \PYGZhy{}4)(0, 1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}v\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[al=2mm]
+	\PYG{k}{\PYGZbs{}tzdots*}(0, 0)(0, \PYGZhy{}4);(5pt)
+	\PYG{k}{\PYGZbs{}tzto}\PYG{n+na}{[out=90,in=180,dashed]}(0,\PYGZhy{}4)(5,0)
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

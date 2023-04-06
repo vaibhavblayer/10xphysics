@@ -1,0 +1,25 @@
+Q. How to update a table with multiple value using python in sqlite3 using sqlite3 module?
+
+The following example demonstrates how to update a table with multiple values using Python in SQLite3 using the sqlite3 module:
+
+import sqlite3
+
+# Open database connection 
+db = sqlite3.connect("mydatabase.db")
+
+# prepare a cursor object using cursor() method 
+cursor = db.cursor()
+
+# Prepare SQL query to UPDATE required records 
+sql = "UPDATE table_name SET field1 = value1, field2 = value2, field3 = value3 WHERE condition"
+try:
+   # Execute the SQL command 
+   cursor.execute(sql)
+   # Commit your changes in the database 
+   db.commit()
+except:
+   # Rollback in case there is any error 
+   db.rollback()
+
+# disconnect from server 
+db.close()

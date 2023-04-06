@@ -1,0 +1,21 @@
+Q. Write a python function for finding HCF.
+
+def hcf(x, y):
+   """This function takes two integers and returns the HCF"""
+
+   # choose the smaller number
+   if x > y:
+       smaller = y
+   else:
+       smaller = x
+
+   # find all factors of smaller number
+   for i in range(1,smaller+1):
+       if((x % i == 0) and (y % i == 0)):
+           hcf = i 
+   return hcf
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("The HCF of", num1,"and", num2,"is", hcf(num1, num2))

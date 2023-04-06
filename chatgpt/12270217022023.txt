@@ -1,0 +1,46 @@
+Q. Write a cli tool have two commands and three subcommands each using cloup and click module in python.
+
+import click
+import cloud
+
+@click.group()
+def cli():
+    pass
+
+@cli.command()
+def list():
+    """List all cloud resources"""
+    resources = cloud.list()
+    for resource in resources:
+        click.echo(resource)
+
+@cli.command()
+@click.option('--name', help='The name of the resource to create')
+def create(name):
+    """Create a new cloud resource"""
+    resource = cloud.create(name)
+    click.echo(resource)
+
+@create.command()
+@click.option('--size', help='The size of the resource to create')
+def vm(size):
+    """Create a new virtual machine"""
+    vm = cloud.create_vm(size)
+    click.echo(vm)
+
+@create.command()
+@click.option('--disk-size', help='The size of the disk to create')
+def disk(disk_size):
+    """Create a new disk"""
+    disk = cloud.create_disk(disk_size)
+    click.echo(disk)
+
+@create.command()
+@click.option('--network-name', help='The name of the network to create')
+def network(network_name):
+    """Create a new network"""
+    network = cloud.create_network(network_name)
+    click.echo(network)
+
+if __name__ == '__main__':
+    cli()

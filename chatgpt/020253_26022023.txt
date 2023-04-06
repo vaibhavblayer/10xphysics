@@ -1,0 +1,7 @@
+Q. Draw arc and their tangent in tikz.
+
+\begin{tikzpicture}
+\draw[thick] (0,0) circle (2cm);
+\draw[thick,->] (0,0) -- (1.5,1.5);
+\draw[thick,->] (0,0) -- (-1.5,1.5);
+\end{tikzpicture}

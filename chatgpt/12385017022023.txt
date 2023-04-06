@@ -1,0 +1,19 @@
+Q. Write a cli tool have two commands and subcommands using cloup and click module in python.
+
+import click 
+
+@click.group()
+def cli():
+    pass
+
+@cli.command()
+def command1():
+    click.echo("This is command 1")
+
+@cli.command()
+@click.option('--name', prompt='Your name', help='The person to greet.')
+def command2(name):
+    click.echo('Hello %s!' % name)
+
+if __name__ == '__main__':
+    cli()

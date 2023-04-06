@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{v-equation}
+\geometry{
+paperwidth=5in, 
+paperheight=5in, 
+top=15mm, 
+bottom=15mm, 
+left=10mm, 
+right=10mm
+}
+
+\begin{document}
+\ttfamily
+\begin{center}
+Geometrical meaning of Curl
+\end{center}
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+\fill (0, 0) circle(2pt);
+\foreach \a in {10, 40, ..., 340}{
+\draw[->] (0.5*cos{\a}, 0.5*sin{\a})--(cos{\a}, sin{\a});
+\draw[->] (1.25*cos{\a}, 1.25*sin{\a})--(2*cos{\a}, 2*sin{\a});
+}
+\begin{scope}[xshift=3.5cm, yshift=-1cm]
+\foreach \x in {0, 0.4, ..., 4}{
+\draw[->] (\x, 0)--(\x, 0.35);
+\draw[->] (\x, 0.5)--(\x, 1);
+\draw[->] (\x, 1.15)--(\x, 2);
+}
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\begin{align*}
+\nabla \times \text{vector} = 0
+\end{align*}
+
+Curl is a measure of how much the vector swirls around the point.
+In the above figure curl is zero.
+
+\vspace*{\fill}
+\end{document}

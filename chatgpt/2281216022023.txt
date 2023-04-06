@@ -1,0 +1,3 @@
+Q. What is specific heat capacity?
+
+Specific heat capacity is the amount of energy required to raise the temperature of a unit mass of a substance by one degree. It is measured in joules per kilogram per degree Celsius (J/kg⋅K).

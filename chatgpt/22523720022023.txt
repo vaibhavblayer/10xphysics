@@ -1,0 +1,15 @@
+Q. Write a python decorator which takes one argument and adds to any output of a function.
+
+def add_to_output(num):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            result = func(*args, **kwargs)
+            return result + num
+        return wrapper
+    return decorator
+
+@add_to_output(10)
+def add(x, y):
+    return x + y
+
+print(add(2, 3)) # Output: 15

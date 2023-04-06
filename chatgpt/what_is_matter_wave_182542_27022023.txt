@@ -1,0 +1,3 @@
+Q. What is matter wave ?
+
+Matter wave is a wave that is associated with a moving particle or group of particles. It is a wave-like behavior of particles that is described by the wave-particle duality of quantum mechanics. Matter waves are also known as de Broglie waves, named after the French physicist Louis de Broglie who first proposed the concept in 1924.

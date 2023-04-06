@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{v-equation}
+\usepackage{minted}
+\usemintedstyle{staroffice}
+\vgeometry
+\begin{document}
+\vspace*{\fill}
+\begin{center}
+\input{tikz-1.tex}
+\end{center}
+\vspace*{\fill}
+\pagebreak
+
+\vspace*{\fill}
+\inputminted[tabsize=4, breaklines]{tex}{tikz-1.tex}
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+\input{tikz-3.tex}
+\end{center}
+\vspace*{\fill}
+\pagebreak
+\vspace*{\fill}
+\inputminted[linenos=true, tabsize=4, breaklines, fontsize=\small]{tex}{tikz-3.tex}
+\vspace*{\fill}
+\end{document}

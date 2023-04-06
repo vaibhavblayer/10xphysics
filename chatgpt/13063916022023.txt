@@ -1,0 +1,34 @@
+Q. Write a python code for counting the number of character in line and returning the max value.
+
+# Define a function that takes a string as an argument 
+def max_character_count(line): 
+  
+    # Create an empty dictionary 
+    char_count = {} 
+  
+    # Iterate over the string 
+    for char in line: 
+  
+        # If character already exists in dictionary 
+        if char in char_count: 
+            char_count[char] += 1
+        else: 
+            char_count[char] = 1
+  
+    # Find the maximum character count 
+    max_count = 0
+    max_char = None
+  
+    for char in char_count: 
+        if char_count[char] > max_count: 
+            max_count = char_count[char] 
+            max_char = char 
+  
+    # Return the maximum character count 
+    return max_char, max_count 
+  
+# Driver code 
+line = "Hello world!"
+max_char, max_count = max_character_count(line) 
+print("Max occurring character is " + max_char) 
+print("Number of time it occurred is " + str(max_count))

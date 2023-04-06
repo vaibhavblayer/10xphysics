@@ -1,0 +1,54 @@
+Q. make a JEE format physics paper in latex
+
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\begin{document}
+
+\title{Physics JEE Format Paper}
+\maketitle
+
+\section{Introduction}
+
+This paper is a sample paper created in JEE format, which is used for entrance exams in India. The paper contains questions of a variety of difficulty levels, ranging from basic to advanced level. This paper is to help students prepare for such exams and to get familiarized with the JEE format. 
+
+\section{Questions}
+
+\subsection{Basic Level Questions}
+
+\begin{enumerate}
+\item What is the definition of momentum?
+\item What is the equation for the gravitational force between two objects?
+\item What is the difference between kinetic and potential energy?
+\item What is the formula for the velocity of an object in uniform circular motion?
+\end{enumerate}
+
+\subsection{Intermediate Level Questions}
+
+\begin{enumerate}
+\item What is the relationship between work and energy?
+\item What is the formula for the acceleration of an object in uniform circular motion?
+\item What is the equation for the centripetal force of an object in uniform circular motion?
+\item What is the definition of angular momentum?
+\item What is the equation for the power of an object in uniform circular motion?
+\end{enumerate}
+
+\subsection{Advanced Level Questions}
+
+\begin{enumerate}
+\item What is the equation for the momentum of an object in uniform circular motion?
+\item How can conservation of momentum be used to solve problems in physics?
+\item What is the equation for the kinetic energy of an object in uniform circular motion?
+\item What is the formula for the angular acceleration of an object in uniform circular motion?
+\item What is the equation for the torque of an object in uniform circular motion?
+\end{enumerate}
+
+\section{Conclusion}
+
+This paper has given a sample of questions in JEE format, which are used for entrance exams in India. The questions range from basic to advanced level, and can be used to help students prepare for such exams.
+
+\end{document}

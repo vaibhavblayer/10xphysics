@@ -1,0 +1,3 @@
+Q. What is Inducer Classes?.
+
+Inducer classes are a type of machine learning algorithm which are used to learn the underlying structure of a dataset. They attempt to discover the most important features in a dataset, and then use those features to create a model that can be used to make future predictions. Inducer classes can be used for predictive analytics, classification, clustering, and other predictive tasks.

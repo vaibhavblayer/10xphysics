@@ -1,0 +1,29 @@
+Q. Write a cli tool using cloup and click module in python.
+
+import click
+from cloud import Cloud
+
+@click.group(help='This is a CLI tool to interact with Cloud APIs.')
+def cli():
+    pass
+
+@cli.command()
+@click.option('--name', help='Specify a name for the cloud instance.')
+def create(name):
+    cloud = Cloud()
+    cloud.create(name)
+
+@cli.command()
+@click.option('--name', help='Specify a name for the cloud instance.')
+def delete(name):
+    cloud = Cloud()
+    cloud.delete(name)
+
+@cli.command()
+@click.option('--name', help='Specify a name for the existing cloud instance.')
+def status(name):
+    cloud = Cloud()
+    cloud.status(name)
+
+if __name__ == '__main__':
+    cli()

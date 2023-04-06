@@ -1,0 +1,3 @@
+Q. What is python?
+
+Python is a high-level, interpreted, general-purpose programming language. It is widely used for web development, scripting, data science, and creating software applications. It is an object-oriented language with powerful built-in data structures, combined with dynamic typing and dynamic binding. Python is easy to learn and use, and it is cross-platform compatible.

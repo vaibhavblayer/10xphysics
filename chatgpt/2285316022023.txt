@@ -1,0 +1,3 @@
+Q. What is conservation of angular momentum?
+
+Conservation of angular momentum is the principle that the total angular momentum of a system remains constant unless an external torque is applied to it. This concept is useful in understanding the motion of objects in a rotating system, such as planets and stars. It is also used to explain the motion of objects in a gravitational field and the stability of objects rotating around each other, such as binary stars and galaxies.

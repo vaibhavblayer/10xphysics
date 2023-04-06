@@ -1,0 +1,5 @@
+Q. Write code in tikz for a drawing a circle.
+
+\begin{tikzpicture}
+\draw (0,0) circle (2.5cm);
+\end{tikzpicture}

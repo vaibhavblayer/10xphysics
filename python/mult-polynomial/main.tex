@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{v-square-equation}
+\usemintedstyle{algol}
+\begin{document}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{RED20}{$\Omega ~.$}]\textcolor{RED20}{Write a python function for multiplying two polynomials.}
+	\item[\textcolor{black}{$\lambda ~.$}]
+\begin{minted}[tabsize=4, breaklines]{python}
+
+
+def multiply_polynomials(poly1, poly2):
+    result = [0] * (len(poly1) + len(poly2) - 1)
+    for i in range(len(poly1)):
+        for j in range(len(poly2)):
+            result[i+j] += poly1[i] * poly2[j]
+    return result
+\end{minted}
+\end{itemize}
+\vspace*{\fill}
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{v-equation}
+\geometry{
+paperwidth=5in, 
+paperheight=5in, 
+top=10mm, 
+bottom=10mm, 
+left=10mm, 
+right=10mm
+}
+
+
+\colorlet{myred}{red!65!black}
+\colorlet{metalcol}{blue!25!black!20!white}
+\tikzstyle{metal}=[draw=metalcol!30!black,rounded corners=0.1,top color=metalcol,bottom color=metalcol!80!black,shading angle=10]
+
+\begin{document}
+\ttfamily
+\sloppy
+\begin{center}
+Elasticity
+\end{center}
+
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{PINKD}{$\Omega ~.$}]\textcolor{PINKD}{Define strain in physics.}
+
+	\item[\textcolor{GRAY20}{$\lambda ~.$}]\textcolor{GRAY20}{In physics, strain is a measure of the deformation of an object due to an applied force. It is defined as the ratio of the change in length of an object to its original length. Strain can be expressed as a fraction, a percentage, or in terms of parts per million (ppm).}
+\end{itemize}
+\vspace*{\fill}
+
+\begin{center}
+\def\Rx{0.15}   % horizontal radius
+\def\Ry{0.40}   % vertical radius
+\def\L{3}     % total length
+\def\F{0.28*\L} % force magnitude
+\begin{tikzpicture}
+    [scale=2]
+  \def\x{0.14*\L}
+  \draw[dashed]
+    %(0,\Ry) arc(90:270:{\Rx} and {\Ry})
+    %(0,0) ellipse ({\Rx} and {\Ry})
+    (\x,\Ry) -- (0,\Ry) arc(90:270:{\Rx} and {\Ry})
+    (0,-\Ry) -- (\x,-\Ry);
+  \draw[|<->|] (0,-1.5*\Ry) --++ (\L,0) node[midway,below] {$L$};
+  \draw[<->] (0, 1.3*\Ry) --++ (\x,0) node[midway,above] {$\Delta L$};
+  \draw[PINKD, ->, very thick] (\L+\F,0) --++ (-0.9*\F,0) node[pos=0.4,above] {$\vec{F}$};
+  \draw[metal](\x,-\Ry) |- (\L,\Ry) arc(90:-90:{\Rx} and {\Ry}) -- cycle;
+  \draw[metal] (\x,0) ellipse ({\Rx} and {\Ry});
+  \draw[PINKD, ->, very thick] (\x-\F,0) --++ (\F,0) node[pos=0,left] {$\vec{F}$};
+  \draw[dashed] (0,\Ry) arc(90:-90:{\Rx} and {\Ry});
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+\texttt{strain($\varepsilon$)} = \dfrac{\Delta L}{L}
+\end{align*}
+\end{document}

@@ -1,0 +1,3 @@
+Q. How many ticks in one second in atomic clock ?
+
+There are 9,192,631,770 ticks in one second in an atomic clock.

@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{v-equation}
+\geometry{
+paperwidth=5in, 
+paperheight=5in, 
+top=15mm, 
+bottom=15mm, 
+left=5mm, 
+right=5mm
+}
+
+\begin{document}
+\large
+\ttfamily
+\sloppy
+\boldmath
+\begin{center}
+Del Operator
+\end{center}
+\def\del{\dfrac{\partial}{\partial x} \hat{i} + \dfrac{\partial}{\partial y} \hat{j} + \dfrac{\partial}{\partial z} \hat{k}}
+\def\veca{a_x\hat{i} + a_y\hat{j} + a_z\hat{k}}
+\begin{align*}
+\nabla = \del
+\end{align*}
+\vspace*{\fill}
+\begin{align*}
+\nabla a &= \left(\del\right)a &&\textit{(gradient)}\\[4mm]
+\nabla \cdot \vec{a} &= \left(\del\right) \cdot \left( \veca \right) &&\textit{(divergence)} \\[4mm]
+\nabla \times \vec{a} &= \left(\del\right)\times\left(\veca\right) &&\textit{(curl)}\\
+\end{align*}
+\vspace*{\fill}
+
+\end{document}

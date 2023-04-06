@@ -1,0 +1,5 @@
+Q. Write python code for animating a point moving along a circle using manim library.
++
++## Output
++
++![](https://github.com/anuragrana/manim-animations/blob/master/animations/moving_point_on_circle.gif)

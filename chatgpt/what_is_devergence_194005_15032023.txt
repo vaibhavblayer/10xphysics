@@ -1,0 +1,3 @@
+Q. What is devergence ?
+
+Divergence is a mathematical concept that describes the rate of change of a vector field. It is a measure of how a vector field is spreading out or converging in a given point. It is calculated by taking the divergence of a vector field, which is the sum of the partial derivatives of the vector field with respect to each of its coordinates.

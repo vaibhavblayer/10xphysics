@@ -1,0 +1,9 @@
+Q. Make 5 questions for jee from de-Broglie wavelength in latex.
+
+\begin{enumerate}
+    \item What is the mathematical expression for de-Broglie wavelength?
+    \item How does the de-Broglie wavelength of a particle depend on its momentum?
+    \item What is the significance of the de-Broglie wavelength in quantum mechanics?
+    \item How does the de-Broglie wavelength of a particle change when its energy is increased?
+    \item What is the relationship between the de-Broglie wavelength and the Heisenberg Uncertainty Principle?
+\end{enumerate}

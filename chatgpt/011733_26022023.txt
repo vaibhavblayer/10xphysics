@@ -1,0 +1,10 @@
+Q. Using dataclass write a class in python.
+
+from dataclasses import dataclass
+
+@dataclass
+class Person:
+    name: str
+    age: int
+    gender: str
+    occupation: str

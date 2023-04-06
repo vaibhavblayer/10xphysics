@@ -1,0 +1,4 @@
+Q. Write a python function for calculating acceleration of a particle.
+
+def acceleration(velocity, time):
+  return velocity/time

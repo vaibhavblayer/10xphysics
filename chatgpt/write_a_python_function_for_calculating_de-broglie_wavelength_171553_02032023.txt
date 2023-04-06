@@ -1,0 +1,5 @@
+Q. Write a python function for calculating de-Broglie wavelength.
+
+def deBroglieWavelength(mass, velocity):
+    h = 6.62607004 * 10**-34
+    return h / (mass * velocity)

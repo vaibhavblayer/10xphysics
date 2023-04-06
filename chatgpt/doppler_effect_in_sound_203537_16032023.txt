@@ -1,0 +1,3 @@
+Q. Doppler effect in sound.
+
+The Doppler effect is a phenomenon that occurs when a sound source is moving relative to an observer. As the source moves closer to the observer, the frequency of the sound waves increases, resulting in a higher pitch. As the source moves away from the observer, the frequency of the sound waves decreases, resulting in a lower pitch. The Doppler effect is most commonly heard when a vehicle is passing by, such as a car or a train. The sound of the engine changes as it moves closer and then away from the observer.

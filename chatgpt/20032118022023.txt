@@ -1,0 +1,38 @@
+Q. Write python code for tracedpath of a moving point using manim library.
+
+from manimlib.imports import *
+
+class TracedPath(Scene):
+    def construct(self):
+        point = Dot(color=BLUE)
+        path = VMobject(color=RED)
+        path.set_points_as_corners([point.get_center()])
+
+        self.add(point)
+        self.add(path)
+
+        self.play(
+            point.shift, UP * 2,
+            run_time=2
+        )
+        path.add_points_as_corners([point.get_center()])
+
+        self.play(
+            point.shift, RIGHT * 2,
+            run_time=2
+        )
+        path.add_points_as_corners([point.get_center()])
+
+        self.play(
+            point.shift, DOWN * 2,
+            run_time=2
+        )
+        path.add_points_as_corners([point.get_center()])
+
+        self.play(
+            point.shift, LEFT * 2,
+            run_time=2
+        )
+        path.add_points_as_corners([point.get_center()])
+
+        self.wait()

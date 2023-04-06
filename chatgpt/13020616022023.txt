@@ -1,0 +1,18 @@
+Q. Write a python code for counting the number of character in line and returning the max value.
+
+def max_length(line):
+  # set max_length to 0
+  max_length = 0
+  # iterate through each character in line
+  for char in line:
+    # count the length of each character
+    char_length = len(char)
+    # if the length of the character is greater than the current max_length, update max_length
+    if char_length > max_length:
+      max_length = char_length
+  # return the max_length
+  return max_length
+
+line = "This is a line"
+
+print(max_length(line))

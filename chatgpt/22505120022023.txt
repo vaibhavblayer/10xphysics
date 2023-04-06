@@ -1,0 +1,13 @@
+Q. Write a python decorator which squares any output of a function.
+
+def square_decorator(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return result**2
+    return wrapper
+
+@square_decorator
+def add(x, y):
+    return x + y
+
+print(add(2, 3)) # Output: 25

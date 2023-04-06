@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+
+
+\PYG{k+kn}{import} \PYG{n+nn}{sympy}
+
+\PYG{k}{def} \PYG{n+nf}{derivative}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{var}\PYG{p}{):}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n}{sympy}\PYG{o}{.}\PYG{n}{Symbol}\PYG{p}{(}\PYG{n}{var}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{sympy}\PYG{o}{.}\PYG{n}{diff}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}Example}
+\PYG{n}{f} \PYG{o}{=} \PYG{n}{x}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{x} \PYG{o}{+} \PYG{l+m+mi}{1}
+\PYG{n}{derivative}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: 2*x + 3}
+\end{Verbatim}

@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{v-problem}
+\geometry{
+paperwidth=5in, 
+paperheight=5in, 
+top=10mm, 
+bottom=10mm, 
+left=10mm, 
+right=10mm
+}
+
+
+\begin{document}
+\vtitle[ROTATION]
+
+\vproblem[01][
+A solid sphere of mass $1\kg$ and radius $1\m$ rolls without slipping on a fixed inclined plane with an angle of inclination $\theta=30^\circ$ from the horizontal. Two forces of magnitude $1\N$ each, parallel to the incline, act on the sphere, both at distance $r=0.5\m$ from the center of the sphere, as shown in figure. The acceleration of the sphere down the plane in $\mpss$ is\hfill (Take $g=10\mpss$.)][2022]
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+\pic at (0, 0){frame=8cm};
+%\draw (-2, 0)--(3, 0)--(-2, 4*tan{30})--cycle;
+\begin{scope}[ rotate around={-30:(2, 0)}, >=latex, thick]
+\def\c{0, 1}
+\draw (-2.5, 0)--(2, 0);
+\draw (0, 1) circle[radius=1];
+\fill (0, 1) circle(2pt);
+\draw[dashed] (\c)--+(0, 0.5)node[left, midway]{$r$}--+(sin{60}, 0.5);
+\draw[dashed] (\c)--+(0, -0.5)node[right, midway]{$r$}--+(-sin{60}, -0.5);
+
+\draw[->] (2, 1.5)--(sin{60}, 1.5) ;
+\draw[->] (-2, 0.5)--(-sin{60}, 0.5);
+
+\end{scope}
+\tzanglemark[thick](0, 2*sin{35})(2, 0)(0, 0){$30^\circ$}(18pt)
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\voption[
+\begin{tasks}(2)
+	\task $\dfrac{20}{7}$
+	\task $\dfrac{10}{7}$
+	\task $\dfrac{30}{7}$
+	\task $0$
+\end{tasks}
+][0.15]
+
+\end{document}

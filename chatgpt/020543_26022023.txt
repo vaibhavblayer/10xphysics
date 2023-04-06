@@ -1,0 +1,3 @@
+Q. Energy of photon in latex eqation form.
+
+E = h\nu

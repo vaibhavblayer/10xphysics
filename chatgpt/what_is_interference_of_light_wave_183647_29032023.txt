@@ -1,0 +1,3 @@
+Q. What is interference of light wave?
+
+Interference of light waves is the phenomenon in which two or more waves combine to form a resultant wave of greater, lower, or the same amplitude. When two waves of the same frequency and amplitude interact, they produce a pattern of constructive and destructive interference. Constructive interference occurs when the two waves are in phase and add together to form a wave of greater amplitude. Destructive interference occurs when the two waves are out of phase and cancel each other out.

@@ -1,0 +1,15 @@
+Q. Make 2 numerical questions with four options for jee from photons in latex.
+
+Q1. What is the frequency of a photon with a wavelength of 500 nm?
+
+A. 5.0 x 10^14 Hz
+B. 5.0 x 10^15 Hz
+C. 5.0 x 10^16 Hz
+D. 5.0 x 10^17 Hz
+
+Q2. What is the energy of a photon with a frequency of 5.0 x 10^14 Hz?
+
+A. 2.4 x 10^-19 J
+B. 2.4 x 10^-18 J
+C. 2.4 x 10^-17 J
+D. 2.4 x 10^-16 J

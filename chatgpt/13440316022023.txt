@@ -1,0 +1,3 @@
+Q. Why the acidity of water is greater than ethanol?
+
+The acidity of water is greater than ethanol because water molecules have a higher tendency to donate protons (H+) compared to ethanol molecules. This is because water molecules have a higher degree of polarity, and the oxygen atom in the water molecule has a higher electronegativity than the carbon atom in the ethanol molecule. This higher electronegativity of oxygen causes the electrons in the water molecule to be more strongly attracted to the oxygen atom, making it easier for water molecules to donate protons.

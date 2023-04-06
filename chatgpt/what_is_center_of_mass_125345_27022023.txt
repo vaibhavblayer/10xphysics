@@ -1,0 +1,3 @@
+Q. What is center of mass ?
+
+Center of mass is the point at which the entire mass of an object is concentrated. It is the average location of all the mass in an object and is also known as the center of gravity.

@@ -1,0 +1,3 @@
+Q. What is Compton effect?
+
+The Compton effect is a phenomenon in which X-rays or gamma rays are scattered by electrons in a material, resulting in a decrease in energy (or increase in wavelength) of the scattered radiation. This effect is named after the physicist Arthur Holly Compton, who first observed it in 1923. The Compton effect is an example of inelastic scattering of electromagnetic radiation, in which the energy of the radiation is changed due to its interaction with matter.

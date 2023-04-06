@@ -1,0 +1,3 @@
+Q. What is photoelectric effect ?
+
+The photoelectric effect is a phenomenon in which electrons are emitted from a material when it is exposed to light. When light of a certain frequency is shone on a metal surface, electrons are emitted from the surface. This effect is used in many applications, such as solar cells, photodetectors, and photocopiers.

@@ -1,0 +1,3 @@
+Q. Write a ffmpeg command for converting pngs into movie in proress format.
+
+ffmpeg -framerate 25 -i image%03d.png -c:v prores -profile:v 3 movie.mov

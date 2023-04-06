@@ -1,0 +1,7 @@
+Q. Moseley’s law for characteristic spectrum
+
+Moseley's law is an empirical law formulated by Henry Moseley in 1913, which states that the square of the frequency of the X-ray spectral lines of an element is proportional to the atomic number of the element. This law is used to determine the atomic number of an element from the X-ray spectrum of the element. It is expressed mathematically as:
+
+f^2 = Z^2 \times c
+
+where f is the frequency of the X-ray spectral line, Z is the atomic number of the element, and c is a constant.

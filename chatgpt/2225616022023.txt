@@ -1,0 +1,5 @@
+Q. Derive the derivative of sin(x) using first principle and convert it into latex code.
+
+$\frac{d}{dx}\sin(x) = \cos(x)$
+
+$\frac{d}{dx}\sin(x) = \cos(x)$

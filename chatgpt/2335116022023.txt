@@ -1,0 +1,20 @@
+Q. Write python code for animating a cicle using manim module.
+
+from manimlib.imports import *
+
+class CircleAnimation(Scene):
+    def construct(self):
+        circle = Circle()
+        self.play(ShowCreation(circle))
+        self.play(
+            ApplyMethod(circle.scale, 2),
+            ApplyMethod(circle.shift, RIGHT*2),
+            ApplyMethod(circle.rotate, TAU/4)
+         )
+        self.wait(1)
+        self.play(
+            ApplyMethod(circle.scale, 0.5),
+            ApplyMethod(circle.shift, LEFT*2),
+            ApplyMethod(circle.rotate, -TAU/4)
+         )
+        self.wait(1)

@@ -1,0 +1,3 @@
+Q. How is symmetricity is related to conservation of angular momentum?
+
+Symmetry is related to conservation of angular momentum because it implies that the system is invariant under rotations. This means that the angular momentum of the system is conserved, since the system does not change when it is rotated. This is because the forces acting on the system are the same in all directions, so the angular momentum of the system is conserved.

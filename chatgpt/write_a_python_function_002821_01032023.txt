@@ -1,0 +1,13 @@
+Q. Write a python function.
+
+def calculate_area(length, width):
+  """Calculates the area of a rectangle given its length and width.
+  
+  Args:
+    length (int): The length of the rectangle.
+    width (int): The width of the rectangle.
+  
+  Returns:
+    int: The area of the rectangle.
+  """
+  return length * width

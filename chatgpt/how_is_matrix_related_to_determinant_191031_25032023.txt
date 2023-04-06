@@ -1,0 +1,3 @@
+Q. How is matrix related to determinant?
+
+Matrix and determinant are related in that the determinant of a matrix is a scalar value that can be calculated from the elements of a square matrix. The determinant of a matrix can be used to determine the inverse of a matrix, the area of a parallelogram, and the volume of a parallelepiped.

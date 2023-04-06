@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{v-equation}
+
+\geometry{
+paperwidth=5in, 
+paperheight=5in, 
+top=15mm, 
+bottom=15mm, 
+left=10mm, 
+right=10mm
+}
+
+\begin{document}
+\begin{center}
+Young’s Double Slit Experiment
+\end{center}
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+[thick]
+	\coordinate (S) at (0, 0);
+	\coordinate (O) at ($(S)+(6, 0)$);
+	\coordinate (M) at ($(S)!0.2!(O)$);
+	\coordinate (S1) at ($(M)+(0, 0.6)$);
+	\coordinate (S2) at ($(M)+(0, -0.6)$);
+	\coordinate (P) at ($(0, 0)+(6, 2)$);
+	
+	\tzline+[dashed](S)(6, 0)
+	\tzline+(O)(0, 2.5)
+	\tzline+(O)(0, -2.5)
+	\tzdots*(S)(S1)(S2)(P);(4pt)
+	\tzlines(M)(S1)(M)(S2);
+	\tzline+(S1)(0, 0.5)
+	\tzline+(S2)(0, -0.5)
+	\tzlines(S1)(P)(S2)(P);
+	\tzline[dashed](M)(P)
+	\tzanglemark(O)(M)(P){$\theta$}(15pt)
+	\tzline[|<->|]<0, -1>(M)(O){$D$}[b, midway]
+	\tzline[|<->|]<-0.25, 0>(S1)(S2){$d$}[l, midway]
+	\tzline[|<->|]<0.25, 0>(O)(P){$y$}[r, midway]
+	\node at ($($(M)!0.5!(O)$)+(0, -2.5)$) {$\lambda << d << D$};
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+&\texttt{Path difference} &&\Delta x \approx d\sin\theta\\
+&\texttt{For maxima} &&d\sin\theta=n\lambda\\
+&\texttt{For minima} &&d\sin\theta=(2n-1)\dfrac{\lambda}{2}\\
+\end{align*}
+
+\pagebreak
+
+\begin{center}
+\begin{tikzpicture}
+\draw[draw=black, blur shadow] (0,0) circle (1);
+\node[draw=black, blur shadow] at (4,0.5) {\Large Node};
+\end{tikzpicture}
+\end{center}
+\end{document}

@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+[thick]
+\tzline[dashed](0, 0)(5, 0)
+\tzline+[->, thick](0, 0)(1, 0){$\vec{u}$}[ar=2mm]
+\tzline[dashed](0, 0)(0, -4)
+\tzline[|<->|]<-0.5, 0>(0, 0)(0, -4){$l$}[l=2mm, midway]
+\tzline+[->](0, -4)(0, 1){$\vec{v}$}[al=2mm]
+\tzdots*<0, 0.09>(0, 0)(0, -4);(5pt)
+\tzto[out=90,in=180,dashed](0,-4)(5,0)
+\end{tikzpicture}

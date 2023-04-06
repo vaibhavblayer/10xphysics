@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage{v-equation}
+\geometry{
+    paperwidth=5in,
+    paperheight=5in,
+    top=10mm,
+    bottom=10mm,
+    left=10mm,
+    right=10mm
+}
+
+\begin{document}
+\begin{center}
+    average of a function
+\end{center}
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+	\tzaxes(-0.5, -0.5)(7, 4){$x$}{$y$}
+	\def\Fn{0.25*\x*\x - \x + 2 - sin(deg(1.5*\x))}
+
+
+	\tzfn\Fn[0:5.5]
+	%\tzfn[dashed]\Fnn[0:6.3]
+	
+	\tzvXpoint{Fn}(3,1)(A)
+	\tzvXpoint{Fn}(3.2,1)(B)
+	\tzvXpoint{Fn}(5.4,1)(C)
+	
+	\tzvXpoint{Fn}(2,1)(x)
+	\tzvXpoint{Fn}(4.5,1)(X)
+	%\tzdots*(A)(B);
+	\tzproj*[<-](x){$x_1$}
+	\tzproj*[<-](X){$x_2$}
+	
+	\tzfnarea*[pattern=dots]{\Fn}[2:4.5]
+	
+	\draw[pattern, pattern=north east lines](3, 0)--(3.2, 0)--(B)--(A)--cycle;
+	
+	\tznode(3.1, 0){$d\!x$}[b]
+	
+	\tzlines+[<-](C)(0.5, -0.5)(1, 0){$f(x)$}[r];
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+< f(x) > = \dfrac{\int_{x_1}^{x_2} f(x) d\!x}{\int_{x_1}^{x_2} d\!x}
+\end{align*}
+\vspace*{\fill}
+\pagebreak
+\begin{center}
+average velocity with respect to time
+\end{center}
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+	\tzaxes(-0.5, -0.5)(7, 4){$t$}{$v$}
+	\def\Fn{0.25*\x*\x - \x + 2}
+
+
+	\tzfn\Fn[0:5.5]
+	%\tzfn[dashed]\Fnn[0:6.3]
+	
+	\tzvXpoint{Fn}(3,1)(A)
+	\tzvXpoint{Fn}(3.2,1)(B)
+	\tzvXpoint{Fn}(5.4,1)(C)
+	
+	\tzvXpoint{Fn}(2,1)(x)
+	\tzvXpoint{Fn}(4.5,1)(X)
+	%\tzdots*(A)(B);
+	\tzproj*[<-](x){$t_1$}
+	\tzproj*[<-](X){$t_2$}
+	
+	\tzfnarea*[pattern=dots]{\Fn}[2:4.5]
+	
+	\draw[pattern, pattern=north east lines](3, 0)--(3.2, 0)--(B)--(A)--cycle;
+	
+	\tznode(3.1, 0){$d\!t$}[b]
+	
+	\tzlines+[<-](C)(0.5, -0.5)(1, 0){$v(t)$}[r];
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+< \vec{v} > = \dfrac{\int_{t_1}^{t_2} \vec{v} d\!t}{\int_{t_1}^{t_2} d\!t}
+\end{align*}
+\vspace*{\fill}
+
+\pagebreak
+\begin{center}
+average speed with respect to time
+\end{center}
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+	\tzaxes(-0.5, -1)(7, 3){$t$}{$v$}
+	\def\Fn{0.25*\x*\x - \x + 1+sin(deg(1.5*\x))}
+
+
+	\tzfn\Fn[0:5]
+	%\tzfn[dashed]\Fnn[0:6.3]
+	
+	\tzvXpoint{Fn}(3,1)(A)
+	\tzvXpoint{Fn}(3.2,1)(B)
+	\tzvXpoint{Fn}(4.9,1)(C)
+	
+	\tzvXpoint{Fn}(1,1)(x)
+	\tzvXpoint{Fn}(4.5,1)(X)
+	%\tzdots*(A)(B);
+	\tzproj*[<-](x){$t_1$}
+	\tzproj*[<-](X){$t_2$}
+	
+	\tzfnarea*[pattern=dots]{\Fn}[1:4.5]
+	
+	\draw[pattern, pattern=north east lines](3, 0)--(3.2, 0)--(B)--(A)--cycle;
+	
+	\tznode(3.1, 0){$d\!t$}[a]
+	
+	\tzlines+[<-](C)(0.5, -0.5)(1, 0){$v(t)$}[r];
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+< \left|\vec{v} \right| > = \dfrac{\int_{t_1}^{t_2} \left|\vec{v} \right| d\!t}{\int_{t_1}^{t_2} d\!t}
+\end{align*}
+\vspace*{\fill}
+\pagebreak
+\vspace*{\fill}
+
+\begin{center}
+	\fbox{\qrcode[height=2cm]{https://drive.google.com/drive/folders/1IqvkIB5ogYJ33ti39rrGxGE6gBgKKiOb?usp=share_link}}
+\end{center}
+\vspace*{\fill}
+\pagebreak
+
+
+\foreach \x in {1,...,6} {\x, }
+\pagebreak
+\begin{tikzpicture}[ ]
+\shade[upper left=red, upper right=green, lower left=blue, lower right=yellow] (current page.south west) rectangle (current page.north east) ;
+\end{tikzpicture}
+\end{document}

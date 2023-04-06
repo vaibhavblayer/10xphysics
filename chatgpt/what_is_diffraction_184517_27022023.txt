@@ -1,0 +1,3 @@
+Q. What is diffraction?
+
+Diffraction is the bending of light or other waves around the edges of an obstacle or through an aperture. It is an important phenomenon in optics, acoustics, and radio technology. Diffraction occurs when a wave encounters an obstacle or opening that is comparable in size to its wavelength.

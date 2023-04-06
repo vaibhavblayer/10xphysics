@@ -1,0 +1,13 @@
+Q. Write a python function finding derivative using sympy.
+
+import sympy
+
+def derivative(f, x):
+    return sympy.diff(f, x)
+
+#Example
+x = sympy.Symbol('x')
+f = x**2 + 3*x + 5
+
+derivative(f, x)
+#2*x + 3

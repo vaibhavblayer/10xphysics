@@ -1,0 +1,16 @@
+Q. Write a python function to iterate a list.
+
+def iterate_list(list):
+  for item in list:
+    print(item)
+
+#Example
+list = [1, 2, 3, 4, 5]
+iterate_list(list)
+
+#Output
+1
+2
+3
+4
+5

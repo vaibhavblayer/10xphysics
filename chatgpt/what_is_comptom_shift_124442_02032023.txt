@@ -1,0 +1,3 @@
+Q. What is Comptom shift?
+
+Compton shift is a phenomenon in which the wavelength of a photon increases after it interacts with an atom or molecule. It is named after Arthur Compton, who first observed the effect in 1923. The effect occurs when a photon interacts with an electron, causing the electron to gain energy and the photon to lose energy. This causes the wavelength of the photon to increase, resulting in a shift in the photon's frequency.

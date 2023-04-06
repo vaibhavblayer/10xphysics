@@ -1,0 +1,9 @@
+Q. Write a python code for trimming starting \n linebreak in python.
+
+def trim_start_linebreak(string):
+  return string.lstrip('\n')
+  
+# example
+string = '\nHello World!'
+print(trim_start_linebreak(string))
+# Output: Hello World!

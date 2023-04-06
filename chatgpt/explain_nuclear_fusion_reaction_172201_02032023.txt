@@ -1,0 +1,3 @@
+Q. Explain nuclear fusion reaction.
+
+Nuclear fusion is a process in which two or more atomic nuclei join together, or “fuse”, to form a single heavier nucleus. During this process, matter is not conserved because some of the mass of the fusing nuclei is converted to energy, which is released. This energy is released in the form of gamma rays, which is what powers the sun and other stars. Fusion reactions can take place under extreme temperatures and pressures, such as those found in the cores of stars.

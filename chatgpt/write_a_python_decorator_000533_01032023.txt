@@ -1,0 +1,20 @@
+Q. Write a python decorator.
+
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before function call")
+        result = func(*args, **kwargs)
+        print("After function call")
+        return result
+    return wrapper
+
+@my_decorator
+def add(x, y):
+    return x + y
+
+print(add(2, 3))
+
+# Output:
+# Before function call
+# After function call
+# 5

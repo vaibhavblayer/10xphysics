@@ -1,0 +1,29 @@
+Q. Write python code for tracedpath of a moving point using manim library.
+
+import manimlib.imports as manim import numpy as np import math class TracedPath(manim.Scene): def construct(self): # Create a point and trace its path point = manim.Dot(color=manim.BLUE) point.move_to(np.array([-3, -3, 0])) point.add_updater(lambda m: m.move_to(m.get_center() + np.array([0.1, 0.1, 0]))) # Create a traced path traced_path = manim.VMobject() traced_path.set_points_as_corners([point.get_center()]) traced_path.add_updater(lambda m: m.add_points_as_corners([point.get_center()])) # Add the point and traced path to the scene self.add(point) self.add(traced_path) # Run the animation self.wait(10)
+
+Output:
+
+Explanation:
+
+In this code, we have created a point and traced its path using the manim library.
+
+First, we have imported the manim library and created a class TracedPath which extends the Scene class of the manim library.
+
+Then, we have created a point and traced its path using the VMobject class of the manim library.
+
+We have used the move_to() method to move the point to the specified position.
+
+We have used the add_updater() method to update the point’s position.
+
+We have used the set_points_as_corners() method to set the points of the traced path.
+
+We have used the add_points_as_corners() method to add the points to the traced path.
+
+Finally, we have added the point and traced path to the scene and run the animation.
+
+Conclusion
+
+In this article, we have learned how to create a traced path of a moving point using the manim library in Python.
+
+Also read,

@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+[thick]
+\def\side{3.5}
+	\draw[dashed] (-30:\side)--(90:\side)--(210:\side) node[midway, left]{$l$} --cycle;
+	\draw[->] (-30:\side)--+(120:\side-2) node[right]{$\vec{v}_2$};
+	\draw[->] (90:\side)--+(240:\side-2) node[left]{$\vec{v}_3$};
+	\draw[->] (210:\side)--+(0:\side-2) node[below]{$\vec{v}_1$} coordinate(V1);
+	
+	
+	
+	\draw[->, PINKD] (210:\side)--+(60:\side-2) node[right]{$\vec{v}_1\cos60^\circ$} coordinate(V13);
+	
+	\draw[->, PINKD] (210:\side)--+(-30:\side-2) node[right, below]{$\vec{v}_1\sin60^\circ$} coordinate(V1P3);
+	
+	\tzanglemark(V1)(210:\side)(V13){$60^\circ$}(15pt)
+	
+
+\tzdots*(-30:\side)(90:\side)(210:\side);(6pt)
+\end{tikzpicture}

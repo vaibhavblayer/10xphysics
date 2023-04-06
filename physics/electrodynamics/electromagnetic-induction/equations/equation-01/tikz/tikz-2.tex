@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\coordinate (a) at (0, 0);
+\coordinate (b) at (2, 1);
+
+\draw[postaction=decorate, mark={at pos=0.5 with coordinate(c)}] (a)--(b);
+\draw (c)--++(2, 0);
+\end{tikzpicture}

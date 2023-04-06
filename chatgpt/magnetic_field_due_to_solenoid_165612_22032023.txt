@@ -1,0 +1,3 @@
+Q. Magnetic field due to solenoid.
+
+The magnetic field due to a solenoid is a uniform, cylindrical field that is directed along the axis of the solenoid. The magnitude of the magnetic field is proportional to the number of turns of the solenoid and the current passing through it.

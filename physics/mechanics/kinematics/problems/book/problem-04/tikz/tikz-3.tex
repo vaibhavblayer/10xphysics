@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+[thick]
+	\def\tangentat{0.8}
+	\tzline[dashed]"HL"(0, 0)(5, 0)
+	\tzline[dashed](0, 0)(0, -4)
+	\tzline[|<->|]<-0.5, 0>(0, 0)(0, -4){$l$}[l=2mm, midway]
+	\tzto[out=90,in=180,dashed]"path"(0,-4)(5,0)
+	\tztangentat[dashed, thick]"TL"{path}{\tangentat}[\tangentat:3.5]
+	\tztangentat[->, thick]{path}{\tangentat}[\tangentat:\tangentat + 1]{$\vec{v}$}[al]
+	\tzXpoint{HL}{TL}(X)
+	\tzline+[->](X)(1, 0){$\vec{u}$}[ar=2mm]
+	\tzvXpointat*{path}{\tangentat}{$A$}[above left=2mm](5pt)
+	\tzdot*(X)(5pt)
+	\tznode(X){$B$}[a=2mm]
+	\tzvXpointat{TL}{3}(A)
+	\tzanglemark(5, 0)(X)(A){$\theta$}
+\end{tikzpicture}

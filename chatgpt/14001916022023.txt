@@ -1,0 +1,10 @@
+Q. Write a python code for trimming starting \n linebreak in python.
+
+#Using the strip() method
+
+text = '\nThis is a sample string.'
+
+result = text.strip()
+
+print(result)
+#Output: This is a sample string.

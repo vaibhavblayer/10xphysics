@@ -1,0 +1,3 @@
+Q. Why the acidity of water is greater than ethanol?
+
+The acidity of water is greater than ethanol because water has a higher concentration of hydrogen ions (H+) than ethanol does. Water molecules are composed of two hydrogen atoms and one oxygen atom and the oxygen atoms have a greater affinity for electrons than the hydrogen atoms do. This creates a slightly negative charge on the oxygen atom, resulting in a higher concentration of H+ ions in the water molecule than in the ethanol molecule.

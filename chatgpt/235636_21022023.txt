@@ -1,0 +1,3 @@
+Q. decorators in python
+
+Decorators in Python are functions that are used to modify the behavior of other functions. They are also known as metaprogramming because a part of the program tries to modify another part of the program at compile time. Decorators are usually used to add functionality to an existing function without modifying its structure. They can also be used to check the validity of input parameters and to add logging or debugging statements.

@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+	\node[qnumber] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\book \quad \page]};
+	\node[diagram] (d) [below=1cm of q.south] {\diagram};
+	\node[option] (o) [below=0.1cm of d.south] {\option};
+\end{tikzpicture}	

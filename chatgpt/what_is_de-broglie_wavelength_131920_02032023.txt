@@ -1,0 +1,3 @@
+Q. What is de-Broglie wavelength?
+
+De Broglie wavelength is the wavelength associated with a particle, such as an electron, calculated from its momentum using the equation λ = h/p, where h is Planck's constant and p is the particle's momentum. It is a fundamental concept in quantum mechanics.

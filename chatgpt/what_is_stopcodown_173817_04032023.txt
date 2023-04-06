@@ -1,0 +1,3 @@
+Q. What is stopcodown?
+
+Stopcodown is a web-based platform that helps developers and teams create and manage their software development projects. It provides tools for project management, task tracking, code review, and more. Stopcodown also offers integrations with popular tools like GitHub, Slack, and Jira.

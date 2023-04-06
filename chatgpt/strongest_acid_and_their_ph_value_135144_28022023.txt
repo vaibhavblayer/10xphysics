@@ -1,0 +1,3 @@
+Q. Strongest acid and their ph value.
+
+The strongest acid known is fluorosulfuric acid (HFSO3) with a pH value of -3.  This acid is so strong that it will actually corrode glass.

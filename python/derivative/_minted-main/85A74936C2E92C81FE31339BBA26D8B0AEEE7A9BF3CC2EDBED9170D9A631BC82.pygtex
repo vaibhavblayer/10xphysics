@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{def} \PYG{n+nf}{derivative}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{h}\PYG{p}{)}\PYG{p}{:}
+	
+	\PYG{c+c1}{\PYGZsh{} $f'(x)=\dfrac{f(x+h)-f(x)}{h}$}
+	
+    \PYG{k}{return} \PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{x} \PYG{o}{+} \PYG{n}{h}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{)} \PYG{o}{/} \PYG{n}{h}
+
+\PYG{c+c1}{\PYGZsh{}Example}
+\PYG{k}{def} \PYG{n+nf}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{return} \PYG{n}{x}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2}
+
+\PYG{n}{derivative}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: 4.01}
+\end{Verbatim}

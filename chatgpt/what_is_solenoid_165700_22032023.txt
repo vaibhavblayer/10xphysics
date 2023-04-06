@@ -1,0 +1,3 @@
+Q. What is solenoid.
+
+A solenoid is an electrical device consisting of a coil of wire wrapped around a core, usually made of iron, which creates a magnetic field when an electric current is passed through it. Solenoids are used in a variety of applications, such as door locks, valves, and motors.

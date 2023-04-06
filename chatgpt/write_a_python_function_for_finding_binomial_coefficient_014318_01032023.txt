@@ -1,0 +1,12 @@
+Q. Write a python function for finding binomial coefficient.
+
+def binomial_coefficient(n, k): 
+    result = 1
+    for i in range(k): 
+        result = result * (n - i) // (i + 1) 
+    return result 
+  
+# Driver Program to test above function 
+n = 5
+k = 2
+print("Value of C(%d, %d) is %d" %(n, k, binomial_coefficient(n, k)))

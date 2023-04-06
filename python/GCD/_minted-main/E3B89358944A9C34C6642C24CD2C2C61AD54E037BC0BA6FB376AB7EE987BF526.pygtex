@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{def} \PYG{n+nf}{GCD}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{n}{n}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} $CGD(12, 4)=4 \Rightarrow (12-4, 4) \Rightarrow (8-4, 4) \Rightarrow 4$}
+    \PYG{k}{if} \PYG{n}{m} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0} \PYG{o+ow}{and} \PYG{n}{n} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{k}{if} \PYG{n}{m} \PYG{o}{\PYGZgt{}} \PYG{n}{n}\PYG{p}{:}
+            \PYG{n}{m} \PYG{o}{=} \PYG{n}{m} \PYG{o}{\PYGZhy{}}\PYG{n}{n}
+            \PYG{n}{n} \PYG{o}{=} \PYG{n}{n}
+            \PYG{k}{return} \PYG{n}{GCD}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{n}{n}\PYG{p}{)}
+
+        \PYG{k}{elif} \PYG{n}{m} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{:}
+            \PYG{n}{n} \PYG{o}{=} \PYG{n}{n}\PYG{o}{\PYGZhy{}}\PYG{n}{m}
+            \PYG{n}{m} \PYG{o}{=} \PYG{n}{m}
+            \PYG{k}{return} \PYG{n}{GCD}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,} \PYG{n}{n}\PYG{p}{)}
+
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{k}{return} \PYG{n}{m}
+
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Given inputs are not positive integers.\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

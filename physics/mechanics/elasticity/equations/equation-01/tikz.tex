@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    [scale=2]
+  \def\x{0.14*\L}
+  \draw[dashed]
+    %(0,\Ry) arc(90:270:{\Rx} and {\Ry})
+    %(0,0) ellipse ({\Rx} and {\Ry})
+    (\x,\Ry) -- (0,\Ry) arc(90:270:{\Rx} and {\Ry})
+    (0,-\Ry) -- (\x,-\Ry);
+  \draw[|<->|] (0,-1.5*\Ry) --++ (\L,0) node[midway,below] {$L$};
+  \draw[<->] (0, 1.3*\Ry) --++ (\x,0) node[midway,above] {$\Delta L$};
+  \draw[PINKD, ->, very thick] (\L+\F,0) --++ (-0.9*\F,0) node[pos=0.4,above] {$\vec{F}$};
+  \draw[metal](\x,-\Ry) |- (\L,\Ry) arc(90:-90:{\Rx} and {\Ry}) -- cycle;
+  \draw[metal] (\x,0) ellipse ({\Rx} and {\Ry});
+  \draw[PINKD, ->, very thick] (\x-\F,0) --++ (\F,0) node[pos=0,left] {$\vec{F}$};
+  \draw[dashed] (0,\Ry) arc(90:-90:{\Rx} and {\Ry});
+\end{tikzpicture}

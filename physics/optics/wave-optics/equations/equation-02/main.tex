@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{v-equation}
+\usepackage{pgf-interference}
+\usepackage{hyperref}
+\usepackage[final]{qrcode}
+\geometry{
+paperwidth=5in, 
+paperheight=5in, 
+top=10mm, 
+bottom=10mm, 
+left=10mm, 
+right=10mm
+}
+
+\begin{document}
+\begin{center}
+Young’s Double Slit Experiment
+\end{center}
+\vspace*{\fill}
+\begin{center}
+\pgfinterferencepattern{screen-width=0.09,screen-height=0.01}
+\begin{tikzpicture}
+[thick]
+	\coordinate (S) at (0, 0);
+	\coordinate (O) at ($(S)+(7, 0)$);
+	\coordinate (M) at ($(S)!0.2!(O)$);
+	\coordinate (S1) at ($(M)+(0, 0.7)$);
+	\coordinate (S2) at ($(M)+(0, -0.7)$);
+	\coordinate (P) at ($(S)+(7, 2)$);
+	
+	\tzline+[dashed](S)(O)
+	\tzline+(O)(0, 2.5)
+	\tzline+(O)(0, -2.5)
+	\tzdots*(S)(S1)(S2)(P);(4pt)
+	\tzlines(M)(S1)(M)(S2);
+	\tzline+(S1)(0, 0.5)
+	\tzline+(S2)(0, -0.5)
+	\tzlines(S1)(P)(S2)(P);
+	\tzline[dashed](M)(P)
+	\tzanglemark(O)(M)(P){$\theta$}(16pt)
+	\tzline[|<->|]<0, -1>(M)(O){$D$}[b, midway]
+	\tzline[|<->|]<-0.25, 0>(S1)(S2){$d$}[l, midway]
+	\tzline[|<->|]<0.25, 0>(O)(P){$y$}[r, midway]
+	\node at ($($(M)!0.5!(O)$)+(0, -2.25)$) {$\lambda << d << D$};
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+&\texttt{Phase difference} &&\phi = \dfrac{2\pi}{\lambda}\Delta x\\
+&\texttt{Resultant intensity} &&I = 4I_0\cos^2\left(\dfrac{\phi}{2}\right)\\
+&\texttt{Fringe Width} &&\omega = \dfrac{\lambda D}{d}
+\end{align*}
+\qrcode[link,height=0.5in]{http://www.ctan.org}
+\end{document}

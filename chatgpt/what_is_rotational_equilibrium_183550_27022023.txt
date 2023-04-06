@@ -1,0 +1,3 @@
+Q. What is rotational equilibrium ?
+
+Rotational equilibrium is a state of balance in which the net torque on an object is zero, meaning that the object is not rotating. This means that the sum of all the torques acting on the object is equal to zero.

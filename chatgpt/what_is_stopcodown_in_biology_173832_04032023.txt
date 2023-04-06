@@ -1,0 +1,3 @@
+Q. What is stopcodown in biology?
+
+Stopcodown is a type of gene regulation in which a gene's expression is stopped or reduced. It is a form of post-transcriptional gene regulation, meaning that it occurs after the gene has been transcribed into mRNA. Stopcodown is typically achieved by the addition of a stop codon to the mRNA, which signals the ribosome to stop translating the mRNA into a protein.

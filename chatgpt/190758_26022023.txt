@@ -1,0 +1,3 @@
+Q. What is de Broglie wavelength ?
+
+The de Broglie wavelength is a concept in quantum mechanics that states that all matter has a wave-like nature and can be described by a wave equation. It is named after Louis de Broglie, who proposed it in 1924. The de Broglie wavelength is inversely proportional to the momentum of a particle, and is equal to Planck's constant divided by the particle's momentum.

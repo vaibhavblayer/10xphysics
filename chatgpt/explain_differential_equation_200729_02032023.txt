@@ -1,0 +1,3 @@
+Q. Explain differential equation.
+
+A differential equation is an equation that relates a function with its derivatives. It is used to describe the relationship between a function and its derivatives, and is used to model physical phenomena such as population growth, electrical circuits, and fluid flow. Differential equations can be used to solve for the unknown function, or to find the behavior of the function over time.

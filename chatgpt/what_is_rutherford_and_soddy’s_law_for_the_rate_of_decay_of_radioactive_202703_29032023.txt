@@ -1,0 +1,3 @@
+Q. What is Rutherford and Soddy’s law for the rate of decay of radioactive ?
+
+Rutherford and Soddy's law states that the rate of decay of a radioactive element is proportional to the number of atoms of the element present at any given time. This means that the rate of decay of a radioactive element is directly proportional to the number of atoms of the element present.

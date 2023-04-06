@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{v-square-equation}
+\usemintedstyle{monokai}
+\begin{document}
+\pagecolor{BLUE20}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{GREEN10}{$\Omega ~.$}]\textcolor{GREEN10}{Write a python function for solving linear differential equation using sympy.}
+
+	\item[\textcolor{WHITE01}{$\lambda ~.$}]
+\begin{minted}[tabsize=4, breaklines, mathescape]{python}
+
+
+import sympy
+
+def solve_linear_diff_eq(eq, y, x):
+    y = sympy.Function('y')(x)
+    return sympy.dsolve(eq, y)
+
+#Example
+#Solve the differential equation:
+# $\dfrac{dy}{dx} + 2y = x$
+
+eq = sympy.Eq(sympy.Derivative(y, x) + 2*y, x)
+solution = solve_linear_diff_eq(eq, y, x)
+print(solution)
+
+#Output:
+#y(x) = C1*exp(-2*x) + x/2 - x**2/4
+\end{minted}
+\end{itemize}
+\vspace*{\fill}
+\end{document}

@@ -1,0 +1,33 @@
+Q. Make a circle in tex using tzplot
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xmin=-2,xmax=2,
+    ymin=-2,ymax=2,
+    xlabel=$x$,
+    ylabel=$y$,
+    xtick={-2,-1,0,1,2},
+    ytick={-2,-1,0,1,2},
+    xlabel style={below right},
+    ylabel style={above left},
+    axis line style={->},
+    samples=100,
+    domain=-2:2
+]
+\addplot[
+    thick,
+    color=blue,
+    domain=-2:2,
+    samples=100,
+]
+{sqrt(4-x^2)};
+\addplot[
+    thick,
+    color=blue,
+    domain=-2:2,
+    samples=100,
+]
+{-sqrt(4-x^2)};
+\end{axis}
+\end{tikzpicture}

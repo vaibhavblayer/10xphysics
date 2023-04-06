@@ -1,0 +1,10 @@
+Q. Write a python function for calculating derivative of a function.
+
+def derivative(f, x, h):
+    return (f(x + h) - f(x)) / h
+
+#Example
+def f(x):
+    return x**2
+
+derivative(f, 2, 0.01) # Output: 4.01

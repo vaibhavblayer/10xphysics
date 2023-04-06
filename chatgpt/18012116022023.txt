@@ -1,0 +1,15 @@
+Q. Write python code for animating a decimal number uncreasing from 0 to 100 using manim library?
+
+from manimlib.imports import *
+
+class TestAnimation(Scene):
+    def construct(self):
+        number_decimal = DecimalNumber(0)
+        self.play(
+            UpdateFromAlphaFunc(
+                number_decimal,
+                lambda a, dt: a + dt
+            ),
+            run_time=10
+        )
+        self.wait()

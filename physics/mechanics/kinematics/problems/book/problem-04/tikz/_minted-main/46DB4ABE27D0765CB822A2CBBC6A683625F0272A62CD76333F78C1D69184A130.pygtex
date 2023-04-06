@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[thick]
+	\PYG{k}{\PYGZbs{}def\PYGZbs{}tangentat}\PYG{n+nb}{\PYGZob{}}0.8\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}\PYGZdq{}HL\PYGZdq{}(0, 0)(5, 0)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(0, 0)(0, \PYGZhy{}4)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}\PYGZhy{}0.5, 0\PYGZgt{}(0, 0)(0, \PYGZhy{}4)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[l=2mm, midway]
+	\PYG{k}{\PYGZbs{}tzto}\PYG{n+na}{[out=90,in=180,dashed]}\PYGZdq{}path\PYGZdq{}(0,\PYGZhy{}4)(5,0)
+	\PYG{k}{\PYGZbs{}tztangentat}\PYG{n+na}{[dashed, thick]}\PYGZdq{}TL\PYGZdq{}\PYG{n+nb}{\PYGZob{}}path\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}tangentat}\PYG{n+nb}{\PYGZcb{}}[\PYG{k}{\PYGZbs{}tangentat}:3.5]
+	\PYG{k}{\PYGZbs{}tztangentat}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}, thick]}\PYG{n+nb}{\PYGZob{}}path\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}tangentat}\PYG{n+nb}{\PYGZcb{}}[\PYG{k}{\PYGZbs{}tangentat}:\PYG{k}{\PYGZbs{}tangentat} + 1]\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}v\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[al]
+	\PYG{k}{\PYGZbs{}tzXpoint}\PYG{n+nb}{\PYGZob{}}HL\PYG{n+nb}{\PYGZcb{}\PYGZob{}}TL\PYG{n+nb}{\PYGZcb{}}(X)
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](X)(1, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}u\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ar=2mm]
+	\PYG{k}{\PYGZbs{}tzvXpointat*}\PYG{n+nb}{\PYGZob{}}path\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}tangentat}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{A}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[above left=2mm](5pt)
+	\PYG{k}{\PYGZbs{}tzdot*}(X)(5pt)
+	\PYG{k}{\PYGZbs{}tznode}(X)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{B}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a=2mm]
+	\PYG{k}{\PYGZbs{}tzvXpointat}\PYG{n+nb}{\PYGZob{}}TL\PYG{n+nb}{\PYGZcb{}\PYGZob{}}3\PYG{n+nb}{\PYGZcb{}}(A)
+	\PYG{k}{\PYGZbs{}tzanglemark}(5, 0)(X)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

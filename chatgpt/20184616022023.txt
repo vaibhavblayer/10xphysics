@@ -1,0 +1,5 @@
+Q. What are the top three books to learn machine learning using python?
+
+1. Python Machine Learning: Unlock Deeper Insights Into Machine Leaning With This Vital Guide to Cutting-Edge Predictive Analytics, by Sebastian Raschka 
+2. Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems, by Aurelien Geron 
+3. Machine Learning with Python Cookbook: Practical Solutions from Preprocessing to Deep Learning, by Chris Albon

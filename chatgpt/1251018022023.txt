@@ -1,0 +1,94 @@
+Q. Write 10 JEE Main level question of physics of center of mass in objective format with 4 options each in latex
+
+\begin{enumerate}
+    \item A particle of mass m is moving in a circular path of radius r with uniform angular speed $\omega$. What is the position of the centre of mass of the particle?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item (r, 0)
+    \item (0, r)
+    \item (r, $\pi$)
+\end{enumerate}
+
+\item A uniform rod AB of length 2l is suspended from a fixed point O at its middle point M. What is the position of the centre of mass of the rod?
+
+\begin{enumerate}
+    \item (l, 0)
+    \item (l, l)
+    \item (0, l)
+    \item (l, $\pi$)
+\end{enumerate}
+
+\item A uniform solid hemisphere of radius r is suspended from a fixed point O. What is the position of the centre of mass of the hemisphere?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item (r, 0)
+    \item (0, r)
+    \item (r, $\pi$)
+\end{enumerate}
+
+\item A uniform disc of radius r is suspended from a fixed point O at its centre. What is the position of the centre of mass of the disc?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item (r, 0)
+    \item (0, r)
+    \item (r, $\pi$)
+\end{enumerate}
+
+\item A uniform hoop of radius r is suspended from a fixed point O. What is the position of the centre of mass of the hoop?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item (r, 0)
+    \item (0, r)
+    \item (r, $\pi$)
+\end{enumerate}
+
+\item A uniform cylinder of radius r is suspended from a fixed point O at its centre. What is the position of the centre of mass of the cylinder?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item (r, 0)
+    \item (0, r)
+    \item (r, $\pi$)
+\end{enumerate}
+
+\item A uniform cone of base radius r is suspended from a fixed point O at its vertex. What is the position of the centre of mass of the cone?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item (r, 0)
+    \item (0, r)
+    \item (r, $\pi$)
+\end{enumerate}
+
+\item A uniform triangle ABC of base length l is suspended from a fixed point O at its vertex A. What is the position of the centre of mass of the triangle?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item (l, 0)
+    \item (0, l)
+    \item (l, $\pi$)
+\end{enumerate}
+
+\item A uniform square ABCD of side length l is suspended from a fixed point O at its vertex A. What is the position of the centre of mass of the square?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item (l, 0)
+    \item (0, l)
+    \item (l, $\pi$)
+\end{enumerate}
+
+\item A uniform rectangle ABCD of length l and breadth b is suspended from a fixed point O at its vertex A. What is the position of the centre of mass of the rectangle?
+
+\begin{enumerate}
+    \item (0, 0)
+    \item ($\frac{l}{2}$, 0)
+    \item (0, $\frac{b}{2}$)
+    \item ($\frac{l}{2}$, $\pi$)
+\end{enumerate}
+
+\end{enumerate}

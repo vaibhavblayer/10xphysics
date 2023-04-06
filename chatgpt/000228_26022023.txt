@@ -1,0 +1,3 @@
+Q. What is de Broglie wavelength?
+
+De Broglie wavelength is the wavelength associated with a particle, such as an electron, and is equal to the Planck's constant divided by the particle's momentum. It is named after the French physicist Louis de Broglie who first proposed the concept in 1924.

@@ -1,0 +1,9 @@
+Q. Write a python function in 10 keyword args.
+
+def calculate_total(price, tax, discount, shipping, handling, currency, quantity, minimum_order, maximum_order, payment_method):
+  total = (price + tax - discount + shipping + handling) * quantity
+  if quantity < minimum_order or quantity > maximum_order:
+    return 'Invalid order'
+  if payment_method == 'cash':
+    total *= 0.9
+  return total + ' ' + currency

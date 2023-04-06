@@ -1,0 +1,3 @@
+Q. What is translational equilibrium ?
+
+Translational equilibrium is a state of balance in which the net force and net torque on an object are both zero. This means that the object is not accelerating and is not rotating.

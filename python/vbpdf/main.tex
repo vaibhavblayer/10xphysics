@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{v-equation}
+\usepackage{pgfmath}
+\geometry{
+	paperheight=8in,
+	paperwidth=4.5in,
+	left=10mm,
+	right=10mm,
+	top=20mm,
+	bottom=20mm
+}
+\usemintedstyle{xcode}
+\begin{document}
+%\pagecolor{BLUE20}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{PINKD}{$\Omega ~.$}]\textcolor{PINKD}{I wrote a CLI tool for PDF.}
+
+	\item[\textcolor{WHITE01}{$\lambda ~.$}]
+\inputminted[tabsize=4, breaklines, mathescape]{bash}{main.sh}
+\end{itemize}
+\vspace*{\fill}
+
+\pagebreak
+\pgfmathparse{2pt+3.4pt}
+
+\end{document}

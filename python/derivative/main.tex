@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{v-square-equation}
+\usemintedstyle{fruity}
+\begin{document}
+\pagecolor{BLUE20}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{GREEN10}{$\Omega ~.$}]\textcolor{GREEN10}{Write a python function for calculating derivative of a function.}
+
+	\item[\textcolor{WHITE01}{$\lambda ~.$}]
+\begin{minted}[tabsize=4, breaklines, mathescape, escapeinside=\[\]]{python}
+
+
+def derivative(f, x, h):
+	
+	# $f'(x)=\dfrac{f(x+h)-f(x)}{h}$
+	
+    return (f(x + h) - f(x)) / h
+
+#Example
+def f(x):
+    return x**2
+
+derivative(f, 2, 0.01) 
+# Output: 4.01
+\end{minted}
+\end{itemize}
+\vspace*{\fill}
+\end{document}

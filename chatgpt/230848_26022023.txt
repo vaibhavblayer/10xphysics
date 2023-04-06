@@ -1,0 +1,3 @@
+Q. What is entropy?
+
+Entropy is a measure of disorder or randomness in a system. It is a thermodynamic quantity that is related to the amount of energy that is unavailable for work in a system. Entropy is often used to measure the amount of disorder or chaos in a system.

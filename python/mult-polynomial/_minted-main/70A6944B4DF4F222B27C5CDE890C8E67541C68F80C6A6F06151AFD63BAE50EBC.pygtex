@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+
+\PYG{k}{def} \PYG{n+nf}{multiply\PYGZus{}polynomials}\PYG{p}{(}\PYG{n}{poly1}\PYG{p}{,} \PYG{n}{poly2}\PYG{p}{):}
+    \PYG{n}{result} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{*} \PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{poly1}\PYG{p}{)} \PYG{o}{+} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{poly2}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{poly1}\PYG{p}{)):}
+        \PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{poly2}\PYG{p}{)):}
+            \PYG{n}{result}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{n}{j}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{poly1}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{*} \PYG{n}{poly2}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}
+    \PYG{k}{return} \PYG{n}{result}
+\end{Verbatim}

@@ -1,0 +1,12 @@
+Q. Write a python function for finding the max value in the list.
+
+def find_max(list):
+    max_value = list[0]
+    for i in list:
+        if i > max_value:
+            max_value = i
+    return max_value
+
+list = [1,2,3,4,5]
+max_value = find_max(list)
+print(max_value) # Output: 5

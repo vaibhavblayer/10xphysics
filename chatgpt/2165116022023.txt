@@ -1,0 +1,3 @@
+
+
+Python is a high-level, interpreted, general purpose programming language. It is a powerful, dynamic language that is used in many different application domains. Python is known for its easy-to-learn syntax, and its ability to handle large and complex data sets. Python has become one of the most popular programming languages and is used by software engineers, data scientists, web developers, and many more to create applications and solve problems.

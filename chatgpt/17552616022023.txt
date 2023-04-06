@@ -1,0 +1,11 @@
+Q. Write python code for animating text using manim library?
+
+from manimlib.imports import *
+
+class MyAnimation(Scene):
+    def construct(self):
+        # Create text
+        my_text = TextMobject("My Text Animation")
+     
+        # Apply animation
+        self.play(Write(my_text))

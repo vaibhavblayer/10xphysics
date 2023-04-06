@@ -1,0 +1,3 @@
+Q. What is oxymercuration and demercuration reaction in organic chemistry?
+
+Oxymercuration-demercuration is an organic reaction involving the addition of a hydroxy group to an alkene using mercuric acetate and methanol. Oxymercuration is the first step of the reaction, which involves the addition of a hydroxy group to the alkene using mercuric acetate. The second step, demercuration, involves the removal of the hydroxy group from the alkene using a base, such as sodium bicarbonate. The overall reaction results in the formation of an alcohol.

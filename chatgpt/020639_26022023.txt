@@ -1,0 +1,5 @@
+Q. Write energy of photon in latex align* environment.
+
+\begin{align*}
+E = hf
+\end{align*}

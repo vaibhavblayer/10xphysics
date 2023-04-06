@@ -1,0 +1,20 @@
+Q. Write a python function for calculating viscous force inside a fluid.
+
+def viscous_force(dynamic_viscosity, velocity_gradient):
+    """
+    Calculates the viscous force inside a fluid.
+    
+    Parameters
+    ----------
+    dynamic_viscosity : float
+        The dynamic viscosity of the fluid.
+    velocity_gradient : float
+        The velocity gradient of the fluid.
+        
+    Returns
+    -------
+    viscous_force : float
+        The viscous force inside the fluid.
+    """
+    viscous_force = dynamic_viscosity * velocity_gradient
+    return viscous_force

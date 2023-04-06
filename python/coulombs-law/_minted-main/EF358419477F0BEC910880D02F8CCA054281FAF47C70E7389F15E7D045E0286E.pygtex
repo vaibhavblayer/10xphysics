@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+
+
+\PYG{k}{def} \PYG{n+nf}{coulombs\PYGZus{}law}\PYG{p}{(}\PYG{n}{q1}\PYG{p}{,} \PYG{n}{q2}\PYG{p}{,} \PYG{n}{r}\PYG{p}{):}
+
+    \PYG{c+c1}{\PYGZsh{}$ \quad F = \dfrac{1}{4\pi\epsilon_0}\dfrac{q_1q_2}{r^2}, \quad\quad\quad k = \dfrac{1}{4\pi\epsilon_0}=8.99\times 10^9 $}
+
+    \PYG{c+c1}{\PYGZsh{} Coulomb\PYGZsq{}s constant}
+    \PYG{n}{k} \PYG{o}{=} \PYG{l+m+mf}{8.99e9}
+
+    \PYG{c+c1}{\PYGZsh{} Calculate the force}
+    \PYG{n}{force} \PYG{o}{=} \PYG{n}{k} \PYG{o}{*} \PYG{p}{(}\PYG{n}{q1} \PYG{o}{*} \PYG{n}{q2}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(}\PYG{n}{r}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{force}
+\end{Verbatim}

@@ -1,0 +1,19 @@
+Q. Write 2 physics problem of collision of exam JEE main from year 2021 in objective format with 4 options each in latex
+
+\begin{enumerate}
+    \item In a head-on collision between two objects of equal masses, the ratio between their final velocities is:
+    \begin{enumerate}
+        \item $\frac{1}{2}$
+        \item $\frac{2}{1}$
+        \item 1
+        \item $\frac{1}{4}$
+    \end{enumerate}
+    
+    \item In an elastic collision between two objects of equal masses, the ratio between their initial and final kinetic energies respectively is:
+    \begin{enumerate}
+        \item 1:2
+        \item 1:1
+        \item 2:1
+        \item 4:1
+    \end{enumerate}
+\end{enumerate}

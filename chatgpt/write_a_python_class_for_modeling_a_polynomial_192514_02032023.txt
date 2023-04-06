@@ -1,0 +1,17 @@
+Q. Write a python class for modeling a polynomial.
+
+class Polynomial:
+    def __init__(self, coefficients):
+        self.coefficients = coefficients
+ 
+    def evaluate(self, x):
+        result = 0
+        for i in range(len(self.coefficients)):
+            result += self.coefficients[i] * (x ** i)
+        return result
+ 
+    def __str__(self):
+        result = ""
+        for i in range(len(self.coefficients)):
+            result += str(self.coefficients[i]) + "x^" + str(i) + " + "
+        return result[:-3]

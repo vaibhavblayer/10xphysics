@@ -1,0 +1,3 @@
+Q. What is Bragg's law?
+
+Bragg's law is a mathematical equation used to describe the angles for coherent and incoherent scattering from a crystal lattice. It states that the angle of reflection (θ) is equal to twice the angle of incidence (2θ) multiplied by the ratio of the wavelength of the incident radiation (λ) to the inter-atomic spacing (d) of the crystal lattice: 2θ = nλ/d, where n is an integer.

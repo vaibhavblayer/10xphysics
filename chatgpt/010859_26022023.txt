@@ -1,0 +1,3 @@
+Q. Write a vim command for copping selected lines from another file into current file.
+
+:r <file_name>

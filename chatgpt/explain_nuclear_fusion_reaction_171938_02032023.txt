@@ -1,0 +1,3 @@
+Q. Explain nuclear fusion reaction.
+
+Nuclear fusion is a reaction in which two or more atomic nuclei come close enough to form one or more different atomic nuclei and subatomic particles (neutrons or protons). This reaction releases a large amount of energy. Fusion is the process that powers active stars and produces virtually all elements in a process called nucleosynthesis. The fusion of two nuclei with lower masses than iron (which, along with nickel, has the largest binding energy per nucleon) generally releases energy, while the fusion of nuclei heavier than iron absorbs energy. The opposite is true for nuclear fission.

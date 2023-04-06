@@ -1,0 +1,3 @@
+Q. Explain the nuclear fusion reaction.
+
+Nuclear fusion is a process in which two or more atomic nuclei join together, or “fuse”, to form a single heavier nucleus. During this process, matter is not conserved because some of the mass of the fusing nuclei is converted to energy, according to Einstein’s famous equation, E=mc2. This energy is released in the form of gamma rays, neutrons, and other forms of radiation. The fusion of light elements releases an enormous amount of energy, which can be used to generate electricity in a nuclear power plant.

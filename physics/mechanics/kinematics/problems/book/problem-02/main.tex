@@ -1,0 +1,153 @@
+\documentclass{article}
+\usepackage{v-problem}
+\vgeometry
+
+\begin{document}
+\vtitle[KINEMATICS]
+
+\def\pn{02}
+\def\book{A.K.}
+\def\page{24}
+\def\gdrive{https://drive.google.com/drive/folders/1RR25FWDy_RG5Dtrz-iG65_0AgnX3cMja?usp=share_link}
+
+\def\question{
+Two rings $O$ and $O'$ are put on two vertical stationary rods $AB$ and $A'B'$ respectively. An inextensible thread is fixed at point $A'$ and on ring $O$ and is passed through ring $O'$ as shown in the figure. A Assuming that ring $O'$ moves downwards at a constant velocity $v_1$ determine the velocity $v_2$ of ring $O$ if
+$\angle AOO' = \theta_0$.
+}
+
+
+\def\option{
+
+}
+
+\def\diagram{
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\def\r{0.25}
+\pic[rotate=180] (ceiling) at (0, 0) {frame=5cm};
+
+\coordinate (A) at ($(ceiling-center)+(-2, 0)$);
+\coordinate (A') at ($(ceiling-center)+(2, 0)$);
+\coordinate (B) at ($(A)+(0, -4)$);
+\coordinate (B') at ($(A')+(0, -4)$);
+\coordinate (O) at ($(A)!0.75!(B)$);
+\coordinate (O') at ($(A')!0.35!(B')$);
+
+\tzline[very thick](A)(B)
+\tzline[very thick](A')(B')
+\tzdots*(A)(A')(B)(B');
+
+\def\Mr{0.15}
+\def\mr{0.08}
+\def\offsetr{0.1}
+
+\draw[line width=0.75mm] (O) ellipse(\Mr cm and \mr cm);
+\draw[line width=0.75mm] (O') ellipse(\Mr cm and \mr cm);
+\draw (A')--($(O')+(-\offsetr, 0)$)--($(O)+(\offsetr, 0)$);
+\tzanglemark[thick](O')(O)(A){$\theta_0$}(20pt)
+
+
+\tzline+[->, thick]<0.7, 0.5>(O')(0, -1){$v_1$}[b]
+\tzline+[->, thick]<-0.7, 0.5>(O)(0, -1){$v_2$}[b]
+
+\tznode<-0.1, -0.1>(A){$A$}[bl]
+\tznode<0.1, -0.1>(A'){$A'$}[br]
+\tznode<-0.2, 0>(O){$O$}[l]
+\tznode<0.2, 0>(O'){$O'$}[r]
+\tznode(B){$B$}[left=1mm]
+\tznode(B'){$B'$}[right=1mm]
+
+
+\end{tikzpicture}
+\end{center}
+}
+
+\vspace*{\fill}
+\begin{tikzpicture}
+	\node[qnumber] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\book \quad \page]};	\node[diagram] (d) [below=1cm of q.south] {\diagram};
+	\node[option] (o) [below=0.1cm of d.south] {\option};
+\end{tikzpicture}	
+\vspace*{\fill}
+
+\pagebreak
+\vtitle[SOLUTION]
+
+\texttt{
+As the length of the string is constant\_
+\[
+OO' + O'A' = L_\texttt{string}
+\]
+}
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\def\r{0.25}
+\pic[rotate=180] (ceiling) at (0, 0) {frame=5cm};
+
+\coordinate (A) at ($(ceiling-center)+(-2, 0)$);
+\coordinate (A') at ($(ceiling-center)+(2, 0)$);
+\coordinate (B) at ($(A)+(0, -4)$);
+\coordinate (B') at ($(A')+(0, -4)$);
+\coordinate (O) at ($(A)!0.75!(B)$);
+\coordinate (O') at ($(A')!0.35!(B')$);
+
+\tzline[very thick](A)(B)
+\tzline[very thick](A')(B')
+\tzdots*(A)(A')(B)(B');
+\tzline+[dashed, PINKD](O')(-4, 0){$P$}[l]
+
+\def\Mr{0.15}
+\def\mr{0.08}
+\def\offsetr{0.1}
+
+\draw[line width=0.75mm] (O) ellipse(\Mr cm and \mr cm);
+\draw[line width=0.75mm] (O') ellipse(\Mr cm and \mr cm);
+\draw (A')--($(O')+(-\offsetr, 0)$)--($(O)+(\offsetr, 0)$);
+\tzanglemark[thick](O')(O)(A){$\theta_0$}(20pt)
+
+
+\tzline+[->, thick]<0.7, 0.5>(O')(0, -1){$v_1$}[b]
+\tzline+[->, thick]<-0.7, 0.5>(O)(0, -1){$v_2$}[b]
+
+\tznode<-0.1, -0.1>(A){$A$}[bl]
+\tznode<0.1, -0.1>(A'){$A'$}[br]
+\tznode<-0.2, 0>(O){$O$}[l]
+\tznode<0.2, 0>(O'){$O'$}[r]
+\tznode(B){$B$}[left=1mm]
+\tznode(B'){$B'$}[right=1mm]
+\end{tikzpicture}
+\end{center}
+\addtolength{\jot}{1ex}
+\begin{align*}
+OO' + O'A' &= L\\
+\sqrt{(PO)^2 + (PO')^2} + O'A' &= L\\
+\sqrt{(AO-AP)^2 + (PO')^2} + O'A' &= L\\
+\sqrt{(AO-O'A')^2 + (PO')^2} + O'A' &= L\\
+(AO-O'A')^2 + (PO')^2  &= (L-O'A')^2 \hfill \quad\cdots (1)
+\end{align*}
+
+\pagebreak
+
+\texttt{Now, differentiate the above equation w.r.t. time\_}
+\addtolength{\jot}{2ex}
+\begin{align*}
+(AO-O'A')^2 + (PO')^2  &= (L-O'A')^2\\
+2\left(AO-O'A'\right)\cdot \left(\dfrac{\d{AO}}{\d{t}} -\dfrac{\d{O'A'}}{\d{t}} \right) + 0 &=2\left(L-O'A'\right) \cdot \left( 0 - \dfrac{\d{O'A'}}{\d{t}} \right) \\ 
+2(PO) \cdot \left( v_2 -v_1\right) &= 2(OO')(-v_1)\\
+2\cdot OO'\cos\theta_0 \cdot (v_2-v_1) &= 2(OO')(-v_1)\\ 
+\cos\theta_0 \cdot (v_2-v_1) &= (-v_1)\\ 
+v_2 &= - v_1\left(\dfrac{1-\cos\theta_0}{\cos\theta_0}\right)\ans\\
+\end{align*}
+\texttt{Negative means the ring $O$ is moving upward.}
+\pagebreak
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+\end{document}

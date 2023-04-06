@@ -1,0 +1,20 @@
+Q. Write a cli tool using cloup and click module in python.
+
+# import the click and cloud modules
+import click
+from cloud import Cloud
+
+# create a click command
+@click.command()
+@click.option('--name', help='Name of the cloud instance.')
+@click.option('--size', help='Size of the cloud instance.')
+def create_cloud(name, size):
+    """Create a cloud instance with the given name and size."""
+    
+    # create a cloud instance
+    cloud = Cloud(name, size)
+    cloud.create()
+
+# call the create_cloud command
+if __name__ == '__main__':
+    create_cloud()

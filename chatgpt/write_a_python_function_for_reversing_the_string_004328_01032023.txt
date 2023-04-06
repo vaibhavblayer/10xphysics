@@ -1,0 +1,4 @@
+Q. Write a python function for reversing the string.
+
+def reverse_string(string):
+  return string[::-1]

@@ -1,0 +1,6 @@
+Q. Write a python function for calculating de-Broglie wavelength for electron.
+
+def deBroglieWavelength(mass, velocity):
+    h = 6.626e-34 # Planck's constant
+    c = 3.0e+8 # Speed of light
+    return h / (mass * velocity * c)

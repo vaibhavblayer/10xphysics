@@ -1,0 +1,3 @@
+Q. Define differential equation.
+
+A differential equation is an equation that relates a function with its derivatives. It is used to describe the behavior of a system in terms of its changing state over time.

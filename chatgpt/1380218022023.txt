@@ -1,0 +1,71 @@
+Q. Write 10 JEE Main previous yeear questions of physics of center of mass in objective format with 4 options each in latex
+
+Q1. A uniform rod of mass M and length L is suspended from a point on its end by a light string. The center of mass of the rod is
+
+A. at the point of suspension
+B. at the midpoint of the rod
+C. at a distance L/4 from the point of suspension
+D. at a distance 3L/4 from the point of suspension
+
+Q2. A thin rod of mass M and length L is suspended from one end and has a particle of mass m at its other end. The center of mass of the rod and particle system is
+
+A. at the point of suspension
+B. at the midpoint of the rod
+C. at a distance L/4 from the point of suspension
+D. at a distance 3L/4 from the point of suspension
+
+Q3. Two particles of masses m1 and m2 are separated by a distance L. The center of mass of the two particles is
+
+A. at the midpoint of the line joining the two particles
+B. at the point m1
+C. at the point m2
+D. none of the above
+
+Q4. Two identical particles each of mass m are separated by a distance L. The center of mass of the two particles is
+
+A. at the midpoint of the line joining the two particles
+B. at the point m1
+C. at the point m2
+D. none of the above
+
+Q5. Two particles of masses m1 and m2 are connected by a massless rigid rod of length L. The center of mass of the system is
+
+A. at the midpoint of the rigid rod
+B. at the point m1
+C. at the point m2
+D. none of the above
+
+Q6. A light rod of length L and mass M is suspended from one end by a light string. The center of mass of the rod is
+
+A. at the point of suspension
+B. at the midpoint of the rod
+C. at a distance L/4 from the point of suspension
+D. at a distance 3L/4 from the point of suspension
+
+Q7. Two identical particles each of mass m are connected by a massless rigid rod of length L. The center of mass of the system is
+
+A. at the midpoint of the rigid rod
+B. at the point m1
+C. at the point m2
+D. none of the above
+
+Q8. A uniform rod of mass M and length L is suspended from one end by a light string. The center of mass of the rod is
+
+A. at the point of suspension
+B. at the midpoint of the rod
+C. at a distance L/4 from the point of suspension
+D. at a distance 3L/4 from the point of suspension
+
+Q9. A thin rod of length L and mass M is supported at one end and has a particle of mass m at its other end. The center of mass of the rod and particle system is
+
+A. at the point of support
+B. at the midpoint of the rod
+C. at a distance L/4 from the point of support
+D. at a distance 3L/4 from the point of support
+
+Q10. Two particles of masses m1 and m2 are connected by a massless rigid rod of length L. The center of mass of the system is
+
+A. at the midpoint of the rigid rod
+B. at the point m1
+C. at the point m2
+D. none of the above

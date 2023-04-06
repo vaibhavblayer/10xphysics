@@ -1,0 +1,6 @@
+Q. Write code in tikz for a drawing a capsule.
+
+\begin{tikzpicture}[scale=1]
+\draw[thick] (0,0) ellipse (3 and 1.5);
+\draw[thick] (0,1.5) -- (0,2.5);
+\end{tikzpicture}

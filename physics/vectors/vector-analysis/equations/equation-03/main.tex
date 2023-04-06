@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage{v-equation}
+%\usepackage{pgfmath}
+\usepackage{pgf-interference}
+%\usepackage{termsim}
+\geometry{
+paperwidth=5in, 
+paperheight=5in, 
+top=15mm, 
+bottom=15mm, 
+left=10mm, 
+right=10mm
+}
+
+%\tikzset{>=latex, very thick} 
+
+\begin{document}
+\Large
+
+\def\R{1.5}
+\def\r{0.05}
+\def\N{9}
+
+\begin{tikzpicture}[remember picture, overlay]
+	\node at (current page.center)[scale=15, red, opacity=0.1]{$\int$};
+\end{tikzpicture}
+
+% RADIAL OUTWARD
+\begin{center}
+\begin{tikzpicture}
+[scale=2, very thick]
+  \fill (0,0) circle (\r);
+  \foreach \i [evaluate={\ang=\i*360/\N;}] in {0,...,\N}{
+    \draw[->] (\ang:0.1*\R) --++ (\ang:\R);
+  }
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+\nabla \cdot \vec{a} > 0
+\end{align*}
+
+\pagebreak
+
+% RADIAL INWARD
+\begin{center}
+\begin{tikzpicture}
+[scale=2, very thick]
+  \fill (0,0) circle (\r);
+  \foreach \i [evaluate={\ang=\i*360/\N;}] in {0,...,\N}{
+    \draw[->] (\ang:1.1*\R) -- (\ang:0.1*\R);
+  }
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+\nabla \cdot \vec{a} < 0
+\end{align*}
+
+\pagebreak
+
+% ZERO
+\begin{center}
+\begin{tikzpicture}
+[scale=2, very thick]
+  \def\ang{60}
+  \fill (0,0) circle (\r);
+  \foreach \x/\y in {-1/0,-1/1,0/1,1/1,1/0,-1/-1,0/-1,1/-1}{
+    \draw[->] (\x*0.5*\R,\y*0.5*\R) ++ (\ang-180:\R/2) --++ (\ang:\R);
+  }
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+\nabla \cdot \vec{a} = 0
+\end{align*}
+
+\pagebreak
+% ZERO - solenoid
+\begin{center}
+\begin{tikzpicture}
+[scale=2, very thick]
+  \def\ang{60}
+  \def\N{6}
+  \fill (0,0) circle (\r);
+  %\foreach \x/\y in {-1/0,-1/1,0/1,1/1,1/0,-1/-1,0/-1,1/-1}{
+  %  \draw[vector] (\x*0.5*\R,\y*0.5*\R) --++ (-\y*0.2*\R,\x*0.2*\R);
+  %}
+  \foreach \R in {0.44,0.88}{
+    \foreach \i [evaluate={\ang=\i*360/\N;}] in {1,...,\N}{
+      \draw[->] (\ang:\R) --++ (\ang+90:\R);
+    }
+  }
+  %\foreach \i [evaluate={\ang=\i*360/\N;}] in {1,...,\N}{
+  %  \draw[vector] (\x*0.5*\R,\y*0.5*\R) ++ (\ang-180:\R/2) --++ (\ang:\R);
+  %}
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+\nabla \cdot \vec{a} = 0
+\end{align*}
+
+\pgfmathparse{2pt+3.4pt}
+\pgfmathresult \\
+\pgfmathparse{ceil(sin(pi/2 r))}
+\pgfmathresult
+
+\begin{tikzpicture}
+[scale=3]
+  \draw [->] (0,0) -- (1,0,0) node [right] {$x$};
+  \draw [->] (0,0) -- (0,1,0) node [above] {$y$};
+  \draw [->] (0,0) -- (0,0,1) node [below left] {$z$};
+  \pgfpathcircle{\pgfpointcylindrical{30}{1}{.5}}{1pt}
+  \pgfusepath{fill}
+  \draw[red] (0,0) -- (0,0,.5) -- +(30:1);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \begin{pgfscope}
+    {
+      \pgfsetarrows{-latex}
+      \pgfsetlinewidth{2pt}
+      \pgfpathmoveto{\pgfpointorigin}\pgfpathlineto{\pgfpoint{2ex}{2ex}}
+      \pgfusepath{stroke}
+    }
+    \pgfpathmoveto{\pgfpoint{3ex}{0ex}}\pgfpathlineto{\pgfpoint{5ex}{2ex}}
+    \pgfusepath{stroke}
+  \end{pgfscope}
+  \pgfpathmoveto{\pgfpoint{6ex}{0ex}}\pgfpathlineto{\pgfpoint{8ex}{2ex}}
+  \pgfusepath{stroke}
+\end{tikzpicture}
+
+\tikz{\draw[help lines] (-1,-.5) grid (1,.5);
+     \pgftext[base] {lovely}}
+
+%\begin{center}
+%\begin{tikzpicture}
+%\pgfinterferencepattern{wavelength=590e-9}
+%\pgfinterferencepattern{slits=5}
+%\pgfinterferencepattern{wavelength=350e-9,screen-color=white}
+%\pgfinterferencepattern{ruler=above}
+%\end{tikzpicture}
+%\end{center}
+
+%\centering
+%\termset{os=mac,theme=dark}
+%\begin{terminal}{terminal title}
+%  %xxxxxx@xxxxxx-lap:~$ ls
+%  Desktop     Downloads   p2         Public
+%  Documents   Music       Pictures   snap
+%  xxxxxx@xxxxxx-lap:~
+%\end{terminal}
+
+\begin{pgfpicture}
+\pgfpathmoveto{\pgfpoint{0}{0}}
+\pgfpathlineto{\pgfpoint{100bp}{0bp}}
+\pgfusepath{stroke}
+\end{pgfpicture}
+
+     
+
+\end{document}

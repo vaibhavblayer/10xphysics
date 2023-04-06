@@ -1,0 +1,3 @@
+Q. Explain geometrical meaning of curl in physics.
+
+In physics, the curl of a vector field is a measure of its local rotational or twisting tendency. It is a vector operator that describes the circulation of a vector field around a given point. It is a measure of the rate of change of the vector field in a given direction. The curl of a vector field is a measure of the amount of rotation or twisting of the vector field at a given point. It is a measure of the local vorticity of the vector field.

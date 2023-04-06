@@ -1,0 +1,104 @@
+Q. None"use strict";
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _objectSpread2 = _interopRequireDefault(require("@babel/runtime/helpers/objectSpread"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _lodash = _interopRequireDefault(require("lodash.isfunction"));
+
+var _checkProps = _interopRequireDefault(require("./check-props"));
+
+var _docs = _interopRequireDefault(require("./docs.json"));
+
+var _constants = require("../../utilities/constants");
+
+var propTypes = {
+  /**
+   * **Assistive text for accessibility.**
+   * This object is merged with the default props object on every render.
+   * * `toggleOpen`: Label for the toggle open button. The default is `Toggle details`.
+   * * `toggleClose`: Label for the toggle close button. The default is `Toggle details`.
+   */
+  assistiveText: _propTypes.default.shape({
+    toggleOpen: _propTypes.default.string,
+    toggleClose: _propTypes.default.string
+  }),
+
+  /**
+   * HTML id for component.
+   */
+  id: _propTypes.default.string,
+
+  /**
+   * CSS classes to be added to the assisting elements.
+   */
+  className: _propTypes.default.oneOfType([_propTypes.default.array, _propTypes.default.object, _propTypes.default.string]),
+
+  /**
+   * The summary displays the collapse/expand toggle and the content summary.
+   */
+  summary: _propTypes.default.string.isRequired,
+
+  /**
+   * Determines the collapse/expand state.
+   */
+  isOpen: _propTypes.default.bool,
+
+  /**
+   * Triggered when the Collapsible is opened or closed.
+   */
+  onToggleOpen: _propTypes.default.func,
+
+  /**
+   * The content of the collapsible.
+   */
+  children: _propTypes.default.node.isRequired
+};
+var defaultProps = {
+  assistiveText: {
+    toggleOpen: 'Toggle details',
+    toggleClose: 'Toggle details'
+  },
+  isOpen: false
+};
+/**
+ * The Collapsible component wraps content and helps manage the open/closed state.
+ */
+
+var Collapsible =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inherits2.default)(Collapsible, _React$Component);
+
+  function Collapsible(props) {
+    var _this;
+
+    (0, _classCallCheck2.default)(this, Collapsible);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0

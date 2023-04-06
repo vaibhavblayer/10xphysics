@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+	\node[qnumber] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\book \quad \page]};
+	\node[diagram] (d) [below=1cm of q.south] {\diagram};
+	\node[option] (o) [below=0.1cm of d.south] {\option};
+\end{tikzpicture}	
+\vspace*{\fill}
+
+\pagebreak
+\vtitle[\texttt{SOLUTION}]
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\def\tangentat{0.8}
+\tzline[dashed]"HL"(0, 0)(5, 0)
+\tzline[dashed](0, 0)(0, -4)
+\tzline[|<->|]<-0.5, 0>(0, 0)(0, -4){$l$}[l=2mm, midway]
+\tzto[out=90,in=180,dashed]"path"(0,-4)(5,0)
+\tztangentat[dashed, thick]"TL"{path}{\tangentat}[\tangentat:3.5]
+\tztangentat[->, thick]{path}{\tangentat}[\tangentat:\tangentat + 1]{$\vec{v}$}[al]
+\tzXpoint{HL}{TL}(X)
+\tzline+[->](X)(1, 0){$\vec{u}$}[ar=2mm]
+\tzvXpointat*{path}{\tangentat}{$A$}[above left=2mm](5pt)
+\tzdot*(X)(5pt)
+\tznode(X){$B$}[a=2mm]
+\tzvXpointat{TL}{3}(A)
+\tzanglemark(5, 0)(X)(A){$\theta$}
+\end{tikzpicture}

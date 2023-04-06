@@ -1,0 +1,3 @@
+Q. Define integral calculus.
+
+Integral calculus is a branch of mathematics that deals with the calculation of integrals, which are used to determine the area under a curve or the volume of a solid. It is used to solve problems in physics, engineering, economics, and other areas of science and technology. Integral calculus is closely related to differential calculus, which is used to calculate derivatives.

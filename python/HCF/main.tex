@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{v-square-equation}
+\usemintedstyle{algol}
+\begin{document}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{black}{$\Omega ~.$}]\textcolor{black}{Write a python function for finding HCF.}
+	\item[\textcolor{BLUE20}{$\lambda ~.$}]
+\begin{minted}[tabsize=4, breaklines]{python}
+
+
+def hcf(x, y):
+  
+  # choose the smaller number
+  if x > y:
+    smaller = y
+  else:
+    smaller = x
+  
+  # loop through the range of the smaller number
+  for i in range(1, smaller+1):
+    if((x % i == 0) and (y % i == 0)):
+      hcf = i
+      
+  return hcf
+
+\end{minted}
+\end{itemize}
+\vspace*{\fill}
+\end{document}

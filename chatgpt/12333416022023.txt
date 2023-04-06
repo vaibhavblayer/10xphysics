@@ -1,0 +1,7 @@
+Q. Write code in tikz for a drawing a capsule.
+
+\begin{tikzpicture}
+\draw[fill=red,thick] (0,2) ellipse (2 and 1);
+\draw[fill=red,thick] (0,-2) ellipse (2 and 1);
+\draw[fill=white] (0,0) ellipse (2 and 0.7);
+\end{tikzpicture}

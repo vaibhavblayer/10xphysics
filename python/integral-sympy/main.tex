@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{v-square-equation}
+\usemintedstyle{xcode}
+\begin{document}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{REDD}{$\Omega ~.$}]\textcolor{REDD}{Write a python function for finding integral using sympy.}
+
+	\item[\textcolor{black}{$\lambda ~.$}]
+\begin{minted}[tabsize=4, breaklines, mathescape]{python}
+
+
+import sympy
+
+def integrate(f, var):
+    return sympy.integrate(f, var)
+
+#Example
+x = sympy.Symbol('x')
+f = x**2
+
+integrate(f, x)
+#Output: x**3/3
+\end{minted}
+\end{itemize}
+\vspace*{\fill}
+\end{document}

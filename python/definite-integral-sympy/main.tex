@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{v-square-equation}
+\usemintedstyle{xcode}
+\begin{document}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{REDD}{$\Omega ~.$}]\textcolor{REDD}{Write a python function for finding definite integral using sympy.}
+
+	\item[\textcolor{black}{$\lambda ~.$}]
+\begin{minted}[tabsize=4, breaklines, mathescape]{python}
+
+
+import sympy
+
+def definite_integral(f, a, b):
+    x = sympy.Symbol('x')
+    return sympy.integrate(f, (x, a, b))
+
+# Example
+f = sympy.sin(x)
+a = 0
+b = sympy.pi
+
+print(definite_integral(f, a, b))
+# 2
+\end{minted}
+\end{itemize}
+\vspace*{\fill}
+\end{document}

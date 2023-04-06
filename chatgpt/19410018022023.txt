@@ -1,0 +1,16 @@
+Q. Write python code for animating a point moving on a circle using manim library.
++
++## Requirements
++
++- Python 3.7
++- Manim
++
++## Usage
++
++```
++python3 -m manim <file_name> <class_name> -pl
++```
++
++## License
++
++[MIT](https://choosealicense.com/licenses/mit/)

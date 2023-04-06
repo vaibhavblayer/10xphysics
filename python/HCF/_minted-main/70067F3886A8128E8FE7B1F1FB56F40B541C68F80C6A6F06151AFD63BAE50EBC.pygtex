@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+
+\PYG{k}{def} \PYG{n+nf}{hcf}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+
+  \PYG{c+c1}{\PYGZsh{} choose the smaller number}
+  \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{n}{y}\PYG{p}{:}
+    \PYG{n}{smaller} \PYG{o}{=} \PYG{n}{y}
+  \PYG{k}{else}\PYG{p}{:}
+    \PYG{n}{smaller} \PYG{o}{=} \PYG{n}{x}
+
+  \PYG{c+c1}{\PYGZsh{} loop through the range of the smaller number}
+  \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{smaller}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{):}
+    \PYG{k}{if}\PYG{p}{((}\PYG{n}{x} \PYG{o}{\PYGZpc{}} \PYG{n}{i} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{o+ow}{and} \PYG{p}{(}\PYG{n}{y} \PYG{o}{\PYGZpc{}} \PYG{n}{i} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)):}
+      \PYG{n}{hcf} \PYG{o}{=} \PYG{n}{i}
+
+  \PYG{k}{return} \PYG{n}{hcf}
+
+\end{Verbatim}

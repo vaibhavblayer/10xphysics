@@ -1,0 +1,7 @@
+Q. Write a python recursive function for calculating factorial.
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)

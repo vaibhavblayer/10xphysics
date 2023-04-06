@@ -1,0 +1,19 @@
+Q. Write 2 questions from year 2021 from physics of chapter collision in objective format with 4 options each in latex
+
+\begin{enumerate}
+\item[Q1] Which of the following is the definition of collision in physics?
+\begin{enumerate}
+\item[A.] A change in momentum
+\item[B.] A change in speed
+\item[C.] A change in energy
+\item[D.] A change in velocity
+\end{enumerate}
+
+\item[Q2] In which of the following types of collision is the total kinetic energy conserved?
+\begin{enumerate}
+\item[A.] Elastic collision
+\item[B.] Inelastic collision
+\item[C.] Perfectly elastic collision
+\item[D.] Perfectly inelastic collision
+\end{enumerate}
+\end{enumerate}

@@ -1,0 +1,3 @@
+Q. What is Young's Double slit experiment?
+
+Young's Double Slit experiment is a classic experiment in physics that demonstrates the wave-like nature of light. It was first performed by Thomas Young in 1801. In the experiment, a beam of light is directed at a barrier with two parallel slits cut into it. The light passing through the slits is then projected onto a screen, where it forms an interference pattern of alternating light and dark bands. This pattern is caused by the interference of the light waves passing through the two slits. The experiment demonstrates that light behaves like a wave, and not like a particle, as was previously thought.

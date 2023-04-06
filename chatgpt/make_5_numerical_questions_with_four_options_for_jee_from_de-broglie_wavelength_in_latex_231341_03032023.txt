@@ -1,0 +1,39 @@
+Q. Make 5 numerical questions with four options for jee from de-Broglie wavelength in latex.
+
+\begin{enumerate}
+    \item What is the de-Broglie wavelength of a particle with a momentum of $2.5 \times 10^{-20}$ kg m/s?
+    \begin{enumerate}
+        \item $1.0 \times 10^{-20}$ m
+        \item $2.5 \times 10^{-20}$ m
+        \item $5.0 \times 10^{-20}$ m
+        \item $7.5 \times 10^{-20}$ m
+    \end{enumerate}
+    \item What is the de-Broglie wavelength of a particle with a momentum of $1.0 \times 10^{-22}$ kg m/s?
+    \begin{enumerate}
+        \item $1.0 \times 10^{-22}$ m
+        \item $2.5 \times 10^{-22}$ m
+        \item $5.0 \times 10^{-22}$ m
+        \item $7.5 \times 10^{-22}$ m
+    \end{enumerate}
+    \item What is the de-Broglie wavelength of a particle with a momentum of $3.0 \times 10^{-19}$ kg m/s?
+    \begin{enumerate}
+        \item $1.0 \times 10^{-19}$ m
+        \item $2.5 \times 10^{-19}$ m
+        \item $5.0 \times 10^{-19}$ m
+        \item $7.5 \times 10^{-19}$ m
+    \end{enumerate}
+    \item What is the de-Broglie wavelength of a particle with a momentum of $4.5 \times 10^{-21}$ kg m/s?
+    \begin{enumerate}
+        \item $1.0 \times 10^{-21}$ m
+        \item $2.5 \times 10^{-21}$ m
+        \item $5.0 \times 10^{-21}$ m
+        \item $7.5 \times 10^{-21}$ m
+    \end{enumerate}
+    \item What is the de-Broglie wavelength of a particle with a momentum of $6.0 \times 10^{-18}$ kg m/s?
+    \begin{enumerate}
+        \item $1.0 \times 10^{-18}$ m
+        \item $2.5 \times 10^{-18}$ m
+        \item $5.0 \times 10^{-18}$ m
+        \item $7.5 \times 10^{-18}$ m
+    \end{enumerate}
+\end{enumerate}

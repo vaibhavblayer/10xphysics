@@ -1,0 +1,3 @@
+Q. What is differentiability?
+
+Differentiability is the quality of a function or equation that enables it to be differentiated with respect to a variable. A function is said to be differentiable at a point if the derivative (slope) of the function at that point exists.

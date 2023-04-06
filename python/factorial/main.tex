@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{v-square-equation}
+\usemintedstyle{fruity}
+\begin{document}
+\pagecolor{BLUE20}
+\ttfamily
+\sloppy
+\vspace*{\fill}
+\begin{itemize}
+	\item[\textcolor{GREEN10}{$\Omega ~.$}]\textcolor{GREEN10}{Write a python recursive function for calculating factorial.}
+
+	\item[\textcolor{WHITE01}{$\lambda ~.$}]
+\begin{minted}[tabsize=4, breaklines, mathescape]{python}
+
+def factorial(n):
+	
+	# $n! = n\cdot(n-1)!$
+	# $0! = 1$
+
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+      
+factorial(5) 
+ 
+# Output:
+# 120
+\end{minted}
+\end{itemize}
+\vspace*{\fill}
+\end{document}

@@ -1,0 +1,3 @@
+
+
+ChatGPT is an open source chatbot framework based on the popular GPT-3 natural language processing (NLP) model. It provides an easy-to-use API for building chatbots that can understand and respond to natural language input. ChatGPT enables developers to create powerful conversational systems that can understand context and provide personalized responses to user queries.

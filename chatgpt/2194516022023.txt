@@ -1,0 +1,5 @@
+Q. Write tikz code for drawing rhombus.
+
+\begin{tikzpicture}
+\draw (0,0) -- (1,1) -- (2,0) -- (1,-1) -- cycle;
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+Q. Write a python decorator.
+
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before calling " + func.__name__)
+        func(*args, **kwargs)
+        print("After calling " + func.__name__)
+    return wrapper
+
+@my_decorator
+def say_hello(name):
+    print("Hello " + name)
+
+say_hello("John")
+
+# Output:
+# Before calling say_hello
+# Hello John
+# After calling say_hello

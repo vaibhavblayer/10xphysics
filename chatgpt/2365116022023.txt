@@ -1,0 +1,11 @@
+Q. Write python code for animating a hexagon using manim module.
+
+from manimlib.imports import *
+
+class Hexagon(Scene):
+    def construct(self):
+        hexagon = RegularPolygon(n = 6, start_angle = TAU/6, color = WHITE, fill_opacity = 1, radius = 2)
+        self.play(ShowCreation(hexagon))
+        self.play(Rotate(hexagon, angle = TAU/3))
+        self.play(Rotate(hexagon, angle = TAU/3))
+        self.play(Rotate(hexagon, angle = TAU/3))

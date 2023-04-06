@@ -1,0 +1,3 @@
+Q. Why the acidity of methenol is greater than water?
+
+Methanol is a polar molecule, meaning that it has an uneven distribution of electrons. This makes it more likely to form hydrogen bonds with water molecules, which increases the acidity of the methanol. Water, on the other hand, is a nonpolar molecule and does not form hydrogen bonds as easily. This makes it less acidic than methanol.

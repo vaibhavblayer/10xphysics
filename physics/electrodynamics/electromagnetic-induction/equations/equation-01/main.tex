@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{v-equation}
+
+\vgeometry[5][5]
+
+\newcommandx*\varea[5][1=title, 2=0,3=0,4=$d\vec{S}$, 5=$\vec{B}$, usedefault=@]{
+	%\coordinate (O) at (0, 0);
+	\tzcoors(3,1.5)(A)(5,2)(B)(5.5,3)(C)(4.5,4)(D)(2.5,3)(E);
+	%\tzdots*<#2, #3>(A)(B)(C)(D)(E);
+	\tztos[#1]<#2, #3>
+		(A)[out=-30,in=210]
+		(B)[out=30,in=-90]
+		(C)[out=90,in=-30]
+		(D)[out=150,in=80]
+		(E)[out=-90,in=150]
+		(A);
+	\coordinate (O) at ($0.5*(A)+0.5*(D)$);
+	\draw[pattern=crosshatch] (O) --++(1, 0)--++(0.3, 0.4)coordinate (X)--++(-1, 0)--cycle;
+	\coordinate (c) at ($0.5*(O)+0.5*(X)$);
+	\coordinate (a) at ($0.5*(O)+0.5*(X)+(1, 1.3)$);
+	\coordinate (b) at ($0.5*(O)+0.5*(X)+(0, 1.5)$);
+	\tzline+[->](c)(0, 1.5){#4}[a]
+	\tzline+[->](c)(1, 1.3){#5}[ar]
+	\tzanglemark(a)(c)(b){$\theta$}
+}
+
+
+\begin{document}
+\vtitle[magnetic flux]
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+	\begin{scope}[scale=1.3]
+	\varea[pattern=dots]
+	\end{scope}
+	%\tzdot*(0, 0)
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+\phi_B = \oint \vec{B} \cdot d\vec{S}
+\end{align*}
+\vspace*{\fill}
+
+\pagebreak
+\vspace*{\fill}
+\begin{align*}
+\phi_B &- \texttt{magnetic flux}\\
+\vec{B} &- \texttt{magnetic field}\\
+\vec{S} &- \texttt{area vector}
+\end{align*}
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{https://drive.google.com/drive/folders/1LJujyFVL5gzN8l7O2zfd9jXW5Ad0cJrk?usp=share_link}}
+\end{center}
+\vspace*{\fill}
+
+\pagebreak
+
+\begin{center}
+\begin{tikzpicture}
+\coordinate (a) at (0, 0);
+\coordinate (b) at (2, 1);
+
+\draw[postaction=decorate, mark={at pos=0.5 with coordinate(c)}] (a)--(b);
+\draw (c)--++(2, 0);
+\end{tikzpicture}
+\end{center}
+\end{document}

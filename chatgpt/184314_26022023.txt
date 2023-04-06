@@ -1,0 +1,6 @@
+Q. Write a function with two inputs in python.
+
+def add_numbers(x, y):
+  return x + y
+
+# This function takes two numbers as inputs and returns their sum.

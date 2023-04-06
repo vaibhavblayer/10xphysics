@@ -1,0 +1,3 @@
+Q. What is chatGPT ?
+
+ChatGPT is an open-source natural language processing (NLP) chatbot that uses the GPT-3 language model. It is designed to generate human-like conversations in response to user input. It can be used to create virtual assistants, customer service bots, and other conversational applications.

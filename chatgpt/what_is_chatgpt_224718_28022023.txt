@@ -1,0 +1,3 @@
+Q. What is chatGPT ?
+
+ChatGPT is an AI-powered chatbot that uses natural language processing (NLP) to generate human-like conversations. It is designed to help businesses automate customer service conversations and provide personalized customer experiences. ChatGPT can be used to answer customer inquiries, provide product information, and even help with sales and marketing.

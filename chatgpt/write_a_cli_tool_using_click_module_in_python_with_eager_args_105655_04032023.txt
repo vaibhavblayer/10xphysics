@@ -1,0 +1,13 @@
+Q. Write a cli tool using click module in python with eager args.
+
+import click
+
+@click.command()
+@click.option('--name', prompt='Your name', help='Your name')
+@click.option('--age', prompt='Your age', help='Your age')
+@click.option('--gender', prompt='Your gender', help='Your gender')
+def cli(name, age, gender):
+    click.echo('Hello {}, you are {} years old and your gender is {}'.format(name, age, gender))
+
+if __name__ == '__main__':
+    cli()

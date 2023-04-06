@@ -1,0 +1,3 @@
+Q. Define strain in physics.
+
+In physics, strain is a measure of the deformation of an object due to an applied force. It is defined as the ratio of the change in length of an object to its original length. Strain can be expressed as a fraction, a percentage, or in terms of parts per million (ppm).

@@ -1,0 +1,12 @@
+Q. Write python code for creating cli tool using click module.
+
+import click
+
+@click.command()
+@click.option('--name', prompt='Your name',
+help='The name of the user')
+def hello(name):
+    click.echo('Hello %s!' % name)
+
+if __name__ == '__main__':
+    hello()

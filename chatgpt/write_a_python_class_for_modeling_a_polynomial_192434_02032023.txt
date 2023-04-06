@@ -1,0 +1,24 @@
+Q. Write a python class for modeling a polynomial.
+
+class Polynomial:
+    def __init__(self, coefficients):
+        self.coefficients = coefficients
+
+    def evaluate(self, x):
+        result = 0
+        for i, c in enumerate(self.coefficients):
+            result += c * x**i
+        return result
+
+    def __str__(self):
+        terms = []
+        for i, c in enumerate(self.coefficients):
+            if c == 0:
+                continue
+            if i == 0:
+                terms.append(str(c))
+            elif i == 1:
+                terms.append("{}x".format(c))
+            else:
+                terms.append("{}x^{}".format(c, i))
+        return " + ".join(terms)

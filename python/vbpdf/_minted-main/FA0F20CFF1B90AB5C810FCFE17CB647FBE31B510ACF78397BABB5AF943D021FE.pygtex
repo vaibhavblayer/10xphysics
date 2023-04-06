@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+pip\PYG{+w}{ }install\PYG{+w}{ }vbpdf
+
+
+vbpdf\PYG{+w}{ }\PYGZhy{}h
+
+Usage:\PYG{+w}{ }vbpdf\PYG{+w}{ }\PYG{o}{[}OPTIONS\PYG{o}{]}\PYG{+w}{ }COMMAND\PYG{+w}{ }\PYG{o}{[}ARGS\PYG{o}{]}...
+
+Options:
+\PYG{+w}{  }\PYGZhy{}h,\PYG{+w}{ }\PYGZhy{}\PYGZhy{}help\PYG{+w}{  }Show\PYG{+w}{ }this\PYG{+w}{ }message\PYG{+w}{ }and\PYG{+w}{ }exit.
+
+Commands:
+\PYG{+w}{  }overlay\PYG{+w}{  }Annotates\PYG{+w}{ }any\PYG{+w}{ }pdf\PYG{+w}{ }file.
+\PYG{+w}{  }split\PYG{+w}{    }Splits\PYG{+w}{ }any\PYG{+w}{ }pdf\PYG{+w}{ }file.
+\PYG{+w}{  }topng\PYG{+w}{    }Converts\PYG{+w}{ }pdf\PYG{+w}{ }pages\PYG{+w}{ }into\PYG{+w}{ }pngs
+
+\end{Verbatim}

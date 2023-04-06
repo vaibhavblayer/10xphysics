@@ -1,0 +1,14 @@
+Q. Write a cli tool using click module in python with eager and callback.
+
+import click
+
+@click.command()
+@click.option('--name', prompt='What is your name?',
+              help='The person to greet.')
+@click.option('--greeting', prompt='What is your greeting?',
+              help='The greeting to use.')
+def cli(name, greeting):
+    click.echo('{0}, {1}!'.format(greeting, name))
+
+if __name__ == '__main__':
+    cli()

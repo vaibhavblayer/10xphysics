@@ -1,0 +1,43 @@
+Q. Write 5 JEE Main previous year questions from physics of collision in objective format with 4 options each in latex
+
+\begin{enumerate}
+\item A particle of mass m moving with velocity v collides elastically with a stationary particle of same mass. Then, the magnitude of the velocity of the particles after collision is
+\begin{enumerate}
+\item v
+\item 0
+\item 2v
+\item $\frac{v}{2}$
+\end{enumerate}
+
+\item Two bodies of masses m and 2m move towards each other with the same velocity v. After collision, the velocities of two bodies are
+\begin{enumerate}
+\item m has velocity 0 and 2m has velocity v
+\item m has velocity 0 and 2m has velocity 2v
+\item m has velocity v and 2m has velocity 0
+\item m has velocity 2v and 2m has velocity 0
+\end{enumerate}
+
+\item Two particles A and B having masses m and 2m, respectively, move towards each other with velocities 3v and -v, respectively. After collision, the velocities of two bodies are
+\begin{enumerate}
+\item A has velocity v and B has velocity -v
+\item A has velocity -2v and B has velocity v
+\item A has velocity -v and B has velocity 2v
+\item A has velocity 2v and B has velocity -3v
+\end{enumerate}
+
+\item Two particles A and B of masses m and 4m, respectively, move towards each other with velocities v and -v, respectively. After collision, the velocities of two bodies are
+\begin{enumerate}
+\item A has velocity v and B has velocity -v
+\item A has velocity -v and B has velocity v
+\item A has velocity -2v and B has velocity 2v
+\item A has velocity 2v and B has velocity -2v
+\end{enumerate}
+
+\item A particle of mass m moving with velocity v collides elastically with a stationary particle of mass 2m. Then, the magnitude of the velocity of the particles after collision is
+\begin{enumerate}
+\item v
+\item 0
+\item 2v
+\item $\frac{v}{2}$
+\end{enumerate}
+\end{enumerate}

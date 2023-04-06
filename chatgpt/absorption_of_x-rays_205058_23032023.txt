@@ -1,0 +1,3 @@
+Q. Absorption of x-rays
+
+X-rays are a form of electromagnetic radiation, and they are absorbed by matter. The amount of absorption depends on the type of material, its density, and the energy of the x-ray. Generally, materials with higher atomic numbers, such as lead, absorb more x-rays than materials with lower atomic numbers, such as aluminum. The absorption of x-rays also increases with increasing density. For example, a dense material such as lead will absorb more x-rays than a less dense material such as air.

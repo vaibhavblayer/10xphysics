@@ -1,0 +1,29 @@
+Q. Write a python function for calculating coulombs law.
+
+def coulombs_law(q1, q2, r):
+    '''
+    This function calculates the force between two charges q1 and q2 separated by a distance r.
+    The force is calculated using Coulomb's law.
+    
+    Parameters
+    ----------
+    q1 : float
+        Charge of the first particle.
+    q2 : float
+        Charge of the second particle.
+    r : float
+        Distance between the two particles.
+    
+    Returns
+    -------
+    force : float
+        Force between the two particles.
+    '''
+    
+    # Coulomb's constant
+    k = 8.99e9
+    
+    # Calculate the force
+    force = k * (q1 * q2) / (r**2)
+    
+    return force

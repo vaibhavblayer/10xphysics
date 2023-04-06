@@ -1,0 +1,3 @@
+Q. What is magnetic flus?
+
+Magnetic flux is the total number of magnetic field lines passing through a given area. It is measured in Webers (Wb). Magnetic flux is related to the strength of the magnetic field and the size of the area that the field is passing through.

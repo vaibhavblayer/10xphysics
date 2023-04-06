@@ -1,0 +1,10 @@
+Q. Write a python recursive function for arranging terms in a list.
+
+def arrange_terms(terms):
+    if len(terms) == 0:
+        return []
+    else:
+        pivot = terms[0]
+        left = [x for x in terms[1:] if x < pivot]
+        right = [x for x in terms[1:] if x >= pivot]
+        return arrange_terms(left) + [pivot] + arrange_terms(right)

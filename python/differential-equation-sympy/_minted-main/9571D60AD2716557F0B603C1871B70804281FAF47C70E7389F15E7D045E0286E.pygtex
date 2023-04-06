@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+
+
+\PYG{k+kn}{import} \PYG{n+nn}{sympy}
+
+\PYG{k}{def} \PYG{n+nf}{solve\PYGZus{}linear\PYGZus{}diff\PYGZus{}eq}\PYG{p}{(}\PYG{n}{eq}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{x}\PYG{p}{):}
+    \PYG{n}{y} \PYG{o}{=} \PYG{n}{sympy}\PYG{o}{.}\PYG{n}{Function}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{)(}\PYG{n}{x}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{sympy}\PYG{o}{.}\PYG{n}{dsolve}\PYG{p}{(}\PYG{n}{eq}\PYG{p}{,} \PYG{n}{y}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}Example}
+\PYG{c+c1}{\PYGZsh{}Solve the differential equation:}
+\PYG{c+c1}{\PYGZsh{} $\dfrac{dy}{dx} + 2y = x$}
+
+\PYG{n}{eq} \PYG{o}{=} \PYG{n}{sympy}\PYG{o}{.}\PYG{n}{Eq}\PYG{p}{(}\PYG{n}{sympy}\PYG{o}{.}\PYG{n}{Derivative}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{y}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+\PYG{n}{solution} \PYG{o}{=} \PYG{n}{solve\PYGZus{}linear\PYGZus{}diff\PYGZus{}eq}\PYG{p}{(}\PYG{n}{eq}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{solution}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}Output:}
+\PYG{c+c1}{\PYGZsh{}y(x) = C1*exp(\PYGZhy{}2*x) + x/2 \PYGZhy{} x**2/4}
+\end{Verbatim}

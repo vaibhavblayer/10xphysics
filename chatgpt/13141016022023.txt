@@ -1,0 +1,22 @@
+Q. Write code in python for returning longest line in a file and also return the number of character in the longest line.
+
+#open file 
+file = open('sample.txt', 'r') 
+
+#initialize variables 
+max_len = 0
+longest_line = ""
+
+#loop through each line in file
+for line in file: 
+    #find length of line
+    line_len = len(line) 
+    #compare line length with max_len
+    #if line length is greater than max_len, set max_len to line length and store line
+    if line_len > max_len: 
+        max_len = line_len
+        longest_line = line
+#close file
+file.close()
+print("Longest line:", longest_line)
+print("Number of characters in longest line:", max_len)
