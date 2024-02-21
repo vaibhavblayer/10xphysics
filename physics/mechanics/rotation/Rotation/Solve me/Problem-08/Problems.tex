@@ -1,0 +1,301 @@
+ \documentclass[12 pt]{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[paperwidth=5 in,paperheight=5 in,left=9 mm, right=9 mm, top=15 mm, bottom=18.5 mm]{geometry}
+\usepackage{graphics}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{marvosym}
+\newcommand{\myitem}{\refstepcounter{enumi}\item[$^\star$\theenumi.]}
+\newcommand{\mmyitem}{\refstepcounter{enumi}\item[$^{\star \star}$\theenumi.]}
+\setcounter{page}{01}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\setlength{\arrayrulewidth}{0.1 mm}
+%BLUE%
+%\definecolor{Mycolor2}{HTML}{3D9BE9}
+\definecolor{Mycolor2}{HTML}{33cccc}
+%\definecolor{Mycolor2}{HTML}{000000}
+
+%%----HEADER &&& FOOTER----%%
+
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{8 mm}
+%\fancyhead[CE,CO]{ \Times\Large{\textbf{\textls*[100]{\textcolor{tomato}{\textit{Illustration}}}}}}
+
+\fancyhead[CE,CO]{\Large{\textbf{\textls*[250]{\textcolor{tomato}{SOLVE ME! \\[-5 mm]{\Large{\textbf{\textls*[5000]{\textcolor{black}{\scalebox{.42}{ROTATION}}}}}}     }}}}}
+
+\fancyfoot[RE,RO]{\large{\textbf{\textls*[10]{\textcolor{tomato}{\Times\textit{Solution~\boldmath$\rightarrow$}}}}}}
+
+\renewcommand{\headrulewidth}{0 mm}
+\renewcommand{\footrulewidth}{0 mm}
+
+
+\DeclareMathOperator{\Ln}{ln}
+
+%%----FONT &&& MATHS_FONT----%%
+
+\usepackage{amssymb}
+\usepackage{upgreek,xspace}
+\newcommand*{\rom}[1]{\expandafter\@\romannumeral #1}
+
+
+\usepackage[utopia]{mathdesign}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled=1]{helvet}
+\newcommand*\Times{\fontfamily{ptm}\selectfont}
+
+%%%------PACAKAGES------%%%
+
+\usepackage[letterspace=120]{microtype}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{width=8cm,compat=1.16}
+\usepackage{tikz}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{quotes,angles,patterns,through,calc}
+\usepgflibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta,bending}
+\usepackage{rotating}
+\usepackage{tikz-3dplot}
+\usepackage[american voltages, american currents,siunitx]{circuitikz}
+\usepackage{circuitikz}
+\usetikzlibrary{fit,positioning}
+\usetikzlibrary{optics}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{setspace}
+\setstretch{1.1}
+
+
+\usepackage{vwcol}[widths={0.25,0.75}]
+
+
+\usepackage{color}
+\usepackage[autostyle]{csquotes}
+
+
+\usepackage{xcolor}
+\definecolor{Mycolor2}{HTML}{33cccc}
+\definecolor{One}{HTML}{336666}
+\definecolor{Two}{HTML}{666666}
+\definecolor{Three}{HTML}{cc6699}
+
+
+%  black--brown--black %
+\definecolor{Four}{HTML}{000000}
+\definecolor{Five}{HTML}{330000}
+\definecolor{Six}{HTML}{000000}
+
+\definecolor{Seven}{HTML}{ff6666}
+\definecolor{Eight}{HTML}{330066}
+\definecolor{Nine}{HTML}{cc3333}
+\definecolor{tomato}{HTML}{FF6347}
+\definecolor{darkblue}{HTML}{2c3e50}
+\definecolor{blackm}{HTML}{363636}
+\definecolor{pink}{HTML}{ff6666}
+
+
+\newcommand{\nm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{8. }}}}
+\end{minipage}}
+
+\newcommand{\sm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{ }}}}
+\end{minipage}}
+
+\newcommand{\AxisRotator}[1][rotate=0]{%
+    \tikz [x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw (0,0) arc (-120:120:1 and 1);%
+}
+
+
+\def\centerarc[#1]#2(#3)#4(#5:#6:#7)% [draw options] (center) (initial angle:final angle:radius)
+  {\draw[#1]($(#3)+({#7*cos(#5)},{#7*sin(#5)})$)arc(#5:#6:#7);}
+ 
+
+
+\newcommand{\vl}{{{\textcolor{tomato}{\textbf{\vrule width 2.25 pt{}}}}}}
+
+\newenvironment{question}
+{	
+	\nm  \vl \,
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{minipage}
+}
+
+
+\newenvironment{options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{multicols}{2}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{multicols}
+	\end{minipage}
+}
+
+
+\newenvironment{v-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{minipage}
+}
+
+
+
+\newenvironment{definition}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{note}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+\newenvironment{q-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{note}
+	\begin{enumerate}[label={(\roman*)}, itemsep=1 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{note}
+	\end{minipage}
+}
+
+
+
+\newcommand{\physics}{\normalsize{\textcolor{tomato}{\textls*[100]{{\hspace*{75 mm} @10xphysics}}}}}
+
+\newcommand{\solution}{\centering\Large\Times\textbf{\textcolor{tomato}{\textls*[100]{ \textit{\\[-20 mm]Solution}}} }}
+
+\newcommand{\calculations}{\centering\large\Times{\textcolor{tomato}{ \textit{\\[-18 mm]calculations:\\[-2 mm]}} }}
+
+\newcommand{\integration}{\centering\large\Times{\textcolor{tomato}{ \textit{\\[-18 mm]Integration involved:\\[-2 mm]}} }}
+
+\begin{document}
+
+
+\nopagecolor
+%\boldmath
+\color{black!100}
+%\pagecolor{black!95}
+\setlength{\parindent}{0pt}
+\large
+
+%%%%   PROBLEM-02  %%%%%
+
+\begin{question}
+Velocity of point $A$ on the rod is $2\; m/s$ at the instant shown in the figure. The velocity of the point $B$ on the rod at this instant is:
+\end{question}
+
+{\physics}
+
+
+
+\begin{center}
+\begin{tikzpicture}[use optics,very thick,decoration={
+    markings,
+    mark=at position 0.3 with {\arrow{Stealth}}},every node/.style={scale=0.85},scale=0.85]
+\node[very thick,mirror,rotate=-90,scale=2,mirror decoration separation=0.08,mirror decoration amplitude=0.12] at (2.5,0) {};
+\node[very thick,mirror,rotate=0,scale=1.5,mirror decoration separation=0.08,mirror decoration amplitude=0.12] at (4.5,1.5) {};
+\node[very thick,mirror,rotate=-90,scale=1,mirror decoration separation=0.08,mirror decoration amplitude=0.12] at (5.5,3) {};
+\draw[line width=5,line cap=round] (2,0.1) coordinate (b)--([turn]48:5) coordinate (a);
+\coordinate (c) at (4,-0.2);
+\pic [thick,draw=black,"$60^\circ$", angle eccentricity=1.6,angle radius=0.6cm] {angle = c--b--a};
+\node at (4,3) {$B$};
+\node at (2,-0.2)[below] {$A$};
+\draw[thick] (1.8,0.2) to[dim arrow={label=$5 \; m$}] ([turn]45:3.8) coordinate(d);
+\draw[thick] (d) to[dim arrow={label=$1 \; m$}] ([turn]15:1.15);
+\draw [-Stealth] (1.75,0.3)--(0.75,0.3) node[left]{$V_A = 2 \; m/s$};
+\end{tikzpicture}
+\end{center}
+
+\begin{options}
+\item $\dfrac{2}{\sqrt{3}} \; m/s$
+\item $1 \; m/s$
+\item $\dfrac{1}{2\sqrt{3}} \; m/s$
+\item $\dfrac{\sqrt{3}}{2} \; m/s$
+\end{options}
+
+\pagebreak
+
+
+\pagestyle{empty}
+
+\begin{center}
+{\solution}
+\end{center}
+
+
+\begin{note}
+{\textcolor{tomato}{Similar to problem - 05}}
+
+
+As the rod is rigid hence distance between the point $A$ and $B$ on the rod will remain constant , therefore velocity of these points along the rod would be equal. 
+
+\end{note}
+
+\begin{center}
+\begin{tikzpicture}[use optics,very thick,decoration={
+    markings,
+    mark=at position 0.3 with {\arrow{Stealth}}},every node/.style={scale=0.85},scale=0.75]
+\draw[line width=5,line cap=round] (2,0) coordinate (b)--([turn]60:5) coordinate (a);
+\draw [-Stealth] (2,0)--(0,0) node[left]{$V_A = 2 \; m/s$};
+\draw [-Stealth] (2,0)--([turn]-120:2) node[left]{$V_A \cos60^\circ$};
+\centerarc [thick,red] (2,0)(180:240:0.5);
+\node at (1.7,0)[below left]{$60^\circ$};
+\draw [thick, dashed] (2,0) -- (4.5,0);
+\centerarc [thick,red, dashed] (2,0)(0:60:0.5);
+\end{tikzpicture}
+\end{center}
+
+\begin{note}
+$V_B=V_A\cos60^\circ = 2 \times \cos60^\circ = 1 \; m/s$
+\end{note}
+
+{\physics}
+
+\pagebreak
+
+\end{document}

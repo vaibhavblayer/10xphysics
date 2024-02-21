@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\tzcoor*(0, 0)(O){$O$}[b]
+\tzcoor*(3, 0)(X)
+\tzcoor*(-3, 0)(X')
+\foreach \a in {0, 10, ..., 360}{
+	\tzcoor(cos{(\a)}, 2.5*sin{(\a)})(P)
+	\tznode(P){$+$}[scale=0.8]
+	\tzdot(P)(7pt)
+	\tzline[->, red]($(P)!0.03!(X)$)($(P)!1.3!(X)$)
+	\tzline[->]($(P)!0.03!(X')$)($(P)!1.3!(X')$)
+}
+\tzline[<->](-5, 0)(5, 0)
+\end{tikzpicture}

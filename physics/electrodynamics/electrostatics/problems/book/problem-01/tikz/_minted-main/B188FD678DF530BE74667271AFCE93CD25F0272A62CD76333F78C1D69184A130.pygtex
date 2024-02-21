@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}pic}\PYG{n+na}{[rotate=180]} (ceiling) at (0, 0) \PYG{n+nb}{\PYGZob{}}frame=2cm\PYG{n+nb}{\PYGZcb{}};
+\PYG{k}{\PYGZbs{}tzcoor*}(ceiling\PYGZhy{}center)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{O}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[br]
+\PYG{k}{\PYGZbs{}tzcoor}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(}\PYG{l+m}{0}\PYG{n+nb}{, }\PYG{o}{\PYGZhy{}}\PYG{l+m}{3}\PYG{o}{*}\PYG{n+nb}{cos\PYGZob{}}\PYG{l+m}{30}\PYG{n+nb}{\PYGZcb{}}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(O\PYGZsq{})
+\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{ceiling}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{center}\PYG{o}{)+(\PYGZhy{}}\PYG{l+m}{90}\PYG{o}{\PYGZhy{}}\PYG{l+m}{30}\PYG{n+nb}{:}\PYG{l+m}{3}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(Q1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}uprho}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl](10pt)
+\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{ceiling}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{center}\PYG{o}{)+(\PYGZhy{}}\PYG{l+m}{60}\PYG{n+nb}{:}\PYG{l+m}{3}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(Q2)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}uprho}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[br](10pt)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZhy{}\PYGZgt{}\PYGZhy{}\PYGZhy{}=0.4]}(Q1)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{T}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[pos=0.35, a]
+	\PYG{k}{\PYGZbs{}tzline}(O)(Q2)
+	\PYG{k}{\PYGZbs{}tzanglemark}(Q1)(O)(O\PYGZsq{})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzanglemark}(O)(Q1)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{Q}\PYG{l+m}{1}\PYG{o}{)+(}\PYG{l+m}{0}\PYG{n+nb}{, }\PYG{l+m}{1}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(Q1)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{Q}\PYG{l+m}{1}\PYG{o}{)+(}\PYG{l+m}{0}\PYG{n+nb}{, }\PYG{l+m}{2}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(O)(O\PYGZsq{})
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](Q1)(0, \PYGZhy{}1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{W}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[b]
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](Q1)(\PYGZhy{}1, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{F\PYGZus{}e}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[l]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,333 @@
+ \documentclass[12 pt]{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[paperwidth=5 in,paperheight=5 in,left=6 mm, right=6 mm, top=15 mm, bottom=18.5 mm]{geometry}
+\usepackage{graphics}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{marvosym}
+\newcommand{\myitem}{\refstepcounter{enumi}\item[$^\star$\theenumi.]}
+\newcommand{\mmyitem}{\refstepcounter{enumi}\item[$^{\star \star}$\theenumi.]}
+\setcounter{page}{01}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\setlength{\arrayrulewidth}{0.1 mm}
+%BLUE%
+%\definecolor{Mycolor2}{HTML}{3D9BE9}
+\definecolor{Mycolor2}{HTML}{33cccc}
+%\definecolor{Mycolor2}{HTML}{000000}
+
+%%----HEADER &&& FOOTER----%%
+
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{8 mm}
+%\fancyhead[CE,CO]{ \Times\Large{\textbf{\textls*[100]{\textcolor{tomato}{\textit{Illustration}}}}}}
+
+\fancyhead[CE,CO]{\Large{\textbf{\textls*[250]{\textcolor{tomato}{SOLVE ME! \\[-5 mm]{\Large{\textbf{\textls*[5000]{\textcolor{black}{\scalebox{.42}{ROTATION}}}}}}     }}}}}
+
+\fancyfoot[RE,RO]{\large{\textbf{\textls*[10]{\textcolor{tomato}{\Times\textit{Solution~\boldmath$\rightarrow$}}}}}}
+
+\renewcommand{\headrulewidth}{0 mm}
+\renewcommand{\footrulewidth}{0 mm}
+
+
+\DeclareMathOperator{\Ln}{ln}
+
+%%----FONT &&& MATHS_FONT----%%
+
+\usepackage{amssymb}
+\usepackage{upgreek,xspace}
+\newcommand*{\rom}[1]{\expandafter\@\romannumeral #1}
+
+
+\usepackage[utopia]{mathdesign}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled=1]{helvet}
+\newcommand*\Times{\fontfamily{ptm}\selectfont}
+
+%%%------PACAKAGES------%%%
+
+\usepackage[letterspace=120]{microtype}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{width=8cm,compat=1.16}
+\usepackage{tikz}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{quotes,angles,patterns,through,calc}
+\usepgflibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta,bending}
+\usepackage{rotating}
+\usepackage{tikz-3dplot}
+\include{tikz-3dplot}
+\usepackage[american voltages, american currents,siunitx]{circuitikz}
+\usepackage{circuitikz}
+\usetikzlibrary{fit,positioning}
+\usetikzlibrary{optics}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{setspace}
+\setstretch{1}
+\usepackage{tkz-tab} [3]
+
+
+
+\usepackage{vwcol}[widths={0.25,0.75}]
+
+
+\usepackage{color}
+\usepackage[autostyle]{csquotes}
+
+
+\usepackage{xcolor}
+\definecolor{Mycolor2}{HTML}{33cccc}
+\definecolor{One}{HTML}{336666}
+\definecolor{Two}{HTML}{666666}
+\definecolor{Three}{HTML}{cc6699}
+
+
+%  black--brown--black %
+\definecolor{Four}{HTML}{000000}
+\definecolor{Five}{HTML}{330000}
+\definecolor{Six}{HTML}{000000}
+
+\definecolor{Seven}{HTML}{ff6666}
+\definecolor{Eight}{HTML}{330066}
+\definecolor{Nine}{HTML}{cc3333}
+\definecolor{tomato}{HTML}{FF6347}
+\definecolor{darkblue}{HTML}{2c3e50}
+\definecolor{blackm}{HTML}{363636}
+\definecolor{pink}{HTML}{ff6666}
+
+
+
+
+
+
+  \tikzset{every to/.style={append after command={[draw,dashed]}}}
+
+\tikzset{
+  mirror->/.style={postaction={decorate,black!95,draw,thick,
+decoration={border,amplitude=-0.25cm,angle=45,segment length=0.22cm}}
+  }
+}
+
+
+
+\def\centerarc[#1]#2(#3)#4(#5:#6:#7)% [draw options] (center) (initial angle:final angle:radius)
+  {\draw[#1]($(#3)+({#7*cos(#5)},{#7*sin(#5)})$)arc(#5:#6:#7);}
+
+
+
+\newcommand{\sm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{ }}}}
+\end{minipage}}
+
+\newcommand{\AxisRotator}[1][rotate=0]{%
+    \tikz [x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw (0,0) arc (-120:120:1 and 1);%
+}
+
+\newcommand{\nm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{10. }}}}
+\end{minipage}}
+
+\newcommand{\vl}{{{\textcolor{tomato}{\textbf{\vrule width 2.25 pt{}}}}}}
+
+\newenvironment{question}
+{	
+	\nm  \vl \,
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{minipage}
+}
+
+
+\newenvironment{options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{multicols}{2}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{multicols}
+	\end{minipage}
+}
+
+
+\newenvironment{v-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{minipage}
+}
+
+
+
+\newenvironment{definition}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{note}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{calculations}
+{
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+}
+
+
+\newenvironment{q-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{note}
+	\begin{enumerate}[label={(\roman*)}, itemsep=1 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{note}
+	\end{minipage}
+}
+
+
+
+\newcommand{\physics}{\normalsize{\textcolor{tomato}{\textls*[100]{{\hspace*{75 mm} @10xphysics}}}}}
+
+\newcommand{\solution}{\centering\Large\Times\textbf{\textcolor{tomato}{\textls*[100]{ \textit{\\[-20 mm]Solution}}} }}
+
+\newcommand{\calculation}{\centering\large\Times{\textcolor{tomato}{ \textit{\\[-18 mm]calculations:\\}} }}
+
+\newcommand{\integration}{\centering\large\Times{\textcolor{tomato}{ \textit{\\[-18 mm]Integration involved:\\[-2 mm]}} }}
+
+
+\def\step[#1]{\Times{\textcolor{tomato}{\textbf{\textit{Step-#1.}}}}}
+
+
+\begin{document}
+
+
+\nopagecolor
+%\boldmath
+\color{black!100}
+%\pagecolor{black!95}
+\setlength{\parindent}{0pt}
+\large
+
+
+\begin{question}
+A thin uniform rod of length $l$ and mass $m$ is free to rotate about a smooth pivot which passes through its one end $A$. A point like mass $m$ is shot horizontally at a velocity of $v_0$ towards the lower end of the rod (point $B$). When it hits the rod, it sticks to it. What is the minimum value of $v_0$ required for the rod to reach an angle of $90^\circ$ (horizontal state) ?
+\end{question}
+
+{\physics}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,use optics,very thick,every node/.style={scale=0.75},scale=1]
+\draw[thick,line cap=round,line width=10] (0,0) coordinate (a) node[right]{$A$} -- (0,-4) coordinate (b) node[right]{$B$} node[midway, left]{$l,m$};
+\fill[white] (a) circle(2 pt);
+\fill (-2,-4) coordinate (c) circle(3 pt) edge[->, thick] node[at end,above]{$v_0$} ++(1.5,0);
+\node at (c) [above]{$m$};
+\end{tikzpicture}
+\end{center}
+
+\pagebreak
+
+
+\pagestyle{empty}
+
+\begin{center}
+{\solution}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,use optics,very thick,every node/.style={scale=0.75},scale=1]
+\draw[thick,line cap=round,line width=10] (0,0) coordinate (a)  -- (4,0) coordinate (b);
+\fill (4,-0.28) circle(3.25 pt);
+\draw[red,dashed, thick,rounded corners] (-0.15,-4.15) --++(0.3,0)--++(0,4.3)--++(-0.3,0)--cycle;
+\fill[white] (a) circle(2 pt);
+\draw[dashed,thick,red] (-0.3,-4) coordinate (c) circle(3.5 pt);
+\centerarc[dashed,red,->,thick] (0,0)(270:358:2);
+\fill[red] ($(a)!0.5!(b)$) circle(2 pt);
+\fill[red] ($(a)!0.5!(0,-4)$) circle(2 pt);
+\node at (a)[above=2 mm]{$A$};
+\node at (b)[above=2 mm]{$B$};
+\end{tikzpicture}
+\end{center}
+
+{\physics}
+
+\begin{note}
+As the net external torque about the point $A$ of the system is zero, therefore angular momentum of the system about the point $A$ will remain same before collision and after collision.\\[3 mm]
+
+\tikz \filldraw[black,fill=red,very thick] (0,0) circle (4 pt);
+The energy of the system is not conserved during collision as collision is inelastic. But after collision we can apply energy conservation equation.
+\end{note}
+
+\pagebreak
+
+
+{\calculation}
+
+
+\begin{calculations}
+\step[1] conservation of angular momentum
+\begin{align*}
+L_{i_{\textit{particle}}} + L_{i_{\textit{rod}}} &= L_{f_{\textit{particle}}} + L_{f_{\textit{rod}}} \\[2 mm]
+mv_0l + 0 &= \dfrac{1}{3}ml^2  \omega + ml^2 \omega \\[3 mm]
+\omega &= \dfrac{3v_0}{4l}
+\end{align*}
+
+\step[2] energy conservation 
+\begin{align*}
+E_{\textit{rotational kinetic energy}}  &= U_{\textit{potential energy gained}}  \\[2 mm]
+\dfrac{1}{2} \left( I_{\textit{rod + particle}} \right) \omega^2 &= U_{\textit{rod}} + U_{\textit{particle}} \\[3 mm]
+\dfrac{1}{2} \left( \dfrac{ml^2}{3} + ml^2 \right) \left( \dfrac{3v_0}{4l} \right)^2 &= mg\dfrac{l}{2} + mgl \\[3 mm]
+v_0 &= 2\sqrt{gl}\\[-18 mm]
+\end{align*}
+\end{calculations}
+
+{\physics}
+
+\pagebreak
+
+\end{document}

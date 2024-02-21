@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{manim} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{k+kn}{from} \PYG{n+nn}{manim\PYGZus{}physics} \PYG{k+kn}{import} \PYG{o}{*}
+
+\PYG{k}{class} \PYG{n+nc}{Collision}\PYG{p}{(}\PYG{n}{SpaceScene}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{construct}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{Circle}\PYG{o}{.}\PYG{n}{set\PYGZus{}default}\PYG{p}{(}\PYG{n}{color}\PYG{o}{=}\PYG{n}{WHITE}\PYG{p}{)}
+        \PYG{n}{COLLISIONS} \PYG{o}{=} \PYG{p}{[}
+            \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}elastic collision\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{],}
+            \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}inelastic collision\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{0.98}\PYG{p}{],}
+            \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}perfectly inelastic collision\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}
+        \PYG{p}{]}
+
+        \PYG{n}{OBJECTS} \PYG{o}{=} \PYG{n}{VGroup}\PYG{p}{()}
+
+        \PYG{k}{for} \PYG{n}{col} \PYG{o+ow}{in} \PYG{n}{COLLISIONS}\PYG{p}{:}
+            \PYG{n}{S} \PYG{o}{=} \PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mf}{3.5}\PYG{o}{*}\PYG{n}{LEFT}\PYG{p}{,} \PYG{l+m+mf}{3.5}\PYG{o}{*}\PYG{n}{RIGHT}\PYG{p}{)}
+            \PYG{n}{C} \PYG{o}{=} \PYG{n}{Circle}\PYG{p}{()}\PYG{o}{.}\PYG{n}{next\PYGZus{}to}\PYG{p}{(}\PYG{n}{S}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{o}{*}\PYG{n}{UP}\PYG{p}{)}
+            \PYG{n}{T} \PYG{o}{=} \PYG{n}{MathTex}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{textit}\PYG{l+s+se}{\PYGZob{}\PYGZob{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{col}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZcb{}\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{next\PYGZus{}to}\PYG{p}{(}\PYG{n}{S}\PYG{p}{,} \PYG{n}{DOWN}\PYG{p}{)}\PYG{o}{.}\PYG{n}{scale}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{S}\PYG{p}{,} \PYG{n}{C}\PYG{p}{,} \PYG{n}{T}\PYG{p}{)}
+            \PYG{n}{OBJECTS}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{VGroup}\PYG{p}{(}\PYG{n}{S}\PYG{p}{,} \PYG{n}{C}\PYG{p}{,} \PYG{n}{T}\PYG{p}{))}
+
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{OBJECTS}\PYG{o}{.}\PYG{n}{arrange}\PYG{p}{(}\PYG{n}{buff}\PYG{o}{=}\PYG{l+m+mf}{0.2}\PYG{p}{,} \PYG{n}{direction}\PYG{o}{=}\PYG{n}{DOWN}\PYG{p}{))}
+        \PYG{k}{for} \PYG{n}{obj} \PYG{o+ow}{in} \PYG{n+nb}{zip}\PYG{p}{(}\PYG{n}{OBJECTS}\PYG{p}{,} \PYG{n}{COLLISIONS}\PYG{p}{):}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{make\PYGZus{}rigid\PYGZus{}body}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{elasticity}\PYG{o}{=}\PYG{n}{obj}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{])}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{make\PYGZus{}static\PYGZus{}body}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{elasticity}\PYG{o}{=}\PYG{n}{obj}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{])}
+
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{wait}\PYG{p}{(}\PYG{l+m+mi}{30}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{v-problem}
+\vgeometry
+\usepackage{v-electrostatics}
+
+\begin{document}
+\vtitle[ELECTROSTATICS]
+
+\def\pn{08}
+\def\book{Irodov}
+\def\page{106}
+\def\gdrive{https://drive.google.com/drive/folders/1u8ZXjLO_OxcEmov0vulKNt7NhfiTKrsL?usp=share_link}
+
+\def\question{
+Point charges $q$ and $-q$ are located at the vertices of a square with diagonals $2l$ as shown in Figure. Find the magnitude of the electric
+field strength at a point located symmetrically with respect to the vertices of the square at a distance $x$ from its centre.
+}
+
+\vspace*{\fill}
+\begin{tikzpicture}
+	\node[qnumber] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\book \quad \page]};
+\end{tikzpicture}	
+\vspace*{\fill}
+
+\begin{center}
+\begin{tikzpicture}
+[scale=2]
+\tzcoor*(1, 0, 1)(A){$q$}[br](5pt)
+\tzcoor*(-1, 0, 1)(B){$q$}[bl](5pt)
+\tzcoor*(-1, 0, -1)(C){$-q$}[al](5pt)
+\tzcoor*(1, 0, -1)(D){$-q$}[ar](5pt)
+\tzcoor*(0, 2, 0)(X){$X$}[a]
+	%\tzline[->](-3, 0, 0)(3, 0, 0){$x$}[r]
+	%\tzline[->](0, -1, 0)(0, 5, 0){$y$}[a]
+	%\tzline[->](0, 0, -2)(0, 0, 4){$z$}[b]
+	\tzlines[dashed](A)(B)(B)(C)(C)(D)(D)(A);
+	\tzline[dashed](A)(C){$2l$}[ml]
+	\tzline[dashed](B)(D){$2l$}[mb]
+	%\tzlines[dashed](A)(X)(B)(X)(C)(X)(D)(X);
+	\tzline[dashed](0, 0, 0)(X){$x$}[mr]
+\end{tikzpicture}
+\end{center}
+\pagebreak
+
+\vtitle[\texttt{Solution}]
+\begin{center}
+\begin{tikzpicture}
+[scale=2]
+\def\CA{red}
+\def\CB{green}
+\def\CC{blue}
+\def\CD{black}
+\tzcoor*[\CA](1, 0, 1)(A){$q, A$}[br](5pt)
+\tzcoor*[\CB](-1, 0, 1)(B){$q, B$}[bl](5pt)
+\tzcoor*[\CC](-1, 0, -1)(C){$-q, C$}[al](5pt)
+\tzcoor*[\CD](1, 0, -1)(D){$-q, D$}[ar](5pt)
+\tzcoor*(0, 2, 0)(X){$X$}[a]
+	\tzlines[dashed](A)(B)(B)(C)(C)(D)(D)(A);
+	\tzline[dashed](A)(C){$2l$}[ml]
+	\tzline[dashed](B)(D){$2l$}[mb]
+	\tzline[dashed](0, 0, 0)(X){$x$}[mr]
+	
+	\foreach \p/\c in {A/\CA, B/\CB}{
+		\tzline[dashed, \c](\p)(X)	
+		\tzline[->, \c](X)($(\p)!1.35!(X)$)
+	}
+	
+	\foreach \p/\c in {C/\CC, D/\CD}{
+		\tzline[dashed, \c](\p)(X)	
+		\tzline[->, \c](X)($(\p)!0.5!(X)$)
+	}
+	
+
+\end{tikzpicture}
+\end{center}
+
+\pagebreak
+
+\begin{center}
+\begin{tikzpicture}
+\def\r{2}
+\tzaxes[rotate=45](-1.5*\r, -1.5*\r)(1.5*\r,1.5*\r){$x$}{$y$}
+\foreach \a/\q/\n in {-45/q/A, 45/-q/D, 135/-q/C, -135/q/B}{
+	\tzdot*(\a:\r){$\q, \n$}[\a](5pt)
+	\ifthenelse{\a=45}{
+		\tzline[<->](0, 0)(\a:\r){$l$}[ml]
+	}{}
+}
+\end{tikzpicture}
+\end{center}
+
+\def\AX{-l\hat{j} + x\hat{k}}
+\def\BX{-l\hat{i} + x\hat{k}}
+\def\CX{l\hat{j} + x\hat{k}}
+\def\DX{l\hat{i} + x\hat{k}}
+\begin{align*}
+\overrightarrow{\text{AX}} &= \AX \\
+\overrightarrow{\text{BX}} &= \BX\\
+\overrightarrow{\text{CX}} &= \CX\\
+\overrightarrow{\text{DX}} &= \DX
+\end{align*}
+
+\pagebreak
+
+\addtolength{\jot}{3ex}
+\begin{align*}
+\vec{E}_{\textit{net}} &= \vec{E}_A + \vec{E}_B + \vec{E}_C + \vec{E}_D\\
+	&= \sum\EF\\
+	&= \K \cdot \dfrac{1}{\left(\sqrt{l^2 + x^2}\right)^3} \cdot \left(q\left(\AX\right) + q\left(\BX\right) -q\left(\CX\right)-q\left(\DX\right) \right)\\
+	&= \K \cdot \dfrac{q}{\left(\sqrt{l^2 + x^2}\right)^3}\cdot \left( -2l\hat{i} -2l\hat{j} \right)\\[5mm]
+\left| \vec{E}_{\textit{net}} \right| &= \K\cdot \dfrac{q}{\left(\sqrt{l^2 + x^2}\right)^3}\cdot\sqrt{8}l\\
+\Aboxed{\left| \vec{E}_{\textit{net}} \right| &= \dfrac{ql}{\sqrt{2} \pi\varepsilon_0\left(l^2+x^2\right)^{3/2}}}\ans
+\end{align*}
+\pagebreak
+
+
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+
+\begin{center}
+\begin{tikzpicture}
+\draw (0, 0) grid (8, 8);
+\tzaxes(0, 0)(8.5,8.5){$x$}{$y$}
+\tzcoor*(0, 0)(O){$(0, 0)$}[bl]
+
+	\tzline+[->, red](O)(4,0)
+	\tzline+[->, red](4, 0)(0,5)
+	\tzline[->, green](O)(4, 5)
+
+
+\end{tikzpicture}
+\end{center}
+
+\vspace*{\fill}
+
+\pagebreak
+
+
+
+\end{document}

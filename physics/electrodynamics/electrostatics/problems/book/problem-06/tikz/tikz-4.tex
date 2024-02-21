@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+[thick]
+\def\A{16} %angle for element
+\def\r{2} %radius
+\def\dr{0.1} %delta r
+\def\RO{\r+\dr} %radius outer
+\def\RI{\r-\dr} %radius inner
+\tzcoor(0:\RO)(O') %point at right end
+\tzcoor*(0, 0)(O){$q_0$}[bl](5pt)
+	\foreach \a in {0, 8, ..., 352}{
+		\tznode(\a:\r){$+$}[scale=0.65]
+		\draw[thin](\a:\r) circle [radius=\dr];
+	}
+	\tzlines(O)(\A:\RO)(O)(-\A:\RO);
+	\tzarc(O)(-\A:\A:\RO)
+	\tzarc(O)(-\A:\A:\RI)
+	\tzline[->](\A:\RO)($(\A:\RO)!2cm!(1.01*\A:\RO)$){$\Delta T$}[a]
+	\tzline[->](-\A:\RO)($(-\A:\RO)!2cm!(-1.01*\A:\RO)$){$\Delta T$}[b]
+	\tzline+[->](O')(2, 0){$\Delta F_e$}[r]
+	\tzanglemark'(-\A:\r)(O)(\A:\r){$\d{\theta}$}(15pt)
+	\tzline[<->, thick]($(O')+(0,2.5)$)($(O')+(0,-2.5)$)
+	\tzarc[thick](O')(90:90+0.7*\A:1){$\d{\theta}/2$}[a=2mm, r=1mm]
+	\tzarc[thick](O')(270-0.7*\A:270:1)
+\end{tikzpicture}

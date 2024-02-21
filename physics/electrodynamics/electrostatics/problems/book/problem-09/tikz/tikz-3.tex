@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+[arcnode/.style 2 args={                
+	decoration={
+	raise=#1,             
+	markings,   
+	mark=at position 0.5 with { 
+		\node[inner sep=0] {#2};
+	}
+},
+postaction={decorate}},
+thick
+]
+\def\A{6} %angle for element
+\def\AA{130} %at angle
+\def\r{2} %radius
+\def\dr{0.12} %delta r
+\def\RO{\r+\dr} %radius outer
+\def\RI{\r-\dr} %radius inner
+\def\R{1.25}
+\tzcoor(\AA:\RO)(O') %point at right end
+\tzcoor*(0, 0)(O){$O$}[bl]
+	\foreach \a in {90, 100, ..., 270}{
+		\tznode(\a:\r){$+$}[scale=0.65]
+		\draw(\a:\r) circle [radius=\dr];
+	}
+	\tzline[dashed, thin]($(O)+(-3, 0)$)($(O)+(3, 0)$)
+	\tzlines(O)(\AA+\A:\RO)(O)(\AA-\A:\RO);
+	\tzarc(O)(\AA-\A:\AA+\A:\RO)
+	\tzarc(O)(\AA-\A:\AA+\A:\RI)
+	\tzline[->](O)($(O')!1.5!(O)$){$\d{\vec{E}}$}[r]
+	\tzanglemark(\AA-\A:\r)(O)(\AA+\A:\r){$\d{\theta}$}(15pt)
+	\tzanglemark(\AA+\A:\r)(O)(180:\r){$\theta$}(15pt)
+	\tzanglemark'($(O')!1.75!(O)$)(O)(0:\r){$\theta$}(15pt)
+	\tzline+[->](O)(\R, 0){$\d{E}\cos\theta$}[r]
+	\tzline+[->](O)(0, -\R){$\d{E}\sin\theta$}[b]
+	\tzarc[|<->|, arcnode={-10pt}{$\d{l}$}](O)(\AA-\A:\AA+\A:1.1*\RO)
+\end{tikzpicture}

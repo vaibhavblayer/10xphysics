@@ -1,0 +1,17 @@
+\large
+\ttfamily
+\vtitle[Voltmeter]
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+	\draw (0, 0) to ++(1, 0) to[rmeter, t=G, i>^=$i_g$]++(3, 0) to[R, l=$R$, resistors/zigs=5, resistors/width=1.5] ++(3, 0) to ++(1, 0);
+	
+\end{tikzpicture}
+\end{center}
+\addtolength{\jot}{2ex}
+\begin{align*}
+V &= i_g*\left(G+R\right)\\
+R &= \dfrac{V}{i_g} - G
+\end{align*}
+

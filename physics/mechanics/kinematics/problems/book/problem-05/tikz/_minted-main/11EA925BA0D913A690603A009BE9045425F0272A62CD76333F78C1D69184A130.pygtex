@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[\PYGZgt{}=latex, thick]
+	\PYG{k}{\PYGZbs{}tzcoor*}(0,  0)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{A}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[b]
+	\PYG{k}{\PYGZbs{}tzcoor*}(0,  3)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{O}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[ultra thick]}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(\PYGZhy{}}\PYG{l+m}{3}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(}\PYG{l+m}{3}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[ultra thick]}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{A}\PYG{o}{)+(\PYGZhy{}}\PYG{l+m}{3}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{A}\PYG{o}{)+(}\PYG{l+m}{3}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})
+	
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(A)(O)
+	
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZlt{}\PYGZhy{}\PYGZgt{}]}\PYGZlt{}\PYGZhy{}3, 0\PYGZgt{}(A)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{d}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[left, midway]
+	\PYG{k}{\PYGZbs{}tzto}\PYG{n+na}{[out=0, in=\PYGZhy{}120]}\PYGZdq{}path\PYGZdq{}(0, 0)(1.5, 1.2);
+	\PYG{k}{\PYGZbs{}tzvXpointat}\PYG{n+nb}{\PYGZob{}}path\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1.5\PYG{n+nb}{\PYGZcb{}}(P)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{P}\PYG{o}{(}\PYG{n+nb}{r, }\PYG{n+nv}{\PYGZbs{}theta}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[l]
+	
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{P}\PYG{o}{)!}\PYG{l+m}{0}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{o}{!(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(O)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}]}(P)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{P}\PYG{o}{)!}\PYG{l+m}{0}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{o}{!(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{u}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl]
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](P)(1.2, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v}\PYG{o}{=}\PYG{n+nb}{nu}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}, dashed]}(P)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{P}\PYG{o}{)!\PYGZhy{}}\PYG{l+m}{0}\PYG{n+nb}{.}\PYG{l+m}{45}\PYG{o}{!(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v}\PYG{n+nv}{\PYGZbs{}sin\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}]}(P)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{P}\PYG{o}{)!}\PYG{l+m}{0}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{o}{!\PYGZhy{}}\PYG{l+m}{90}\PYG{n+nb}{:}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v}\PYG{n+nv}{\PYGZbs{}cos\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+	\PYG{k}{\PYGZbs{}tzdot*}(P)(4pt)
+	
+	\PYG{k}{\PYGZbs{}tzanglemark}(A)(O)(P)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(12pt)
+	\PYG{k}{\PYGZbs{}tzanglemark}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{P}\PYG{o}{)+(}\PYG{l+m}{1}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(P)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{P}\PYG{o}{)!}\PYG{l+m}{0}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{o}{!\PYGZhy{}}\PYG{l+m}{90}\PYG{n+nb}{:}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(12pt)
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

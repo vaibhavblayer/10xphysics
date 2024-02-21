@@ -1,0 +1,9 @@
+Q. Derive the electric field due to a ring shaped charge in latex.
+
+The electric field due to a ring shaped charge is given by:
+
+\begin{equation}
+\vec{E} = \frac{1}{4\pi\epsilon_0}\int_{\text{ring}} \frac{\sigma \hat{r}}{r^2} ds
+\end{equation}
+
+where $\sigma$ is the linear charge density of the ring, $\hat{r}$ is the unit vector pointing from the charge to the point of interest, and $r$ is the distance from the charge to the point of interest.

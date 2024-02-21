@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+[>=latex, thick]
+	\tzcoor*(0,  0)(A){$A$}[b]
+	\tzcoor*(0,  3)(O){$O$}[a]
+	\tzline[ultra thick]($(O)+(-3.5, 0)$)($(O)+(3.5, 0)$)
+	\tzline[ultra thick]($(A)+(-3.5, 0)$)($(A)+(3.5, 0)$)
+	
+	\tzline[dashed](A)(O)
+	
+	\tzline[<->]<-3, 0>(A)(O){$d$}[left, midway]
+	\tzto[out=0, in=-120]"path"(0, 0)(1.5, 1.2);
+	\tzvXpointat{path}{1.5}(P){$P(r, \theta)$}[l]
+	
+	\tzline[dashed]($(P)!0.5!(O)$)(O)
+	\tzline[->](P)($(P)!0.5!(O)$){$u$}[bl]
+	\tzline+[->](P)(1.2, 0){$v=nu$}[r]
+	\tzline[->, dashed](P)($(P)!-0.45!(O)$){$v\sin\theta$}[r]
+	\tzline[->](P)($(P)!0.5!-90:(O)$){$v\cos\theta$}[r]
+	\tzdot*(P)(4pt)
+	
+	\tzanglemark(A)(O)(P){$\theta$}(12pt)
+	\tzanglemark($(P)+(1, 0)$)(P)($(P)!0.5!-90:(O)$){$\theta$}(12pt)
+\end{tikzpicture}

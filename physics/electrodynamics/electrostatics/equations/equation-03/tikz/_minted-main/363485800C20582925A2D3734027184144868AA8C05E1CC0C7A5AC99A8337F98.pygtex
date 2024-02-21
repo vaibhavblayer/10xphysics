@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[thick, cap=round]
+\PYG{k}{\PYGZbs{}def\PYGZbs{}a}\PYG{n+nb}{\PYGZob{}}1\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzcoor*}(\PYGZhy{}\PYG{k}{\PYGZbs{}a}, 0)(Q\PYGZsq{})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[b](5pt)
+	\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{k}{\PYGZbs{}a}, 0)(Q)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{+}\PYG{n+nb}{q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[b](5pt)
+	\PYG{k}{\PYGZbs{}tzcoor*}(45:3)(A)\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzline}(Q)(Q\PYGZsq{})
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}]\PYGZlt{}0.5, \PYGZhy{}0.5\PYGZgt{} (Q)(1, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}p\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+	\PYG{k}{\PYGZbs{}tzline}(0, 0)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{r}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ml]
+	\PYG{k}{\PYGZbs{}tzanglemark}(\PYG{k}{\PYGZbs{}a}, 0)(0, 0)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](A)(90:1.5)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}E\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ar]
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](A)(45:1.5)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}E\PYGZcb{}\PYGZus{}r}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](A)(135:1.5)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}E\PYGZcb{}\PYGZus{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[al]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

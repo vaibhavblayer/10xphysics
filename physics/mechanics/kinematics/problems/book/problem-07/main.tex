@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{v-problem}
+\vgeometry
+
+\begin{document}
+\vtitle[KINEMATICS]
+
+\def\pn{07}
+\def\book{A.K.}
+\def\page{33}
+\def\gdrive{https://drive.google.com/drive/folders/1HZVm3fyIfqVvoALg4mc9JejHvsZBDiyw?usp=share_link}
+
+\def\question{
+A sitting cat in a field suddenly sees a standing dog. To save its life the cat runs away in a straight line with constant velocity $\vec{u}$. Without any time lag the dog starts with a constant speed $v>u$ to catch the cat. At the initial moment $\vec{v}\perp\vec{u}$ and $l$ is the separation between them. If the dog always heads towards the cat, find the time after which the dog catches the cat.
+}
+
+\def\option{
+\begin{tasks}(2)
+\task $\dfrac{b^2\tau}{4}$
+\task $\dfrac{b^2\tau}{2}$
+\task $b^2\tau$
+\task $\dfrac{b^2\tau}{\sqrt{2}}$
+\end{tasks}
+}
+
+\vspace*{\fill}
+\begin{tikzpicture}
+	\node[qnumber] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\book \quad \page]};
+\end{tikzpicture}	
+\vspace*{\fill}
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\tzline[dashed](0, 0)(5, 0)
+\tzline+[->, thick](0, 0)(1, 0){$\vec{u}$}[ar]
+\tzline[dashed](0, 0)(0, -4)
+\tzline[|<->|]<-0.5, 0>(0, 0)(0, -4){$l$}[ml]
+\tzline+[->](0, -4)(0, 1){$\vec{v}$}[al]
+\tzdots*(0, 0)(0, -4);(5pt)
+\tzto[out=90,in=180,dashed](0,-4)(5,0)
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+
+\pagebreak
+\vtitle[\texttt{SOLUTION}]
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\def\tangentat{0.8}
+\tzline[dashed]"HL"(0, 0)(5, 0)
+\tzline[dashed](0, 0)(0, -4)
+\tzline[|<->|]<-0.5, 0>(0, 0)(0, -4){$l$}[l=2mm, midway]
+\tzto[out=90,in=180,dashed]"path"(0,-4)(5,0)
+\tztangentat[dashed, thick]"TL"{path}{\tangentat}[\tangentat:3.5]
+\tztangentat[->, thick]{path}{\tangentat}[\tangentat:\tangentat + 1]{$\vec{v}$}[al]
+\tzXpoint{HL}{TL}(X)
+\tzline+[->](X)(1, 0){$\vec{u}$}[ar=2mm]
+\tzvXpointat*{path}{\tangentat}{Dog}[above left=2mm](5pt)
+\tzdot*(X)(5pt)
+\tznode(X){Cat}[a=2mm]
+\tzvXpointat{TL}{3}(A)
+\tzanglemark(5, 0)(X)(A){$\theta$}
+\end{tikzpicture}
+\end{center}
+
+
+At any moment distance between dog and cat is $s$ and this distance being covered by relative velocity of both these particles in the direction of chasing line as shown in figure. 
+
+\begin{align}
+-\dfrac{\d{s}}{\d{t}} &= v - u\cos\theta 
+\end{align}
+
+\pagebreak
+
+\addtolength{\jot}{4ex}
+
+As both dog and cat covered the same horizontal distance so,
+\begin{align}
+\int_0^t u\d{t} = \int_0^t v\cos\theta\d{t}
+\end{align}
+
+From equation (1)
+\begin{align*}
+-\int_l^0 \d{s} &= \int_0^t \left( v -u\cos\theta \right) \d{t}\\
+l &= vt - u\int_0^t \cos\theta \d{t}\\ 
+\int_0^t \cos\theta \d{t} &= \dfrac{vt-l}{u}
+\end{align*}
+
+Now put this integral value in equation (2)
+\begin{align*}
+\int_0^t u\d{t} &= \int_0^t v\cos\theta\d{t}\\
+ut &= v\int_0^t \cos\theta \d{t}\\
+ut &= v \left(\dfrac{vt-l}{u}\right)\\
+u^2t &= v^2t -vl \\
+t &= \dfrac{vl}{v^2-u^2}\ans
+\end{align*}
+
+\pagebreak
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+
+\end{document}

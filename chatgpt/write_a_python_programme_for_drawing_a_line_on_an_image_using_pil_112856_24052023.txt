@@ -1,0 +1,15 @@
+Q. Write a python programme for drawing a line on an image using PIL.
+
+from PIL import Image, ImageDraw
+
+# Create an image
+img = Image.new('RGB', (500, 500), color = 'white')
+
+# Create a draw object
+draw = ImageDraw.Draw(img)
+
+# Draw a line
+draw.line((0, 0) + img.size, fill='black', width=5)
+
+# Save the image
+img.save('line_image.png')

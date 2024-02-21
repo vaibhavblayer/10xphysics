@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+[thick]
+\tzcoor*(0, 0)(O){$O$}[b]
+\tzcoor*(3, 0)(X)
+\tzcoor*(-3, 0)(X')
+\foreach \a in {0, 10, ..., 360}{
+	\tzcoor(cos{(\a)}, 2.5*sin{(\a)})(P)
+	\tznode(P){$+$}[scale=0.8]
+	\tzdot(P)(7pt)
+}
+\tzline[<->](-5, 0)(5, 0)
+\def\A{6} %angle for element
+\def\AA{125} %at angle
+\def\r{2.5} %radius
+\def\dr{0.15} %delta r
+\def\RO{\r+\dr} %radius outer
+\def\RI{\r-\dr} %radius inner
+\def\R{1.25}
+\tzcoor(3, 0)(O') %point at right end
+\tzcoor(cos{\AA}, 2.5*sin{\AA})(L)
+\tzcoor(1.15*cos{(\AA-\A)}, 2.65*sin{(\AA-\A)})(A)
+\tzcoor(1.15*cos{(\AA+\A)}, 2.65*sin{(\AA+\A)})(B)
+
+	\tzlines(O)(A)(O)(B);
+	\tzarc(O)(\AA-\A:\AA+\A:{1+\dr} and {\r + \dr})
+	\tzarc(O)(\AA-0.5*\A:\AA+2*\A:{1-\dr} and {\r - \dr})
+	\tzline[->](L)($(L)!1.25!(O')$){$\d{\vec{E}}$}[r]
+	\tzline[|<->|]<0, -0.5>(O)(O'){$l$}[mb]
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+\addtolength{\jot}{3ex}
+\begin{align*}
+S &= \sin(\theta) + \sin(2\theta) + \cdots + \sin(n\theta)\\
+  &= \text{Im}\left\{e^{i\theta} + e^{2i\theta}+ \cdots + e^{ni\theta} \right\}\\
+  &= \text{Im}\left\{\dfrac{e^{i\theta\left\{ \left(e^{i\theta}\right)^n -1\right\}}}{e^{i\theta}-1}\right\}\\
+  &= \text{Im}\left\{ \dfrac{e^{i\theta}\cdot e^{ni\theta/2}\cdot 2i\sin\left(\dfrac{n\theta}{2}\right)}{e^{i\theta/2}\cdot 2i\sin\left(\dfrac{\theta}{2}\right)} \right\}\\
+  &= \text{Im}\left\{ \dfrac{\sin\left(\dfrac{n\theta}{2}\right)}{\sin\left(\dfrac{\theta}{2}\right)} \cdot e^{\left(\dfrac{n+1}{2}\right) i\theta} \right\}\\
+  &= \dfrac{\sin\left(\dfrac{n\theta}{2}\right)}{\sin\left(\dfrac{\theta}{2}\right)} \cdot \sin{\left[\left(\dfrac{n+1}{2}\right) \theta \right]}
+\end{align*}

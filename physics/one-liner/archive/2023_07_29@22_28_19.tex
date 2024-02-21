@@ -1,0 +1,15 @@
+
+\begin{tikzpicture}
+[thick]
+\def\R{1.8}
+\def\r{3.8}
+\def\rr{0.75}
+\def\A{51.5}
+\coordinate (O) at (0, 0);
+\draw (O) circle[radius=\R] node{Indeterminate Forms};
+
+\foreach \n/\L in {1/$\dfrac{0}{0}$, 2/$\dfrac{\infty}{\infty}$, 3/$\infty-\infty$, 4/$1^\infty$, 5/$0^0$, 6/$\infty^0$, 7/$\infty\times 0$}{
+	\draw (\n*\A:\r) circle[radius=\rr] node{\L};
+	\draw (\n*\A:\R)--(\n*\A:\r-\rr);
+}
+\end{tikzpicture}

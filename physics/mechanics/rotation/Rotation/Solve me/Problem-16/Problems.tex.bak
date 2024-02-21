@@ -1,0 +1,346 @@
+\documentclass[12 pt]{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[paperwidth=5 in,paperheight=5 in,left=6 mm, right=6 mm, top=15 mm, bottom=18 mm]{geometry}
+\usepackage{graphics}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{marvosym}
+\newcommand{\myitem}{\refstepcounter{enumi}\item[$^\star$\theenumi.]}
+\newcommand{\mmyitem}{\refstepcounter{enumi}\item[$^{\star \star}$\theenumi.]}
+\setcounter{page}{01}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\setlength{\arrayrulewidth}{0.1 mm}
+%BLUE%
+%\definecolor{Mycolor2}{HTML}{3D9BE9}
+\definecolor{Mycolor2}{HTML}{33cccc}
+%\definecolor{Mycolor2}{HTML}{000000}
+
+%%----HEADER &&& FOOTER----%%
+
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{8 mm}
+%\fancyhead[CE,CO]{ \Times\Large{\textbf{\textls*[100]{\textcolor{tomato}{\textit{Illustration}}}}}}
+
+\fancyhead[CE,CO]{\Large{\textbf{\textls*[250]{\textcolor{tomato}{SOLVE ME! \\[-5 mm]{\Large{\textbf{\textls*[5000]{\textcolor{black}{\scalebox{.42}{ROTATION}}}}}}     }}}}}
+
+\fancyfoot[CE,CO]{\Huge{\textbf{\textls*[10]{\textcolor{tomato}{\Times\textit{Solution~\boldmath$\rightarrow$}}}}}}
+
+\renewcommand{\headrulewidth}{0 mm}
+\renewcommand{\footrulewidth}{0 mm}
+
+
+\DeclareMathOperator{\Ln}{ln}
+
+%%----FONT &&& MATHS_FONT----%%
+
+\usepackage{amssymb}
+\usepackage{upgreek,xspace}
+\newcommand*{\rom}[1]{\expandafter\@\romannumeral #1}
+
+
+\usepackage[utopia]{mathdesign}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled=1]{helvet}
+\newcommand*\Times{\fontfamily{ptm}\selectfont}
+
+%%%------PACAKAGES------%%%
+
+\usepackage[letterspace=120]{microtype}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{width=8cm,compat=1.16}
+\usepackage{tikz}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{quotes,angles,patterns,through,calc}
+\usepgflibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta,bending}
+\usepackage{rotating}
+\usepackage{tikz-3dplot}
+\include{tikz-3dplot}
+\usepackage[american voltages, american currents,siunitx]{circuitikz}
+\usepackage{circuitikz}
+\usetikzlibrary{fit,positioning}
+\usetikzlibrary{optics}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{setspace}
+\setstretch{1.1}
+\usepackage{tkz-tab} [3]
+
+
+
+\usepackage{vwcol}[widths={0.25,0.75}]
+
+
+\usepackage{color}
+\usepackage[autostyle]{csquotes}
+
+
+\usepackage{xcolor}
+\definecolor{Mycolor2}{HTML}{33cccc}
+\definecolor{One}{HTML}{336666}
+\definecolor{Two}{HTML}{666666}
+\definecolor{Three}{HTML}{cc6699}
+
+
+%  black--brown--black %
+\definecolor{Four}{HTML}{000000}
+\definecolor{Five}{HTML}{330000}
+\definecolor{Six}{HTML}{000000}
+
+\definecolor{Seven}{HTML}{ff6666}
+\definecolor{Eight}{HTML}{330066}
+\definecolor{Nine}{HTML}{cc3333}
+\definecolor{tomato}{HTML}{FF6347}
+\definecolor{darkblue}{HTML}{2c3e50}
+\definecolor{blackm}{HTML}{363636}
+\definecolor{pink}{HTML}{ff6666}
+
+
+
+
+
+
+  \tikzset{every to/.style={append after command={[draw,dashed]}}}
+
+\tikzset{
+  mirror->/.style={postaction={decorate,black!95,draw,thick,
+decoration={border,amplitude=-0.25cm,angle=45,segment length=0.22cm}}
+  }
+}
+
+
+
+\def\centerarc[#1]#2(#3)#4(#5:#6:#7)% [draw options] (center) (initial angle:final angle:radius)
+  {\draw[#1]($(#3)+({#7*cos(#5)},{#7*sin(#5)})$)arc(#5:#6:#7);}
+
+
+
+\newcommand{\sm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{ }}}}
+\end{minipage}}
+
+\newcommand{\AxisRotator}[1][rotate=0]{%
+    \tikz [x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw (0,0) arc (-120:120:1 and 1);%
+}
+
+
+%%%%%%       Problem Number        %%%%%%%%
+%%%%%%       Problem Number        %%%%%%%%
+
+\newcommand{\nm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{16. }}}}
+\end{minipage}}
+
+%%%%%%       Problem Number        %%%%%%%%
+%%%%%%       Problem Number        %%%%%%%%
+
+\newcommand{\vl}{{{\textcolor{tomato}{\textbf{\vrule width 2.25 pt{}}}}}}
+
+\newenvironment{question}
+{	
+	\nm  \vl \,
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{itshape}
+	\large\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{minipage}
+}
+
+
+\newenvironment{options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{multicols}{2}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{multicols}
+	\end{minipage}
+}
+
+
+\newenvironment{v-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{minipage}
+}
+
+
+
+\newenvironment{definition}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{note}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{calculations}
+{
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+}
+
+
+\newenvironment{q-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{note}
+	\begin{enumerate}[label={(\roman*)}, itemsep=1 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{note}
+	\end{minipage}
+}
+
+
+
+\newcommand{\physics}{\normalsize{\textcolor{tomato}{\textls*[100]{{\hspace*{75 mm} @10xphysics}}}}}
+\newcommand{\solution}{\centering\Large\Times\textbf{\textcolor{tomato}{\textls*[100]{ \textit{\\[-20 mm]Solution}}} }}
+\newcommand{\calculation}{\centering\large\Times{\textcolor{tomato}{ \textit{\\[-18 mm]calculations:\\}} }}
+\newcommand{\integration}{\centering\large\Times{\textcolor{tomato}{ \textit{\\[-18 mm]Integration involved:\\[-2 mm]}} }}
+\def\step[#1]{\Times{\textcolor{tomato}{\textbf{\textit{Step-#1.}}}}}
+
+
+\begin{document}
+
+
+\nopagecolor
+%\boldmath
+\color{black!100}
+%\pagecolor{black!95}
+\setlength{\parindent}{0pt}
+\large
+
+
+\begin{question}
+A sphere of mass $m$ and radius $R$ rests on sufficiently rough inclined plane in equilibrium as shown in the figure. Find the tension in the string.
+\end{question}
+
+{\physics}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,very thick,every node/.style={scale=0.8}]
+\draw (0,0) coordinate (o)--(6,0) coordinate (a);
+\begin{scope}[rotate=30]
+\draw[mirror->] (6,0)--(6,2.3);
+\draw (3,2)--(6,2);
+\draw (3,1) coordinate (c) circle[radius=1];
+\draw (0,0)--(6,0) coordinate (b);
+\draw [->] (c)--(3,0) node[midway,right,red]{$R$};
+\fill [red] (c) circle(2pt);
+\end{scope}
+\pic [thick,red,draw=black,"$30^\circ$", angle eccentricity=1.65,angle radius=0.95 cm] {angle = a--o--b};
+\end{tikzpicture}
+\end{center}
+
+\pagebreak
+
+
+\pagestyle{empty}
+
+\begin{center}
+{\solution}
+\end{center}
+
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,very thick,every node/.style={scale=0.8},every node/.style={color=red}]
+\begin{scope}[rotate=30]
+\draw [->](3,2)--(5,2) node[right]{$T$};
+\draw (3,1) coordinate (c) circle[radius=1];
+\draw [->] (c)--++(-2,0) node[left]{$mg\sin30^\circ$};
+\fill [red] (c) circle(2pt);
+\draw [->] (3,0)--++(2,0) node[right]{$f_r$};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+
+\begin{calculations}
+\step[1] For translational equilibrium 
+\begin{align*}
+mg\sin30^\circ &= T + f_r \\[3 mm]
+\dfrac{mg}{2} &= T + f_r
+\end{align*}
+
+\step[2] For rotational equilibrium 
+\begin{align*}
+\tau_{\textit{centre of mass}} &= 0\\[3 mm]
+f_r \cdot R - T\cdot R &=0 \\[3 mm]
+f_r &= T
+\end{align*}
+
+\[
+\textit{Solving both equations}
+\]
+
+\begin{align*}
+\dfrac{mg}{2} &= T + T 
+						& \quad  \quad \left( \textit{as~~} f_r = T \right) \\[3 mm]
+					T &= \dfrac{mg}{4} \textit{\textcolor{red}{~~Ans.}}
+\end{align*}
+\end{calculations}
+{\physics}
+\pagebreak
+
+
+%%%% testing images within tikzpicture
+
+\begin{center}
+\begin{tikzpicture}
+\node[inner sep=-10pt] (russell) at (0,0)
+    {\includegraphics[width=.25\textwidth]{04.png}};
+\node[inner sep=0pt] (whitehead) at (2,0)
+    {\includegraphics[width=.25\textwidth]{05.png}};
+\draw[<->,thick] (0,0)--(2,0);
+\end{tikzpicture}
+\end{center}
+
+
+
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{instagram-square-post}
+\usepackage{pgf}
+\usepgflibrary{easing}
+\begin{document}
+\CenterWallPaper{1}{background.jpg}
+\color{matte-black}
+
+%\begin{center}
+%	\input{./graphics.tex}
+%\end{center}
+%\vspace*{\fill}
+%
+%\pagebreak
+
+\input{./frames.tex}
+
+
+\end{document}

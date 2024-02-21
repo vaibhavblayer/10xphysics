@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[scale=2]
+\PYG{k}{\PYGZbs{}def\PYGZbs{}CA}\PYG{n+nb}{\PYGZob{}}red\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}CB}\PYG{n+nb}{\PYGZob{}}green\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}CC}\PYG{n+nb}{\PYGZob{}}blue\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}CD}\PYG{n+nb}{\PYGZob{}}black\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzcoor*}\PYG{n+na}{[\PYGZbs{}CA]}(1, 0, 1)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{q, A}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[br](5pt)
+\PYG{k}{\PYGZbs{}tzcoor*}\PYG{n+na}{[\PYGZbs{}CB]}(\PYGZhy{}1, 0, 1)(B)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{q, B}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl](5pt)
+\PYG{k}{\PYGZbs{}tzcoor*}\PYG{n+na}{[\PYGZbs{}CC]}(\PYGZhy{}1, 0, \PYGZhy{}1)(C)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{q, C}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[al](5pt)
+\PYG{k}{\PYGZbs{}tzcoor*}\PYG{n+na}{[\PYGZbs{}CD]}(1, 0, \PYGZhy{}1)(D)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{q, D}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ar](5pt)
+\PYG{k}{\PYGZbs{}tzcoor*}(0, 2, 0)(X)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{X}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a]
+	\PYG{k}{\PYGZbs{}tzlines}\PYG{n+na}{[dashed]}(A)(B)(B)(C)(C)(D)(D)(A);
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(A)(C)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{l+m}{2}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ml]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(B)(D)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{l+m}{2}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mb]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(0, 0, 0)(X)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{x}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mr]
+	
+	\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}p}/\PYG{k}{\PYGZbs{}c} in \PYG{n+nb}{\PYGZob{}}A/\PYG{k}{\PYGZbs{}CA}, B/\PYG{k}{\PYGZbs{}CB}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed, \PYGZbs{}c]}(\PYG{k}{\PYGZbs{}p})(X)	
+		\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}, \PYGZbs{}c]}(X)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nv}{\PYGZbs{}p}\PYG{o}{)!}\PYG{l+m}{1}\PYG{n+nb}{.}\PYG{l+m}{35}\PYG{o}{!(}\PYG{n+nb}{X}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})
+	\PYG{n+nb}{\PYGZcb{}}
+	
+	\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}p}/\PYG{k}{\PYGZbs{}c} in \PYG{n+nb}{\PYGZob{}}C/\PYG{k}{\PYGZbs{}CC}, D/\PYG{k}{\PYGZbs{}CD}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed, \PYGZbs{}c]}(\PYG{k}{\PYGZbs{}p})(X)	
+		\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}, \PYGZbs{}c]}(X)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nv}{\PYGZbs{}p}\PYG{o}{)!}\PYG{l+m}{0}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{o}{!(}\PYG{n+nb}{X}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})
+	\PYG{n+nb}{\PYGZcb{}}
+	
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

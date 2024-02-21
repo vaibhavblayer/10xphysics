@@ -1,0 +1,3 @@
+Q. write a ffmpeg command for placing a video on a image with perspective grid.
+
+ffmpeg -i video.mp4 -i image.jpg -filter_complex "[0:v]setpts=PTS-STARTPTS,scale=iw/2:-1[left];[1:v]scale=iw/2:-1[right];[left][right]overlay=x='min(0,(main_w-overlay_w)/2)':y='min(0,(main_h-overlay_h)/2)':eof_action=endall:enable='between(t,0,20)'[out]" -map "[out]" -map 0:a -c:v libx264 -c:a copy output.mp4

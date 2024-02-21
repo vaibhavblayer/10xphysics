@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+\def\v@f{60}
+\def\fps{60}
+\def\t{sinestep(0, \fps, \v@f)}
+\tzcoor*(0, 0)(O){$O$}[bl]
+\tzcoor*(70:3)(Q1){$q_1$}[br](5pt)
+\tzcoor*(15:5)(Q2){$q_2$}[br](5pt)
+\tzcoor*(35:{\t*4.5})(Q3){$q_3$}[b](5pt)
+\tzaxes(-0.5, -0.5)(8,4){$x$}{$y$}
+	\tzline[->](O)(Q1){$\vec{r}_1$}[mr]
+	\tzline[->](O)(Q2){$\vec{r}_2$}[mb]
+	\tzline[->](O)(Q3){$\vec{r}_3$}[mb]
+	\tzline[->](Q3)($(Q3)!0.3!(Q1)$){$\vec{F}_{31}$}[l]
+	\tzline[->](Q3)($(Q3)!0.3!(Q2)$){$\vec{F}_{32}$}[r]
+	\tzline[->](Q2)($(Q2)!0.3!(Q3)$){$\vec{F}_{23}$}[l]
+	\tzline[->](Q2)($(Q2)!-0.2!(Q1)$){$\vec{F}_{21}$}[r]
+	\tzline[->](Q1)($(Q1)!0.3!(Q3)$){$\vec{F}_{13}$}[r]
+	\tzline[->](Q1)($(Q1)!-0.2!(Q2)$){$\vec{F}_{12}$}[l]
+\end{tikzpicture}

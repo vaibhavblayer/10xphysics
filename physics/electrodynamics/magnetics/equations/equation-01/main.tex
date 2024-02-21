@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{v-equation}
+\vgeometry
+
+\begin{document}
+
+\def\gdrive{https://drive.google.com/drive/folders/134Dp6Lf0MMG1RS7dcQl6RoIlbQ4pKlSL?usp=share_link}
+
+\vtitle[Magnetic Force : Direction]
+\begin{center}
+\begin{tikzpicture}
+[xscale=1.2, yscale=1.2, very thick, >=latex]
+\draw[->] (0,0,0)--(2,0,0) node[below]{$\vec{v}$};
+\draw[->] (0,0,0)--(0,1.5,0) node[left]{$\vec{F}$};
+\draw[->] (0,0,0)--(1,0,-2) node[above]{$\vec{B}$};
+\draw (0.5,0,0) arc[start angle=0, end angle=24, radius=0.5];
+\draw [line width=0 mm, opacity=0.35,pattern=grid, pattern color=black!50] (0,0,0)--(2,0,0)--(3,0,-2)--(1,0,-2)--(0,0,0);
+\end{tikzpicture}
+\end{center}
+Direction of magnetic force will be in the direction of the plane perpendicular to both $\vec{v}$ and $\vec{B}$, because it is defined as cross product.
+\begin{itemize}
+\item It can be found using right-hand thumb rule.
+\item Just point your fingers in the direction of $\vec{v}$ such that they can be curled into $\vec{B}$, the thumb points in the direction of $\vec{F}$. 
+\end{itemize}
+\vspace*{\fill}
+\begin{align*}
+\vec{F}=q_0 \left( \vec{v} \times \vec{B} \right)
+\end{align*}
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+    \fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+\end{document}

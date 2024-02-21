@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{v-problem}
+\usepackage{v-temp-macro}
+\vgeometry
+
+\begin{document}
+\vtitle[KINEMATICS]
+
+\def\pn{01}
+\def\exam{IIT-JEE}
+\def\year{2016}
+\def\gdrive{https://drive.google.com/drive/folders/1MyNIyEawU1Ote8-yj1a2Tujg45iw-hrE?usp=share_link}
+
+\def\question{
+The position vector $\vec{r}$ of particle of mass $m$ is given by the
+following equation \[ \vec{r}(t)=\alpha t^3\hat{i} + \beta t^2\hat{j} \]
+where, $\alpha=\dfrac{10}{3}ms^{-3}, \beta=5ms^{-2} \text{ and } m=0.1\kg $. At $t=1\s$, which of the following statement(s) is(are) true about the particle? 
+}
+
+\def\option{
+\begin{tasks}(1)
+\task The velocity $\vec{v}$ is given by $\vec{v}=\left(10\hat{i}+10\hat{j}\right)\mps$ \ans
+\task The angular momentum $\vec{L}$ with respect to the origin is given by $\vec{L}=\dfrac{5}{3}\hat{k}\N\m\s$
+\task The force $\vec{F}$ is given by $\vec{F}=\left(\hat{i}+2\hat{j}\right)\N$
+\task The torque $\tau$ with respect to the origin is given by $\tau=-\dfrac{20}{3}\hat{k}\N\m$ \ans
+\end{tasks}
+}
+
+\vspace*{\fill}
+\begin{assemble}[S]
+	\node[qnumber, \C] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider, \C]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\exam \quad \year]};
+\end{assemble}	
+\vspace*{\fill}
+
+\begin{tikzpicture}
+\node[minimum width=1cm](n) at (0, 0){}; 
+\node[option, anchor=west] at (n.east){\option};
+\end{tikzpicture}
+\vspace*{\fill}
+
+\pagebreak
+
+\begin{align}
+\vec{r}(t) &=\alpha t^3\hat{i} + \beta t^2\hat{j}\\
+\vec{v}(t) &= 3\alpha t^2\hat{i} + 2\beta t\hat{j}\\
+\vec{a}(t) &= 6\alpha t\hat{i} + 2\beta \hat{j}
+\end{align}
+
+\begin{enumerate}[label=(\alph*)]
+\item From equation (2)
+\begin{align*}
+\vec{v}(1) &= 3\cdot\dfrac{10}{3}\cdot 1^2\hat{i} + 2\cdot 5 \cdot 1\hat{j}\\
+&= 10\hat{i} + 10\hat{j} \ans
+\end{align*}
+
+\item Using equation (1) and (2)
+
+\begin{align*}
+\vec{L} &= \vec{r} \times \vec{p}\\
+		&= \left(\alpha t^3 \hat{i} + \beta t^2\hat{j} \right) \times \left(0.1\right)\left(3\alpha t^2\hat{i} + 2\beta t\hat{j}\right)\\
+		&= -0.1\alpha\beta t^4\hat{k}\\
+		&= -\dfrac{5}{3}\hat{k}
+\end{align*}
+
+\item Using equation (3)
+\begin{align*}
+\vec{F} &= m\vec{a}\\
+		&= 0.1 \left( 6\alpha t\hat{i} + 2\beta\hat{j} \right)\\
+		&= 2\hat{i} + \hat{j}
+\end{align*}
+
+\item From (b) we can use $\vec{L}$
+\begin{align*}
+\vec{\tau} &= \dfrac{\d{\vec{L}}}{\d{t}} \\
+		&= \dfrac{\d{}}{\d{t}}\left(-0.1\alpha\beta t^4 \hat{k} \right)\\
+		&= -0.1\alpha\beta \cdot 4t^3\hat{k}\\
+		&= -\dfrac{20}{3}\hat{k} \ans
+\end{align*}
+\end{enumerate}
+
+
+
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+
+\end{document}

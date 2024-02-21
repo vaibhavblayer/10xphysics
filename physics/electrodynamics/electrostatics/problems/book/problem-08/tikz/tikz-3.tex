@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+[scale=2]
+\def\CA{red}
+\def\CB{green}
+\def\CC{blue}
+\def\CD{black}
+\tzcoor*[\CA](1, 0, 1)(A){$q, A$}[br](5pt)
+\tzcoor*[\CB](-1, 0, 1)(B){$q, B$}[bl](5pt)
+\tzcoor*[\CC](-1, 0, -1)(C){$-q, C$}[al](5pt)
+\tzcoor*[\CD](1, 0, -1)(D){$-q, D$}[ar](5pt)
+\tzcoor*(0, 2, 0)(X){$X$}[a]
+	\tzlines[dashed](A)(B)(B)(C)(C)(D)(D)(A);
+	\tzline[dashed](A)(C){$2l$}[ml]
+	\tzline[dashed](B)(D){$2l$}[mb]
+	\tzline[dashed](0, 0, 0)(X){$x$}[mr]
+	
+	\foreach \p/\c in {A/\CA, B/\CB}{
+		\tzline[dashed, \c](\p)(X)	
+		\tzline[->, \c](X)($(\p)!1.35!(X)$)
+	}
+	
+	\foreach \p/\c in {C/\CC, D/\CD}{
+		\tzline[dashed, \c](\p)(X)	
+		\tzline[->, \c](X)($(\p)!0.5!(X)$)
+	}
+	
+
+\end{tikzpicture}

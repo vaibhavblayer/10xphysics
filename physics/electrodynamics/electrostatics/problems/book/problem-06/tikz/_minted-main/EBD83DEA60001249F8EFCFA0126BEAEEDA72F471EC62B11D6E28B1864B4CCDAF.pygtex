@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzcoor*}(0, 0)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{q\PYGZus{}}\PYG{l+m}{0}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl](5pt)
+	\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}a} in \PYG{n+nb}{\PYGZob{}}0, 8, ..., 352\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}tznode}(\PYG{k}{\PYGZbs{}a}:2)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{+}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[scale=0.65]
+		\PYG{k}{\PYGZbs{}tzdot}\PYG{n+na}{[thin]}(\PYG{k}{\PYGZbs{}a}:2)(6pt)	
+	\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tznode}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(}\PYG{l+m}{0}\PYG{n+nb}{, }\PYG{o}{\PYGZhy{}}\PYG{l+m}{2}\PYG{n+nb}{.}\PYG{l+m}{1}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[b]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}, thick]}(O)(40:2)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{r}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mb]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

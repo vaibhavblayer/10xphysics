@@ -1,0 +1,3 @@
+Q. What is Kirchhoff's Junction rule?
+
+Kirchhoff's Junction Rule states that the sum of the currents entering and leaving a junction in an electrical circuit must be equal to zero. This means that the total current entering a junction must be equal to the total current leaving the junction.

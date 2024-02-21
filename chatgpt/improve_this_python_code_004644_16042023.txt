@@ -1,0 +1,16 @@
+Q. Improve this python code  
+
+```
+def add_two_numbers(a, b):
+    return a + b
+
+x = add_two_numbers(2, 3)
+print(x)
+```
+
+def add_two_numbers(a, b):
+    result = a + b
+    print(f"The result of adding {a} and {b} is {result}")
+    return result
+
+x = add_two_numbers(2, 3)

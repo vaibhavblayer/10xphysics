@@ -1,0 +1,3 @@
+Q. Write a ffmpeg command for extracting audio from video
+
+ffmpeg -i video.mp4 -vn -acodec copy audio.mp3

@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\tzaxes(-5, -3)(5,3){$l$}{$E$}
+\def\Fx{4*\x/(1+(\x)^2)^(3/2)}
+\tzfn{\Fx}[-5:5]
+\tzvXpointat{Fx}{0.707}(A)
+\tzproj*[<->,solid,draw=red](A){$l/\sqrt{2}$}{$E_{\textit{max}}$}
+\end{tikzpicture}

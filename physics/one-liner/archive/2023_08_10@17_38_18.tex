@@ -1,0 +1,17 @@
+\large
+\ttfamily
+\vtitle[Ammeter]
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+	\draw (0, 0) to[short, i=$i$] ++(2, 0) coordinate(GS) to[rmeter, t=G, i>^=$i_g$]++(3, 0) coordinate(GE) to ++(2, 0);
+	\draw (GS) to [short, i=$i-i_g$] ++(0, 2) to [R, l=$S$]++(3, 0) to (GE);
+\end{tikzpicture}
+\end{center}
+\addtolength{\jot}{2ex}
+\begin{align*}
+(i-i_g)*S &= i_g*G\\
+S &= \left(\dfrac{i_g}{i-i_g} \right)G
+\end{align*}
+

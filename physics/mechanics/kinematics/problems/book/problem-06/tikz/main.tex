@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{v-equation}
+\usepackage{minted}
+\usemintedstyle{staroffice}
+\vgeometry
+\begin{document}
+\def\gdrive{https://drive.google.com/drive/folders/1M6igGY8V4fSOFMslEF9VlcPTaXLsKyxO?usp=share_link}
+
+\vspace*{\fill}
+\begin{center}
+\input{tikz-2.tex}
+\end{center}
+\vspace*{\fill}
+\pagebreak
+
+
+\vspace*{\fill}
+\inputminted[tabsize=4, breaklines, linenos=true, fontsize=\small]{tex}{tikz-2.tex}
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+\input{tikz-3.tex}
+\end{center}
+\vspace*{\fill}
+\pagebreak
+
+
+\vspace*{\fill}
+\inputminted[tabsize=4, breaklines, linenos=true, fontsize=\small]{tex}{tikz-3.tex}
+\vspace*{\fill}
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+
+\end{document}

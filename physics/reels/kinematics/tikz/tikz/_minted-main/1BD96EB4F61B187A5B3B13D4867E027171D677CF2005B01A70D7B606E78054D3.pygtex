@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{n}{problem}\PYG{o}{.}\PYG{n}{importance} \PYG{o}{\PYGZlt{}} \PYG{n}{high}\PYG{p}{:}
+    \PYG{n}{relax}\PYG{p}{()}
+\end{Verbatim}

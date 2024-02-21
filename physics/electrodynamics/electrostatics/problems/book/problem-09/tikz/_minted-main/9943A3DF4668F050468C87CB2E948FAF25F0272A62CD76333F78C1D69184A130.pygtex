@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[arcnode/.style 2 args=\PYG{n+nb}{\PYGZob{}}                
+	decoration=\PYG{n+nb}{\PYGZob{}}
+	raise=\PYGZsh{}1,             
+	markings,   
+	mark=at position 0.5 with \PYG{n+nb}{\PYGZob{}} 
+		\PYG{k}{\PYGZbs{}node}\PYG{n+na}{[inner sep=0]} \PYG{n+nb}{\PYGZob{}}\PYGZsh{}2\PYG{n+nb}{\PYGZcb{}};
+	\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}},
+postaction=\PYG{n+nb}{\PYGZob{}}decorate\PYG{n+nb}{\PYGZcb{}\PYGZcb{}},
+thick
+]
+\PYG{k}{\PYGZbs{}def\PYGZbs{}A}\PYG{n+nb}{\PYGZob{}}6\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}angle for element}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}AA}\PYG{n+nb}{\PYGZob{}}130\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}at angle}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}r}\PYG{n+nb}{\PYGZob{}}2\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}radius}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}dr}\PYG{n+nb}{\PYGZob{}}0.12\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}delta r}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}RO}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}r}+\PYG{k}{\PYGZbs{}dr}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}radius outer}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}RI}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}r}\PYGZhy{}\PYG{k}{\PYGZbs{}dr}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}radius inner}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}R}\PYG{n+nb}{\PYGZob{}}1.25\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzcoor}(\PYG{k}{\PYGZbs{}AA}:\PYG{k}{\PYGZbs{}RO})(O\PYGZsq{}) \PYG{c}{\PYGZpc{}point at right end}
+\PYG{k}{\PYGZbs{}tzcoor*}(0, 0)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{O}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl]
+	\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}a} in \PYG{n+nb}{\PYGZob{}}90, 100, ..., 270\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}tznode}(\PYG{k}{\PYGZbs{}a}:\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{+}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[scale=0.65]
+		\PYG{k}{\PYGZbs{}draw}(\PYG{k}{\PYGZbs{}a}:\PYG{k}{\PYGZbs{}r}) circle [radius=\PYG{k}{\PYGZbs{}dr}];
+	\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed, thin]}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(\PYGZhy{}}\PYG{l+m}{3}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(}\PYG{l+m}{3}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})
+	\PYG{k}{\PYGZbs{}tzlines}(O)(\PYG{k}{\PYGZbs{}AA}+\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RO})(O)(\PYG{k}{\PYGZbs{}AA}\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RO});
+	\PYG{k}{\PYGZbs{}tzarc}(O)(\PYG{k}{\PYGZbs{}AA}\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}AA}+\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RO})
+	\PYG{k}{\PYGZbs{}tzarc}(O)(\PYG{k}{\PYGZbs{}AA}\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}AA}+\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RI})
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}]}(O)(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O\PYGZsq{}}\PYG{o}{)!}\PYG{l+m}{1}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{o}{!(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}E\PYGZcb{}\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+	\PYG{k}{\PYGZbs{}tzanglemark}(\PYG{k}{\PYGZbs{}AA}\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}r})(O)(\PYG{k}{\PYGZbs{}AA}+\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(15pt)
+	\PYG{k}{\PYGZbs{}tzanglemark}(\PYG{k}{\PYGZbs{}AA}+\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}r})(O)(180:\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(15pt)
+	\PYG{k}{\PYGZbs{}tzanglemark}\PYGZsq{}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O\PYGZsq{}}\PYG{o}{)!}\PYG{l+m}{1}\PYG{n+nb}{.}\PYG{l+m}{75}\PYG{o}{!(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(O)(0:\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(15pt)
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](O)(\PYG{k}{\PYGZbs{}R}, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}E\PYGZcb{}}\PYG{n+nv}{\PYGZbs{}cos\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](O)(0, \PYGZhy{}\PYG{k}{\PYGZbs{}R})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}E\PYGZcb{}}\PYG{n+nv}{\PYGZbs{}sin\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[b]
+	\PYG{k}{\PYGZbs{}tzarc}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|, arcnode=\PYGZob{}\PYGZhy{}10pt\PYGZcb{}\PYGZob{}\PYGZdl{}\PYGZbs{}d\PYGZob{}l\PYGZcb{}\PYGZdl{}\PYGZcb{}]}(O)(\PYG{k}{\PYGZbs{}AA}\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}AA}+\PYG{k}{\PYGZbs{}A}:1.1*\PYG{k}{\PYGZbs{}RO})
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

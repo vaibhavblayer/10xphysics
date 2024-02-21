@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}r}\PYG{n+nb}{\PYGZob{}}2\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzaxes}\PYG{n+na}{[rotate=45]}(\PYGZhy{}1.5*\PYG{k}{\PYGZbs{}r}, \PYGZhy{}1.5*\PYG{k}{\PYGZbs{}r})(1.5*\PYG{k}{\PYGZbs{}r},1.5*\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{x}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{y}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}a}/\PYG{k}{\PYGZbs{}q}/\PYG{k}{\PYGZbs{}n} in \PYG{n+nb}{\PYGZob{}}\PYGZhy{}45/q/A, 45/\PYGZhy{}q/D, 135/\PYGZhy{}q/C, \PYGZhy{}135/q/B\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+	\PYG{k}{\PYGZbs{}tzdot*}(\PYG{k}{\PYGZbs{}a}:\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}q}\PYG{n+nb}{, }\PYG{n+nv}{\PYGZbs{}n}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[\PYG{k}{\PYGZbs{}a}](5pt)
+	\PYG{k}{\PYGZbs{}ifthenelse}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}a}=45\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZlt{}\PYGZhy{}\PYGZgt{}]}(0, 0)(\PYG{k}{\PYGZbs{}a}:\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ml]
+	\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

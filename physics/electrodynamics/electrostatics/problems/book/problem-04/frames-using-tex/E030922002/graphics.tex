@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+[>=latex, line cap=round]
+\def\v@f{24}
+\def\fps{24}
+\def\t{sinestep(0, \fps, \v@f)}
+	\draw[<->](0, 4)--(0,0)--(6, 0);
+	\draw[ rotate around= {45*\t:(0, 0)}] (4, 0) circle[radius=1];
+\end{tikzpicture}

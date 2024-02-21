@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+[scale=2]
+\tzcoor*(1, 0, 1)(A){$q$}[br](5pt)
+\tzcoor*(-1, 0, 1)(B){$q$}[bl](5pt)
+\tzcoor*(-1, 0, -1)(C){$-q$}[al](5pt)
+\tzcoor*(1, 0, -1)(D){$-q$}[ar](5pt)
+\tzcoor*(0, 2, 0)(X){$X$}[a]
+	%\tzline[->](-3, 0, 0)(3, 0, 0){$x$}[r]
+	%\tzline[->](0, -1, 0)(0, 5, 0){$y$}[a]
+	%\tzline[->](0, 0, -2)(0, 0, 4){$z$}[b]
+	\tzlines[dashed](A)(B)(B)(C)(C)(D)(D)(A);
+	\tzline[dashed](A)(C){$2l$}[ml]
+	\tzline[dashed](B)(D){$2l$}[mb]
+	%\tzlines[dashed](A)(X)(B)(X)(C)(X)(D)(X);
+	\tzline[dashed](0, 0, 0)(X){$x$}[mr]
+\end{tikzpicture}

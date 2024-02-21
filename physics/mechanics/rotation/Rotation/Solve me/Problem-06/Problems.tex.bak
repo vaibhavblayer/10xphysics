@@ -1,0 +1,321 @@
+ \documentclass[12 pt]{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[paperwidth=5 in,paperheight=5 in,left=9 mm, right=9 mm, top=15 mm, bottom=18.5 mm]{geometry}
+\usepackage{graphics}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{marvosym}
+\newcommand{\myitem}{\refstepcounter{enumi}\item[$^\star$\theenumi.]}
+\newcommand{\mmyitem}{\refstepcounter{enumi}\item[$^{\star \star}$\theenumi.]}
+\setcounter{page}{01}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\setlength{\arrayrulewidth}{0.1 mm}
+%BLUE%
+%\definecolor{Mycolor2}{HTML}{3D9BE9}
+\definecolor{Mycolor2}{HTML}{33cccc}
+%\definecolor{Mycolor2}{HTML}{000000}
+
+%%----HEADER &&& FOOTER----%%
+
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{8 mm}
+%\fancyhead[CE,CO]{ \Times\Large{\textbf{\textls*[100]{\textcolor{tomato}{\textit{Illustration}}}}}}
+
+\fancyhead[CE,CO]{\Large{\textbf{\textls*[250]{\textcolor{tomato}{SOLVE ME! \\[-5 mm]{\Large{\textbf{\textls*[5000]{\textcolor{black}{\scalebox{.42}{ROTATION}}}}}}     }}}}}
+
+\fancyfoot[RE,RO]{\large{\textbf{\textls*[10]{\textcolor{tomato}{\Times\textit{Solution~\boldmath$\rightarrow$}}}}}}
+
+\renewcommand{\headrulewidth}{0 mm}
+\renewcommand{\footrulewidth}{0 mm}
+
+
+\DeclareMathOperator{\Ln}{ln}
+
+%%----FONT &&& MATHS_FONT----%%
+
+\usepackage{amssymb}
+\usepackage{upgreek,xspace}
+\newcommand*{\rom}[1]{\expandafter\@\romannumeral #1}
+
+
+\usepackage[utopia]{mathdesign}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled=1]{helvet}
+\newcommand*\Times{\fontfamily{ptm}\selectfont}
+
+%%%------PACAKAGES------%%%
+
+\usepackage[letterspace=120]{microtype}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{width=8cm,compat=1.16}
+\usepackage{tikz}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{quotes,angles,patterns,through,calc}
+\usepgflibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta,bending}
+\usepackage{rotating}
+\usepackage{tikz-3dplot}
+\usepackage[american voltages, american currents,siunitx]{circuitikz}
+\usepackage{circuitikz}
+\usetikzlibrary{fit,positioning}
+\usetikzlibrary{optics}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{setspace}
+\setstretch{1.1}
+
+
+\usepackage{vwcol}[widths={0.25,0.75}]
+
+
+\usepackage{color}
+\usepackage[autostyle]{csquotes}
+
+
+\usepackage{xcolor}
+\definecolor{Mycolor2}{HTML}{33cccc}
+\definecolor{One}{HTML}{336666}
+\definecolor{Two}{HTML}{666666}
+\definecolor{Three}{HTML}{cc6699}
+
+
+%  black--brown--black %
+\definecolor{Four}{HTML}{000000}
+\definecolor{Five}{HTML}{330000}
+\definecolor{Six}{HTML}{000000}
+
+\definecolor{Seven}{HTML}{ff6666}
+\definecolor{Eight}{HTML}{330066}
+\definecolor{Nine}{HTML}{cc3333}
+\definecolor{tomato}{HTML}{FF6347}
+\definecolor{darkblue}{HTML}{2c3e50}
+\definecolor{blackm}{HTML}{363636}
+\definecolor{pink}{HTML}{ff6666}
+
+
+\newcommand{\nm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{6. }}}}
+\end{minipage}}
+
+\newcommand{\sm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{ }}}}
+\end{minipage}}
+
+\newcommand{\AxisRotator}[1][rotate=0]{%
+    \tikz [x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw (0,0) arc (-120:120:1 and 1);%
+}
+
+\newcommand{\vl}{{{\textcolor{tomato}{\textbf{\vrule width 2.25 pt{}}}}}}
+
+\newenvironment{question}
+{	
+	\nm  \vl \,
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{minipage}
+}
+
+
+\newenvironment{options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{multicols}{2}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{multicols}
+	\end{minipage}
+}
+
+
+\newenvironment{v-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{minipage}
+}
+
+
+
+\newenvironment{definition}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{note}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+\newenvironment{q-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{note}
+	\begin{enumerate}[label={(\roman*)}, itemsep=1 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{note}
+	\end{minipage}
+}
+
+
+
+\newcommand{\physics}{\normalsize{\textcolor{tomato}{\textls*[100]{{\hspace*{75 mm} @10xphysics}}}}}
+
+\newcommand{\solution}{\centering\Large\Times\textbf{\textcolor{tomato}{\textls*[100]{ \textit{\\[-20 mm]Solution}}} }}
+
+\newcommand{\calculations}{\centering\large\Times{\textcolor{tomato}{ \textit{\\[-18 mm]calculations:\\[-2 mm]}} }}
+
+\begin{document}
+
+
+\nopagecolor
+%\boldmath
+\color{black!100}
+%\pagecolor{black!95}
+\setlength{\parindent}{0pt}
+\large
+
+%%%%   PROBLEM-02  %%%%%
+
+\begin{question}
+A uniform rod of length $l$ and mass $m$ is suspended on two vertical inextensible strings as shown in figure. Calculate tension $T$ in left string at the instant when right string snaps. 
+\end{question}
+
+{\physics}
+
+
+
+\begin{center}
+\begin{tikzpicture}[use optics,very thick,decoration={
+    markings,
+    mark=at position 0.3 with {\arrow{Stealth}}},every node/.style={scale=0.85},yscale=0.65]
+\node[thick,mirror,rotate=90,scale=4,mirror decoration separation=0.08,mirror decoration amplitude=0.12] at (3,0) {};
+\draw[line width=7,line cap=round] (1,-3) --(5,-3);
+\draw[thick] (1,-3)--(1,0);
+\draw[thick] (5,-3)--(5,0);
+\end{tikzpicture}
+\end{center}
+
+\vspace*{5 mm}
+
+\begin{options}
+\item $\dfrac{mg}{2}$
+\item $mg$
+\item $\dfrac{mg}{4}$
+\item $\dfrac{mg}{8}$
+\end{options}
+
+\pagebreak
+
+
+\pagestyle{empty}
+
+\begin{center}
+{\solution}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,use optics,very thick,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{Stealth}}},every node/.style={scale=0.85},yscale=0.65]
+\node[thick,mirror,rotate=90,scale=4,mirror decoration separation=0.08,mirror decoration amplitude=0.12] at (3,0) {};
+\draw[line width=7,line cap=round] (1,-3) coordinate(a)--([turn]60:4) coordinate(b);
+\draw[thick] (1,-3)--(1,0) node[midway,left]{$T$};
+\draw[thick,decorate] (1,-3)--(1,0);
+\draw[thick] (5,-3)--(5,0);
+\draw [->](a)--([turn]60:2)--++(0,-2) node[below]{$mg$};
+\draw (1,-2.85) to [dim arrow={label=$l/2$}](3,-2.85);
+\end{tikzpicture}
+\end{center}
+
+{\physics}
+
+\begin{note}
+The moment right string snaps, rod starts to rotate about the left tied point and hence its centre of mass gains some linear acceleration also.
+\end{note}
+
+\pagebreak
+
+
+\begin{note}
+Equation for linear acceleration of the rod
+\[
+mg -T = ma \quad \cdots (1)
+\]
+
+Equation for angular acceleration of the rod
+\[
+\tau = I \upalpha \quad \cdots (2)
+\]
+
+As rod will be in pure rotational motion about the tied point so
+\[
+a = R\upalpha=\dfrac{l}{2} \times \upalpha  \quad \cdots (3)
+\]
+
+
+On solving all three equations you'll get the result
+\[
+T=\dfrac{mg}{4}
+\]
+
+\pagebreak
+
+{\calculations}
+
+\begin{align*}
+& \textit{From equation (2)}  && mg \times \dfrac{l}{2} = \dfrac{ml^2}{3} \times \upalpha \\[3 mm]
+& \textit{Put $\upalpha$ from equation (3)}  &&mg \times \dfrac{l}{2} = \dfrac{ml^2}{3} \times \dfrac{2a}{l} \\[3 mm]
+& ~ && ~~\quad\quad a = \dfrac{3g}{4} \\[5mm]
+& \textit{Put $a$ in equation (1)}  &&mg -T = ma \\[3 mm]
+& ~ && mg -T = m \times \dfrac{3g}{4} \\[3 mm]
+& ~ &&T = \dfrac{mg}{4} \quad \textit{Option(iii)} \\
+\end{align*}
+
+\end{note}
+
+{\physics}
+
+\pagebreak
+
+\end{document}

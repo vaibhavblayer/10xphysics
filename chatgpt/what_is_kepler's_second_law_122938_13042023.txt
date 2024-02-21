@@ -1,0 +1,3 @@
+Q. What is Kepler's second law?
+
+Kepler's second law states that a planet's orbit around the sun is an ellipse with the sun at one of the two foci. This means that a planet's distance from the sun varies as it orbits, and it is closest to the sun (perihelion) and farthest from the sun (aphelion) at different points in its orbit.

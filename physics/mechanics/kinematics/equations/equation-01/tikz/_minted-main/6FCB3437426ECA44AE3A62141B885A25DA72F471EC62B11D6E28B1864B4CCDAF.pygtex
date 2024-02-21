@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[thick, scale=3]
+\PYG{k}{\PYGZbs{}clip} (2, 1) rectangle (4.25, 4);
+\PYG{k}{\PYGZbs{}def\PYGZbs{}tat}\PYG{n+nb}{\PYGZob{}}3.65\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}tangent at \PYGZob{}x\PYGZcb{}}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}dx}\PYG{n+nb}{\PYGZob{}}0.2\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzaxes}(\PYGZhy{}0.5, \PYGZhy{}0.5)(7,4)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{x}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{f}\PYG{o}{(}\PYG{n+nb}{x}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tztos}\PYGZdq{}curve\PYGZdq{}
+		(0,0)[out=0, in=\PYGZhy{}180]
+		(3,1.5)[out=0, in=\PYGZhy{}180]
+		(6, 3.5);
+	\PYG{k}{\PYGZbs{}tzvXpointat*}\PYG{n+nb}{\PYGZob{}}curve\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}tat}\PYGZhy{}\PYG{k}{\PYGZbs{}dx}\PYG{n+nb}{\PYGZcb{}}(A)
+	\PYG{k}{\PYGZbs{}tzvXpointat*}\PYG{n+nb}{\PYGZob{}}curve\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}tat}+\PYG{k}{\PYGZbs{}dx}\PYG{n+nb}{\PYGZcb{}}(B)
+	\PYG{k}{\PYGZbs{}tztangentat}\PYGZdq{}TL\PYGZdq{}\PYG{n+nb}{\PYGZob{}}curve\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}tat}\PYG{n+nb}{\PYGZcb{}}[\PYG{k}{\PYGZbs{}tat}\PYGZhy{}1.5:5]
+	\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{l+s}{\PYGZdl{}}(A)!0.5!(B)\PYG{l+s}{\PYGZdl{}}\PYG{o}{)!}\PYG{l+m}{1}\PYG{n+nb}{cm}\PYG{o}{!}\PYG{l+m}{90}\PYG{n+nb}{:}\PYG{o}{(}\PYG{n+nb}{B}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{O}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ar]
+	\PYG{k}{\PYGZbs{}tzcircle}\PYG{n+na}{[dashed]}(O)(1)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed, red]}(O)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{r}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ml]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed, red]}(O)(B)
+	\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{A}\PYG{o}{)+(}\PYG{l+m}{2}\PYG{o}{*}\PYG{n+nv}{\PYGZbs{}dx}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(C)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[red]}(A)(C)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}x\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mb]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[red]}(B)(C)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}y\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mr]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[red]}(A)(B)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}l\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ma]
+	\PYG{k}{\PYGZbs{}tzanglemark}(C)(A)(B)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(5pt)
+	\PYG{k}{\PYGZbs{}tzanglemark}(B)(O)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(5pt)
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

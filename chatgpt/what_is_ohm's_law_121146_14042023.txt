@@ -1,0 +1,3 @@
+Q. What is Ohm's Law?
+
+Ohm's Law states that the current through a conductor between two points is directly proportional to the voltage across the two points. Mathematically, it can be expressed as V = I x R, where V is the voltage, I is the current, and R is the resistance.

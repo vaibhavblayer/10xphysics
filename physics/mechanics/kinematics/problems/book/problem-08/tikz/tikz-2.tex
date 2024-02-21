@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+[thick]
+\pic[rotate=-90] at (0, 0) {frame=6cm};
+\foreach \s/\x/\n in {3/0/1, 2/3/2, 1/5/3}{
+	\draw[xshift=\x cm] (0, 0)
+		--++(-60:\s)node[below]{$C_\n$}
+		--++(60:\s) node[right]{$A_\n$}
+		--++(120:\s)node[above]{$B_\n$}-- cycle;
+}
+\tznode(0, 0){$A_0$}[r]
+\tzline+[->](6, 0)(1.5, 0){$v$}[r]
+\end{tikzpicture}

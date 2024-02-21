@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{v-equation}
+\vgeometry
+%\usepackage{pgf}
+\usepgflibrary{easing}
+\begin{document}
+%\CenterWallPaper{1}{background.jpg}
+\color{matte-black}
+
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+[>=latex, line cap=round]
+\def\v@f{24}
+\def\fps{60}
+\def\t{sinestep(0, \fps, \v@f)}
+	\draw[->](-1, 0) -- (5, 0);
+	\draw[->] (0, -1)--(0, 5);
+	\draw[->] (0, 0)-- ({4*\t}, {4*\t});
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+%
+%\pagebreak
+
+%\input{./frames.tex}
+
+
+\end{document}

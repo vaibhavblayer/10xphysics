@@ -1,0 +1,3 @@
+Q. write a ffmpeg command for speed up a video in mov format
+
+ffmpeg -i input.mov -filter:v "setpts=0.5*PTS" output.mov

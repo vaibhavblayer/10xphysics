@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+\tzdot*(0,0)(4pt)
+\tznode(0, -3){\texttt{Knowing}}
+\foreach \x in {0, 20,..., 340}{
+	\tzdot*(\x:2)(4pt)
+}
+
+\begin{scope}[xshift=5.25cm]
+\foreach \x in {0, 20,..., 340}{
+	\tzdot*(\x:2)(4pt)
+	\foreach \y in {20, 40, ..., 340}{
+		\tzline(\x:2)(\y:2)
+	}
+}
+\tznode(0, -3){\texttt{Understanding}}
+\end{scope}
+\end{tikzpicture}

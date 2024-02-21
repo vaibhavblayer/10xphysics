@@ -1,0 +1,46 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{manim} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{k+kn}{from} \PYG{n+nn}{manim\PYGZus{}physics} \PYG{k+kn}{import} \PYG{o}{*}
+
+\PYG{k}{class} \PYG{n+nc}{ElectricFieldLine}\PYG{p}{(}\PYG{n}{Scene}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{construct}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{charges} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{17}\PYG{p}{):}
+            \PYG{n}{charge} \PYG{o}{=} \PYG{n}{Charge}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{add\PYGZus{}glow}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{charge}\PYG{p}{)}
+            \PYG{n}{charges}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{charge}\PYG{p}{)}
+
+        \PYG{k}{def} \PYG{n+nf}{rebuild}\PYG{p}{(}\PYG{n}{field}\PYG{p}{):}
+            \PYG{n}{field}\PYG{o}{.}\PYG{n}{become}\PYG{p}{(}\PYG{n}{ElectricField}\PYG{p}{(}
+                \PYG{o}{*}\PYG{p}{[}\PYG{n}{charges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{17}\PYG{p}{)]}
+            \PYG{p}{))}
+
+        \PYG{n}{field} \PYG{o}{=} \PYG{n}{ElectricField}\PYG{p}{(}
+            \PYG{o}{*}\PYG{p}{[}\PYG{n}{charges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{17}\PYG{p}{)]}
+        \PYG{p}{)}
+
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{field}\PYG{p}{)}
+
+        \PYG{n}{field}\PYG{o}{.}\PYG{n}{add\PYGZus{}updater}\PYG{p}{(}\PYG{n}{rebuild}\PYG{p}{)}
+
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{):}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}
+                \PYG{n}{charges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{.}\PYG{n}{animate}\PYG{o}{.}\PYG{n}{shift}\PYG{p}{((}\PYG{l+m+mi}{4}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{i}\PYG{p}{)}\PYG{o}{*}\PYG{n}{RIGHT}\PYG{p}{),}
+                \PYG{n}{charges}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{8}\PYG{p}{]}\PYG{o}{.}\PYG{n}{animate}\PYG{o}{.}\PYG{n}{shift}\PYG{p}{((}\PYG{l+m+mi}{4}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{i}\PYG{p}{)}\PYG{o}{*}\PYG{n}{LEFT}\PYG{p}{)}
+            \PYG{p}{)}
+
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{):}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}
+                \PYG{n}{Rotating}\PYG{p}{(}
+                    \PYG{n}{charges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],}
+                    \PYG{n}{radians}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{PI}\PYG{p}{,}
+                    \PYG{n}{about\PYGZus{}point}\PYG{o}{=}\PYG{n}{ORIGIN}
+                \PYG{p}{),}
+                \PYG{n}{Rotating}\PYG{p}{(}
+                    \PYG{n}{charges}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{8}\PYG{p}{],}
+                    \PYG{n}{radians}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{PI}\PYG{p}{,}
+                    \PYG{n}{about\PYGZus{}point}\PYG{o}{=}\PYG{n}{ORIGIN}
+                \PYG{p}{),}
+                \PYG{n}{run\PYGZus{}time}\PYG{o}{=}\PYG{l+m+mi}{1}
+            \PYG{p}{)}
+\end{Verbatim}

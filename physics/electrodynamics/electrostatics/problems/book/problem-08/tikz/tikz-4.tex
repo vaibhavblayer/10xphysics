@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\def\r{2}
+\tzaxes[rotate=45](-1.5*\r, -1.5*\r)(1.5*\r,1.5*\r){$x$}{$y$}
+\foreach \a/\q/\n in {-45/q/A, 45/-q/D, 135/-q/C, -135/q/B}{
+	\tzdot*(\a:\r){$\q, \n$}[\a](5pt)
+	\ifthenelse{\a=45}{
+		\tzline[<->](0, 0)(\a:\r){$l$}[ml]
+	}{}
+}
+\end{tikzpicture}

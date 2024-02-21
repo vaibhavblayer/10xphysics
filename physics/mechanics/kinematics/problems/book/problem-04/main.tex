@@ -66,7 +66,37 @@ Point $A$ moves uniformly with velocity $v$ so that the vector $\vec{v}$ is cont
 \end{tikzpicture}
 \end{center}
 
+At any moment distance between $A$ and $B$ is $s(AB)$ and this distance being covered by relative velocity of both these particles in the direction of $AB$. 
+
+\begin{align}
+-\dfrac{\d{s}}{\d{t}} &= v - u\cos\theta 
+\end{align}
+
 \pagebreak
+
+As both the particles $A$ and $B$ covered the same horizontal distance so,
+\begin{align}
+\int_0^t u\d{t} = \int_0^t v\cos\theta\d{t}
+\end{align}
+
+From equation (1)
+\begin{align*}
+-\int_l^0 \d{s} &= \int_0^t \left( v -u\cos\theta \right) \d{t}\\
+l &= vt - u\int_0^t \cos\theta \d{t}\\ 
+\int_0^t \cos\theta \d{t} &= \dfrac{vt-l}{u}
+\end{align*}
+
+Now put this integral value in equation (2)
+\begin{align*}
+\int_0^t u\d{t} &= \int_0^t v\cos\theta\d{t}\\
+ut &= v\int_0^t \cos\theta \d{t}\\
+ut &= v \left(\dfrac{vt-l}{u}\right)\\
+u^2t &= v^2t -vl \\
+t &= \dfrac{vl}{v^2-u^2}\ans
+\end{align*}
+
+\pagebreak
+
 \vspace*{\fill}
 \begin{center}
 	\fbox{\qrcode[height=2cm]{\gdrive}}

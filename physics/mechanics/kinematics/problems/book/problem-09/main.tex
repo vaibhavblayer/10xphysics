@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage{v-problem}
+\vgeometry
+
+\begin{document}
+\vtitle[KINEMATICS]
+
+\def\pn{09}
+\def\book{A.K.}
+\def\page{34}
+\def\gdrive{https://drive.google.com/drive/folders/1IPJTFCpNJ8SgMcUTHNS77TwG7qWWWP0E?usp=share_link}
+
+\def\question{
+Two particles $P$ and $Q$ describe coplanar concentric circles of radii $a$ and $a'$ with angular velocities $\omega$ and $\omega'$ (in the same sense) respectively. Find the angular velocity of $P$ with respect to $Q$, when angle $P\!O\!Q$ equals $\theta$ and also find $\theta$ when relative angular velocity vanishes.
+}
+
+\vspace*{\fill}
+\begin{tikzpicture}
+	\node[qnumber] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\book \quad \page]};
+\end{tikzpicture}	
+\vspace*{\fill}
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\def\a{2}
+\def\b{1.2}
+	\tzcoor*(0,  0)(O){$O$}[bl]
+	\tzcircle"ca"(O)(\a)
+	\tzcircle"cb"(O)(\b)
+	\tzvXpoint*{ca}(1,0)(P){$P$}[a]
+	\tzvXpoint*{cb}(0,0)(Q){$Q$}[a]
+	\tztangent[->]{ca}(P)[1:-0.5]{$a\omega$}[l]
+	\tztangent[->]{cb}(Q)[0:-1.5]{$a'\omega'$}[l]
+	\tzline[->](O)(-30:\a){$a$}[mb]
+	\tzline[->](O)(30:\b){$a'$}[ma]
+\end{tikzpicture}
+\end{center}
+\pagebreak
+\vtitle[\texttt{Solution}]
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\def\a{2.5}
+\def\b{1.2}
+\def\q{-1}
+	\tzcoor*(0,  0)(O){$O$}[bl]
+	\tzcircle"ca"(O)(\a)
+	\tzcircle"cb"(O)(\b)
+	\tzvXpoint*{ca}(1,0)(P){$P$}[a]
+	\tzvXpoint*{cb}(\q,0)(Q){$Q$}[a]
+	\tztangent[->]{ca}(P)[1:-0.5]{$a\omega$}[l]
+	\tztangent[->]{cb}(Q)[\q:\q-1]{$a'\omega'$}[l]
+	%\tzline[->](O)(-30:\a){$a$}[mb]
+	%\tzline[->](O)(30:\b){$a'$}[ma]
+	\tzlines[dashed, red](P){$d$}[ma](Q){$a'$}[mb](O){$a$}[mr](P);
+	\tzanglemark[red](P)(O)(Q){$\theta$}
+	\tzanglemark[red](Q)(P)(O){$\alpha$}
+	\tzanglemark'[red](O)(Q)(P){$\beta$}
+	\tzcoor($(P)!2cm!-90:(Q)$)(PP){$a\omega\cos\alpha$}[ar]
+	\tzcoor($(Q)!2cm!-90:(P)$)(QP){$a'\omega'\cos\beta$}[b]
+	\tzline[->](P)(PP)
+	\tzline[->](Q)(QP)
+\end{tikzpicture}
+\end{center}
+Now the angular velocity of $P$ relative to $Q$
+\begin{align*}
+\Omega &= \dfrac{\textit{The projection of $\vec{v}_{PQ}$ normal to the line QP}}{\textit{Separation between Q and P}}
+\end{align*}
+\pagebreak
+
+\addtolength{\jot}{3ex}
+\def\vp{a\omega\cos\alpha}
+\def\vq{a'\omega'\cos\beta}
+\def\cosa{\left(\dfrac{a^2+d^2-a'^2}{2ad}\right)}
+\def\cosb{\left(\dfrac{a'^2+d^2-a^2}{2a'd}\right)}
+\begin{align*}
+\Omega &= \dfrac{\vp + \vq}{d}\\
+	&= \dfrac{a\omega\cosa +a'\omega'\cosb}{d}\\
+	&=\dfrac{\omega\left( a^2+d^2-a'^2 \right) +\omega'\left(a'^2+d^2-a^2  \right)}{2d^2}\\
+	&=\dfrac{\left( \omega+\omega' \right)}{2} + \dfrac{\left(\omega-\omega'\right)\left(a^2-a'^2\right)}{2\left( a^2+a'^2-2aa'\cos\theta \right)}\ans
+\end{align*}
+\pagebreak
+
+For $\theta$ when $\Omega = 0$\_
+\begin{align*}
+\Omega &=\dfrac{\left( \omega+\omega' \right)}{2} + \dfrac{\left(\omega-\omega'\right)\left(a^2-a'^2\right)}{2\left( a^2+a'^2-2aa'\cos\theta \right)}\\
+0 &=\dfrac{\left( \omega+\omega' \right)}{2} + \dfrac{\left(\omega-\omega'\right)\left(a^2-a'^2\right)}{2\left( a^2+a'^2-2aa'\cos\theta \right)}\\
+-\left(\omega-\omega'\right)\left( a^2-a'^2\right) &= \left(a^2+a'^2\right) \left(\omega+\omega'\right) -2aa'\cos\theta\left(\omega+\omega'\right) \\
+2aa'\cos\theta\left(\omega+\omega'\right) &= \left(a^2+a'^2\right) \left(\omega+\omega'\right) + \left(\omega-\omega'\right)\left( a^2-a'^2\right)\\
+\cos\theta &= \dfrac{a^2\omega+a'^2\omega'}{aa'\left(\omega+\omega'\right)} \ans
+\end{align*}
+
+
+\pagebreak
+
+
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+	\foreach \x in {0, 3}{
+		\foreach \y in {0, 3}{
+			\begin{scope}[xshift=\x cm, yshift=\y cm]
+				\foreach \r in {0.5, 0.75, ..., 2}{
+					\tzcircle[line width=3/\r mm](0, 0)(\r)
+				}
+			\end{scope}
+		}
+	}
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+\def\ps{\texttt{you are what you do}}
+\def\ns{\texttt{not what you say you'll do}}
+	\tzpolygon(0, 0)(1, 2)(-1, 2);
+	\tzpolygon*[scale=0.25, fill=black, opacity=1](0, 0)(1, 2)(-1, 2);
+	\tznode(0, 0){\ps}[b]
+	\begin{scope}[yshift=-4cm]
+	\tzpolygon(0, 0)(1, 2)(-1, 2);
+	\tzpolygon*[fill=black, opacity=1](0, 0)(1, 2)(-1, 2);
+	\tznode(0, 0){\ns}[b]
+	\end{scope}
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+
+\end{document}

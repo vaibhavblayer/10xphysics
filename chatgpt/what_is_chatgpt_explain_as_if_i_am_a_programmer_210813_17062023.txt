@@ -1,0 +1,3 @@
+Q. What is chatGPT explain as if I am a programmer.
+
+ChatGPT is a natural language processing (NLP) technology that enables computers to generate human-like conversations. It uses a deep learning model based on the GPT-2 algorithm to generate responses to user input. ChatGPT can be used to create interactive chatbots, virtual assistants, and other conversational applications. It is designed to understand natural language and generate meaningful responses in real-time.

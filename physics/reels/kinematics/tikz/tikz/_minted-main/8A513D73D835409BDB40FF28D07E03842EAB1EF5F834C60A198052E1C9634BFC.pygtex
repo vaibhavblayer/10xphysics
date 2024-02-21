@@ -1,0 +1,61 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{vmanim} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{k+kn}{from} \PYG{n+nn}{manim} \PYG{k+kn}{import} \PYG{o}{*}
+
+\PYG{k}{class} \PYG{n+nc}{GenSpiral}\PYG{p}{(}\PYG{n}{ThreeDScene}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{construct}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{phi}\PYG{p}{,} \PYG{n}{theta}\PYG{p}{,} \PYG{n}{focal\PYGZus{}distance}\PYG{p}{,} \PYG{n}{gamma}\PYG{p}{,} \PYG{n}{zoom} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{camera}\PYG{o}{.}\PYG{n}{get\PYGZus{}value\PYGZus{}trackers}\PYG{p}{()}
+        \PYG{n}{t} \PYG{o}{=} \PYG{n}{ValueTracker}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{n}{axes} \PYG{o}{=} \PYG{n}{ThreeDAxes}\PYG{p}{()}\PYG{o}{.}\PYG{n}{scale}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{p}{)}
+        \PYG{n}{title} \PYG{o}{=} \PYG{n}{RTitle}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}textit}\PYG{l+s+si}{\PYGZob{}Helicoid\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{n}{X} \PYG{o}{=} \PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}x \PYGZam{}= \PYGZbs{}theta\PYGZbs{}cdot\PYGZbs{}cos(\PYGZbs{}phi)}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s2}{\PYGZdq{}}
+        \PYG{n}{Y} \PYG{o}{=} \PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}y \PYGZam{}= \PYGZbs{}theta\PYGZbs{}cdot\PYGZbs{}sin(\PYGZbs{}phi)}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s2}{\PYGZdq{}}
+        \PYG{n}{Z} \PYG{o}{=} \PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}z \PYGZam{}= \PYGZbs{}phi\PYGZdq{}}
+        \PYG{n}{coords} \PYG{o}{=} \PYG{n}{MathTex}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{Y}\PYG{p}{,} \PYG{n}{Z}\PYG{p}{)}\PYG{o}{.}\PYG{n}{shift}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{o}{*}\PYG{n}{DOWN}\PYG{p}{)}
+
+        \PYG{k}{def} \PYG{n+nf}{func}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{):}
+            \PYG{k}{return} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}
+                \PYG{n}{u}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{v}\PYG{p}{),} \PYG{n}{u}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{v}\PYG{p}{),} \PYG{l+m+mf}{0.4}\PYG{o}{*}\PYG{n}{v}
+            \PYG{p}{])}
+
+        \PYG{n}{surface} \PYG{o}{=} \PYG{n}{Surface}\PYG{p}{(}\PYG{n}{func}\PYG{p}{)}
+
+        \PYG{n}{surface}\PYG{o}{.}\PYG{n}{add\PYGZus{}updater}\PYG{p}{(}
+            \PYG{k}{lambda} \PYG{n}{m}\PYG{p}{:} \PYG{n}{m}\PYG{o}{.}\PYG{n}{become}\PYG{p}{(}
+                \PYG{n}{Surface}\PYG{p}{(}
+                    \PYG{n}{func}\PYG{p}{,}
+                    \PYG{n}{u\PYGZus{}range}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{PI}\PYG{p}{],}
+                    \PYG{n}{v\PYGZus{}range}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{t}\PYG{o}{.}\PYG{n}{get\PYGZus{}value}\PYG{p}{()],}
+                    \PYG{n}{resolution}\PYG{o}{=}\PYG{l+m+mi}{24}\PYG{p}{,}
+                    \PYG{n}{checkerboard\PYGZus{}colors}\PYG{o}{=}\PYG{p}{[}\PYG{n}{GRAY\PYGZus{}C}\PYG{p}{,} \PYG{n}{GRAY\PYGZus{}C}\PYG{p}{],}
+                    \PYG{n}{stroke\PYGZus{}color}\PYG{o}{=}\PYG{n}{GRAY\PYGZus{}C}\PYG{p}{,}
+                \PYG{p}{)}
+            \PYG{p}{)}
+        \PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{add\PYGZus{}fixed\PYGZus{}in\PYGZus{}frame\PYGZus{}mobjects}\PYG{p}{(}\PYG{n}{title}\PYG{p}{,} \PYG{n}{coords}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{set\PYGZus{}camera\PYGZus{}orientation}\PYG{p}{(}
+                \PYG{n}{theta}\PYG{o}{=}\PYG{l+m+mi}{60} \PYG{o}{*} \PYG{n}{DEGREES}\PYG{p}{,} 
+                \PYG{n}{phi}\PYG{o}{=}\PYG{l+m+mi}{60} \PYG{o}{*} \PYG{n}{DEGREES}
+        \PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{t}\PYG{p}{,} \PYG{n}{axes}\PYG{p}{,} \PYG{n}{surface}\PYG{p}{)}
+
+        \PYG{k}{def} \PYG{n+nf}{funct}\PYG{p}{(}\PYG{n}{mobject}\PYG{p}{,} \PYG{n}{dt}\PYG{p}{):}
+            \PYG{k}{if} \PYG{n}{t}\PYG{o}{.}\PYG{n}{get\PYGZus{}value}\PYG{p}{()} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{PI}\PYG{p}{:}
+                \PYG{n}{mobject}\PYG{o}{.}\PYG{n}{increment\PYGZus{}value}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{o}{*}\PYG{n}{dt}\PYG{p}{)}
+
+        \PYG{n}{t}\PYG{o}{.}\PYG{n}{add\PYGZus{}updater}\PYG{p}{(}\PYG{n}{funct}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{play}\PYG{p}{(}
+            \PYG{n}{phi}\PYG{o}{.}\PYG{n}{animate}\PYG{o}{.}\PYG{n}{set\PYGZus{}value}\PYG{p}{(}
+                \PYG{n}{phi}\PYG{o}{.}\PYG{n}{get\PYGZus{}value}\PYG{p}{()} \PYG{o}{+} \PYG{l+m+mi}{20}\PYG{o}{*}\PYG{n}{DEGREES}
+            \PYG{p}{),}
+            \PYG{n}{theta}\PYG{o}{.}\PYG{n}{animate}\PYG{o}{.}\PYG{n}{set\PYGZus{}value}\PYG{p}{(}
+                \PYG{n}{theta}\PYG{o}{.}\PYG{n}{get\PYGZus{}value}\PYG{p}{()} \PYG{o}{+} \PYG{l+m+mi}{360}\PYG{o}{*}\PYG{n}{DEGREES}
+            \PYG{p}{),}
+            \PYG{n}{zoom}\PYG{o}{.}\PYG{n}{animate}\PYG{o}{.}\PYG{n}{set\PYGZus{}value}\PYG{p}{(}\PYG{n}{theta}\PYG{o}{.}\PYG{n}{get\PYGZus{}value}\PYG{p}{()}\PYG{o}{*}\PYG{l+m+mf}{0.4}\PYG{p}{),}
+            \PYG{n}{rate\PYGZus{}func}\PYG{o}{=}\PYG{n}{rate\PYGZus{}functions}\PYG{o}{.}\PYG{n}{linear}\PYG{p}{,}
+            \PYG{n}{run\PYGZus{}time}\PYG{o}{=}\PYG{l+m+mi}{30}
+        \PYG{p}{)}
+
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{wait}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}
+\end{Verbatim}

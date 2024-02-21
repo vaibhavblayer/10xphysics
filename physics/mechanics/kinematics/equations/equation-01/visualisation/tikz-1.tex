@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+[thick]
+\def\tat{3.65}%tangent at {x}
+\def\dx{0.25}
+	\tzaxes(-0.5, -0.5)(7,4){$x$}{$f(x)$}
+	\tztos"curve"
+		(0,0)[out=0, in=-180]
+		(3,1.5)[out=0, in=-180]
+		(6, 3.5);
+		
+	\tzvXpointat{curve}{\tat-\dx}(A)
+	\tzvXpointat{curve}{\tat+\dx}(B)
+	\tztangentat"TL"{curve}{\tat}[\tat-1.5:5]
+	\tzcoor*($($(A)!0.5!(B)$)!1cm!90:(B)$)(O){$O$}[ar]
+	%\tzXpoint{normal}{normall}(X)
+	\tzcircle[dashed](O)(1)
+	\tzline[dashed, red](O)(A)
+	\tzline[dashed, red](O)(B)
+	\tzcoor*($(A)+(2*\dx, 0)$)(C)
+	\tzline[red](A)(C)
+	\tzline[red](B)(C)
+\end{tikzpicture}

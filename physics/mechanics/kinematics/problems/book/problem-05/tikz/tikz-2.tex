@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+[>=latex, thick]
+%\draw[->] (0, 0)--((5, 0);
+%\fill[pattern=north east lines](0, 0) rectangle (4, -0.5);
+\draw[ultra thick] (-3, 0)--(3, 0) (-3, 2.5)--(3, 2.5);
+\foreach \y in {0.5, 1.0,..., 2}{
+\draw[->] (2, \y)--(3, \y);
+};
+\node at (3, 1.25)[right]{$nu$};
+\draw[dashed](0,0)--(0, 2.5) node[above]{$O$};
+\draw[->](0, 0) node[below]{$A$}--+(0, 1) node[right]{$u$};
+%\draw (0, 0.3) arc (90:135:0.3);
+\draw[<->](-2.5, 0)--(-2.5, 2.5) node[left, midway]{$d$};
+\end{tikzpicture}

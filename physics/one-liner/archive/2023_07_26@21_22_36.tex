@@ -1,0 +1,9 @@
+\addtolength{\jot}{3ex}
+\begin{align*}
+S &= \cos(\theta) + \cos(2\theta) + \cdots + \cos(n\theta)\\
+  &= Re\left\{e^{i\theta} + e^{2i\theta}+ \cdots + e^{ni\theta} \right\}\\
+  &= Re\left\{\dfrac{e^{i\theta\left\{ \left(e^{i\theta}\right)^n -1\right\}}}{e^{i\theta}-1}\right\}\\
+  &= Re\left\{ \dfrac{e^{i\theta}\cdot e^{ni\theta/2}\cdot 2i\sin\left(\dfrac{n\theta}{2}\right)}{e^{i\theta/2}\cdot 2i\sin\left(\dfrac{\theta}{2}\right)} \right\}\\
+  &= Re\left\{ \dfrac{\sin\left(\dfrac{n\theta}{2}\right)}{\sin\left(\dfrac{\theta}{2}\right)} \cdot e^{\left(\dfrac{n+1}{2}\right) i\theta} \right\}\\
+  &= \dfrac{\sin\left(\dfrac{n\theta}{2}\right)}{\sin\left(\dfrac{\theta}{2}\right)} \cdot \cos{\left[\left(\dfrac{n+1}{2}\right) \theta \right]}
+\end{align*}

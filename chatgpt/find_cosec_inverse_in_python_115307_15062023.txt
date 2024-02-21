@@ -1,0 +1,17 @@
+Q. Find cosec inverse in python
+
+The cosec inverse in python can be calculated using the math.acos() function.
+
+Syntax: math.acos(x)
+
+Example:
+
+import math
+
+x = 0.5
+
+cosec_inverse = math.acos(x)
+
+print("The cosec inverse of 0.5 is", cosec_inverse)
+
+Output: The cosec inverse of 0.5 is 1.0471975511965976

@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+\def\l{1.5}
+\tzcoor*(0, 0)(Q)(8pt)
+	\tzline+[->](Q)(60:\l){$T$}[a]
+	\tzline+[->](Q)(180:\l){$F_e$}[l]
+	\tzline+[->](Q)(90:\l){$T\cos\theta$}[a]
+	\tzline+[->](Q)(0:\l){$T\sin\theta$}[r]
+	\tzline+[->](Q)(270:\l){$mg$}[b]
+	\tzanglemark(60:1)(Q)(90:1){$\theta$}
+	
+\begin{scope}[xshift=6cm, yshift=\l cm]
+\def\x{1.5}
+\tzcoor*(0, 0)(O){$O$}[a]
+\tzcoor*($(O)+(-\x, -3)$)(Q1){$m, q$}[bl](6pt)
+\tzcoor*($(O)+(\x, -3)$)(Q2){$m, q$}[br](6pt)
+	\tzline(O)(Q1){$l$}[ml]
+	\tzline(O)(Q2){$l$}[mr]
+	\tzline[|<->|]<0, -0.5>(Q1)(Q2){$x$}[mb]
+	\tzanglemark(Q1)(O)($(O)+(0,-1)$){$\theta$}
+	\tzline+[dashed](O)($(Q1)!0.5!(Q2)$)
+	\tzline[dashed](Q1)($(Q1)!0.5!(Q2)$)
+\end{scope}
+\end{tikzpicture}

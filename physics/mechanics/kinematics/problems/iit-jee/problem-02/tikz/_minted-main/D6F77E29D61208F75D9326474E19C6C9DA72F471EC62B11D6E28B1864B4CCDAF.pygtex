@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzdot*}(0,0)(4pt)
+\PYG{k}{\PYGZbs{}tznode}(0, \PYGZhy{}3)\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}texttt}\PYG{n+nb}{\PYGZob{}}Knowing\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}x} in \PYG{n+nb}{\PYGZob{}}0, 20,..., 340\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+	\PYG{k}{\PYGZbs{}tzdot*}(\PYG{k}{\PYGZbs{}x}:2)(4pt)
+\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}scope\PYG{n+nb}{\PYGZcb{}}[xshift=5.25cm]
+\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}x} in \PYG{n+nb}{\PYGZob{}}0, 20,..., 340\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+	\PYG{k}{\PYGZbs{}tzdot*}(\PYG{k}{\PYGZbs{}x}:2)(4pt)
+	\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}y} in \PYG{n+nb}{\PYGZob{}}20, 40, ..., 340\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}tzline}(\PYG{k}{\PYGZbs{}x}:2)(\PYG{k}{\PYGZbs{}y}:2)
+	\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tznode}(0, \PYGZhy{}3)\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}texttt}\PYG{n+nb}{\PYGZob{}}Understanding\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}scope\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

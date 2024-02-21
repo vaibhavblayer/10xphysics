@@ -1,0 +1,3 @@
+Q. What is definite integral in latex.
+
+\int_{a}^{b} f(x) \, dx

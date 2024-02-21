@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\tzcoor*(0, 0)(O){$q_0$}[bl](5pt)
+	\foreach \a in {0, 8, ..., 352}{
+		\tznode(\a:2){$+$}[scale=0.65]
+		\tzdot[thin](\a:2)(6pt)	
+	}
+	\tznode($(O)+(0, -2.1)$){$q$}[b]
+	\tzline[->, thick](O)(40:2){$r$}[mb]
+\end{tikzpicture}

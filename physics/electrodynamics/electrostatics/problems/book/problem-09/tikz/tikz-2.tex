@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\tzcoor*(0, 0)(O){$O$}[b]
+\foreach \a in {90, 100,..., 270}{
+	\tznode(\a:2){$+$}[scale=0.8]
+	\tzdot(\a:2)(7pt)
+	\tzline[->](\a:1.86)(\a:1.25)
+}
+\tzline+[->](O)(1.5, 0){$\vec{E}$}[r]
+\end{tikzpicture}

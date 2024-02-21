@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}x}\PYG{n+nb}{\PYGZob{}}0.5\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzcoor*}(0, 0)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{O}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a]
+\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(\PYGZhy{}}\PYG{n+nv}{\PYGZbs{}x}\PYG{n+nb}{, }\PYG{o}{\PYGZhy{}}\PYG{l+m}{3}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(Q1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{m, q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl](6pt)
+\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(}\PYG{n+nv}{\PYGZbs{}x}\PYG{n+nb}{, }\PYG{o}{\PYGZhy{}}\PYG{l+m}{3}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(Q2)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{m, q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[br](6pt)
+	\PYG{k}{\PYGZbs{}tzline}(O)(Q1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ml]
+	\PYG{k}{\PYGZbs{}tzline}(O)(Q2)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mr]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}0, \PYGZhy{}0.5\PYGZgt{}(Q1)(Q2)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{x}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mb]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

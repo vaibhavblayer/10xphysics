@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{v-equation}
+\vgeometry
+
+\begin{document}
+
+\def\gdrive{https://drive.google.com/drive/folders/13INMzi77nDWVTDnG7vtIGrPbDapDjZNB?usp=share_link}
+
+\vtitle[Work done by Magnetic Force on a moving charge]
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+	\foreach \x in {0, 1, ..., 5}{
+		\foreach \y in {0, 1, ..., 4}{
+			\node at (\x, \y)[scale=0.75]{$\times$};
+		}
+	} 
+	\tzcoor*(3.5, 1.5)(O){$q_0$}[r]
+	\tzcoor($(O)+(-2,0)$)(C)
+	\begin{scope}[rotate around={30:(C)}]
+	
+	\tzline+[->](O)(0, 1){$\vec{v}$}[a]
+	\tzline+[->](O)(-1, 0){$\vec{F}_m$}[l]
+	\tzarc[-->--=0.5]($(O)+(-2,0)$)(-30:0:2)
+	\tzarc[-->--=0.5, dashed]($(O)+(-2,0)$)(0:90:2)
+	\end{scope}
+	
+\end{tikzpicture}
+\end{center}
+
+\vspace*{\fill}
+\begin{align*}
+W & =\int \vec{F} \cdot \d{\vec{r}}\\
+ & = \int q_0 \left( \vec{v} \times \vec{B} \right) \cdot \vec{v}\d{t}\\
+ & = \int q_0 \left[\vec{v} \vec{B} \vec{v} \right] \d{t}\\
+W & = 0
+\end{align*}
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+    \fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+\end{document}

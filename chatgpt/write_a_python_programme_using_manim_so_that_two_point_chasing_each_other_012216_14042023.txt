@@ -1,0 +1,32 @@
+Q. Write a python programme using manim so that two point chasing each other.
+
+from manimlib.imports import *
+
+class ChasingPoints(Scene):
+    def construct(self):
+        point1 = Dot(color=BLUE)
+        point2 = Dot(color=RED)
+
+        self.play(
+            ShowCreation(point1),
+            ShowCreation(point2)
+        )
+
+        self.play(
+            point1.shift, RIGHT * 3,
+            point2.shift, LEFT * 3
+        )
+
+        self.play(
+            point1.shift, LEFT * 3,
+            point2.shift, RIGHT * 3
+        )
+
+        self.wait(2)
+
+        self.play(
+            point1.shift, RIGHT * 3,
+            point2.shift, LEFT * 3
+        )
+
+        self.wait(2)

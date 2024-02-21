@@ -1,0 +1,3 @@
+Q. What is AI
+
+AI (Artificial Intelligence) is a branch of computer science that focuses on creating intelligent machines that can think and act like humans. AI systems are designed to learn from their environment, recognize patterns, and make decisions with minimal human intervention. AI is used in a variety of applications, including robotics, natural language processing, computer vision, and machine learning.

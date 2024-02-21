@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+	\tzcoor*(0, 0)(O){$O$}[br]
+	\tzcoor*($(O)+(-4, 0)$)(A){$A$}[bl]
+	\tzcoor*($(O)+(0, 4)$)(B){$B$}[al]
+	\tzcoor*($(A)!0.35!(O)$)(V1)(5pt)
+	\tzcoor*($(B)!0.35!(O)$)(V2)(5pt)
+	
+	\tzline+[->, thick](V1)(1, 0){$v_1$}[ar]
+	\tzline+[->, thick](V2)(0, -1){$v_2$}[l]
+	
+	\tzline[dashed](O)(A)
+	\tzline[dashed](O)(B)
+	\tzline[|<->|]<0, -0.5>(O)(A){$l_1$}[midway, below]
+	\tzline[|<->|]<0.5, 0>(O)(B){$l_2$}[midway, right]
+	
+	\tzline[|<->|]<0, -1>(A)(V1){$v_1t$}[midway, below]
+	\tzline[|<->|]<1, 0>(B)(V2){$v_2t$}[midway, right]
+	
+	\tzline[|<->|]<0, -1>(V1)(O){$l_1-v_1t$}[midway, below]
+	\tzline[|<->|]<1, 0>(V2)(O){$l_2-v_2t$}[midway, right]
+
+	\tzline[dashed](V1)(V2){$s$}[sloped, midway, above]
+\end{tikzpicture}

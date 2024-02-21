@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+if=${1} # input-file
+fps=${2:-24} # fps -> 24, 30, 60 ,120
+
+
+# sl -> starting line
+sl=$(awk '/\\begin\{tikzpicture\}/{print NR}' $if)
+
+# el -> ending line
+el=$(awk '/\\end\{tikzpicture\}/{print NR}' $if)
+
+awk -v sl="$sl" -v el="$el" '(NR>=sl && NR <= el){print}' $if > temp-01.txt
+
+#cat temp-01.txt
+touch temp-02.txt
+for ((i=1; i<=$fps; i++))
+do
+	awk -v f="@f{$i}" -v fps="fps{$fps}" 'BEGIN{print "\\vspace\*\{\\fill\}\n\\begin\{center\}"}{gsub(/\@f\{[0-9]*\}$/, f); gsub(/fps{[0-9]*\}$/, fps); print}END{print "\\end\{center\}\n\\vspace\*\{\\fill\}\n\\pagebreak\n"}' temp-01.txt >> temp-02.txt
+done
+
+#cat temp-02.txt
+rm temp-01.txt
+mv temp-02.txt frames.tex

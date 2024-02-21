@@ -1,0 +1,316 @@
+ \documentclass[12 pt]{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[paperwidth=5 in,paperheight=5 in,left=9 mm, right=9 mm, top=15 mm, bottom=18.5 mm]{geometry}
+\usepackage{graphics}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{marvosym}
+\newcommand{\myitem}{\refstepcounter{enumi}\item[$^\star$\theenumi.]}
+\newcommand{\mmyitem}{\refstepcounter{enumi}\item[$^{\star \star}$\theenumi.]}
+\setcounter{page}{01}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\setlength{\arrayrulewidth}{0.1 mm}
+%BLUE%
+%\definecolor{Mycolor2}{HTML}{3D9BE9}
+\definecolor{Mycolor2}{HTML}{33cccc}
+%\definecolor{Mycolor2}{HTML}{000000}
+
+%%----HEADER &&& FOOTER----%%
+
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{8 mm}
+%\fancyhead[CE,CO]{ \Times\Large{\textbf{\textls*[100]{\textcolor{tomato}{\textit{Illustration}}}}}}
+
+\fancyhead[CE,CO]{\Large{\textbf{\textls*[250]{\textcolor{tomato}{SOLVE ME! \\[-5 mm]{\Large{\textbf{\textls*[5000]{\textcolor{black}{\scalebox{.42}{ROTATION}}}}}}     }}}}}
+
+\fancyfoot[RE,RO]{\large{\textbf{\textls*[10]{\textcolor{tomato}{\Times\textit{Solution~\boldmath$\rightarrow$}}}}}}
+
+\renewcommand{\headrulewidth}{0 mm}
+\renewcommand{\footrulewidth}{0 mm}
+
+
+\DeclareMathOperator{\Ln}{ln}
+
+%%----FONT &&& MATHS_FONT----%%
+
+\usepackage{amssymb}
+\usepackage{upgreek,xspace}
+\newcommand*{\rom}[1]{\expandafter\@\romannumeral #1}
+
+
+\usepackage[utopia]{mathdesign}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled=1]{helvet}
+\newcommand*\Times{\fontfamily{ptm}\selectfont}
+
+%%%------PACAKAGES------%%%
+
+\usepackage[letterspace=120]{microtype}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{width=8cm,compat=1.16}
+\usepackage{tikz}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{quotes,angles,patterns,through,calc}
+\usepgflibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta,bending}
+\usepackage{rotating}
+\usepackage{tikz-3dplot}
+\usepackage[american voltages, american currents,siunitx]{circuitikz}
+\usepackage{circuitikz}
+\usetikzlibrary{fit,positioning}
+\usetikzlibrary{optics}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{setspace}
+\setstretch{1.1}
+
+
+\usepackage{vwcol}[widths={0.25,0.75}]
+
+
+\usepackage{color}
+\usepackage[autostyle]{csquotes}
+
+
+\usepackage{xcolor}
+\definecolor{Mycolor2}{HTML}{33cccc}
+\definecolor{One}{HTML}{336666}
+\definecolor{Two}{HTML}{666666}
+\definecolor{Three}{HTML}{cc6699}
+
+
+%  black--brown--black %
+\definecolor{Four}{HTML}{000000}
+\definecolor{Five}{HTML}{330000}
+\definecolor{Six}{HTML}{000000}
+
+\definecolor{Seven}{HTML}{ff6666}
+\definecolor{Eight}{HTML}{330066}
+\definecolor{Nine}{HTML}{cc3333}
+\definecolor{tomato}{HTML}{FF6347}
+\definecolor{darkblue}{HTML}{2c3e50}
+\definecolor{blackm}{HTML}{363636}
+\definecolor{pink}{HTML}{ff6666}
+
+
+\newcommand{\nm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{1. }}}}
+\end{minipage}}
+
+\newcommand{\sm}{\begin{minipage}[c]{0.1\linewidth}
+{\Huge{\textcolor{tomato}{\textbf{ }}}}
+\end{minipage}}
+
+\newcommand{\AxisRotator}[1][rotate=0]{%
+    \tikz [x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw (0,0) arc (-150:150:1 and 1);%
+}
+
+\newcommand{\vl}{{{\textcolor{tomato}{\textbf{\vrule width 2.25 pt{}}}}}}
+
+\newenvironment{question}
+{	
+	\nm  \vl \,
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{itshape}
+	\large\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{minipage}
+}
+
+
+\newenvironment{options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{multicols}{2}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{multicols}
+	\end{minipage}
+}
+
+
+\newenvironment{v-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{enumerate}[label={(\roman*)}, itemsep=4 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{minipage}
+}
+
+
+
+\newenvironment{definition}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{note}
+{
+	\begin{center}
+	\begin{itshape}
+	\normalsize\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+\newenvironment{q-options}
+{	
+	\sm ~
+	\begin{minipage}[l]{0.86\linewidth}
+	\begin{note}
+	\begin{enumerate}[label={(\roman*)}, itemsep=1 mm]
+	\normalsize{}
+}
+{
+	\end{enumerate}
+	\end{note}
+	\end{minipage}
+}
+
+
+
+\newcommand{\physics}{\normalsize{\textcolor{tomato}{\textls*[100]{{\hspace*{75 mm} @10xphysics}}}}}
+
+\newcommand{\solution}{\centering\Large\Times\textbf{\textcolor{tomato}{\textls*[100]{ \textit{\\[-20 mm]Solution}}} }}
+
+\begin{document}
+
+
+\nopagecolor
+%\boldmath
+\color{black!100}
+%\pagecolor{black!95}
+\setlength{\parindent}{0pt}
+\large
+
+%%%%   PROBLEM-01  %%%%%
+
+\begin{question}
+Find the moment of inertia of the rod $AB$ about an axis $YY'$ as shown in figure. Mass of the rod is $m$ and length is $l$.
+\end{question}
+
+{\physics}
+
+\begin{center}
+\begin{tikzpicture}[use optics,thick,decoration={
+    markings,
+    mark=at position 0.3 with {\arrow{Stealth}}},every node/.style={scale=0.85},scale=1]
+\draw[dashed] (0,-2) node[left]{$Y$}--(0,2.5) node[left]{$Y'$} node[below] {\AxisRotator[rotate=-90]};
+\draw[line width=5,line cap=round] (0,0) coordinate (b) node[left]{$A$}--([turn]125:3) coordinate (a) node[right]{$B$};
+\coordinate (c) at (0,2);
+\pic [thick,draw=black,"$\theta$", angle eccentricity=1.45,angle radius=0.6cm] {angle = a--b--c};
+\end{tikzpicture}
+\end{center}
+
+
+\pagebreak
+
+
+\pagestyle{empty}
+
+\begin{center}
+{\solution}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,use optics,thick,decoration={
+    markings,
+    mark=at position 0.3 with {\arrow{Stealth}}},every node/.style={scale=0.75},scale=1.65]
+\draw[dashed] (0,-2) node[left]{$Y$}--(0,2.5) node[left]{$Y'$} node[below] {\AxisRotator[rotate=-90]};
+
+	\begin{scope}[rotate=35]
+		\draw[line width=6,line cap=round] (0,0) coordinate (b) node[left]{$A$}--(3,0) coordinate (a) node[right]{$B$};
+		\draw[tomato,line width=6] (1.75,0) --(2,0);
+		\draw[thick,->] (0,-0.25)--(1.6,-0.25) node[midway, below]{$x$} node[rotate=35,right]{$dx$};
+	\end{scope}
+
+\draw[thick] (-0.2,0) to[dim arrow={label=$x\cos\theta$}] (-0.2,1.2);
+\draw[thick,->] (0,1.2)--(1.5,1.2) node[midway, above]{$x\sin\theta$} ;
+\draw [dashed] (0,1.15) ellipse(1.53 and 0.35);
+\coordinate (c) at (0,2);
+\pic [thick,draw=black,"$\theta$", angle eccentricity=1.45,angle radius=0.6cm] {angle = a--b--c};
+\end{tikzpicture}
+\end{center}
+
+
+{\physics}
+
+\pagebreak
+
+\begin{center}
+{\solution}
+\end{center}
+
+
+\begin{note}
+Differential element $dx$ with have mass $dm$
+\begin{align*}
+dm &= \lambda \; dx \quad \quad \lambda = \textit{linear mass density} \\
+dm &= \dfrac{m}{l}  \; dx \quad \quad \quad \lambda = \dfrac{m}{l}\\
+\end{align*}
+
+Differential element $dx$ will rotate around the axis with a radius of $x\sin\theta$ and $\theta$ will remain constant for every element of the rod so,  $r=x\sin\theta$
+
+\end{note}
+
+{\physics}
+
+\pagebreak
+
+\begin{center}
+{\solution}
+\end{center}
+
+\begin{note}
+
+From the definition of moment of inertia $I=mr^2$
+\begin{align*}
+dI &= r^2 \; dm \\[4 mm]
+dI  &= \left( x\sin\theta \right)^2 \; \dfrac{m}{l}  \; dx \\[4 mm]
+\int dI  &= \dfrac{m}{l} \; \sin^2\theta \; \int_0^l x^2 \; dx \\[4 mm]
+I &= \dfrac{ml^2}{3} \; \sin^2\theta
+\end{align*}
+
+
+\end{note}
+
+{\physics}
+
+
+\pagebreak
+
+
+
+
+
+\end{document}

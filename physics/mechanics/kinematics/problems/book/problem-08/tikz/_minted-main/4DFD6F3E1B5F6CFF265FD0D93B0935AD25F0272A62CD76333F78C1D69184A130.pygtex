@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[thick]
+\PYG{k}{\PYGZbs{}pic}\PYG{n+na}{[rotate=\PYGZhy{}90]} at (0, 0) \PYG{n+nb}{\PYGZob{}}frame=6cm\PYG{n+nb}{\PYGZcb{}};
+\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}s}/\PYG{k}{\PYGZbs{}x}/\PYG{k}{\PYGZbs{}n} in \PYG{n+nb}{\PYGZob{}}3/0/1, 2/3/2, 1/5/3\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+	\PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[xshift=\PYGZbs{}x cm]} (0, 0)
+		\PYGZhy{}\PYGZhy{}++(\PYGZhy{}60:\PYG{k}{\PYGZbs{}s})node[below]\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{C\PYGZus{}}\PYG{n+nv}{\PYGZbs{}n}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}} 
+		\PYGZhy{}\PYGZhy{}++(60:\PYG{k}{\PYGZbs{}s}) node[right]\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{A\PYGZus{}}\PYG{n+nv}{\PYGZbs{}n}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}} coordinate (A\PYG{k}{\PYGZbs{}n})
+		\PYGZhy{}\PYGZhy{}++(120:\PYG{k}{\PYGZbs{}s})node[above]\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{B\PYGZus{}}\PYG{n+nv}{\PYGZbs{}n}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}} coordinate (B\PYG{k}{\PYGZbs{}n})\PYGZhy{}\PYGZhy{} cycle;
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzcoor*}(0,  0)(A0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{A\PYGZus{}}\PYG{l+m}{0}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](A3)(1.5, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(A0)(A3)
+\PYG{k}{\PYGZbs{}tzanglemark}(A1)(A0)(B1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(15pt)
+\PYG{k}{\PYGZbs{}tzdot*}(A1)
+\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](A1)(1, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}v\PYGZcb{}\PYGZus{}\PYGZob{}A\PYGZus{}}\PYG{l+m}{1}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a]
+\PYG{k}{\PYGZbs{}tzdot*}(A2)
+\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](A2)(1, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}v\PYGZcb{}\PYGZus{}\PYGZob{}A\PYGZus{}}\PYG{l+m}{2}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a]
+\PYG{k}{\PYGZbs{}tzdot*}(B2)
+\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](B2)(1, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}v\PYGZcb{}\PYGZus{}\PYGZob{}B\PYGZus{}}\PYG{l+m}{2}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ar]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

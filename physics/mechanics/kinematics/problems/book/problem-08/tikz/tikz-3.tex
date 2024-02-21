@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+[thick]
+\pic[rotate=-90] at (0, 0) {frame=6cm};
+\foreach \s/\x/\n in {3/0/1, 2/3/2, 1/5/3}{
+	\draw[xshift=\x cm] (0, 0)
+		--++(-60:\s)node[below]{$C_\n$} 
+		--++(60:\s) node[right]{$A_\n$} coordinate (A\n)
+		--++(120:\s)node[above]{$B_\n$} coordinate (B\n)-- cycle;
+}
+\tzcoor*(0,  0)(A0){$A_0$}[r]
+\tzline+[->](A3)(1.5, 0){$v$}[r]
+\tzline[dashed](A0)(A3)
+\tzanglemark(A1)(A0)(B1){$\theta$}(15pt)
+\tzdot*(A1)
+\tzline+[->](A1)(1, 0){$\vec{v}_{A_1}$}[a]
+\tzdot*(A2)
+\tzline+[->](A2)(1, 0){$\vec{v}_{A_2}$}[a]
+\tzdot*(B2)
+\tzline+[->](B2)(1, 0){$\vec{v}_{B_2}$}[ar]
+\end{tikzpicture}

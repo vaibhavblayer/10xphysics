@@ -1,0 +1,3 @@
+Q. Explain range of sin(x) in latex.
+
+The range of $\sin(x)$ is $[-1,1]$.

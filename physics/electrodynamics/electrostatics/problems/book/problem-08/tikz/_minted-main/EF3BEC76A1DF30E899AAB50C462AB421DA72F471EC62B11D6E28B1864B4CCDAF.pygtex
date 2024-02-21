@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[scale=2]
+\PYG{k}{\PYGZbs{}tzcoor*}(1, 0, 1)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[br](5pt)
+\PYG{k}{\PYGZbs{}tzcoor*}(\PYGZhy{}1, 0, 1)(B)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl](5pt)
+\PYG{k}{\PYGZbs{}tzcoor*}(\PYGZhy{}1, 0, \PYGZhy{}1)(C)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[al](5pt)
+\PYG{k}{\PYGZbs{}tzcoor*}(1, 0, \PYGZhy{}1)(D)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{q}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ar](5pt)
+\PYG{k}{\PYGZbs{}tzcoor*}(0, 2, 0)(X)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{X}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a]
+	\PYG{c}{\PYGZpc{}\PYGZbs{}tzline[\PYGZhy{}\PYGZgt{}](\PYGZhy{}3, 0, 0)(3, 0, 0)\PYGZob{}\PYGZdl{}x\PYGZdl{}\PYGZcb{}[r]}
+	\PYG{c}{\PYGZpc{}\PYGZbs{}tzline[\PYGZhy{}\PYGZgt{}](0, \PYGZhy{}1, 0)(0, 5, 0)\PYGZob{}\PYGZdl{}y\PYGZdl{}\PYGZcb{}[a]}
+	\PYG{c}{\PYGZpc{}\PYGZbs{}tzline[\PYGZhy{}\PYGZgt{}](0, 0, \PYGZhy{}2)(0, 0, 4)\PYGZob{}\PYGZdl{}z\PYGZdl{}\PYGZcb{}[b]}
+	\PYG{k}{\PYGZbs{}tzlines}\PYG{n+na}{[dashed]}(A)(B)(B)(C)(C)(D)(D)(A);
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(A)(C)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{l+m}{2}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ml]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(B)(D)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{l+m}{2}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mb]
+	\PYG{c}{\PYGZpc{}\PYGZbs{}tzlines[dashed](A)(X)(B)(X)(C)(X)(D)(X);}
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(0, 0, 0)(X)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{x}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[mr]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

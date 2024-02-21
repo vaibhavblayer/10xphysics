@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[thick]
+\PYG{k}{\PYGZbs{}def\PYGZbs{}A}\PYG{n+nb}{\PYGZob{}}16\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}angle for element}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}r}\PYG{n+nb}{\PYGZob{}}2\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}radius}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}dr}\PYG{n+nb}{\PYGZob{}}0.1\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}delta r}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}RO}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}r}+\PYG{k}{\PYGZbs{}dr}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}radius outer}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}RI}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}r}\PYGZhy{}\PYG{k}{\PYGZbs{}dr}\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}radius inner}
+\PYG{k}{\PYGZbs{}tzcoor}(0:\PYG{k}{\PYGZbs{}RO})(O\PYGZsq{}) \PYG{c}{\PYGZpc{}point at right end}
+\PYG{k}{\PYGZbs{}tzcoor*}(0, 0)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{q\PYGZus{}}\PYG{l+m}{0}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl](5pt)
+	\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}a} in \PYG{n+nb}{\PYGZob{}}0, 8, ..., 352\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+		\PYG{k}{\PYGZbs{}tznode}(\PYG{k}{\PYGZbs{}a}:\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{+}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[scale=0.65]
+		\PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[thin]}(\PYG{k}{\PYGZbs{}a}:\PYG{k}{\PYGZbs{}r}) circle [radius=\PYG{k}{\PYGZbs{}dr}];
+	\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzlines}(O)(\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RO})(O)(\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RO});
+	\PYG{k}{\PYGZbs{}tzarc}(O)(\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RO})
+	\PYG{k}{\PYGZbs{}tzarc}(O)(\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RI})
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}]}(\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RO})(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nv}{\PYGZbs{}A}\PYG{n+nb}{:}\PYG{n+nv}{\PYGZbs{}RO}\PYG{o}{)!}\PYG{l+m}{2}\PYG{n+nb}{cm}\PYG{o}{!(}\PYG{l+m}{1}\PYG{n+nb}{.}\PYG{l+m}{01}\PYG{o}{*}\PYG{n+nv}{\PYGZbs{}A}\PYG{n+nb}{:}\PYG{n+nv}{\PYGZbs{}RO}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}Delta}\PYG{n+nb}{ T}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}]}(\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}RO})(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(\PYGZhy{}}\PYG{n+nv}{\PYGZbs{}A}\PYG{n+nb}{:}\PYG{n+nv}{\PYGZbs{}RO}\PYG{o}{)!}\PYG{l+m}{2}\PYG{n+nb}{cm}\PYG{o}{!(\PYGZhy{}}\PYG{l+m}{1}\PYG{n+nb}{.}\PYG{l+m}{01}\PYG{o}{*}\PYG{n+nv}{\PYGZbs{}A}\PYG{n+nb}{:}\PYG{n+nv}{\PYGZbs{}RO}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}Delta}\PYG{n+nb}{ T}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[b]
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](O\PYGZsq{})(2, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}Delta}\PYG{n+nb}{ F\PYGZus{}e}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+	\PYG{k}{\PYGZbs{}tzanglemark}\PYGZsq{}(\PYGZhy{}\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}r})(O)(\PYG{k}{\PYGZbs{}A}:\PYG{k}{\PYGZbs{}r})\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}(15pt)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZlt{}\PYGZhy{}\PYGZgt{}, thick]}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O\PYGZsq{}}\PYG{o}{)+(}\PYG{l+m}{0}\PYG{n+nb}{,}\PYG{l+m}{2}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O\PYGZsq{}}\PYG{o}{)+(}\PYG{l+m}{0}\PYG{n+nb}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m}{2}\PYG{n+nb}{.}\PYG{l+m}{5}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})
+	\PYG{k}{\PYGZbs{}tzarc}\PYG{n+na}{[thick]}(O\PYGZsq{})(90:90+0.7*\PYG{k}{\PYGZbs{}A}:1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}d}\PYG{n+nb}{\PYGZob{}}\PYG{n+nv}{\PYGZbs{}theta}\PYG{n+nb}{\PYGZcb{}}\PYG{o}{/}\PYG{l+m}{2}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[a=2mm, r=1mm]
+	\PYG{k}{\PYGZbs{}tzarc}\PYG{n+na}{[thick]}(O\PYGZsq{})(270\PYGZhy{}0.7*\PYG{k}{\PYGZbs{}A}:270:1)
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

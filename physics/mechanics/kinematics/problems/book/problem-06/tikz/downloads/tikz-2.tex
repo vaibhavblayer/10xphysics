@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+	\tzcoor*(0, 0)(O){$O$}[br]
+	
+	\tzline+[->, thick]($(O)+(-4, 0)$)(1, 0){$v_1$}[ar]
+	\tzline+[dashed](O)(-4, 0)
+	\tzdot*($(O)+(-4, 0)$)(5pt)
+	\tzline[|<->|]<0, -0.5>(O)($(O)+(-4, 0)$){$l_1$}[midway, below]
+
+	\tzline+[->, thick]($(O)+(0, 4)$)(0, -1){$v_2$}[l]
+	\tzline+[dashed](O)(0, 4)
+	\tzdot*($(O)+(0, 4)$)(5pt)
+	\tzline[|<->|]<0.5, 0>(O)($(O)+(0, 4)$){$l_2$}[midway, right]
+\end{tikzpicture}

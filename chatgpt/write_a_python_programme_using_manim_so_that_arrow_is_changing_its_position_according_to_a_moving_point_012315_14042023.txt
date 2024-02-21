@@ -1,0 +1,43 @@
+Q. Write a python programme using manim so that arrow is changing its position according to a moving point
+
+from manimlib.imports import *
+
+class MovingArrow(Scene):
+    def construct(self):
+        point = Dot(color=RED)
+        arrow = Arrow(ORIGIN, RIGHT)
+
+        self.add(point, arrow)
+
+        self.play(
+            point.shift, UP,
+            run_time=2
+        )
+        self.play(
+            arrow.next_to, point,
+            run_time=2
+        )
+        self.play(
+            point.shift, RIGHT,
+            run_time=2
+        )
+        self.play(
+            arrow.next_to, point,
+            run_time=2
+        )
+        self.play(
+            point.shift, DOWN,
+            run_time=2
+        )
+        self.play(
+            arrow.next_to, point,
+            run_time=2
+        )
+        self.play(
+            point.shift, LEFT,
+            run_time=2
+        )
+        self.play(
+            arrow.next_to, point,
+            run_time=2
+        )

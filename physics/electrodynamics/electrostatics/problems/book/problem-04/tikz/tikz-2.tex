@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\def\x{0.5}
+\tzcoor*(0, 0)(O){$O$}[a]
+\tzcoor*($(O)+(-\x, -3)$)(Q1){$m, q$}[bl](6pt)
+\tzcoor*($(O)+(\x, -3)$)(Q2){$m, q$}[br](6pt)
+	\tzline(O)(Q1){$l$}[ml]
+	\tzline(O)(Q2){$l$}[mr]
+	\tzline[|<->|]<0, -0.5>(Q1)(Q2){$x$}[mb]
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+[thick]
+\PYG{k}{\PYGZbs{}pic}\PYG{n+na}{[rotate=\PYGZhy{}90]} at (0, 0) \PYG{n+nb}{\PYGZob{}}frame=6cm\PYG{n+nb}{\PYGZcb{}};
+\PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}s}/\PYG{k}{\PYGZbs{}x}/\PYG{k}{\PYGZbs{}n} in \PYG{n+nb}{\PYGZob{}}3/0/1, 2/3/2, 1/5/3\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+	\PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[xshift=\PYGZbs{}x cm]} (0, 0)
+		\PYGZhy{}\PYGZhy{}++(\PYGZhy{}60:\PYG{k}{\PYGZbs{}s})node[below]\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{C\PYGZus{}}\PYG{n+nv}{\PYGZbs{}n}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+		\PYGZhy{}\PYGZhy{}++(60:\PYG{k}{\PYGZbs{}s}) node[right]\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{A\PYGZus{}}\PYG{n+nv}{\PYGZbs{}n}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+		\PYGZhy{}\PYGZhy{}++(120:\PYG{k}{\PYGZbs{}s})node[above]\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{B\PYGZus{}}\PYG{n+nv}{\PYGZbs{}n}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}\PYGZhy{}\PYGZhy{} cycle;
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tznode}(0, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{A\PYGZus{}}\PYG{l+m}{0}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}](6, 0)(1.5, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[r]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

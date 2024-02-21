@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{mood}\PYG{p}{:}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{mood}\PYG{o}{.}\PYG{n}{toggle}\PYG{p}{()}
+\end{Verbatim}

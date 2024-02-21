@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+[thick, cap=round]
+\def\a{1}
+	\tzcoor*(-\a, 0)(Q'){$-q$}[b](5pt)
+	\tzcoor*(\a, 0)(Q){$+q$}[b](5pt)
+	\tzcoor*(45:3)(A){}
+	\tzline(Q)(Q')
+	\tzline+[->]<0.5, -0.5> (Q)(1, 0){$\vec{p}$}[r]
+	\tzline(0, 0)(A){$r$}[ml]
+	\tzanglemark(\a, 0)(0, 0)(A){$\theta$}
+	\tzline+[->](A)(90:1.5){$\vec{E}$}[ar]
+	\tzline+[->](A)(45:1.5){$\vec{E}_r$}[r]
+	\tzline+[->](A)(135:1.5){$\vec{E}_\theta$}[al]
+\end{tikzpicture}

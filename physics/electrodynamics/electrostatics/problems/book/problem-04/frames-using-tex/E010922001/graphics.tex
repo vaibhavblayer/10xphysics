@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+[>=latex, line cap=round]
+\def\v@f{12}
+\def\fps{24}
+\def\t{sinestep(0, \fps, \v@f)}
+	\draw[->](-1, 0) -- (5, 0);
+	\draw[->] (0, -1)--(0, 5);
+	\draw[->] (0, 0)-- ({4*\t}, {4*\t});
+\end{tikzpicture}

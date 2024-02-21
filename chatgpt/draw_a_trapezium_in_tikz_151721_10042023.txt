@@ -1,0 +1,5 @@
+Q. Draw a trapezium in tikz.
+
+\begin{tikzpicture}
+\draw (0,0) -- (2,2) -- (4,2) -- (6,0) -- cycle;
+\end{tikzpicture}

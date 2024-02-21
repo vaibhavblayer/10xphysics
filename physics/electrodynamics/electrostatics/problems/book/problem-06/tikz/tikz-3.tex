@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+	\foreach \a in {0, 8, ..., 352}{
+		\tznode(\a:2){$+$}[scale=0.65]
+		\tzdot[thin](\a:2)(6pt)
+		\ifthenelse{\a=0}{}{
+			\tzline[->]($(\a:2)!0.11cm!(0:2)$)($(\a:2)!4.5cm!(0:2)$)
+		}	
+	}
+\end{tikzpicture}

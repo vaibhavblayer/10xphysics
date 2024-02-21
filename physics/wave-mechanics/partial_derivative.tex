@@ -1,0 +1,17 @@
+\item \textbf{Partial derivatives}\\
+    Let’s first talk about partial derivatives. Say you have a function of two parameters \( f(a, b) \). Now the parameters may be independent or dependent by a constraint equation. What a partial derivative means is that you differentiate the function \( f \) with respect to (one of) its variable keeping the other fixed.\\[2mm]So in the case of the wave function, taking a partial derivative with respect to time means you fix a position and look at how it varies in time. \\Similarly, a partial derivative with respect to space means you freeze an instant of time and look at the spatial variation of the function. Similarly, this can be extended for multiple partial derivatives. This can be seen as freezing time and following the dots over space.
+    \begin{align*}
+        \intertext{For simplicity in this article we used $\dfrac{\d{y}}{\d{x}}$ but it is actually $\dfrac{\partial{y}}{\partial{x}}$}
+        \intertext{Similarly, $\dfrac{\d^2{y}}{\d{x^2}}$ is actually $\dfrac{\partial^2{y}}{\partial{x^2}}$}
+    \end{align*}
+    \begin{center}
+        \begin{tikzpicture}
+            \tzfn"curve"{sin(deg(\x))}[0:2*pi]
+            \foreach \i in {0.1, 0.3,...,  2}{
+                \tzvXpointat*{curve}{pi*\i}(A)
+                \tzline+[->](A)(0, 0.5)
+                \tzline+[->](A)(0, -0.5)
+            }
+            
+        \end{tikzpicture}
+    \end{center}

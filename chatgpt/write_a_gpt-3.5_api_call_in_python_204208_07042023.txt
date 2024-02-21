@@ -1,0 +1,22 @@
+Q. Write a gpt-3.5 API call in python?
+
+import openai
+
+# Create the API instance
+api = openai.API(
+    "your-api-key",
+    engine="davinci",
+    temperature=0.7,
+    max_tokens=100
+)
+
+# Generate a response
+response = api.engine.generate(
+    prompt="What is the best way to learn Python?",
+    n=1,
+    stream=None,
+    stop=None
+)
+
+# Print the response
+print(response)

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}draw} (0, 0) grid (8, 8);
+\PYG{k}{\PYGZbs{}tzaxes}(0, 0)(8.5,8.5)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{x}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{y}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzcoor*}(0, 0)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{l+m}{0}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl]
+
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}, red](O)(4,0)
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}, red](4, 0)(0,5)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[\PYGZhy{}\PYGZgt{}, green]}(O)(4, 5)
+
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

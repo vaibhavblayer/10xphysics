@@ -1,0 +1,18 @@
+\Large
+\ttfamily
+\vtitle[Magnetic Field : Point moving charge]
+\begin{center}
+\begin{tikzpicture}
+	\tzcoor*(0, 0)(O){$q$}[bl](5pt)
+	\tzline[dashed]($(O)+(0, -2)$)($(O)+(0, 2)$)
+	\tzline+[->](O)(90:1){$\vec{v}$}[al]
+	\tzline+[->](O)(30:2){$\vec{r}$}[mb]
+	\tzdot*($(O)+(30:2)$){$\otimes ~ \vec{B}$}[r]
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\addtolength{\jot}{2ex}
+\begin{align*}
+    \vec{B} = \dfrac{\upmu_0}{4\pi} \dfrac{q[\vec{v}\times\vec{r}]}{r^3}
+\end{align*}
+

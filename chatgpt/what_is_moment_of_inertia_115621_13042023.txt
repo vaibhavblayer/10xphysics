@@ -1,0 +1,3 @@
+Q. What is moment of inertia?
+
+Moment of inertia is a measure of an object's resistance to changes in its rotation rate. It is calculated by taking the sum of the products of the mass of each particle in the object and the square of its distance from the axis of rotation. Moment of inertia is also known as the angular mass or rotational inertia.

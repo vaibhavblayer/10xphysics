@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{v-equation}
+\vgeometry
+
+\begin{document}
+
+\def\gdrive{https://drive.google.com/drive/folders/1b_pvU7qPKIDF5s3Ez88Bu9MrGfb2oSpR?usp=share_link}
+\vtitle[$|x|+|y|=1$]
+
+\begin{center}
+\begin{tikzpicture}
+[scale=1.5]
+	\tzaxes(-2, -2)(2,2){$x$}{$y$}
+	\tzticksx*(-2pt:2pt){-1, 1} 
+	\tzticksy*(-2pt:2pt){-1, 1}
+	\tzfn{1-\x}[-1:2]
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+x + y = 1
+\end{align*}
+\vspace*{\fill}
+
+\pagebreak
+
+\begin{center}
+\begin{tikzpicture}
+[scale=1.5]
+	\tzaxes(-2, -2)(2,2){$x$}{$y$}
+	\tzticksx*(-2pt:2pt){-1, 1} 
+	\tzticksy*(-2pt:2pt){-1, 1}
+	\tzfn[dashed]{1-\x}[-1:0]
+	\tzfn{1-abs(\x)}[-2:2]
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+|x| + y = 1
+\end{align*}
+\vspace*{\fill}
+
+\pagebreak
+
+\begin{center}
+\begin{tikzpicture}
+[scale=1.5]
+	\tzaxes(-2, -2)(2,2){$x$}{$y$}
+	\tzticksx*(-2pt:2pt){-1, 1} 
+	\tzticksy*(-2pt:2pt){-1, 1}
+	\tzfn[dashed]{1-abs(\x)}[-2:-1]
+	\tzfn[dashed]{1-abs(\x)}[1:2]
+	\tzfn{1-abs(\x)}[-1:1]
+	\tzfn{abs(\x)-1}[-1:1]
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+|x| + |y| = 1
+\end{align*}
+\vspace*{\fill}
+
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+    \fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+\end{document}

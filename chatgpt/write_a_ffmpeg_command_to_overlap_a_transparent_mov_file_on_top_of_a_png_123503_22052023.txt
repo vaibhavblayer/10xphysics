@@ -1,0 +1,3 @@
+Q. Write a ffmpeg command to overlap a transparent mov file on top of a png
+
+ffmpeg -i background.png -i overlay.mov -filter_complex "[1:v]format=yuva444p,colorchannelmixer=aa=0.5[ov];[0:v][ov]overlay[out]" -map "[out]" -map 0:a -c:a copy output.mp4

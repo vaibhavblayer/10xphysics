@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{v-equation}
+\vgeometry
+
+\begin{document}
+\def\gdrive{https://drive.google.com/drive/folders/1bRnGnog8GUPpYx0sVQJV12olKyDwaWqj?usp=share_link}
+
+\vtitle[radius of curvature]
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\def\tat{3.65}%tangent at {x}
+\def\dx{0.25}%tangent at {x}
+	\tzaxes(-0.5, -0.5)(7,4){$x$}{$f(x)$}
+	\tztos"curve"
+		(0,0)[out=0, in=-180]
+		(3,1.5)[out=0, in=-180]
+		(6, 3.5);
+		
+	\tzvXpointat{curve}{\tat-\dx}(A)
+	\tzvXpointat{curve}{\tat+\dx}(B)
+	\tztangentat"TL"{curve}{\tat}[\tat-1.5:5]
+	\tzcoor*($($(A)!0.5!(B)$)!1cm!90:(B)$)(O){$O$}[ar]
+	%\tzXpoint{normal}{normall}(X)
+	\tzcircle[dashed](O)(1)
+	\tzline[dashed, red](O)(A)
+	\tzline[dashed, red](O)(B)
+	\tzcoor*($(A)+(2*\dx, 0)$)(C)
+	\tzline[red](A)(C)
+	\tzline[red](B)(C)
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+\begin{align*}
+r &= \dfrac{\left[1 + \left(\dfrac{\d{y}}{\d{x}}\right)^2 \right]^{3/2}}{\left| \dfrac{\d{^2y}}{\d{x^2}} \right|}
+\end{align*}
+\vspace*{\fill}
+\pagebreak
+
+\begin{center}
+\begin{tikzpicture}
+[thick, scale=3.5]
+\clip (2, 1) rectangle (4.25, 4);
+\def\tat{3.65}%tangent at {x}
+\def\dx{0.2}%tangent at {x}
+	\tzaxes(-0.5, -0.5)(7,4){$x$}{$f(x)$}
+	\tztos"curve"
+		(0,0)[out=0, in=-180]
+		(3,1.5)[out=0, in=-180]
+		(6, 3.5);
+		
+	\tzvXpointat*{curve}{\tat-\dx}(A)
+	\tzvXpointat*{curve}{\tat+\dx}(B)
+	\tztangentat"TL"{curve}{\tat}[\tat-1.5:5]
+	\tzcoor*($($(A)!0.5!(B)$)!1cm!90:(B)$)(O){$O$}[ar]
+	%\tzXpoint{normal}{normall}(X)
+	\tzcircle[dashed](O)(1)
+	\tzline[dashed, red](O)(A){$r$}[ml]
+	\tzline[dashed, red](O)(B)
+	\tzcoor*($(A)+(2*\dx, 0)$)(C)
+	\tzline[red](A)(C){$\d{x}$}[mb]
+	\tzline[red](B)(C){$\d{y}$}[mr]
+	\tzline[red](A)(B){$\d{l}$}[ma]
+	\tzanglemark(C)(A)(B){$\theta$}(5pt)
+	\tzanglemark(B)(O)(A){$\d{\theta}$}(5pt)
+\end{tikzpicture}
+\end{center}
+\pagebreak
+\addtolength{\jot}{2ex}
+\begin{align}
+r \d{\theta} &= \d{l} \\
+\tan\theta &= \dfrac{\d{y}}{\d{x}}\\
+\d{l}^2 &= \d{x}^2 + \d{y}^2
+\end{align}
+From equation (2)\_
+\begin{align}
+\sec^2\theta \dfrac{\d{\theta}}{\d{x}} &= \dfrac{\d{^2y}}{\d{x^2}}
+\end{align}
+From equation (3)\_
+\begin{align}
+\dfrac{\d{l}}{\d{x}} &= \sqrt{1+ \left( \dfrac{\d{y}}{\d{x}} \right)^2}   
+\end{align}
+
+From equation (4) and (5)\_
+\begin{align}
+\dfrac{\d{l}}{\d{\theta}} &= \dfrac{\sqrt{1+ \left( \dfrac{\d{y}}{\d{x}} \right)^2}}{\dfrac{\d{^2y}}{\d{x^2}}} \sec^2\theta
+\end{align}
+\pagebreak
+
+Now, from equation (1) and (6)\_
+\begin{align*}
+r &= \dfrac{\d{l}}{\d{\theta}}\\
+	&= \dfrac{\sqrt{1+ \left( \dfrac{\d{y}}{\d{x}} \right)^2}}{\dfrac{\d{^2y}}{\d{x^2}}} \sec^2\theta \\
+	&= \dfrac{\sqrt{1+ \left( \dfrac{\d{y}}{\d{x}} \right)^2}}{\dfrac{\d{^2y}}{\d{x^2}}} \left( 1 + \tan^2\theta\right) \\
+	&=\dfrac{\left[1 + \left(\dfrac{\d{y}}{\d{x}}\right)^2 \right]^{3/2}}{\left| \dfrac{\d{^2y}}{\d{x^2}} \right|}
+\end{align*}
+
+\vspace*{\fill}
+\pagebreak
+
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+\end{document}

@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+	\PYG{k}{\PYGZbs{}tzcoor*}(0, 0)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{O}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[br]
+	\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(\PYGZhy{}}\PYG{l+m}{4}\PYG{n+nb}{, }\PYG{l+m}{0}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{A}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[bl]
+	\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{O}\PYG{o}{)+(}\PYG{l+m}{0}\PYG{n+nb}{, }\PYG{l+m}{4}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(B)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{B}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[al]
+	\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{A}\PYG{o}{)!}\PYG{l+m}{0}\PYG{n+nb}{.}\PYG{l+m}{35}\PYG{o}{!(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(V1)(5pt)
+	\PYG{k}{\PYGZbs{}tzcoor*}(\PYG{l+s}{\PYGZdl{}}\PYG{o}{(}\PYG{n+nb}{B}\PYG{o}{)!}\PYG{l+m}{0}\PYG{n+nb}{.}\PYG{l+m}{35}\PYG{o}{!(}\PYG{n+nb}{O}\PYG{o}{)}\PYG{l+s}{\PYGZdl{}})(V2)(5pt)
+	
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}, thick](V1)(1, 0)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v\PYGZus{}}\PYG{l+m}{1}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[ar]
+	\PYG{k}{\PYGZbs{}tzline}+[\PYGZhy{}\PYGZgt{}, thick](V2)(0, \PYGZhy{}1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v\PYGZus{}}\PYG{l+m}{2}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[l]
+	
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(O)(A)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(O)(B)
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}0, \PYGZhy{}0.5\PYGZgt{}(O)(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l\PYGZus{}}\PYG{l+m}{1}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[midway, below]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}0.5, 0\PYGZgt{}(O)(B)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l\PYGZus{}}\PYG{l+m}{2}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[midway, right]
+	
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}0, \PYGZhy{}1\PYGZgt{}(A)(V1)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v\PYGZus{}}\PYG{l+m}{1}\PYG{n+nb}{t}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[midway, below]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}1, 0\PYGZgt{}(B)(V2)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{v\PYGZus{}}\PYG{l+m}{2}\PYG{n+nb}{t}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[midway, right]
+	
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}0, \PYGZhy{}1\PYGZgt{}(V1)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l\PYGZus{}}\PYG{l+m}{1}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{v\PYGZus{}}\PYG{l+m}{1}\PYG{n+nb}{t}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[midway, below]
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[|\PYGZlt{}\PYGZhy{}\PYGZgt{}|]}\PYGZlt{}1, 0\PYGZgt{}(V2)(O)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l\PYGZus{}}\PYG{l+m}{2}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{v\PYGZus{}}\PYG{l+m}{2}\PYG{n+nb}{t}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[midway, right]
+
+	\PYG{k}{\PYGZbs{}tzline}\PYG{n+na}{[dashed]}(V1)(V2)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{s}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}[sloped, midway, above]
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

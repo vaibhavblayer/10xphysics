@@ -1,0 +1,15 @@
+Q. Explain Coulombs Law in latex
+
+Coulomb's Law states that the magnitude of the electrostatic force of attraction or repulsion between two point charges is directly proportional to the product of the magnitudes of the charges and inversely proportional to the square of the distance between them. Mathematically, it can be expressed as:
+
+$F = \frac{kq_1q_2}{r^2}$
+
+where:
+
+$F$ is the magnitude of the electrostatic force between the two charges,
+
+$k$ is Coulomb's constant,
+
+$q_1$ and $q_2$ are the magnitudes of the two charges, and
+
+$r$ is the distance between the two charges.

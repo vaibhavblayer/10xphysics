@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage{v-problem}
+\vgeometry
+
+\begin{document}
+\vtitle[KINEMATICS]
+
+\def\pn{08}
+\def\book{A.K.}
+\def\page{35}
+\def\gdrive{https://drive.google.com/drive/folders/1H_uWnU3LXCRthLukKkt-fnVWMcX-T2oy?usp=share_link}
+
+\def\question{
+A hinged construction consists of three rhombus with the ratio of sides $3:2:1$ (Fig.). Vertex $A_3$ moves in the horizontal direction at a velocity $v$. Determine the velocities of vertices $A_1$ ,$A_2$ and $B_2$ at the instant when the angles of the construction are $90^\circ$.
+}
+
+\vspace*{\fill}
+\begin{tikzpicture}
+	\node[qnumber] (n) at (0, 0)[scale=2] {$\pn.$};
+	\node[question] (q) [right=2mm of n.east] {\question};
+	\tzline[divider]<-0.125, 0> (q.north west)(q.south west);
+	\node[format] (f) at  (q.south east){[\book \quad \page]};
+\end{tikzpicture}	
+\vspace*{\fill}
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\pic[rotate=-90] at (0, 0) {frame=6cm};
+\foreach \s/\x/\n in {3/0/1, 2/3/2, 1/5/3}{
+	\draw[xshift=\x cm] (0, 0)
+		--++(-60:\s)node[below]{$C_\n$}
+		--++(60:\s) node[right]{$A_\n$}
+		--++(120:\s)node[above]{$B_\n$}-- cycle;
+}
+\tznode(0, 0){$A_0$}[r]
+\tzline+[->](6, 0)(1.5, 0){$v$}[r]
+\end{tikzpicture}
+\end{center}
+\pagebreak
+
+\vtitle[Solution]
+Let us take point $A_0$ as origin and indicate x-axis as shown in the Fig. below. If the ratio constant of the sides is denoted by $k$, then obviously at an arbitrary moment when side $A_0B_1$, $A_1B_2$ or $A_2B_3$ makes an angle $\theta$ with the horizontal we have :
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+\pic[rotate=-90] at (0, 0) {frame=6cm};
+\foreach \s/\x/\n in {3/0/1, 2/3/2, 1/5/3}{
+	\draw[xshift=\x cm] (0, 0)
+		--++(-60:\s)node[below]{$C_\n$} 
+		--++(60:\s) node[right]{$A_\n$} coordinate (A\n)
+		--++(120:\s)node[above]{$B_\n$} coordinate (B\n)-- cycle;
+}
+\tzcoor*(0,  0)(A0){$A_0$}[r]
+\tzline+[->](A3)(1.5, 0){$v$}[r]
+\tzline[dashed](A0)(A3)
+\tzanglemark(A1)(A0)(B1){$\theta$}(15pt)
+\tzdot*(A1)
+\tzline+[->](A1)(1, 0){$\vec{v}_{A_1}$}[a]
+\tzdot*(A2)
+\tzline+[->](A2)(1, 0){$\vec{v}_{A_2}$}[a]
+\tzdot*(B2)
+\tzline+[->](B2)(1, 0){$\vec{v}_{B_2}$}[ar]
+\end{tikzpicture}
+\end{center}
+\addtolength{\jot}{2ex}
+\begin{align*}
+A_0B_1 = 3k \qquad A_1B_2 = 2k  \qquad A_2B_3=k
+\end{align*}
+
+\pagebreak
+\begin{align*}
+x_{A_1} = 6k \cos\theta \qquad  x_{A_2} = 10k \cos\theta \qquad x_{A_3} = 12k  \cos\theta \\ x_{B_2} = 8k \cos\theta \qquad y_{B_2} = 2k \sin\theta
+\end{align*}
+
+\begin{align*}
+\dfrac{\d{x_{A_3}}}{\d{t}} &= v\\
+-12k\sin\theta\dfrac{\d{\theta}}{\d{t}} &= v\\
+\Aboxed{-k\sin\theta\dfrac{\d{\theta}}{\d{t}} &= \dfrac{v}{12}}\\[5mm]
+\end{align*}
+	
+Now we can calculate $v_{A_1}$, $v_{A_2}$ and $v_{B_2}$ using above equation\_
+\begin{itemize}
+\item
+\begin{align*}
+v_{A_1} &= \dfrac{\d{x_{A_1}}}{\d{t}} \\
+		&=-6k\sin\theta\dfrac{\d{\theta}}{\d{t}}\\
+		&= 6 \cdot \dfrac{v}{12}\\
+\Aboxed{v_{A_1} &= \dfrac{v}{2}}\ans
+\end{align*}
+\item
+\begin{align*}
+v_{A_2} &= \dfrac{\d{x_{A_2}}}{\d{t}} \\
+		&=-10k\sin\theta\dfrac{\d{\theta}}{\d{t}}\\
+		&= 10 \cdot \dfrac{v}{12}\\
+\Aboxed{v_{A_2} &= \dfrac{5v}{6}}\ans 
+\end{align*}
+\item $B_2$ is moving forward and upward both\_
+\begin{align*}
+v_{x_{B_2}} &= \dfrac{\d{x_{B_2}}}{\d{t}} \\
+		&=-8k\sin\theta\dfrac{\d{\theta}}{\d{t}}\\
+		&= 8 \cdot \dfrac{v}{12}\\
+\Aboxed{v_{x_{B_2}} &= \dfrac{2v}{3}}
+\end{align*}
+\begin{align*}
+v_{y_{B_2}} &= \dfrac{\d{y_{B_2}}}{\d{t}} \\
+		&=-2k\sin\theta\dfrac{\d{\theta}}{\d{t}}\\
+		&= 2 \cdot \dfrac{v}{12}\\
+\Aboxed{v_{y_{B_2}} &= \dfrac{v}{6}}
+\end{align*}
+
+\begin{align*}
+v_{B_2} &= \sqrt{v_{x_{B_2}}^2 + v_{y_{B_2}}^2} \\
+		&=\sqrt{\left(\dfrac{2v}{3}\right)^2 + \left(\dfrac{v}{6}\right)^2} \\
+		&= \sqrt{\dfrac{4v^2}{9} + \dfrac{v^2}{36}}\\
+\Aboxed{v_{B_2} &= \dfrac{\sqrt{17}}{6}v}\ans
+\end{align*}
+
+\end{itemize}
+
+\pagebreak
+\vspace*{\fill}
+\begin{center}
+	\fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+
+\pagebreak
+\vspace*{\fill}
+
+\begin{center}
+\begin{tikzpicture}
+[thick]
+	\tzwedge(0, 0)(-60:240:2){\texttt{how capable you really are}}[ma]
+	\tzwedge<0, -0.2>(0, 0)(240:300:2){\texttt{how capable you think you are}}[mb]
+\end{tikzpicture}
+\end{center}
+\vspace*{\fill}
+
+\end{document}

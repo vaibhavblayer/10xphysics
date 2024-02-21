@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzaxes}(\PYGZhy{}5, \PYGZhy{}3)(5,3)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{E}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}Fx}\PYG{n+nb}{\PYGZob{}}4*\PYG{k}{\PYGZbs{}x}/(1+(\PYG{k}{\PYGZbs{}x})\PYG{n+nb}{\PYGZca{}}2)\PYG{n+nb}{\PYGZca{}}(3/2)\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tzfn}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}Fx}\PYG{n+nb}{\PYGZcb{}}[\PYGZhy{}5:5]
+\PYG{k}{\PYGZbs{}tzvXpointat}\PYG{n+nb}{\PYGZob{}}Fx\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.707\PYG{n+nb}{\PYGZcb{}}(A)
+\PYG{k}{\PYGZbs{}tzproj*}\PYG{n+na}{[\PYGZlt{}\PYGZhy{}\PYGZgt{},solid,draw=red]}(A)\PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{l}\PYG{o}{/}\PYG{n+nv}{\PYGZbs{}sqrt}\PYG{n+nb}{\PYGZob{}}\PYG{l+m}{2}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{E\PYGZus{}\PYGZob{}}\PYG{n+nv}{\PYGZbs{}textit}\PYG{n+nb}{\PYGZob{}max\PYGZcb{}\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}
