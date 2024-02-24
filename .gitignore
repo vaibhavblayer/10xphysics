@@ -6,4 +6,5 @@
 *.mp3
 *.log
 *.DS_Store
-*.temp.driveupload
+*.tmp.driveupload
+*.tmp.drivedownload
