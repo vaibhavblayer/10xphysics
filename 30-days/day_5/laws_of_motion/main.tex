@@ -1,0 +1,464 @@
+\documentclass{article}
+\usepackage{v-test-paper}
+\title{\textsc{Laws of Motion}}
+\date{February 25, 2024}
+\usepackage[none]{hyphenat}
+\usetikzlibrary{mindmap}
+
+\newcommand{\itemstared}{\refstepcounter{enumi}\item[$^\star$\theenumi.]}
+\usetikzlibrary{matrix,  positioning, patterns, backgrounds}
+\renewcommand{\ans}{\quad}
+\renewcommand{\ansint}[1]{\underline{\hspace{2cm}}}
+
+
+\tikzstyle{root} = [rectangle, rounded corners, 
+minimum width=3cm, 
+minimum height=0.7cm,
+text centered, 
+draw, 
+font=\scshape,
+]
+\tikzstyle{child} = [rectangle, rounded corners, 
+inner sep=2mm,
+text centered, 
+draw, 
+font=\itshape,
+text width=3.25cm,
+]
+
+\tikzstyle{child-branch} = [
+    rectangle, 
+    rounded corners, 
+    inner sep=2mm,
+    text centered, 
+    draw, 
+    font=\itshape,
+    text width=2.75cm,
+]
+\tikzstyle{child-stared} = [
+    rectangle, 
+    rounded corners, 
+    inner sep=2mm,
+    text centered, 
+    draw, 
+    font=\itshape,
+    text width=2.75cm,
+    label={[anchor=north west]north west:*}
+]
+
+
+
+\tikzstyle{arrow} = [thick,->,>=latex]
+
+
+\begin{document}
+\sloppy
+\maketitle
+\begin{center}
+\begin{tikzpicture}
+\def\root{Laws Of Motion}
+\def\RowOneColOne{Understanding gravitational and electromagnetic forces}
+\def\RowOneColTwo{Drawing Free Body Diagram}
+\def\RowOneColThree{Understanding the concept of pseudo force}
+\def\RowTwoColOneLeft{Simplified gravitational force($mg$)}
+\def\RowTwoColOneRight{Different manifestations of electromagnetic force}
+\def\RowTwoColTwo{Solving simultaneous linear equations}
+\def\RowThreeColOneLeft{Contact forces}
+\def\RowThreeColOneRight{Tension}
+\def\RowFourColOneLeft{Normal}
+\def\RowFourColOneRight{Friction}
+\def\RowThreeColTwo{Pseudo force}
+\def\RowFourColTwo{Spring force, Hinge force}
+
+\matrix [column sep=0mm,row sep=10mm]
+{
+&\node (root) [root] {\root};\\
+\node (row_one_col_one)[child] {\RowOneColOne}; & &
+\node (row_one_col_two)[child] {\RowOneColTwo}; \\
+\node[child-branch](row_two_col_one_left)at ($(row_one_col_one.south)+(-2, 0)$){\RowTwoColOneLeft};
+\node[child-branch] (row_two_col_one_right) at ($(row_one_col_one.south)+(2, 0)$){\RowTwoColOneRight};& &
+\node[child-branch](row_two_col_two)at ($(row_one_col_two.south)+(0, 0)$){\RowTwoColTwo}; \\
+\node[child-branch] (row_three_col_one_left) at ($(row_two_col_one_right.south)+(-2, 1)$){\RowThreeColOneLeft};
+\node[child-branch] (row_three_col_one_right) at ($(row_two_col_one_right.south)+(2, 1)$){\RowThreeColOneRight}; & &
+\node (row_three_col_two)[child-stared]{\RowThreeColTwo};\\
+\node[child-branch] (row_four_col_one_left) at ($(row_three_col_one_left.south)+(-2, 1)$){\RowFourColOneLeft};
+\node[child-branch] (row_four_col_one_right) at ($(row_three_col_one_left.south)+(2, 1)$){\RowFourColOneRight}; & &
+\node (row_four_col_two)[child-stared]{\RowFourColTwo};\\
+};
+
+\draw[arrow](root.west)-|(row_one_col_one.north);
+\draw[arrow](root.east)-|(row_one_col_two.north);
+\draw[arrow](row_one_col_one)--(row_two_col_one_left);
+\draw[arrow](row_one_col_one)--(row_two_col_one_right);
+\draw[arrow](row_one_col_two)--(row_two_col_two);
+\draw[arrow](row_two_col_one_right)--(row_three_col_one_left);
+\draw[arrow](row_two_col_one_right)--(row_three_col_one_right);
+\draw[arrow](row_three_col_one_left)--(row_four_col_one_left);
+\draw[arrow](row_three_col_one_left)--(row_four_col_one_right);
+
+\end{tikzpicture}
+\end{center}
+
+% \begin{center}
+%     \begin{tikzpicture}[
+%         mindmap, every node/.style={concept, fill=none, draw=black}, concept color=black, text=black,font=\scshape,
+%         level 1/.append style={level distance=5cm, sibling angle=60, font=\itshape, text width=2.5cm},
+%         level 2/.append style={level distance=3cm, sibling angle=45, font=\itshape, text width=2cm}
+%       ]
+    
+%       \node{\large{Physics}} [clockwise from=0]
+%       child {
+%           node {Classical\\Mechanics} [clockwise from=60]
+%           child { node {Lagrangian \& Hamiltonian}}
+%           child { node {Chaos Theory}}
+%           child { node {Gases \& Fluids}}
+%           child { node {Electro\-dynamics}}
+%         }
+%       child {
+%           node {Quantum Mechanics} [counterclockwise from=250]
+%           child { node {Atomic Physics}}
+%           child { node {Molecular Physics}}
+%           child { node {Chemistry}}
+%         }
+%       child {
+%           node {Relativity} [clockwise from=270]
+%           child { node {Special}}
+%           child { node {General}}
+%         }
+%       child  {
+%           node {Statistical Mechanics} [counterclockwise from=140]
+%           child { node {Thermo\-dynamics}}
+%           child { node {Kinetic Gas Theory}}
+%           child { node {Condensed Matter}}
+%         }
+%       child  {
+%           node {High-Energy} [counterclockwise from=80]
+%           child { node {Quantum Field Theory}}
+%           child { node {Particle Physics}}
+%           child { node {Nuclear Physics}}
+%         }
+%       child  {
+%           node {Cosmology} [counterclockwise from=40]
+%           child { node {Astronomy}}
+%           child { node {Early Universe}}
+%         };
+%     \end{tikzpicture}
+% \end{center}
+
+
+\begin{center}
+    \textsc{Problems}
+\end{center}
+\begin{enumerate}
+
+    \item Problems of non-inertial frames can be solved only with the concept of pseudo force.
+        \begin{tasks}(1)
+            \task Above statement is wrong\ans
+            \task Above statement is right
+            \task Can't say anything
+            \task Above statement is right for some cases and wrong for some cases
+        \end{tasks}
+
+        \item To mop-clean a floor, a cleaning machine presses a circular mop of radius $R$ vertically down with a total force $F$ and rotates it with a constant angular speed about its axis. If the force $F$ is distributed uniformly over the mop and if coefficient of friction between the mop and the floor is $\mu$, the torque applied by the machine on the mop in $(\N\m)$ is
+        \begin{tasks}(2)
+            \task $\dfrac{2}{3}\mu FR$\ans
+            \task $\dfrac{1}{6}\mu FR$
+            \task $\dfrac{1}{3}\mu FR$
+            \task $\dfrac{1}{2}\mu FR$
+        \end{tasks}
+
+        \item A small block of mass m is placed on a surface with a vertical cross-section given by $y = x^3 / 6$. If the coefficient of friction is $0.5$, the maximum height above the ground at which the block can be placed without slipping is
+        \begin{multicols}{2}
+            \begin{tasks}
+                \task $\dfrac{1}{6}\m$\ans
+                \task $\dfrac{2}{3}\m$
+                \task $\dfrac{1}{3}\m$
+                \task $\dfrac{1}{2}\m$
+            \end{tasks}
+        \columnbreak
+            \begin{center}
+                \begin{tikzpicture}
+                    \tzaxes(0, 0)(5, 3)
+                    \tzfn"Fx"{0.1*\x^3}[0:3]
+                    \tzvXpointat{Fx}{2.5}(A)
+                    \tzrectangle+[rotate=65](A)(0.35, 0.35){$m$}[scale=0.15]
+                    \tznode[scale=0.65]<-0.08, 0.22>(A){$m$}
+                \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+            
+
+    \item Two blocks A and B each of mass $m$ are placed on a smooth horizontal surface. Two horizontal forces $F$ and $2F$ are applied on the blocks A and B respectively as shown in figure. The block A does not slide on block B. Then the normal reaction acting between the two blocks is
+    \begin{center}
+        \begin{tikzpicture}
+            \pic (surface) {frame=7cm};
+            \tzlines+<-0.75, 0>(surface-center)(3, 0)(0, 1)(-1, 0)(-2, -1){$m$}[midway, right=7mm];
+            \tzlines+<-1, 0>(surface-center)(2, 1)(-3, 0)(0, -1)(1, 0){$m$}[midway, above=3mm];
+            \tzline+[<-](2.25, 0.5)(1.5, 0){$2F$}[ma]
+            \tzline+[<-](-3, 0.5)(1, 0){$F$}[ma]
+            \tzanglemark(3, 0)(-0.75, 0)(1, 1){$30^\circ$}(18pt)
+        \end{tikzpicture}
+    \end{center}
+    \begin{tasks}(2)
+        \task $F$
+        \task $\dfrac{F}{2}$
+        \task $\dfrac{F}{\sqrt{3}}$
+        \task $3F$\ans
+    \end{tasks}
+
+
+    \item The surface is frictionless, the ratio between $T_1$ and $T_2$ is
+        \begin{center}
+        \begin{tikzpicture}
+        \pic (surface) {frame=9cm};
+            \node[block, yshift=4mm] (block1) at (surface-center){$12\kg$};
+            \node[block] (block2) [right of=block1]{$15\kg$};
+            \node[block] (block3) [left of=block1]{$3\kg$};
+            \tzline(block3.east)(block1.west){$T_1$}[midway, a]
+            \tzline(block1.east)(block2.west){$T_2$}[midway, a]
+            \tzline[->]"force"(block2.east)([turn]30:2)
+            \tzvXpointat{force}{3}(A)
+            %\tzdot*(A)
+            \tzline+[dashed]"dashedline"(block2.east)(2, 0)
+            \tzvXpointat{dashedline}{3}(B)
+            %\tzdot*(B)
+            \tzanglemark(B)(block2.east)(A){$30^\circ$}(16pt)
+        \end{tikzpicture}
+        \end{center}	
+        \begin{tasks}(2)
+            \task $\sqrt{3}:1$
+            \task $1:\sqrt{3}$
+            \task $1:5$\ans
+            \task $5:1$
+        \end{tasks}
+
+        \item A block $B$ is pushed momentarily along a horizontal surface with an initial velocity $v$. If $\mu$ is the coefficient of sliding friction between $B$ and the surface, block $B$ will come to rest after a time 
+        \begin{center}
+            \begin{tikzpicture}
+                \pic {frame=5cm};
+                \node[block, yshift=4mm] (box1) at (0, 0) {$B$};
+                \tzline+[->](box1.east)(1.5, 0){$v$}[r]
+            \end{tikzpicture}
+        \end{center}
+        \begin{tasks}(2)
+            \task $\dfrac{v}{\mu g}$\ans
+            \task $\dfrac{\mu g}{v}$
+            \task $\dfrac{g}{v}$
+            \task $\dfrac{v}{g}$
+        \end{tasks}
+
+
+    \item The acceleration of the $2 \kg$ block, if the free end of string is pulled with a force of $20 \N$ as shown, is
+    \begin{multicols}{2}
+        \begin{tasks}
+            \task zero
+            \task $10\mpss$ upward\ans
+            \task $5\mpss$ upward
+            \task $5\mpss$ downward
+        \end{tasks}
+    \columnbreak
+        \begin{center}
+        \begin{tikzpicture}
+            \pic[yshift=10mm,rotate=180] (topsurface){frame=2.5cm};
+            \node[Bpulley, yshift=-20mm] (pulley1) at (topsurface-center){};
+            \node[pulley, xshift=-5mm] (pulley2) [below of=pulley1]{};
+            \tzline(pulley1.west)(pulley2.west)
+            \tzline(pulley1.center)(pulley2.east)
+            \tzline(pulley1.center)(topsurface-center)
+            \tzdot*(pulley1.center)
+            \tzdot*(pulley2.center)
+            \tzline+[->](pulley1.east)(0, -2){$F=20\N$}[b]
+            \node[block] (block1) [below of=pulley2]{$2\kg$};
+            \tzline(pulley2.center)(block1.north)
+        \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+
+
+        \item A bullet of mass $20\gm$ has an initial speed of $1\mps$, just before it starts penetrating a mud wall of thickness $20\cm$. If the wall offers a mean resistance of $2.5\times 10^{-2}\N$, the speed of the bullet just after it emerges from the other side of the wall is close to 
+        \begin{tasks}(2)
+            \task $0.5\mps$
+            \task $0.1\mps$
+            \task $0.3\mps$
+            \task $0.7\mps$\ans
+        \end{tasks}
+
+        \item In the pulley-block arrangement shown in figure, find relation between $a_A$ , $a_B$ and $a_C$ .
+        \begin{multicols}{2}
+            \begin{tasks}
+                \task $2a_A+a_B+a_C=0$\ans
+                \task $a_A+a_B+a_C=0$
+                \task $a_A+2a_B+a_C=0$
+                \task $a_A+a_B+2a_C=0$
+            \end{tasks}
+            \columnbreak
+        \begin{center}
+        \begin{tikzpicture}
+        \tzcoor(0, 0)(O)
+            \pic[yshift=10mm,rotate=180] (hinge){frame=3cm};
+            \node[pulley] (pulley1) at (O){};
+            \node[block] (box1) [below of=pulley1, xshift=-5mm] {$A$};
+            \node[pulley, xshift=5mm, yshift=-10mm] (pulley2) [below of=pulley1]{};
+            \node[block] (box2) [below of=pulley2, xshift=5mm] {$C$};
+            \node[block] (box3) [below of=pulley2, xshift=-5mm, yshift=-5mm]{$B$};
+            \tzline(pulley2.west)(box3.north)
+            \tzline(pulley2.east)(box2.north)
+            \tzdot*(pulley1.center)
+            \tzline(hinge-center)(pulley1.center)
+            \tzline(pulley1.west)(box1.north)
+            \tzline(pulley1.east)(pulley2.center)
+            \tzdot*(pulley2.center)
+        \end{tikzpicture}
+        \end{center} 
+        \end{multicols}
+        
+
+
+        \item Three blocks of masses $3 \kg$, $2 \kg$ and $1 \kg$ are placed side by side on a smooth surface as shown in figure. A horizontal force of $12 \N$ is applied on $3 \kg$ block. The net force on $2 \kg$ block is
+        \begin{center}
+        \begin{tikzpicture}
+        \tzcoor(0, 0)(O)
+            \pic[yshift=-4.3mm, xshift=5mm] at (O) {frame=7cm};
+            \node[block] (box1) at (O) {$3\kg$};
+            \node[block] (box2) [right of=box1, xshift=-9.7mm] {$2\kg$};
+            \node[block] (box3) [right of=box2, xshift=-9.7mm] {$1\kg$};
+            \tzline+[<-](box1.west)(-1.5, 0){$12\N$}[midway, a]
+        \end{tikzpicture}
+        \end{center} 
+        \begin{tasks}(2)
+            \task $2\N$
+            \task $3\N$
+            \task $4\N$\ans
+            \task $5\N$
+        \end{tasks}
+
+
+    \item For the situation shown in figure, mark the correct statement(s).
+    \begin{center}
+        \begin{tikzpicture}
+            \pic (surface) {frame=7cm};
+            \node[hblock,text width=4cm, text centered,  anchor=south] (block1) at (surface-center){\normalsize $4\kg$};
+            \node[block, text width=2cm, text centered, anchor=south] (block2) at (block1.north){$2\kg$};
+            \tzline+[->](block1.east)(1.5, 0){$F=2t$}[r]
+            \tzlines+[<-](block1.south west)(-0.5, 0.5)(-1.5, 0){Smooth}[ma];
+            \tzlines+[<-](block2.south west)(-0.5, 0.5)(-1.5, 0){$\upmu=0.4$}[ma];
+        \end{tikzpicture}
+    \end{center}
+    \begin{tasks}
+        \task At $t=3\s$, pseudo force on $4\kg$ block applied from $2\kg$ block is $4\N$ in forward direction.
+        \task At $t=3\s$, pseudo force on $2\kg$ block applied from $4\kg$ block is $2\N$ in backward direction.\ans
+        \task Pseudo force does not make an equal and opposite pair.\ans
+        \task Pseudo force also makes a pair of equal and opposite forces.
+    \end{tasks}
+
+
+    \begin{center}
+        \textsc{Matrix Match Type}
+    \end{center}
+
+    \item For the situation shown in figure, in Column I, the statements regarding friction forces are mentioned, while in Column II some information related to friction forces are given. Match the entries of Column I with the entries of Column II (Take $g = 10 \mpss$)
+    \begin{center}
+        \begin{tikzpicture}
+            \pic (surface) {frame=7cm};
+            \node[hblock,text width=4cm, text centered,  anchor=south] (block1) at (surface-center){\normalsize $5\kg$};
+            \node[block, text width=2cm, text centered, anchor=south] (block2) at (block1.north){$3\kg$};
+            \node[block, text width=1cm, text centered, anchor=south] (block3) at (block2.north){$2\kg$};
+            \tzline+[->](block2.east)(1.5, 0){$F=100\N$}[r]
+            \tzlines+[<-](block1.south east)(0.5, 0.5)(1.5, 0){Smooth}[ma];
+            \tzlines+[<-](block2.south west)(-0.5, 0.5)(-1.5, 0){$\upmu=0.1$}[ma];
+            \tzlines+[<-](block3.south west)(-0.5, 0.5)(-1.5, 0){$\upmu=0.2$}[ma];
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \renewcommand{\arraystretch}{1.5}
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{p{8cm}|p{3cm}}
+            \hline
+            Column I & Column II \\
+            \hline
+            (a) Total friction force on $3\kg$ block is & (p) Towards right\\
+            (b) Total friction on $5\kg$ block is & (q) Towards left\\
+            (c) Friction force on $2\kg$ block due to $3\kg$ block is & (r) Zero\\
+            (d) Friction force on $3\kg$ block due to $5\kg$ block is & (s) Non-zero\\
+            \hline
+            \end{tabular}
+        \end{table}
+    \end{center}
+    \begin{tasks}(2)
+        \task $a \rightarrow (p, r), b \rightarrow (q, r), c \rightarrow (p, s), d \rightarrow (q, s)$
+        \task $a \rightarrow (p, r), b \rightarrow (q, r), c \rightarrow (p, r), d \rightarrow (q, r)$
+        \task $a \rightarrow (q, s), b \rightarrow (p, s), c \rightarrow (p, s), d \rightarrow (q, s)$\ans
+        \task $a \rightarrow (q, r), b \rightarrow (p, r), c \rightarrow (p, r), d \rightarrow (q, r)$
+    \end{tasks}
+    
+    \begin{center}
+        \textsc{Comprehension Based Questions}
+    \end{center}
+    Two blocks A and B of masses $1 \kg$ and $2 \kg$ respectively are connected by a string, passing over a light frictionless pulley. Both the blocks are resting on a horizontal floor and the pulley is held such that string remains just taut. At moment $t = 0$, a force $F = 20 t$ newton starts acting on the pulley along vertically upward direction as shown in figure.(Take $g = 10 \mpss$)
+    \begin{center}
+        \begin{tikzpicture}
+            \def\H{2.5}
+            \pic (surface) {frame=5cm};
+            \node[pulley] (pulley) at (0, \H){};
+            \tzdot*(pulley.center)
+            \node[block, anchor=south] (block1) at ($(pulley.west)+(0, -\H)$){$1\kg$};
+            \node[block, anchor=south] (block2) at ($(pulley.east)+(0, -\H)$){$2\kg$};
+            
+            \tzline(pulley.west)(block1.north)
+            \tzline(pulley.east)(block2.north)
+            \tzline+[->](pulley.center)(0, 1.5){$F=20t$}[a]
+        \end{tikzpicture}
+    \end{center}
+    \item Velocity of block $A$ when block $B$ loses contact with the floor is
+    \begin{tasks}(2)
+        \task $2\mps$
+        \task $3\mps$
+        \task $4\mps$
+        \task $5\mps$\ans
+    \end{tasks}
+
+    \item Time after which block $B$ loses contact with the floor is
+    \begin{tasks}(2)
+        \task $2\s$\ans
+        \task $1\s$
+        \task $3\s$
+        \task $0\s$
+    \end{tasks}
+
+    \item Height raised by the pulley upto that moment where block $B$ loses contact with the floor is
+    \begin{tasks}(2)
+        \task $\dfrac{5}{3}$
+        \task $\dfrac{5}{6}$\ans
+        \task $\dfrac{10}{6}$
+        \task $\dfrac{10}{3}$
+    \end{tasks}
+    
+
+    
+
+\end{enumerate}
+
+\begin{center}
+    \textsc{Integer Type}
+\end{center}
+
+\begin{enumerate}\addtocounter{enumi}{15}
+\item A thin rod of length $1 \m$ is fixed in a vertical position inside a train, which is moving horizontally with constant acceleration $4 \mpss$. A bead can slide on the rod and friction coefficient between them is $0.5$. If the bead is released from rest at the top of the rod, it will reach the bottom in time $t$ then the value of $2t$ is \ansint{1}
+    
+\item A uniform cube of mass $m$ and side $a$ is resting in equilibrium on a rough $45^\circ$ inclined surface. The distance of the point of application of normal reaction measured from the lower edge of the cube is \ansint{0}
+    
+\item A horizontal force of $10 \N$ is necessary to just hold a block stationary against a wall. The coefficient of friction between the block and the wall is $0.2$. The weight of the block is \ansint{2}
+\end{enumerate}
+
+
+\pagebreak
+% \vspace*{\fill}
+
+\input{answer.tex}
+
+
+
+
+
+\end{document}
