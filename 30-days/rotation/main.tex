@@ -1,0 +1,224 @@
+\documentclass[11pt]{article}
+\usepackage{v-test-paper}
+\def\TITLE{Rotation}
+\usepackage{enumitem}
+\usepackage[export]{adjustbox}
+
+
+\title{\textsc{\TITLE}}
+% \date{February 27, 2024}
+\date{Day-9}
+\usepackage[none]{hyphenat}
+\usetikzlibrary{mindmap}
+\usetikzlibrary {patterns,patterns.meta} 
+
+\newcommand{\itemstared}{\refstepcounter{enumi}\item[$^\star$\theenumi.]}
+\usetikzlibrary{matrix,  positioning, patterns, backgrounds}
+\renewcommand{\ans}{\quad}
+\renewcommand{\ansint}[1]{\underline{\hspace{2cm}}}
+
+
+\tikzstyle{root} = [rectangle, rounded corners, 
+minimum width=3cm, 
+minimum height=0.7cm,
+text centered, 
+draw, 
+font=\scshape,
+]
+\tikzstyle{child} = [rectangle, rounded corners, 
+inner sep=2mm,
+text centered, 
+draw, 
+font=\itshape,
+text width=3.25cm,
+]
+
+\tikzstyle{child-branch} = [
+    rectangle, 
+    rounded corners, 
+    inner sep=2mm,
+    text centered, 
+    draw, 
+    font=\itshape,
+    text width=2.75cm,
+]
+\tikzstyle{child-stared} = [
+    rectangle, 
+    rounded corners, 
+    inner sep=2mm,
+    text centered, 
+    draw, 
+    font=\itshape,
+    text width=2.75cm,
+    label={[anchor=north west]north west:*}
+]
+
+\tikzstyle{ball}=[
+    circle, 
+    minimum size=0.5cm, 
+    draw, 
+    shade,
+]
+
+
+
+\tikzstyle{arrow} = [thick,->,>=latex]
+
+
+\begin{document}
+\sloppy
+\maketitle
+\begin{center}
+\begin{tikzpicture}
+    
+\def\root{\TITLE}
+\def\RowOneColOne{Moment Of Inertia}
+\def\RowOneColTwo{Kinematics of a rigid body}
+\def\RowOneColThree{Dynamics of a rigid body}
+\def\RowTwoColOne{Definition Of MOI}
+\def\RowTwoColTwoLeft{Angular Velocity}
+\def\RowTwoColTwoRight{Angular Acceleration}
+\def\RowTwoColThree{Angular Momentum}
+\def\RowThreeColOne{
+    Calculation of MOI
+    \begin{itemize}[itemsep=-2mm, leftmargin=5mm]
+        \item Descrete system of particles
+        \item Contineous destribution of mass
+        \item Parallel axis theorem
+        \item Perpendicular axis theorem
+    \end{itemize}
+}
+
+\def\RowThreeColTwoLeft{Torque}
+\def\RowThreeColThree{Torque}
+%\def\RowFourColOne{If $\vec{a}_{\textit{COM}}=0$, Conservation of Linear Momentum}
+\def\RowFourColTwoRight{Linear Impluse}
+\def\RowFourColTwoLeft{Variable Mass System(Rocket Propulsion)}
+
+\matrix [column sep=1mm,row sep=10mm]
+{
+&\node (root) [root] {\root};\\
+\node (row_one_col_one)[child] {\RowOneColOne}; & 
+\node (row_one_col_two)[child] {\RowOneColTwo}; &
+\node (row_one_col_three)[child]{\RowOneColThree};\\
+\node[child](row_two_col_one)at ($(row_one_col_one.south)+(0, 0)$){\RowTwoColOne};& 
+\node[child](row_two_col_two_left)at ($(row_one_col_two.south)+(-2, 0)$){\RowTwoColTwoLeft}; 
+\node[child-branch](row_two_col_two_right) at ($(row_one_col_two.south)+(2, 0)$){\RowTwoColTwoRight};&
+\node(row_two_col_three)[child]{\RowTwoColThree};\\
+\node[child] (row_three_col_one_left) at ($(row_two_col_one.south)+(0, 1)$){\RowThreeColOne};
+ & &
+\node[child-branch] (row_three_col_two_left)at ($(row_two_col_three.south)+(0, 1)$){\RowThreeColTwoLeft};\\
+% &&\\
+% \node[child-stared] (row_four_col_two) at ($(row_three_col_one_left.south)+(-2, 1)$){\RowThreeColTwoLeft};
+% \node[child-stared] (row_four_col_two_right) at ($(row_three_col_one_left.south)+(-5.5, 1)$){\RowFourColTwoRight};\\
+};
+
+\draw[arrow](root.west)-|(row_one_col_one.north);
+\draw[arrow](root.south)-|(row_one_col_two.north);
+\draw[arrow](root.east)-|(row_one_col_three.north);
+\draw[arrow](row_one_col_one)--(row_two_col_one);
+\draw[arrow](row_one_col_one)--(row_two_col_one);
+\draw[arrow](row_one_col_two)--(row_two_col_two_left);
+\draw[arrow](row_one_col_two)--(row_two_col_two_right);
+\draw[arrow](row_one_col_three)--(row_two_col_three);
+\draw[arrow](row_two_col_one)--(row_three_col_one_left);
+\draw[arrow](row_two_col_three)--(row_three_col_two_left);
+% \draw[arrow](row_two_col_two_right)--(row_three_col_two_left);
+%\draw[arrow](row_three_col_two_left)--(row_four_col_two);
+% \draw[arrow](row_three_col_one_left)--(row_four_col_one);
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \textsc{Problems}
+\end{center}
+\begin{enumerate}
+
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_1.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_2.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_3.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_4.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_5.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_6.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_7.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_8.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_9.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_10.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_11.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_14.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_15.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_16.png}
+
+
+   \begin{center}
+    \textsc{Comprehension Based Questions}
+\end{center}
+{\textbf{Passage I[15 to 18]}}\\
+\includegraphics*[width=\textwidth, valign=t]{problems/Problem_21.png}\\
+
+\item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_17.png}
+
+\item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_18.png}
+
+\item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_19.png}
+\item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_20.png}
+
+
+    \begin{center}
+        \textsc{Matrix Match Type}
+    \end{center}
+
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_12.png}
+   \item \includegraphics*[width=\textwidth, valign=t]{problems/Problem_13.png}
+    
+    
+    
+
+\end{enumerate}
+
+
+
+\vspace*{\fill}
+\begin{center}
+    \textsc{Answer Key}
+\end{center}
+\begin{multicols}{3}
+\begin{enumerate}
+    \item (a)
+    \item (b)
+    \item (b)
+    \item (a)
+    \item (b)
+    \item (d)
+    \item (b)
+    \item $\dfrac{25}{6}\rad/\s$
+    \item (c)
+    \item (c)
+    \item (a), (c)
+    \item $6.21\mpss$
+    \item $\cos^{-1}\left(\dfrac{v}{R\omega}\right)$
+    \item (b)
+    \item (c)
+    \item (a)
+    \item (d)
+    \item (b)
+    \item $a\rightarrow q, b \rightarrow r, c \rightarrow r, d\rightarrow p$
+    \item $a\rightarrow r, b \rightarrow q, c \rightarrow s, d\rightarrow p$
+\end{enumerate}
+\end{multicols}
+
+% \vspace*{\fill}
+
+% \input{answer.tex}
+
+% % \begin{figure}[h]
+% %     \rotatebox{180}{
+% %     \begin{minipage}{\textwidth}
+% %         \input{answer.tex}
+% %     \end{minipage}
+% %     }
+% %     \end{figure}
+
+
+
+\end{document}
