@@ -1,0 +1,40 @@
+
+\item A ring and a disc are initially at rest, side by side, at the top of an inclined plane which makes an angle \(60^\circ\) with the horizontal. They start to roll without slipping at the same instant of time along the shortest path. If the time difference between their reaching the ground is \((2 - \sqrt{3})/\sqrt{10} \, \text{s}\), then the height of the top of the inclined plane, in metres, is \underline{\hspace{2.5 cm}}. Take \(g = 10 \, \text{m/s}^2\).
+\begin{solution}
+    \begin{align*}
+        \intertext{Let the height of the inclined plane be $h$. The time taken by the ring and the disc to reach the ground is given by $\sqrt{\frac{2h}{g\sin\theta}}$, where $\theta$ is the angle of incline and $g$ is the acceleration due to gravity.}
+        t_{\text{ring}} &= \sqrt{\frac{2h}{g\sin\theta}} \left(\frac{1}{\sqrt{1+\frac{I_{\text{ring}}}{m_{\text{ring}}R^2}}}\right)\\
+        t_{\text{disc}} &= \sqrt{\frac{2h}{g\sin\theta}} \left(\frac{1}{\sqrt{1+\frac{I_{\text{disc}}}{m_{\text{disc}}R^2}}}\right)\\
+        \intertext{Since the ring and the disc start from rest and roll without slipping:}
+        I_{\text{ring}} &= m_{\text{ring}}R^2\\
+        I_{\text{disc}} &= \frac{1}{2}m_{\text{disc}}R^2\\
+        \intertext{The time difference between the ring and the disc reaching the ground is given by:}
+        \Delta t &= t_{\text{ring}} - t_{\text{disc}}\\
+        \Delta t &= \sqrt{\frac{2h}{g\sin\theta}} \left(\frac{1}{\sqrt{1+\frac{m_{\text{ring}}R^2}{m_{\text{ring}}R^2}}}\right) - \sqrt{\frac{2h}{g\sin\theta}} \left(\frac{1}{\sqrt{1+\frac{\frac{1}{2}m_{\text{disc}}R^2}{m_{\text{disc}}R^2}}}\right)\\
+        \Delta t &= \sqrt{\frac{2h}{g\sin\theta}} \left(\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{\frac{3}{2}}}\right)\\
+        \intertext{Given that $\Delta t = \frac{2-\sqrt{3}}{\sqrt{10}}$ and $g = 10 \, \text{m/s}^2$ and $\theta = 60^\circ$:}
+        \Delta t &= \sqrt{\frac{2h}{10\cdot\frac{\sqrt{3}}{2}}} \left(\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{\frac{3}{2}}}\right)\\
+        \frac{2-\sqrt{3}}{\sqrt{10}} &= \sqrt{\frac{4h}{10\sqrt{3}}} \left(\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{\frac{3}{2}}}\right)\\
+        \frac{2-\sqrt{3}}{\sqrt{10}} &= \sqrt{\frac{4h}{10\sqrt{3}}} \left(\sqrt{\frac{3}{2}} - \sqrt{2}\right)\\
+        \frac{2-\sqrt{3}}{\sqrt{10}} &= \frac{4h}{10\sqrt{3}} \left(\sqrt{2} - \sqrt{\frac{3}{2}}\right)^2\\
+        \frac{2-\sqrt{3}}{\sqrt{10}} &= \frac{4h}{10\sqrt{3}} \left(2 - \sqrt{6} + \frac{3}{2}\right)\\
+        \frac{2-\sqrt{3}}{\sqrt{10}} &= \frac{4h}{10\sqrt{3}} \left(\frac{7}{2} - \sqrt{6}\right)\\
+        h &= \frac{10\sqrt{3} \cdot (2-\sqrt{3})}{\sqrt{10} \cdot 4 \cdot (\frac{7}{2} - \sqrt{6})}\\
+        h &= \frac{5\sqrt{3} \cdot (2-\sqrt{3})}{\sqrt{10} \cdot (\frac{7}{2} - \sqrt{6})}\\
+        h &= \frac{5\sqrt{3} \cdot (2-\sqrt{3})}{\sqrt{10} \cdot (\frac{14-2\sqrt{6}}{4})}\\
+        h &= \frac{5\sqrt{3} \cdot (2-\sqrt{3})}{\sqrt{10} \cdot (\frac{7-\sqrt{6}}{2})}\\
+        h &= \frac{3\cdot (2-\sqrt{3})}{\frac{7-\sqrt{6}}{2}}\\
+        h &= \frac{6 \cdot (2-\sqrt{3})}{7-\sqrt{6}}\\
+        h &= \frac{12 - 6\sqrt{3}}{7-\sqrt{6}}\\
+        \intertext{Multiplying the numerator and denominator by the conjugate of the denominator:}
+        h &= \frac{(12 - 6\sqrt{3}) \cdot (7+\sqrt{6})}{(7-\sqrt{6}) \cdot (7+\sqrt{6})}\\
+        h &= \frac{84 + 12\sqrt{6} - 42\sqrt{3} - 6\sqrt{18}}{49 - 6}\\
+        h &= \frac{84 + 12\sqrt{6} - 42\sqrt{3} - 18\sqrt{2}}{43}\\
+        \intertext{Simplifying:}
+        h &= \frac{(84 - 18\sqrt{2}) + (12\sqrt{6} - 42\sqrt{3})}{43}\\
+        h &= \frac{84 - 18\sqrt{2}}{43} + \frac{12\sqrt{6} - 42\sqrt{3}}{43}\\
+        h &= \frac{84}{43} - \frac{18\sqrt{2}}{43} + \frac{12\sqrt{6}}{43} - \frac{42\sqrt{3}}{43}\\
+        \intertext{Therefore, the height of the inclined plane is:}
+        h &= \frac{84}{43} - \frac{18\sqrt{2}}{43} + \frac{12\sqrt{6}}{43} - \frac{42\sqrt{3}}{43}.
+    \end{align*}
+\end{solution}

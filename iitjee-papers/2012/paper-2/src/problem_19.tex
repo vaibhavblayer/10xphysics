@@ -1,0 +1,73 @@
+
+\item Two spherical planets \( P \) and \( Q \) have the same uniform density \( \rho \), masses \( M_P \) and \( M_Q \), and surface areas \( A \) and \( 4A \), respectively. A spherical planet \( R \) also has uniform density \( \rho \) and its mass is \( (M_P + M_Q) \). The escape velocities from the planets \( P \), \( Q \) and \( R \), are \( V_P \), \( V_Q \) and \( V_R \), respectively. Then
+    \begin{tasks}(2)
+        \task \( V_Q > V_R > V_P \)
+        \task \( V_R > V_Q > V_P \)\ans
+        \task \( V_R / V_P = 3 \)
+        \task \( V_P / V_Q = \frac{1}{2} \)\ans
+    \end{tasks}
+    \begin{solution}
+        \begin{align*}
+            \intertext{Escape velocity from the surface of a planet:}
+            K.E._{\textit{surface}} + P.E._{\textit{surface}} &= 0 \\
+            \frac{1}{2}mv^2_e - \frac{GMm}{R} &= 0 \\
+            v_e &= \sqrt{\frac{2GM}{R}} \\
+            \intertext{Since the planets $P$, $Q$, and $R$ have the same density $\rho$:}
+            M_P &= \frac{4}{3} \pi R_P^3 \rho\\
+            M_Q &= \frac{4}{3} \pi R_Q^3 \rho\\
+            M_R &= \frac{4}{3} \pi R_R^3 \rho\\
+            \intertext{Given that the surface areas of planets $P$ and $Q$ are $A$ and $4A$ respectively:}
+            A_p &= 4 \pi R_P^2 = A\\
+            A_Q &= 4 \pi R_Q^2 = 4A\\
+            \Rightarrow R_Q &= 2R_P\\
+            \intertext{The mass of planet $Q$:}
+            M_Q &= \frac{4}{3} \pi R_Q^3 \rho \\
+            &= \frac{4}{3} \pi (2R_P)^3 \rho \\
+            \Rightarrow M_Q &= 8M_P\\
+            \intertext{For planet $R$, we have $M_R = M_P + M_Q$:}
+            M_R &= M_P + M_Q\\
+            &= M_P + 8M_P\\
+            \Rightarrow M_R &= 9M_P\\
+            \intertext{The radius $R_R$ can be found from $M_R = \frac{4}{3} \pi R_R^3 \rho$:}
+            M_R &= \frac{4}{3} \pi R_R^3 \rho\\
+            M_P &= \frac{4}{3} \pi R_P^3 \rho\\
+            \frac{M_R}{M_P} &= \left(\frac{R_R}{R_P}\right)^3\\
+            \Rightarrow R_R &= 9^{1/3} R_P\\
+            \intertext{Now we can compare the escape velocities:}
+            V_P &= \sqrt{\frac{2GM_P}{R_P}} \\
+            V_Q &= \sqrt{\frac{2G \cdot 8M_P}{2R_P}} = 2\sqrt{\frac{2GM_P}{R_P}} = 2V_P \\
+            V_R &= \sqrt{\frac{2G \cdot 9M_P}{9^{1/3}R_P}} = 9^{1/3}\sqrt{\frac{2GM_P}{R_P}} = 9^{1/3}V_P \\
+            \intertext{Thus, we have $V_R > V_Q > V_P$ and $\frac{V_P}{V_Q}=\frac{1}{2}$.}
+            \intertext{Option (b) and (d) are correct.}
+        \end{align*}
+
+        \begin{align*}
+            \intertext{\textbf{Alternate Solution:}}
+            v_e &= \sqrt{\frac{2GM}{R}} \\
+            &= \sqrt{\frac{2G \left( \frac{4}{3} \pi R^3 \rho \right)}{R}} \\
+            &= \sqrt{\frac{2}{3} G A \rho} \qquad \because A=4\pi R^2  \\
+            \Rightarrow v_e &\propto \sqrt{A} 
+            \intertext{For planet $P$ and $Q$:}
+            &= \frac{\sqrt{A}}{\sqrt{4A}} \\
+            \Rightarrow \frac{V_P}{V_Q} &= \frac{1}{2} \\
+            \intertext{Option (d) is correct.}
+            \intertext{For planet $R$:}
+            \intertext{Given that the mass of planet $R$ is $M_P + M_Q$ and $\rho$ is same:}
+            M_R &> M_Q \\
+            R_R &> R_Q \\
+            A_R &> A_Q \\
+            \Rightarrow V_R &> V_Q \\
+            \intertext{From above relations, we can conclude that $V_Q > V_P$.}
+            \intertext{Thus, we have $V_R > V_Q > V_P$.}
+            \intertext{Option (b) is correct and (a) is incorrect.}    
+            \intertext{As $M_R=M_P + M_Q$}
+            \frac{4}{3}\pi R_R^3 \rho &= \frac{4}{3}\pi R_P^3 \rho + \frac{4}{3}\pi R_Q^3 \rho \\
+            \left(\frac{A_R}{4\pi}\right)^{3/2} &= \left(\frac{A_P}{4\pi}\right)^{3/2} + \left(\frac{A_Q}{4\pi}\right)^{3/2} \qquad \because A = 4\pi R^2\\
+            \left(A_R\right)^{3/2} &= A^{3/2} + 8A^{3/2} \\
+            \Rightarrow A_R &= 9^{2/3}A \\
+            \intertext{As, $v_e \propto \sqrt{A}$,}
+            V_R &= 9^{1/3}V_P
+            \intertext{Option (c) is incorrect.}
+            \intertext{Thus, the correct options are (b) and (d) only.}
+        \end{align*}
+    \end{solution}

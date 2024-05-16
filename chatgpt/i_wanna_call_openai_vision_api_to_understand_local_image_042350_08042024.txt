@@ -1,0 +1,37 @@
+Q. I wanna call openai vision api to understand local image
+
+You can use OpenAI's vision model (like CLIP) to understand images. However, please note that the OpenAI API only accepts a URL directly pointing to the file.
+
+For local images, you first have to upload it to a web server or a cloud-based storage service which can provide a publicly accessible URL for the image. You can use services like AWS S3, Azure Blob storage or Google Cloud storage.
+
+After having your image uploaded and a public URL obtained, you can call the API like so:
+
+## Python
+
+```python
+import openai
+
+openai.api_key = 'YOUR_OPEN_AI_KEY'
+
+response = openai.ImageCompletion.create(
+  model="davinci",
+  image_prompt='YOUR_IMAGE_URL'
+)
+
+print(response.choices[0].text)
+```
+
+In place of `'YOUR_IMAGE_URL'`, pass the string containing the publicly accessible URL of the image.
+
+## Curl
+
+```bash
+curl -X POST -H "Content-Type: application/json" \
+    -H "Authorization: Bearer YOUR_OPEN_AI_KEY" \
+    -d '{
+  "model": "davinci",
+  "image_prompt": "YOUR_IMAGE_URL"
+}' https://api.openai.com/v1/completions
+```
+
+You absolutely need to

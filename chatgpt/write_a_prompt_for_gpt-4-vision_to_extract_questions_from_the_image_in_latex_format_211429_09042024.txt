@@ -1,0 +1,3 @@
+Q. Write a prompt for gpt-4-vision to extract questions from the image in latex format
+
+As an AI language model, I'm currently not capable of visually analyzing an image or processing LaTeX format directly from an image. However, you might be able to use a tool like OCR (Optical Character Recognition) to extract text from an image and then input that text here for further processing or understanding. Please ensure the text is in a written or typed format that the tool can recognize.

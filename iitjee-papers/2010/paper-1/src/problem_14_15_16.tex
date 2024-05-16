@@ -1,0 +1,48 @@
+\begin{center}
+    \textsc{Paragraph for Questions 70 to 72}
+\end{center}
+
+When a particle of mass m moves on the x-axis in a potential of the form $V(x) = kx^2$, it performs simple harmonic motion. The corresponding time period is proportional to $\sqrt{\frac{m}{k}}$, as can be seen easily using dimensional analysis. However, the motion of a particle can be periodic even when its potential energy increases on both sides of $x = 0$ in a way different from $kx^2$ and its total energy is such that the particle does not escape to infinity. Consider a particle of mass m moving on the x-axis. Its potential energy is $V(x) = \alpha x^4 (\alpha > 0)$ for $|x| < x_0$ and becomes a constant equal to $V_0$ for $|x| \geq x_0$ (see figure).
+
+\begin{center}
+    \begin{tikzpicture}
+        % Since the image description for V(x) includes a plot with a specific shape, let's create a rough approximation of this.
+        % This is not an accurate rendering of the diagram because it's a free-hand drawing.
+        \draw[-latex] (-3,0) -- (3,0) node[right] {$x$};
+        \draw[-latex] (0,-1) -- (0,2) node[above] {$V(x)$};
+        \draw[domain=-1:1,smooth,variable=\x] plot ({\x},{\x*\x*\x*\x});
+        \draw[dashed] (1,1) -- (1,-1) node[below] {$x_0$};
+        \draw[dashed] (-1,1) -- (-1,-1) node[below] {$-x_0$};
+        \draw (1,1) -- (2.5,1) node[right] {$V_0$};
+        \draw (-1,1) -- (-2.5,1);
+        \fill (1,1) circle (1.5pt);
+        \fill (-1,1) circle (1.5pt);
+    \end{tikzpicture}
+\end{center}
+
+\item The total energy of the particle is $E$, it will perform periodic motion only if
+    \begin{tasks}(2)
+        \task $E < 0$
+        \task $E \geq 0$\ans
+        \task $V_0 > E \geq 0$\ans
+        \task $E > V_0$
+    \end{tasks}
+    \textit{ANSWER: B or C or (B and C) Option C implies option B.}
+
+\item For periodic motion of small amplitude $A$, the time period $T$ of this particle is proportional to
+    \begin{tasks}(2)
+        \task $A\sqrt{\frac{m}{\alpha}}$
+        \task $\frac{1}{A}\sqrt{\frac{m}{\alpha}}$\ans
+        \task $A\sqrt{\frac{\alpha}{m}}$
+        \task $\frac{1}{A}\sqrt{\frac{\alpha}{m}}$
+    \end{tasks}
+    \textit{ANSWER: B}
+
+\item The acceleration of this particle for $|x| > x_0$ is
+    \begin{tasks}(2)
+        \task proportional to $V_0$
+        \task proportional to $\frac{V_0}{m x_0}$
+        \task proportional to $\sqrt{\frac{V_0}{m x_0}}$
+        \task zero\ans
+    \end{tasks}
+    \textit{ANSWER: D}

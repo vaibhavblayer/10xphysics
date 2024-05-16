@@ -1,0 +1,29 @@
+
+\item The potential energy of a particle of mass \( m \) at a distance \( r \) from a fixed point \( O \) is given by \( V(r) = kr^2/2 \), where \( k \) is a positive constant of appropriate dimensions. This particle is moving in a circular orbit of radius \( R \) about the point \( O \). If \( v \) is the speed of the particle and \( L \) is the magnitude of its angular momentum about \( O \), which of the following statements is (are) true?
+	\begin{tasks}(2)
+		\task \( v = \sqrt{\frac{k}{2m}} R \)
+		\task \( v = \sqrt{\frac{k}{m}} R \)
+		\task \( L = \sqrt{m k} R^2 \)
+		\task \( L = \sqrt{\frac{m k}{2}} R^2 \)
+	\end{tasks}
+	\begin{solution}
+		\begin{align*}
+			\intertext{The centripetal force required for circular motion is provided by the gradient of the potential energy.}
+			m \frac{v^2}{R} &= -\frac{dV}{dr}\\
+			&= -\frac{d}{dr}\left(\frac{kr^2}{2}\right)\\
+			&= -kr\\
+			\intertext{For circular motion at radius $R$,}
+			m \frac{v^2}{R} &= -kR\\
+			v^2 &= \frac{kR^2}{m}\\
+			\intertext{Taking the square root on both sides,}
+			v &= \sqrt{\frac{k}{m}} R
+			\intertext{Therefore, option (b) is correct.}
+			\intertext{Now, to find the angular momentum $L$,}
+			L &= m v R\\
+			&= m \left( \sqrt{\frac{k}{m}} R \right) R\\
+			&= m \frac{R^2}{\sqrt{m}} \sqrt{k}\\
+			&= \sqrt{m} \sqrt{k} R^2\\
+			&= \sqrt{m k} R^2
+			\intertext{Therefore, option (c) is correct.}
+		\end{align*}
+	\end{solution}

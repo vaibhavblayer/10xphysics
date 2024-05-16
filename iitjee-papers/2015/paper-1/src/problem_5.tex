@@ -1,0 +1,26 @@
+
+\item Two spherical stars \( A \) and \( B \) emit blackbody radiation. The radius of \( A \) is 400 times that of \( B \) and \( A \) emits \( 10^4 \) times the power emitted from \( B \). The ratio \(\frac{{\lambda_A}}{{\lambda_B}}\) of their wavelengths \( \lambda_A \) and \( \lambda_B \) at which the peaks occur in their respective radiation curves is \underline{\hspace{2.5 cm}}.
+
+\begin{solution}
+    \begin{align*}
+        \intertext{According to the Stefan-Boltzmann Law, the power emitted by a black body is given by}
+        P &= \sigma A T^4 \\
+        \intertext{Where $\sigma$ is the Stefan-Boltzmann constant, $A$ is surface area and $T$ is the temperature.}
+        \intertext{For star $A$ and $B$, we can write}
+        P_A &= \sigma A_A T_A^4 \\
+        P_B &= \sigma A_B T_B^4 \\
+        \intertext{Given that $P_A = 10^4 P_B$ and radius of $A$ is $400$ times that of $B$}
+        P_A &= 10^4 P_B \\
+        \sigma \cdot 4 \pi (400r_B)^2 T_A^4 &= 10^4 \sigma \cdot 4 \pi r_B^2 T_B^4 \\
+        \intertext{Simplifying, we get}
+        T_A^4 &= \frac{10^4}{400^2} T_B^4 \\
+        T_A^4 &= \frac{1}{16} T_B^2 \\
+        \Rightarrow T_A &= \frac{1}{2} T_B \\
+        \intertext{Using Wien's Law, which relates temperature and wavelength at peak radiation}
+        \lambda_{\text{max}} T &= b \implies \lambda_{\text{max}} \propto \frac{1}{T} \\
+        \intertext{We can then write}
+        \frac{\lambda_A}{\lambda_B} &= \frac{T_B}{T_A} \\
+        \Rightarrow \frac{\lambda_A}{\lambda_B} &= \frac{2}{1} \\
+        \intertext{Thus the ratio of their wavelengths at which the peaks occur in their respective radiation curves is 2.}
+    \end{align*}
+\end{solution}

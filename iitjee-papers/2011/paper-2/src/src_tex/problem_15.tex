@@ -1,0 +1,17 @@
+
+\item Two batteries of different emfs and different internal resistances are connected as shown. The voltage across AB in volts is \underline{\hspace{2.5cm}}.
+    \begin{center}
+        \begin{tikzpicture}
+            % Drawing the circuit diagram using TikZ package
+            % Battery and resistances placement can roughly be estimated from the image.
+            \draw (0,0) to[battery, l_=6V] (0,3)
+                        to[resistor, l_=1$\Omega$] (3,3)
+                        to[short] (3,0)
+                        -- (0,0);
+            \draw (0,1.5) to[battery, l_=3V] (3,1.5)
+                          to[resistor, l_=2$\Omega$] (3,0);
+            % Terminals A and B
+            \fill (0,0) circle (2pt) node[left] {A};
+            \fill (3,0) circle (2pt) node[right] {B};
+        \end{tikzpicture}
+    \end{center}

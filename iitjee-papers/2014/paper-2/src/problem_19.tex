@@ -1,0 +1,52 @@
+
+\item A block of mass $m_1 = 1\, kg$ another mass $m_2 = 2\, kg$, are placed together (see figure) on an inclined plane with angle of inclination $\theta$. Various values of $\theta$ are given in List I. The coefficient of friction between the block $m_1$ and the plane is always zero. The coefficient of static and dynamic friction between the block $m_2$ and the plane are equal to $\mu = 0.3$. In List II expressions for the friction on block $m_2$ are given. Match the correct expression of the friction in List II with the angles given in List I, and choose the correct option. The acceleration due to gravity is denoted by $g$.
+
+[Useful information: $\tan(5.5^\circ) \approx 0.1$; $\tan(11.5^\circ) \approx 0.2$; $\tan(16.5^\circ) \approx 0.3$]
+
+\begin{center}
+    \begin{tikzpicture}
+        % Define the coordinates of the triangle vertices
+        \coordinate (A) at (0, 0);
+        \coordinate (B) at (4, 0);
+        \coordinate (C) at (4, -1.5);
+        
+        % Draw the triangle representing the inclined plane
+        \draw (A) -- (B) -- (C) -- cycle;
+        
+        % Label for mass m1
+        \draw[pattern=north west lines] (2.5,-0.5) rectangle (3.0,0);
+        \node at (2.75,-0.25) {$m_1$};
+        
+        % Label for mass m2
+        \draw[pattern=north west lines] (3.5,-1) rectangle (4.0,-0.5);
+        \node at (3.75,-0.75) {$m_2$};
+
+        % Draw and label the angle theta
+        \draw (2.7, -1) arc (0:30:0.5);
+        \node at (3.0, -0.8) {$\theta$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{p{0.25cm}p{8cm}|p{0.25cm}p{5cm}}
+        \hline
+        & List I & & List II \\
+        \hline
+        (P)& $\theta = 5^\circ$ & (1)& $m_2g \sin\theta$\\
+        (Q)& $\theta = 10^\circ$ & (2)& $(m_1 + m_2)g \sin\theta$\\
+        (R)& $\theta = 15^\circ$ & (3)& $\mu m_2 g \cos\theta$\\
+        (S)& $\theta = 20^\circ$ & (4)& $\mu(m_1 + m_2)g \cos\theta$\\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{center}
+
+\begin{tasks}(2)
+    \task $P \rightarrow 1$, $Q \rightarrow 2$, $R \rightarrow 3$, $S \rightarrow 3$
+    \task $P \rightarrow 2$, $Q \rightarrow 1$, $R \rightarrow 3$, $S \rightarrow 3$
+    \task $P \rightarrow 3$, $Q \rightarrow 2$, $R \rightarrow 1$, $S \rightarrow 4$
+    \task $P \rightarrow 2$, $Q \rightarrow 2$, $R \rightarrow 3$, $S \rightarrow 3$
+\end{tasks}

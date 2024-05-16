@@ -1,0 +1,35 @@
+
+\item A container of fixed volume has a mixture of one mole of hydrogen and one mole of helium in equilibrium at temperature \( T \). Assuming the gases are ideal, the correct statement(s) is(are)
+    \begin{tasks}(1)
+        \task The average energy per mole of the gas mixture is \( 2RT \).
+        \task The ratio of speed of sound in the gas mixture to that in helium gas is \( \sqrt{\frac{6}{5}} \).
+        \task The ratio of the rms speed of helium atoms to that of hydrogen molecules is \( \frac{1}{2} \).
+        \task The ratio of the rms speed of helium atoms to that of hydrogen molecules is \( \frac{1}{\sqrt{2}} \).
+    \end{tasks}
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{The average energy of gas mixture can be found using the formula for internal energy of an ideal gas, which is \( U = nC_vT \).}
+            \text{Average energy per mole of mixture} &= \frac{U_{\text{H}_2} + U_{\text{He}}}{2}\\
+            &= \frac{C_{v_{H_2}}T + C_{v_{He}}T}{2}\\
+            &= \frac{\frac{5}{2}RT + \frac{3}{2}RT}{2}\\
+            &= \frac{4RT}{2}\\
+            &= 2RT\\
+            \intertext{Therefore, option (a) is correct.}
+            \intertext{The ratio of speed of sound in the gas mixture to that in helium gas can be found using the formula \( v = \sqrt{\frac{\gamma RT}{M}} \), where \( \gamma \) is the heat capacity ratio, \( R \) is the gas constant, \( T \) is the temperature, and \( M \) is the molar mass. For a mixture of gases, \( \gamma \) and \( M \) are averages.}
+            \text{Speed of sound in mixture} &= \sqrt{\frac{\gamma RT}{M}}\\
+            \text{Speed of sound in helium} &= \sqrt{\frac{\gamma_{\text{He}}RT}{M_{\text{He}}}}\\
+            \text{Ratio of speeds} &= \frac{\sqrt{\frac{\gamma RT}{M}}}{\sqrt{\frac{\gamma_{\text{He}}RT}{M_{\text{He}}}}}\\
+            &= \sqrt{\frac{M_{\text{He}}}{M} \cdot \frac{\gamma}{\gamma_{\text{He}}}}\\
+            &= \sqrt{\frac{4}{2} \cdot \frac{5}{3}}\\
+            &= \sqrt{\frac{6}{5}}\\
+            \intertext{The ratio of the rms speed of helium atoms to that of hydrogen molecules can be found using the formula for rms speed, which is \( v_{\text{rms}} = \sqrt{\frac{3RT}{M}} \).}
+            v_{\text{rms He}} &= \sqrt{\frac{3RT}{M_{\text{He}}}}\\
+            v_{\text{rms H}_2} &= \sqrt{\frac{3RT}{M_{\text{H}_2}}}\\
+            \text{Ratio of rms speeds} &= \frac{\sqrt{\frac{3RT}{M_{\text{He}}}}}{\sqrt{\frac{3RT}{M_{\text{H}_2}}}}\\
+            &= \sqrt{\frac{M_{\text{H}_2}}{M_{\text{He}}}}\\
+            &= \sqrt{\frac{2}{4}}\\
+            &= \frac{1}{\sqrt{2}}\\
+            \intertext{Option (d) is correct. Option (c) is incorrect.}
+        \end{align*}
+    \end{solution}

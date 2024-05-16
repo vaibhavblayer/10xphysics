@@ -1,0 +1,17 @@
+
+\item Two vectors $\vec{A}$ and $\vec{B}$ are defined as $\vec{A} = a\hat{i}$ and $\vec{B} = a(\cos{\omega t}\hat{i} + \sin{\omega t}\hat{j})$, where $a$ is a constant and $\omega = \frac{\pi}{6}\, \text{rad s}^{-1}$. If $|\vec{A} + \vec{B}| = \sqrt{3}|\vec{A} - \vec{B}|$ at time $t = \tau$ for the first time, the value of $\tau$, in seconds, is \underline{\hspace{3cm}}.
+
+\begin{solution}
+    \begin{align*}
+        \intertext{Given $\vec{A} = a\hat{i}$ and $\vec{B} = a(\cos{\omega t}\hat{i} + \sin{\omega t}\hat{j})$, and the condition $|\vec{A} + \vec{B}| = \sqrt{3}|\vec{A} - \vec{B}|$.}
+        |\vec{A} + \vec{B}|^2 &= (\sqrt{3}|\vec{A} - \vec{B}|)^2\\
+        |\vec{A}|^2 + |\vec{B}|^2 + 2\vec{A}\cdot\vec{B} &= 3(|\vec{A}|^2 + |\vec{B}|^2 - 2\vec{A}\cdot\vec{B})\\
+        8\vec{A}\cdot\vec{B} &= 2|\vec{A}|^2 + 2|\vec{B}|^2\\
+        8a^2\cos{\omega t} &= 2a^2 + 2a^2\\
+        8\cos{\omega t} &= 4\\
+        \cos{\omega t} &= \frac{1}{2}\\
+        \omega t &= \frac{\pi}{3}\\
+        \tau &= \frac{\pi}{3\omega} = \frac{\pi}{3\left(\frac{\pi}{6}\right)} = 2\, \text{s}.
+        \intertext{Therefore, the value of $\tau$ is $2\, \text{s}$.}
+    \end{align*}
+\end{solution}

@@ -1,0 +1,27 @@
+
+\item Two infinitely long straight wires lie in the xy-plane along the lines \( x = \pm R \). The wire located at \( x = +R \) carries a constant current \( I_1 \) and the wire located at \( x = -R \) carries a constant current \( I_2 \). A circular loop of radius \( R \) is suspended with its centre at \( (0,0,\sqrt{3}R) \) and in a plane parallel to the xy-plane. This loop carries a constant current \( I \) in the clockwise direction as seen from above the loop. The current in the wire is taken to be positive if it is in the \( +j \) direction. Which of the following statements regarding the magnetic field \( \vec{B} \) is (are) true?
+    \begin{tasks}(1)
+        \task If \( I_1 = I_2 \), then \( \vec{B} \) cannot be equal to zero at the origin \( (0,0,0) \)
+        \task If \( I_1 > 0 \) and \( I_2 < 0 \), then \( \vec{B} \) can be equal to zero at the origin \( (0,0,0) \)
+        \task If \( I_1 < 0 \) and \( I_2 > 0 \), then \( \vec{B} \) can be equal to zero at the origin \( (0,0,0) \)
+        \task If \( I_1 = I_2 \), then the z-component of the magnetic field at the centre of the loop is \( \left(-\frac{\mu_0 I}{2R}\right) \)
+    \end{tasks}
+    \begin{solution}
+        \begin{align*}
+            \intertext{The magnetic field at the origin due to the wire at $x=+R$ carrying current $I_1$ is directed along the $-y$ direction and is given by,}
+            \vec{B}_1 &= \frac{\mu_0 I_1}{2\pi \left|+R\right|} (-\hat{j})\\
+            \intertext{The magnetic field at the origin due to the wire at $x=-R$ carrying current $I_2$ is directed along the $+y$ direction and is given by,}
+            \vec{B}_2 &= \frac{\mu_0 I_2}{2\pi \left|-R\right|} (+\hat{j})\\
+            \intertext{For $\vec{B}$ to be zero at the origin the sum of $\vec{B}_1$ and $\vec{B}_2$ must be zero.}
+            \vec{B}_1 + \vec{B}_2 &= 0\\
+            -\frac{\mu_0 I_1}{2\pi R}\hat{j} + \frac{\mu_0 I_2}{2\pi R}\hat{j} &= 0\\
+            \intertext{For this equation to hold true $I_1$ and $I_2$ must be equal and opposite, i.e. $I_1 = -I_2$.}
+            \intertext{This means that if $I_1 = I_2$ then both of them cannot cancel and so (a) is correct.}
+            \intertext{If $I_1 > 0$ and $I_2 < 0$, then (b) is true since they will cancel each other.}
+            \intertext{If $I_1 < 0$ and $I_2 > 0$, then (c) is true again since they will cancel each other.}
+            \intertext{The z-component of the magnetic field at the center of the loop due to the current in the loop itself is given by,}
+            B_{z-loop} &= \frac{\mu_0 I}{2 R} (-\hat{k})\\
+            \intertext{Hence, statement (d) is also correct.}
+        \intertext{The correct options are (a), (b), (c), and (d).}
+        \end{align*}
+    \end{solution}

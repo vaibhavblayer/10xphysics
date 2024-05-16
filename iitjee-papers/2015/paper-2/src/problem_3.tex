@@ -1,0 +1,31 @@
+
+\item The densities of two solid spheres \( A \) and \( B \) of the same radii \( R \) vary with radial distance \( r \) as \( \rho_A(r) = k \left( \frac{r}{R} \right) \) and \( \rho_B(r) = k \left( \frac{r}{R} \right)^5 \), respectively, where \( k \) is a constant. The moments of inertia of the individual spheres about axes passing through their centres are \( I_A \) and \( I_B \), respectively. If \( \frac{I_B}{I_A} = \frac{n}{10} \), the value of \( n \) is \underline{\hspace{2.5 cm}}.
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{The moment of inertia for a solid sphere with a density varying with radial distance is given by:}
+            I &= \int_{0}^{R} \frac{2}{3} \pi r^2 \rho(r) r^2 \, dr\\
+            \intertext{For sphere A:}
+            \rho_A(r) &= k \left( \frac{r}{R} \right)\\
+            I_A &= \int_{0}^{R} \frac{2}{3} \pi r^2 k \left( \frac{r}{R} \right) r^2 \, dr\\
+            &= \frac{2}{3} \pi k \int_{0}^{R} r^5 \frac{1}{R} \, dr\\
+            &= \frac{2}{3} \pi k \left[ \frac{r^6}{6R} \right]_{0}^{R}\\
+            &= \frac{2}{3} \pi k \left( \frac{R^5}{6} \right)\\
+            &= \frac{1}{9} \pi k R^5\\
+            \intertext{For sphere B:}
+            \rho_B(r) &= k \left( \frac{r}{R} \right)^5\\
+            I_B &= \int_{0}^{R} \frac{2}{3} \pi r^2 k \left( \frac{r}{R} \right)^5 r^2 \, dr\\
+            &= \frac{2}{3} \pi k \int_{0}^{R} r^9 \frac{1}{R^5} \, dr\\
+            &= \frac{2}{3} \pi k \left[ \frac{r^{10}}{10R^5} \right]_{0}^{R}\\
+            &= \frac{2}{3} \pi k \left( \frac{R^5}{10} \right)\\
+            &= \frac{1}{15} \pi k R^5\\
+            \intertext{Taking the ratio of \( I_B \) to \( I_A \):}
+            \frac{I_B}{I_A} &= \frac{\frac{1}{15} \pi k R^5}{\frac{1}{9} \pi k R^5}\\
+            &= \frac{1}{15} \cdot \frac{9}{1}\\
+            &= \frac{9}{15}\\
+            &= \frac{3}{5}\\
+            \intertext{Converting to the form \( \frac{n}{10} \):}
+            &= \frac{6}{10}\\
+            \intertext{Therefore, the value of \( n \) is \( 6 \).}
+        \end{align*}
+    \end{solution}

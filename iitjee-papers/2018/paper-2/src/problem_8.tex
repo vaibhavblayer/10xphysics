@@ -1,0 +1,29 @@
+
+    \item A ball is projected from the ground at an angle of \(45^\circ\) with the horizontal surface. It reaches a maximum height of \(120 \, m\) and returns to the ground. Upon hitting the ground for the first time, it loses half of its kinetic energy. Immediately after the bounce, the velocity of the ball makes an angle of \(30^\circ\) with the horizontal surface. The maximum height it reaches after the bounce, in metres, is \underline{\hspace{2cm}}.
+    \begin{solution}
+        \begin{align*}
+            \intertext{Using the equation of motion along vertical direction for the maximum height before the first bounce:}
+            v_y^2 &= u_y^2 - 2gh\\
+            0 &= u_y^2 - 2g(120)\\
+            u_y^2 &= 2g(120)\\
+            u_y &= \sqrt{2g(120)}\\
+            \Rightarrow u_y &= v_0\sin(45^\circ)\\
+            \Rightarrow v_0 &= \frac{\sqrt{2400}}{\frac{1}{\sqrt{2}}}\\
+            \Rightarrow v_0 &= 40\sqrt{3}\, m/s\\
+            \intertext{Immediately after the first bounce, the kinetic energy is:}
+            KE_f &= \frac{1}{2} \cdot KE_i\\
+            \frac{1}{2} m v_0'^2 &= \frac{1}{2} \cdot \frac{1}{2} m v_0^2\\
+            v_0'^2 &= \frac{1}{2} v_0^2\\
+            \Rightarrow v_0' &= \frac{1}{\sqrt{2}} v_0\\ 
+            \intertext{Using the equation of motion along vertical direction for the maximum height after the first bounce:}
+            v_y'^2 &= u_y'^2 - 2gh'\\
+            0 &= u_y'^2 - 2g(h')\\
+            u_y'^2 &= 2g(h')\\
+            v_0'\sin(30^\circ) &= \sqrt{2g(h')}\\
+            \Rightarrow \left(\frac{1}{\sqrt{2}} v_0 \cdot \frac{1}{2} \right)^2 &= 2g(h')\\
+            h' &= \frac{v_0^2}{16g}\\
+            &= \frac{1600 \cdot 3}{16 \cdot 10}\\
+            \Rightarrow h' &= 30\, m
+            \intertext{Therefore, the maximum height it reaches after the bounce is \(30\, m\).}
+        \end{align*}
+    \end{solution}

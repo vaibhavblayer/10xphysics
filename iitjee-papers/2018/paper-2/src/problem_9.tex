@@ -1,0 +1,22 @@
+
+\item A particle, of mass \(10^{-3}\) kg and charge 1.0 C, is initially at rest. At time \(t = 0\), the particle comes under the influence of an electric field \(\vec{E}(t) = E_0 \sin (\omega t) \hat{i}\), where \(E_0 = 1.0 \, \text{N C}^{-1}\) and \(\omega = 10^3 \, \text{rad s}^{-1}\). Consider the effect of only the electrical force on the particle. Then the maximum speed, in \( \text{m s}^{-1}\), attained by the particle at subsequent times is \underline{\hspace{2cm}}.
+
+\begin{solution}
+    \begin{align*}
+        \intertext{The electrical force acting on the particle is given by}
+        \vec{F} &= q\vec{E}(t)\\
+        &= 1.0 \, \text{C} \cdot E_0 \sin (\omega t) \hat{i}\\
+        \intertext{The acceleration of the particle is given by Newton's second law}
+        \vec{a} &= \frac{\vec{F}}{m}\\
+        &= \frac{1.0 \, \text{C} \cdot E_0 \sin (\omega t) \hat{i}}{10^{-3} \, \text{kg}}\\
+        \intertext{The velocity of the particle can be determined by integrating the acceleration with respect to time}
+        \vec{v}(t) &= \int_0^t \vec{a}(t) \, \d{t}\\
+        &= 10^3 \cdot E_0 \int_0^t \sin (\omega t) \, \d{t} \hat{i}\\
+        &= \frac{10^3 \cdot E_0}{\omega} \left[ -\cos (\omega t) + 1 \right] \hat{i}\\
+        \intertext{The maximum speed is when the cosine function is at its minimum value of -1}
+        v_{\text{max}} &= \frac{10^3 \cdot E_0}{\omega} \left[ 1 - (-1) \right]\\
+        &= \frac{2 \cdot 10^3 \cdot 1.0 \, \text{N C}^{-1}}{10^3 \, \text{rad s}^{-1}}\\
+        &= 2 \, \text{m s}^{-1}
+        \intertext{Therefore, the maximum speed attained by the particle is \(2 \, \text{m s}^{-1}\).}
+    \end{align*}
+\end{solution}

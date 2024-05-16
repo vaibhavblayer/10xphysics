@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{v-test-paper}
+\begin{document}
+
+\section*{Fundamental Rules of Differentiation}
+
+\subsection*{Rule 1}
+The derivative of a constant is equal to zero; i.e., if \(y = C\) where \(C\) is constant then \(\frac{dy}{dx} = 0\).
+
+\subsection*{Proof}
+\begin{align*}
+y &= C \text{ is a function of } x \text{ such that the values of it are equal to } C \forall x. \\
+\intertext{Hence, for any value of } x, \quad y &= f(x) = C \\
+\intertext{We increase the variables } x & \text{ by } \Delta x \text{ and } y \text{ by } \Delta y \text{ respectively. Since, the function } y \text{ retains the value } C \text{ for all values of the argument, we have} \\
+y + \Delta y &= f(x + \Delta x) = C \\
+\Delta y &= f(x + \Delta x) - f(x) = 0 \\
+\intertext{The ratio of the increment of the function to the increment of the argument} \\
+\frac{\Delta y}{\Delta x} &= 0 \\
+\frac{dy}{dx} &= \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} \\
+\frac{dy}{dx} &= 0 \\
+\intertext{Also, we see that the result has a simple geometrical interpretation. The graph of the function } y &= C \text{ is a straight line parallel to the } x\text{-axis.}
+\end{align*}
+
+\subsection*{Rule 2}
+A constant factor may be taken outside the derivative sign, i.e., if \(y = C \cdot v(x)\) \([C = \text{constant}]\) then
+\begin{align*}
+\frac{dy}{dx} &= C \cdot v'(x)
+\end{align*}
+
+\subsection*{Rule 3}
+The derivative of the sum of a finite number of differentiable functions is equal to the corresponding sum of the derivatives of those functions, i.e.,
+\begin{align*}
+\text{if we have } y &= u(x) + v(x) + w(x) \\
+\text{then } \frac{dy}{dx} &= u'(x) + v'(x) + w'(x)
+\end{align*}
+
+\subsection*{Rule 4}
+The derivative of a product of two differentiable functions is equal to the sum of the product of one function to the derivative of the other function; i.e.,
+\begin{align*}
+\text{if } y &= u \cdot v \\
+\text{then } \frac{dy}{dx} &= u' \cdot v + u \cdot v'
+\end{align*}
+
+\end{document}

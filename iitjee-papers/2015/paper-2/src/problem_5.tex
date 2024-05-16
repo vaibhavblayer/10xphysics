@@ -1,0 +1,23 @@
+
+\item For a radioactive material, its activity $A$ and rate of change of its activity $R$ are defined as \[A = -\frac{dN}{dt} \text{\quad and \quad} R = -\frac{dA}{dt}\], where $N(t)$ is the number of nuclei at time $t$. Two radioactive sources $P$ (mean life $\tau$) and $Q$ (mean life $2\tau$) have the same activity at $t = 0$. Their rates of change of activities at $t = 2\tau$ are $R_P$ and $R_Q$, respectively. If $\frac{R_P}{R_Q} = \frac{n}{e}$, then the value of $n$ is \underline{\hspace{2.5 cm}}.
+\begin{solution}
+    \begin{align*}
+        \intertext{For a radioactive material, the number of nuclei $N(t)$ decreases exponentially with time, given by the equation:}
+        N(t) &= N_0 e^{-\frac{t}{\tau}} \\
+        \intertext{where $N_0$ is the initial number of nuclei and $\tau$ is the mean life of the material. The activity $A$ is given by:}
+        A &= -\frac{dN}{dt} = \frac{N_0}{\tau}e^{-\frac{t}{\tau}} \\
+        \intertext{The rate of change of activity $R$ is given by:}
+        R &= -\frac{dA}{dt} = \frac{N_0}{\tau^2}e^{-\frac{t}{\tau}} \\
+        \intertext{For source $P$ with mean life $\tau$:}
+        R_P &= \frac{N_0}{\tau^2}e^{-\frac{2\tau}{\tau}} = \frac{N_0}{\tau^2}e^{-2} \\
+        \intertext{For source $Q$ with mean life $2\tau$:}
+        R_Q &= \frac{N_0}{(2\tau)^2}e^{-\frac{2\tau}{2\tau}} = \frac{N_0}{4\tau^2}e^{-1} \\
+        \intertext{Taking the ratio $\frac{R_P}{R_Q}$:}
+        \frac{R_P}{R_Q} &= \frac{\frac{N_0}{\tau^2}e^{-2}}{\frac{N_0}{4\tau^2}e^{-1}} = \frac{4e^{-2}}{e^{-1}} = 4e^{-1} \\
+        \intertext{Since the problem states that $\frac{R_P}{R_Q} = \frac{n}{e}$, we can equate:}
+        4e^{-1} &= \frac{n}{e} \\
+        \intertext{Multiplying both sides by $e$:}
+        4 &= n \\
+        \intertext{Thus, the value of $n$ is $4$.}
+    \end{align*}
+\end{solution}

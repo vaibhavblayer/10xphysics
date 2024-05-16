@@ -1,0 +1,3 @@
+Q. What is pure mathematics
+
+Pure mathematics is the study of mathematical concepts independently of any application outside mathematics. These abstract and theoretical concepts may not have any immediate or obvious practical use or relevance. Some subfields of pure mathematics include algebra, number theory, real and complex analysis, topology, and geometry. It contrasts with applied mathematics, which is primarily concerned with mathematical methods that are typically used in science, engineering, business, and other areas.

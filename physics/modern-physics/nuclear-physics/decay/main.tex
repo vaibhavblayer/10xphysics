@@ -1,0 +1,270 @@
+\documentclass[12 pt]{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[paperwidth=8.27 in,paperheight=11.69 in,left=25 mm, right=25 mm, top=20 mm, bottom=25 mm]{geometry}
+\usepackage{graphics}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{marvosym}
+\newcommand{\myitem}{\refstepcounter{enumi}\item[$^\star$\theenumi.]}
+\newcommand{\mmyitem}{\refstepcounter{enumi}\item[$^{\star \star}$\theenumi.]}
+\setcounter{page}{401}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\setlength{\arrayrulewidth}{0.1 mm}
+\definecolor{Mycolor2}{HTML}{33cccc}
+
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{10 mm}
+
+\renewcommand{\headrulewidth}{0 mm}
+
+
+%%----FONT &&& MATHS_FONT----%%
+
+\usepackage{amssymb}
+\usepackage{upgreek,xspace}
+\newcommand*{\rom}[1]{\expandafter\@\romannumeral #1}
+
+\usepackage[utopia]{mathdesign}
+% \renewcommand{\familydefault}{\sfdefault}
+%\usepackage{newtxtext,newtxmath}
+% \usepackage[scaled=1]{helvet}
+\newcommand*\Times{\fontfamily{ptm}\selectfont}
+
+%%%------PACAKAGES------%%%
+
+\usepackage[letterspace=200]{microtype}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{width=8cm,compat=1.16}
+\usepackage{tikz}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{quotes,angles,patterns,through,calc}
+\usepgflibrary{arrows.meta}
+\usetikzlibrary{optics}
+\usetikzlibrary{intersections}
+
+\usepackage[version=4]{mhchem}
+\usepackage{chemformula}
+\usepackage{elements}
+
+%\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+
+\usepackage{mathtools}
+\usepackage{old-arrows}
+\usepackage[b]{esvect}
+
+\newcommand{\midarrow}{\tikz \draw[-Stealth] (0,0) -- +(.1,0);}
+\usetikzlibrary{mindmap}
+\usetikzlibrary{scopes}
+\usetikzlibrary{backgrounds}
+\pgfsetlayers{background,main,foreground}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\usetikzlibrary{trees}
+\usetikzlibrary{shadings}
+%\tikzset{every node/.append style = {draw=black,thin}}
+\usetikzlibrary{shadows}
+
+
+
+\usepackage{color}
+\usepackage[autostyle]{csquotes}
+\usepackage{xcolor}
+\definecolor{Mycolor2}{HTML}{33cccc}
+\definecolor{One}{HTML}{336666}
+\definecolor{Two}{HTML}{666666}
+\definecolor{Three}{HTML}{cc6699}
+\definecolor{tomato}{HTML}{FF6347}
+\definecolor{darkblue}{HTML}{2c3e50}
+
+
+
+
+\newcommand{\E}{{\Times{\Huge{\textit{\textcolor{black!65}{E{\textcolor{red!95}{.}}}}}}}}
+
+
+\newcommand*\circled[1]{\tikz[thin, baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+      
+
+\newenvironment{ctikz}{\begin{center}\begin{tikzpicture}} {\end{tikzpicture} \end{center}}
+
+\newcommand{\physics}{\normalsize{\textcolor{tomato}{\textls*[100]{{\hspace*{75 mm} @10xphysics}}}}}
+
+
+\newenvironment{my-title}
+{
+	\begin{center}
+	\begin{itshape}
+	\Large\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{definition}
+{
+	\begin{center}
+	\begin{itshape}
+	\large\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+
+\newenvironment{note}
+{
+	\begin{center}
+	\begin{itshape}
+	\small\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+\newenvironment{chemistry}
+{
+	\begin{center}
+	\begin{itshape}
+	\Large\Times\textit{}
+}
+{
+	\end{itshape}
+	\end{center}
+}
+
+\title{Nuclei Decay}
+
+\date{}
+
+\begin{document}
+
+% \nopagecolor
+%\boldmath
+%\color{white!100}
+% \LARGE
+
+%\pagecolor{Mycolor2!80}
+%\pagecolor{black!35}
+% \setlength{\parindent}{0pt}
+
+\begin{center}
+	\textsc{Nuclei Decay}\\[10mm]
+\end{center}
+
+
+\begin{my-title}
+alpha decay
+\end{my-title}
+
+\begin{definition}
+An alpha particle is a helium nucleus. Thus a nucleus emitting an alpha particle loses two protons and two neutrons.
+\end{definition}
+
+
+\begin{chemistry}
+\ch{$_ZX^A$ \quad ->[$\alpha$-decay] \quad $_{Z-2}Y^{A-4}$ \quad + \quad $_2$He$^4$} \\[7.5 mm]
+\ch{$_{92}U^{238}$ \quad ->[$\alpha$-decay] \quad $_{90}$Th$^{234}$ \quad + \quad $_2$He$^4$}
+\end{chemistry}
+
+\vspace*{10mm}
+
+
+\begin{my-title}
+Beta decay
+\end{my-title}
+
+\begin{definition}
+Beta decay involves the emission of electrons or positron. A positron is a form of antimatter, which has a charge equal to $+e$ and a mass equal to that of electron.
+\end{definition}
+
+
+\begin{note}
+\begin{tikzpicture}
+[edge from parent fork down, sibling distance=40mm, level distance=25mm,
+every node/.style={draw,black,line width=0.75,rounded corners},
+edge from parent/.style={black,line width=0.75,draw,line cap=round}] 
+\node {Beta Decay}
+      child {node {$\upbeta^-$ decay}}
+      child {node {$\upbeta^+$ decay}}
+      child {node {electron capture}};
+\end{tikzpicture}
+\end{note}
+
+
+\vspace*{10mm}
+
+\begin{my-title}
+$\upbeta^-$ decay
+\end{my-title}
+
+\begin{definition}
+In $\upbeta^-$ decay, a neutron in the nucleus is transformed into a proton, an electron and an anti-neutrino ($\overline{\upnu}$). It has zero rest mass, is chargeless.
+\end{definition}
+
+
+\begin{chemistry}
+\ce{n  $~~$ -> $~~$ p $~~$ + $~~$ e- $~~$ + $~~$ $\overline{\upnu}$}\\[8 mm]
+\ce{$_ZX^A$ $~~~$ ->[$\upbeta^-$] $~~~$ $_{Z+1}Y^A~~$ +$~~$ e- $~~$ + $~~$ $\overline{\upnu}$}\\[5 mm]
+\ce{$_6C^{14}$ $~~$ ->[$\upbeta^-$] $~~$ $_7N^{14}~~$ + $~~$ e- $~~$ + $~~$ $\overline{\upnu}$ }
+\end{chemistry}
+
+\pagebreak
+
+\begin{my-title}
+$\upbeta^+$ decay
+\end{my-title}
+
+\begin{definition}
+In $\upbeta^+$ decay, a proton changes into a neutron with the emission of a positron and a neutrino ($\upnu$).
+\end{definition}
+
+
+\begin{chemistry}
+\ce{p  $~~$ -> $~~$ n $~~$ + $~~$ e+ $~~$ + $~~$ $\upnu$}\\[8 mm]
+\ce{$_ZX^A$ $~~~$ ->[$\upbeta^+$] $~~~$ $_{Z-1}Y^A~~$ +$~~$ e+ $~~$ + $~~$ $\upnu$}\\[5 mm]
+\ce{$_7N^{13}$ $~~$ ->[$\upbeta^+$] $~~$ $_6C^{13}~~$ + $~~$ e+ $~~$ + $~~$ $\upnu$ }
+\end{chemistry}
+
+
+
+\vspace*{10mm}
+
+\begin{my-title}
+electron capture
+\end{my-title}
+
+\begin{definition}
+This occurs when a parent nucleus captures one of its own orbital electrons and emits a neutrino.
+\end{definition}
+
+
+\begin{chemistry}
+\ce{$_ZX^A$ $~~~$  +$~~$ e- $~~$ ->[{\small{K-capture}}] $~~~$ $_{Z-1}Y^A~~$  + $~~$ $\upnu$}\\[7 mm]
+\ce{$_4$Be$^{7}$ $~~$ +$~~$ e- $~~$ ->[{\small{K-capture}}] $~~$ $_3$Li$^{7}~~$  + $~~$ $\upnu$ }
+\end{chemistry}
+
+\begin{note}
+{In most cases, it is K-shell electron that is captured, for this reason the process is referred to as K-capture.}
+\end{note}
+
+\pagebreak
+
+     
+
+
+
+\end{document}

@@ -1,0 +1,20 @@
+
+\item In the given circuit, the AC source has $\omega = 100\ \text{rad/s}$. Considering the inductor and capacitor to be ideal, the correct choice(s) is(are)
+    \begin{center}
+        \begin{circuitikz}[american]
+            \draw (0,0)
+            to[V, V=$20\ V$] (0,2) % The voltage source
+            to[L, L=$0.5\ H$] (2,2) % The inductor
+            to[C, C=$100\ \mu F$] (4,2) % The capacitor
+            to[R, R=$100\ \Omega$] (4,0) % 100 ohm resistor
+            -- (0,0);
+            \draw (2,2)
+            to[R, R=$50\ \Omega$] (2,0); % 50 ohm resistor
+        \end{circuitikz}
+    \end{center}
+    \begin{tasks}(1)
+        \task The current through the circuit, $I$ is $0.3\ A$.
+        \task The current through the circuit, $I$ is $0.3\sqrt{2}\ A$.
+        \task The voltage across $100\ \Omega$ resistor is $10\sqrt{2}\ V$.
+        \task The voltage across $50\ \Omega$ resistor is $10\ V$.
+    \end{tasks}

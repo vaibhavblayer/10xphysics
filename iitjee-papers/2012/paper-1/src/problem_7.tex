@@ -1,0 +1,23 @@
+
+\item A small mass $m$ is attached to a massless string whose other end is fixed at $P$ as shown in the figure. The mass is undergoing circular motion in the $x$-$y$ plane with centre at $O$ and constant angular speed $\omega$. If the angular momentum of the system, calculated about $O$ and $P$ are denoted by $\vec{L}_O$ and $\vec{L}_P$ respectively, then
+    \begin{center}
+        \begin{tikzpicture}
+            % This is where you would draw the diagram from the image, a simplified representation is given
+            \coordinate (O) at (0,0);
+            \coordinate (P) at (0,2);
+            \coordinate (M) at (1.5,0);
+            \draw[dashed] (O) -- node[left] {$P$} (P);
+            \draw[dashed] (O) -- (M);
+            \draw (M) circle (0.2cm);
+            \draw[->] (M) -- ++(-0.3,-0.3) node[below] {$\omega$};
+            \fill (O) circle (1pt) node[above left] {$O$};
+            \fill (P) circle (1pt);
+            \fill (M) circle (1pt) node[right] {$m$};
+        \end{tikzpicture}
+    \end{center}
+    \begin{tasks}(2)
+        \task $\vec{L}_O$ and $\vec{L}_P$ do not vary with time.
+        \task $\vec{L}_O$ varies with time while $\vec{L}_P$ remains constant.
+        \task $\vec{L}_O$ remains constant while $\vec{L}_P$ varies with time.
+        \task $\vec{L}_O$ and $\vec{L}_P$ both vary with time.
+    \end{tasks}

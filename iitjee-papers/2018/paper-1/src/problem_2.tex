@@ -1,0 +1,42 @@
+
+\item Consider a body of mass \(1.0 \, \text{kg}\) at rest at the origin at time \( t = 0 \). A force \( \vec{F} = (\alpha t \vec{i} + \beta \vec{j}) \) is applied on the body, where \( \alpha = 1.0 \, \text{Ns}^{-1} \) and \( \beta = 1.0 \, \text{N} \). The torque acting on the body about the origin at time \( t = 1.0 \, \text{s} \) is \( \vec{\tau} \). Which of the following statements is (are) true?
+	\begin{tasks}(1)
+			\task \( |\vec{\tau}| = \frac{1}{3} \, \text{Nm} \)
+			\task The torque \( \vec{\tau} \) is in the direction of the unit vector \( + \vec{k} \)
+			\task The velocity of the body at \( t = 1 \, \text{s} \) is \( \vec{v} = \frac{1}{2} (\vec{i} + 2\vec{j}) \, \text{ms}^{-1} \)
+			\task The magnitude of displacement of the body at \( t = 1 \, \text{s} \) is \( \frac{1}{6} \, \text{m} \)
+	\end{tasks}
+	\begin{solution}
+		\begin{align*}
+			\intertext{First, we find the acceleration as a function of time:}
+			\vec{F} &= \alpha t \vec{i} + \beta \vec{j}\\
+			\vec{a}(t) &= \frac{\vec{F}}{m} = \frac{1}{1.0 \, \text{kg}}(\alpha t \vec{i} + \beta \vec{j})\\
+			&= t \vec{i} + \vec{j} \quad \text{with} \, \alpha = 1.0 \, \text{Ns}^{-1}, \beta = 1.0 \, \text{N} \text{ and } m = 1.0 \, \text{kg}.\\
+			\intertext{Next, we find the velocity as a function of time by integrating the acceleration:}
+			\vec{v}(t) &= \int \vec{a}(t) \, dt\\
+			&= \int (t \vec{i} + \vec{j}) \, dt\\
+			&= \frac{1}{2} t^2 \vec{i} + t \vec{j} \quad \text{with the initial velocity} \, \vec{v}(0) = \vec{0}.\\
+			\intertext{At $t=1.0 \, \text{s}$, the velocity is:}
+			\vec{v}(1.0) &= \frac{1}{2} (1.0)^2 \vec{i} + 1.0 \vec{j}\\
+			&= \frac{1}{2} \vec{i} + \vec{j}.\\
+			\intertext{Option }
+			\vec{r}(t) &= \int \vec{v}(t) \, dt\\
+			&= \int \left(\frac{1}{2} t^2 \vec{i} + t \vec{j}\right) dt\\
+			&= \frac{1}{6} t^3 \vec{i} + \frac{1}{2} t^2 \vec{j} \quad \text{with the initial position} \, \vec{r}(0) = \vec{0}.\\
+			\intertext{At $t=1.0 \, \text{s}$, the displacement is:}
+			\vec{r}(1.0) &= \frac{1}{6} (1.0)^3 \vec{i} + \frac{1}{2} (1.0)^2 \vec{j}\\
+			&= \frac{1}{6} \vec{i} + \frac{1}{2} \vec{j}.\\
+			\intertext{The magnitude of this displacement is:}
+			|\vec{r}(1.0)| &= \sqrt{\left(\frac{1}{6}\right)^2 + \left(\frac{1}{2}\right)^2}\\
+			&= \sqrt{\frac{1}{36} + \frac{1}{4}}\\
+			&= \sqrt{\frac{1}{36} + \frac{9}{36}}\\
+			&= \sqrt{\frac{10}{36}}\\
+			&= \frac{\sqrt{10}}{6}\\
+			\intertext{This disagrees with option (d), which states that the magnitude of the displacement at \( t = 1 \, \text{s} \) is \( \frac{1}{6} \, \text{m} \).}
+			\intertext{Now, we can calculate torque:}
+			\vec{\tau} &= \vec{r} \times \vec{F}\\
+			&= \left(\frac{1}{6}\hat{i} + \frac{1}{2}\hat{j}\right) \times \left(\hat{i} +\hat{j}\right)\\
+			&= \frac{1}{6}\hat{k} - \frac{1}{2}\hat{k}\\
+			&= -\frac{1}{3}\hat{k}\\ 
+		\end{align*}
+	\end{solution}

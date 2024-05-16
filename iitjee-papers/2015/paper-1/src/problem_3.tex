@@ -1,0 +1,29 @@
+
+\item A bullet is fired vertically upwards with velocity $v$ from the surface of a spherical planet. When it reaches its maximum height, its acceleration due to the planet's gravity is $\frac{1}{4}$th of its value at the surface of the planet. If the escape velocity from the planet is $v_{\text{esc}} = \sqrt{N}v$, then the value of $N$ is (ignore energy loss due to atmosphere) \underline{\hspace{2.5 cm}}
+
+\begin{solution}
+    \begin{align*}
+        \intertext{The acceleration due to gravity is inversely proportional to the square of the distance from the center of the planet.}
+        a &= \frac{GM}{r^2}\\
+        \intertext{At the maximum height, the acceleration is $\frac{1}{4}$th of its value at the surface.}
+        \frac{GM}{(r + h)^2} &= \frac{1}{4}\frac{GM}{r^2}\\
+        \frac{1}{(r + h)^2} &= \frac{1}{4}\frac{1}{r^2}\\
+        (r + h)^2 &= 4r^2\\
+        r + h &= 2r\\
+        h &= r\\
+        \intertext{The escape velocity is given by}
+        v_{\text{esc}} &= \sqrt{2GM/r}\\
+        \intertext{Given that $v_{\text{esc}} = \sqrt{N}v$, we have}
+        \sqrt{2GM/r} &= \sqrt{N}v\\
+        \intertext{Since the bullet reaches height h which is equal to the radius of the planet, we can use the conservation of energy. The initial kinetic energy of the bullet must be equal to the potential energy at height h.}
+        \frac{1}{2}mv^2 &= \frac{GMm}{r + h}\\
+        \frac{1}{2}v^2 &= \frac{GM}{2r}\\
+        v^2 &= \frac{GM}{r}\\
+        v_{\text{esc}}^2 &= 2GM/r\\
+        \intertext{Plugging the value of $v^2$ into the equation for $v_{\text{esc}}$, we get}
+        v_{\text{esc}}^2 &= 2v^2\\
+        \sqrt{N}v &= \sqrt{2}v\\
+        N &= 2\\
+        \intertext{Thus, the value of $N$ is 2.}
+    \end{align*}
+\end{solution}

@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{v-test-paper}
+\begin{document}
+\begin{center}
+    \textsc{Mechanics}
+\end{center}
+\include{comprehension_1}
+\include{comprehension_2}
+\include{comprehension_3}
+
+
+\begin{tikzpicture}[scale=1, transform shape]
+    % Draw vertical lines
+    \draw (0,0) -- (0,2);
+    \draw (3,0) -- (3,2);
+    % Draw horizontal lines
+    \draw (0,2) -- (1.5,2);
+    \draw (1.5,2) -- (3,2);
+    % Draw points
+    \draw[fill=black] (1.5,2) circle (0.05);
+    % Draw labels
+    \node at (1.5,2.3) {P};
+    \node at (0,2.3) {A};
+    \node at (3,2.3) {B};
+    \end{tikzpicture}
+\end{document}

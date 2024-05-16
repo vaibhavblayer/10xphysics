@@ -1,0 +1,28 @@
+\item Two satellites P and Q are moving in different circular orbits around the Earth (radius \( R \)). The heights of P and Q from the Earth surface are \( h_P \) and \( h_Q \), respectively, where \( h_P = R/3 \). The accelerations of P and Q due to Earth’s gravity are \( g_P \) and \( g_Q \), respectively. If \( g_P/g_Q = 36/25 \), what is the value of \( h_Q \)?
+        \begin{tasks}(2)
+        	\task \( 3R/5 \) \ans
+        	\task \( R/6 \)
+        	\task \( 6R/5 \)
+        	\task \( 5R/6 \)
+        \end{tasks}
+
+\begin{solution}
+	\begin{align*}
+		\intertext{The acceleration due to gravity at a height \( h \) from the Earth's surface is given by:}
+		g &= \dfrac{GM}{(R+h)^2}\\
+		g_p &= \dfrac{GM}{(R+h_P)^2} \\
+		&= \dfrac{GM}{(4R/3)^2}\\ 
+		&= \dfrac{9GM}{16R^2}\\
+		\intertext{Similarly,}
+		\Rightarrow g_Q &= \dfrac{GM}{(R+h_Q)^2}
+		\intertext{Given that \( g_P/g_Q = 36/25 \).}
+		\dfrac{9GM}{16R^2} \cdot \dfrac{(R+h_Q)^2}{GM} &= \dfrac{36}{25}\\
+		\dfrac{9}{16} \cdot \dfrac{(R+h_Q)^2}{R^2} &= \dfrac{36}{25}\\
+		\left(\frac{R+h_Q}{R}\right)^2 &= \dfrac{36}{25} \cdot \dfrac{16}{9}\\
+		\left(\frac{R+h_Q}{R}\right)^2 &= \dfrac{64}{25}\\
+		\frac{R+h_Q}{R} &= \pm\dfrac{8}{5}\\
+		\intertext{Since height is positive,}
+		\Rightarrow h_Q &= \dfrac{3R}{5}
+		\intertext{Therefore, the correct option is (a).}
+	\end{align*}
+\end{solution}

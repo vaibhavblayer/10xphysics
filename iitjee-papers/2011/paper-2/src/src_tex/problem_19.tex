@@ -1,0 +1,49 @@
+
+\item One mole of a monatomic ideal gas is taken through a cycle ABCDA as shown in the P-V diagram. Column I gives the processes involved in the cycle. Match them with the characteristics in Column II.
+
+\begin{center}
+    \begin{tikzpicture}
+    % Drawing the P-V diagram
+    \draw[->] (0,0) -- (0,5) node[anchor=south] {P};
+    \draw[->] (0,0) -- (10,0) node[anchor=west] {V};
+    \draw (0,1) -- (1,1) -- (1,3) -- (3,1) -- (9,1) -- cycle;
+    
+    % Points A, B, C, D in the diagram
+    \draw (1,3) node[anchor=south east] {B};
+    \draw (3,1) node[anchor=north west] {C};
+    \draw (9,1) node[anchor=west] {D};
+    \draw (0,1) node[anchor=east] {A};
+    
+    % Dashed lines to axes
+    \draw[dashed] (1,3) -- (1,0) node[anchor=north] {1V};
+    \draw[dashed] (3,1) -- (0,1) node[anchor=east] {1P};
+    \draw[dashed] (3,3) -- (3,0) node[anchor=north] {3V};
+    \draw[dashed] (9,1) -- (0,1) node[anchor=east] {3P};
+    
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{p{0.25cm}p{8cm}|p{0.25cm}p{5cm}}
+        \hline
+        & Column I & &Column II \\
+        \hline
+        (A)& Process A $\rightarrow$ B & (p) &Internal energy decreases.\\
+        (B)& Process B $\rightarrow$ C & (q) &Internal energy increases.\\
+        (C)& Process C $\rightarrow$ D & (r) &Heat is lost.\\
+        (D)& Process D $\rightarrow$ A & (s) &Heat is gained.\\
+        && (t) &Work is done on the gas.\\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{center}
+
+\begin{tasks}(2)
+    \task A: p, r and t
+    \task B: p and r
+    \task C: q and s
+    \task D: r and t
+\end{tasks}

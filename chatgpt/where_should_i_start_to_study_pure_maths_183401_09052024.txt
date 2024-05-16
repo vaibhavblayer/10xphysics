@@ -1,0 +1,17 @@
+Q. Where should i start to study pure maths
+
+Studying pure mathematics can be an enriching and rewarding endeavor. Here are some steps to get you started:
+
+1. Basic Understanding: Start with a good background in high school mathematics. This includes algebra, geometry, and trigonometry. Calculus can be helpful too. 
+
+2. College Textbooks: Find introductory college textbooks on pure mathematics. "How to Prove it" by Daniel J. Velleman is a popular book which could be a good starting point. 
+
+3. Specific Areas of Study: You might want to explore areas like set theory, number theory, abstract algebra, real analysis, and topology.
+
+4. Learning Resources: Books is not the only resource you have. Open courseware sites like MIT OpenCourseWare, Coursera, and Khan Academy, amongst others, offer college-level math courses for free. They often include video lectures, assignments, and exams.
+
+5. Math Communities: Join mathematical communities like Art of Problem Solving, StackExchange, and others. They can help you with your math problems and provide a social aspect to learning.
+
+6. Practice: Constantly practice problems and exercises. This helps reinforce your understanding and provides practical application to the theory you've learned.
+
+7. Patience: Mathematics, especially pure mathematics,

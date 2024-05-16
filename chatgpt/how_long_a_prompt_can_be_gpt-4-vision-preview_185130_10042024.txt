@@ -1,0 +1,3 @@
+Q. How long a prompt can be gpt-4-vision-preview
+
+As per the documentation, the maximum limit for a prompt for GPT-4-Vision-Preview is not explicitly mentioned. It would be best to keep your prompt concise and specific to what you want the AI to generate or understand. If you are referring to the text-based GPT-3, the maximum token limit is 4096 tokens. It's recommended to reach out to OpenAI directly or check the latest documentation for the specific limitation of the GPT-4 Vision model.

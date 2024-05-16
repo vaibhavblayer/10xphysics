@@ -1,0 +1,39 @@
+\item A particle of unit mass is moving along the x-axis under the influence of a force and its total energy is conserved. Four possible forms of the potential energy of the particle are given in Column I($a$ and $U_0$ are constants). Match the potential energy functions in Column I with the corresponding statement(s) in Column II.
+\begin{center}
+    \renewcommand{\arraystretch}{3}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{p{0.25cm}p{5cm}|p{0.25cm}p{8cm}}
+        \hline
+        & Column I & & Column II \\
+        \hline
+        (A) & \( U_1(x) = \frac{U_0}{2} \left[ 1 - \left( \frac{x}{a} \right)^2 \right]^2 \) & (P) & The force acting on the particle is zero at \( x = a \). \\
+        (B) & \( U_2(x) = \frac{U_0}{2} \left( \frac{x}{a} \right)^2 \) & (Q) & The force acting on the particle is zero at \( x = 0 \). \\
+        (C) & \( U_3(x) = \frac{U_0}{2} \left( \frac{x}{a} \right)^2 \exp \left[ - \left( \frac{x}{a} \right)^2 \right] \) & (R) & The force acting on the particle is zero at \( x = -a \). \\
+        (D) & \( U_4(x) = \frac{U_0}{2} \left[ \frac{x}{a} - \frac{1}{3} \left( \frac{x}{a} \right)^3 \right] \) & (S) & The particle experiences an attractive force towards \( x = 0 \) in the region \( |x| < a \). \\
+         &  & (T) & The particle with total energy \( \frac{U_0}{4} \) can oscillate about the point \( x = -a \). \\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{center}
+\begin{solution}
+    \begin{align*}
+        \intertext{The force acting on the particle can be found by taking the negative derivative of the potential energy function with respect to $x$.}
+        \intertext{For option (A):}
+        F_1(x) &= -\dfrac{dU_1}{dx} = -\dfrac{d}{dx} \left[ \dfrac{U_0}{2} \left(1-\dfrac{x^2}{a^2}\right)^2 \right]\\
+        &= -U_0 \left(\dfrac{x}{a^2}\right) \left(1-\dfrac{x^2}{a^2}\right)\\
+        \intertext{The force acting on the particle is zero at \(x=0\) and \(x=\pm a\) which corresponds to option (Q) and (P)(R).}
+        \intertext{For option (B):}
+        F_2(x) &= -\dfrac{dU_2}{dx} = -\dfrac{d}{dx} \left[ \dfrac{U_0}{2} \left(\dfrac{x}{a}\right)^2 \right]\\
+        &= -U_0 \left(\dfrac{x}{a^2}\right)\\
+        \intertext{The force acting on the particle is zero at \(x=0\) which corresponds to option (Q).}
+        \intertext{For option (C):}
+        F_3(x) &= -\dfrac{dU_3}{dx} = -\dfrac{d}{dx} \left[ \dfrac{U_0}{2} \left(\dfrac{x}{a}\right)^2 \exp\left(-\dfrac{x^2}{a^2}\right) \right]\\
+        &= -U_0 \left(\dfrac{x}{a^2}\right) \exp\left(-\dfrac{x^2}{a^2}\right) \left(1 - 2\dfrac{x^2}{a^2}\right)\\
+        \intertext{The force acting on the particle is zero at \(x=0\) and \(x=\pm a/\sqrt{2}\) which corresponds to option (Q).}
+        \intertext{For option (D):}
+        F_4(x) &= -\dfrac{dU_4}{dx} = -\dfrac{d}{dx} \left[ \dfrac{U_0}{2} \left(\dfrac{x}{a} - \dfrac{1}{3}\left(\dfrac{x}{a}\right)^3 \right) \right]\\
+        &= U_0 \left(\dfrac{1}{a} - \dfrac{x^2}{a^3}\right)\\
+        \intertext{The force acting on the particle is zero at \(x=\pm a\) which corresponds to option (P) and (R). Also, in the region \(|x|<a\) the term inside the parentheses is positive, so the force acting on the particle is towards \(x=0\) which corresponds to option (S).}
+    \end{align*}
+\end{solution}

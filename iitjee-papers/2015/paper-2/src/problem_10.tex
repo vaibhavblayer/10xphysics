@@ -1,0 +1,36 @@
+
+\item In terms of potential difference \( V \), electric current \( I \), permittivity \( \varepsilon_0 \), permeability \( \mu_0 \) and speed of light \( c \), the dimensionally correct equation(s) is(are)
+    \begin{tasks}(2)
+        \task \( \mu_0 I^2 = \varepsilon_0 V^2 \)
+        \task \( \varepsilon_0 I = \mu_0 V \)
+        \task \( I = \varepsilon_0 c V \)
+        \task \( \mu_0 c I = \varepsilon_0 V \)
+    \end{tasks}
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{Let us analyze the given options one by one and check their dimensional consistency.}
+            \intertext{Option (a): \( \mu_0 I^2 = \varepsilon_0 V^2 \)}
+            \text{Dimension of }\mu_0 &= [M^1L^1T^{-2}I^{-2}] \\
+            \text{Dimension of }I &= [I]\\
+            \text{Dimension of }\varepsilon_0 &= [M^{-1}L^{-3}T^{4}I^{2}] \\
+            \text{Dimension of }V &= [ML^2T^{-3}I^{-1}] \\
+            \text{LHS} &= [M^1L^1T^{-2}I^{-2}]\times[I]^2 = [M^1L^1T^{-2}] \\
+            \text{RHS} &= [M^{-1}L^{-3}T^{4}I^{2}]\times[ML^2T^{-3}I^{-1}]^2 = [M^1L^1T^{-2}] \\
+            \Rightarrow \text{LHS} &= \text{RHS} \quad \text{(Dimensionally consistent)}
+            \intertext{Option (b): \( \varepsilon_0 I = \mu_0 V \)}
+            \text{LHS} &= [M^{-1}L^{-3}T^{4}I^{2}]\times[I] = [M^{-1}L^{-3}T^{4}I^{3}] \\
+            \text{RHS} &= [M^1L^1T^{-2}I^{-2}]\times[ML^2T^{-3}I^{-1}] = [M^2L^3T^{-5}I^{-3}] \\
+            \Rightarrow \text{LHS} &\neq \text{RHS} \quad \text{(Dimensionally inconsistent)}
+            \intertext{Option (c): \( I = \varepsilon_0 c V \)}
+            \text{Dimension of }c &= [LT^{-1}] \\
+            \text{LHS} &= [I] \\
+            \text{RHS} &= [M^{-1}L^{-3}T^{4}I^{2}]\times[LT^{-1}]\times[ML^2T^{-3}I^{-1}] = [I] \\
+            \Rightarrow \text{LHS} &= \text{RHS} \quad \text{(Dimensionally consistent)}
+            \intertext{Option (d): \( \mu_0 c I = \varepsilon_0 V \)}
+            \text{LHS} &= [M^1L^1T^{-2}I^{-2}]\times[LT^{-1}]\times[I] = [ML^2T^{-3}I^{-1}] \\
+            \text{RHS} &= [M^{-1}L^{-3}T^{4}I^{2}]\times[ML^2T^{-3}I^{-1}] = [T] \\
+            \Rightarrow \text{LHS} &\neq \text{RHS} \quad \text{(Dimensionally inconsistent)}
+            \intertext{Thus, options (a) and (c) are dimensionally correct.}
+        \end{align*}
+    \end{solution}

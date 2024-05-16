@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1707135517 "/Users/vaibhavblayer/10xphysics/physics/wave-mechanics/main.tex" "main.pdf" "main" 1707135524 0
-  "/Users/vaibhavblayer/10xphysics/physics/wave-mechanics/main.tex" 1707135510 8242 f15a6f3f542227c8ebf4c79a43bdb45b ""
+["pdflatex"] 1711112162 "/Users/vaibhavblayer/10xphysics/physics/wave-mechanics/main.tex" "main.pdf" "main" 1711112169 0
+  "/Users/vaibhavblayer/10xphysics/physics/wave-mechanics/main.tex" 1711112121 458 f4bfa9d7d6dc0167756fd73ba671cd09 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc" 1276641224 6938 5135be6a8802f13a7faf296d1959a1ab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm" 1246382020 1228 9be37fdf0dc0e1f4df4af3594876d628 ""
@@ -248,9 +248,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1675008677 4623355 58034c3eb7ddf7eacc726a83d01e26d2 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1675008805 7877898 2b6ca87c4d79373c249ace245aea4873 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "main.aux" 1707135524 33 caafbda2f246531a72f60df9bc4c0d5b "pdflatex"
-  "main.tex" 1707135510 8242 f15a6f3f542227c8ebf4c79a43bdb45b ""
+  "main.aux" 1711112169 33 caafbda2f246531a72f60df9bc4c0d5b "pdflatex"
+  "main.tex" 1711112121 458 f4bfa9d7d6dc0167756fd73ba671cd09 ""
   "partial_derivative.tex" 1707118896 1412 87ad50c48863b01af28556e72e0e390d ""
+  "superpositions.tex" 1711112162 7817 da2ea1ba404023517cf51599d06dad06 ""
   "wave_definition.tex" 1707119009 870 77ca6ed3c5934888ea8c0a6193f648ca ""
   "wave_energy.tex" 1707118597 4312 6619fdcffa818f9fcd88c47923efac0b ""
   "wave_equation.tex" 1707118465 10809 3584eb3c9993f4ae47330c685ca1bfb9 ""

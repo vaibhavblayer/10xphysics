@@ -1,0 +1,63 @@
+
+    \item In the List-I below, four different paths of a particle are given as functions of time. In these functions, $\alpha$ and $\beta$ are positive constants of appropriate dimensions and $\alpha \neq \beta$. In each case, the force acting on the particle is either zero or conservative. In List-II, five physical quantities of the particle are mentioned: $\vec{p}$ is the linear momentum, $\vec{L}$ is the angular momentum about the origin, $K$ is the kinetic energy, $U$ is the potential energy and $E$ is the total energy. Match each path in List-I with those quantities in List-II, which are conserved for that path.
+
+\begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{p{0.25cm}p{8cm}|p{0.25cm}p{5cm}}
+        \hline
+        & List-I & &List-II \\
+        \hline
+        P. & $\vec{r}(t) = \alpha t \hat{i} + \beta t \hat{j}$ & 1. & $\vec{p}$ \\
+        Q. & $\vec{r}(t) = \alpha \cos(\omega t) \hat{i} + \beta \sin(\omega t) \hat{j}$ & 2. & $\vec{L}$ \\
+        R. & $\vec{r}(t) = \alpha (\cos(\omega t) \hat{i} + \sin(\omega t) \hat{j})$ & 3. & $K$ \\
+        S. & $\vec{r}(t) = \alpha t \hat{i} + \frac{\beta}{2} t^{2} \hat{j}$ & 4. & $U$ \\
+        & & 5. & $E$ \\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{center}
+
+    Match the correct options:
+    \begin{tasks}(2)
+        \task P $\rightarrow$ 1, 2, 3, 4, 5; Q $\rightarrow$ 2, 5; R $\rightarrow$ 2, 3, 4, 5; S $\rightarrow$ 5
+        \task P $\rightarrow$ 1, 2, 3, 4, 5; Q $\rightarrow$ 3, 5; R $\rightarrow$ 2, 3, 4, 5; S $\rightarrow$ 2, 5
+        \task P $\rightarrow$ 2, 3, 4; Q $\rightarrow$ 5; R $\rightarrow$ 1, 2, 4; S $\rightarrow$ 2, 5
+        \task P $\rightarrow$ 1, 2, 3, 5; Q $\rightarrow$ 2, 5; R $\rightarrow$ 2, 3, 4, 5; S $\rightarrow$ 2, 5
+    \end{tasks}
+    \begin{solution}
+        \begin{align*}
+            \intertext{For path P: $\vec{r}(t) = \alpha t \hat{i} + \beta t \hat{j}$, the particle is moving with constant velocity, hence the force is zero and all quantities are conserved.}
+            \intertext{P $\rightarrow$ 1, 2, 3, 4, 5}
+            \intertext{For path Q: $\vec{r}(t) = \alpha \cos(\omega t) \hat{i} + \beta \sin(\omega t) \hat{j}$:}
+            \vec{r}(t) &= \alpha \cos(\omega t) \hat{i} + \beta \sin(\omega t) \hat{j}\\
+            \vec{v}(t) &= -\alpha \omega \sin(\omega t) \hat{i} + \beta \omega \cos(\omega t) \hat{j}\\
+            \vec{a}(t) &= -\alpha \omega^{2} \cos(\omega t) \hat{i} - \beta \omega^{2} \sin(\omega t) \hat{j}\\
+            \vec{F}(t) &= -m\omega^2\left(\alpha \cos(\omega t) \hat{i} + \beta \sin(\omega t) \hat{j}\right)\\
+            \Rightarrow \vec{F}(t) &= -m\omega^2\vec{r}(t)\\
+            \intertext{As force is non-zero, linear momentum $\vec{p}$ is not conserved,}
+            \intertext{Angular momentum $\vec{L}$ is conserved as the torque about the origin is zero.}
+            \vec{\tau} &= \vec{r} \times \vec{F}\\
+            &= \vec{r} \times (-m\omega^2\vec{r})\\
+            \Rightarrow \vec{\tau} &= 0\\
+            \intertext{For energy, we can find work done:}
+            W &= \int \vec{F} \cdot d\vec{r}\\
+            &= \int -m\omega^2\vec{r} \cdot d\vec{r}\\
+            &= -m\omega^2 \int \vec{r} \cdot d\vec{r}
+            \intertext{As the work done is only dependent on the initial and final positions, the mechanical energy $E$ is conserved.}
+            \intertext{Q $\rightarrow$ 2, 5}
+            \intertext{For path R: $\vec{r}(t) = \alpha (\cos(\omega t) \hat{i} + \sin(\omega t) \hat{j})$, the particle is moving in a circle with constant angular velocity $\omega$. The force is central, and hence the linear momentum $\vec{p}$ is not conserved, but angular momentum $\vec{L}$, kinetic energy $K$, potential energy $U$ and total energy $E$ are conserved.}
+            \intertext{R $\rightarrow$ 2, 3, 4, 5}
+            \intertext{For path S: $\vec{r}(t) = \alpha t \hat{i} + \frac{\beta}{2} t^{2} \hat{j}$:}
+            \vec{r}(t) &= \alpha t \hat{i} + \frac{\beta}{2} t^{2} \hat{j}\\
+            \vec{v}(t) &= \alpha \hat{i} + \beta t \hat{j}\\
+            \vec{a}(t) &= \beta \hat{j}\\
+            \vec{F}(t) &= \beta m \hat{j}\\
+            \intertext{As the force is non-zero, linear momentum $\vec{p}$ is not conserved.}
+            \intertext{The torque about the origin is non-zero, hence angular momentum $\vec{L}$ is not conserved.}
+            \intertext{The work done by the force is path independent, hence mechanical energy $E$ is conserved.}
+            \intertext{S $\rightarrow$ 5}
+            \intertext{Therefore, correct option is (a): P $\rightarrow$ 1, 2, 3, 4, 5; Q $\rightarrow$ 2, 5; R $\rightarrow$ 2, 3, 4, 5; S $\rightarrow$  5}
+        \end{align*}
+    \end{solution}

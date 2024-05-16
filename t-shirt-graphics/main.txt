@@ -1,0 +1,7 @@
+src		-> main source code raw
+	with node
+		-> color variants
+	
+	
+	without node
+		-> color variants

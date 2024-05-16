@@ -1,0 +1,31 @@
+ \item A circular disk of radius \(R\) carries surface charge density \(\sigma(r) = \sigma_0 \left(1 - \frac{r}{R}\right)\), where \(\sigma_0\) is a constant and \(r\) is the distance from the center of the disk. Electric flux through a large spherical surface that encloses the charged disk completely is \(\Phi_0\). Electric flux through another spherical surface of radius \(R-\frac{r}{4}\) and concentric with the disk is \(\Phi\). Then the ratio \(\frac{\Phi}{\Phi_0}\) is \underline{\hspace{2.5 cm}}.
+
+ \begin{solution}
+    \begin{align*}
+        \intertext{Total charge on the disk, \(Q\), is obtained by integrating the surface charge density over the area of the disk,}
+        Q &= \int_0^{2\pi} \int_0^R \sigma(r) r \, dr \, d\theta \\
+        &= \int_0^{2\pi} \int_0^R \sigma_0 \left(1 - \frac{r}{R}\right) r \, dr \, d\theta \\
+        &= \sigma_0 \int_0^{2\pi} \left(\int_0^R r - \frac{r^2}{R} \, dr\right) d\theta \\
+        &= \sigma_0 \int_0^{2\pi} \left(\frac{R^2}{2} - \frac{R^3}{3R}\right) d\theta \\
+        &= \sigma_0 (2\pi) \left(\frac{R^2}{2} - \frac{R^2}{3}\right) \\
+        &= \sigma_0 (2\pi) \frac{R^2}{6} \\
+        &= \frac{\sigma_0 \pi R^2}{3}
+        \intertext{The electric flux \(\Phi_0\) through a large spherical surface enclosing the disk is given by,}
+        \Phi_0 &= \frac{Q}{\varepsilon_0} \\
+        &= \frac{\sigma_0 \pi R^2}{3\varepsilon_0}
+        \intertext{The electric flux \(\Phi\) through a spherical surface of radius \(R-\frac{r}{4}\) is given by,}
+        \Phi &= \frac{Q'}{\varepsilon_0}
+        \intertext{where \(Q'\) is the charge inside the sphere of radius \(R-\frac{r}{4}\). Since the sphere is concentric with the disk, we need to find charge within radius \(R-\frac{r}{4}\),}
+        Q' &= \int_0^{2\pi} \int_0^{R-\frac{r}{4}} \sigma(r) r \, dr \, d\theta \\
+        &= \sigma_0 \int_0^{2\pi} \left(\int_0^{R-\frac{r}{4}} r - \frac{r^2}{R} \, dr\right) d\theta \\
+        &= \sigma_0 \int_0^{2\pi} \left(\frac{(R-\frac{r}{4})^2}{2} - \frac{(R-\frac{r}{4})^3}{3R}\right) d\theta \\
+        &= \sigma_0 (2\pi) \frac{(R-\frac{r}{4})^2}{6} \\
+        &= \frac{\sigma_0 \pi (R-\frac{r}{4})^2}{3}
+        \intertext{So, the ratio \(\frac{\Phi}{\Phi_0}\) is,}
+        \frac{\Phi}{\Phi_0} &= \frac{\frac{\sigma_0 \pi (R-\frac{r}{4})^2}{3\varepsilon_0}}{\frac{\sigma_0 \pi R^2}{3\varepsilon_0}} \\
+        &= \frac{(R-\frac{r}{4})^2}{R^2} \\
+        &= \frac{R^2 - \frac{rR}{2} + \frac{r^2}{16}}{R^2} \\
+        &= 1 - \frac{r}{2R} + \frac{r^2}{16R^2}
+        \intertext{This is the required ratio of the electric fluxes.}
+    \end{align*}
+\end{solution}

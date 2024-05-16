@@ -1,0 +1,87 @@
+
+\begin{center}
+    \textsc{Paragraph For Questions 11 \& 12}
+\end{center}
+
+In the figure a container is shown to have a movable (without friction) piston on top. The container and the piston are all made of perfectly insulating material allowing no heat transfer between outside and inside the container. The container is divided into two compartments by a rigid partition made of a thermally conducting material that allows slow transfer of heat. The lower compartment of the container is filled with 2 moles of an ideal monatomic gas at 700 K and the upper compartment is filled with 2 moles of an ideal diatomic gas at 400 K. The heat capacities per mole of an ideal monatomic gas are $C_V = \dfrac{3}{2} R, C_p = \dfrac{5}{2} R$, and those for an ideal diatomic gas are $C_V = \dfrac{5}{2} R,C_p = \dfrac{7}{2} R$.
+
+\begin{center}
+    \begin{tikzpicture}
+        % Define the style for the piston
+        \tikzset{piston/.style={thick}}
+        % Draw the container
+        \draw[piston] (0,0) -- (0,3) -- (2,3) -- (2,0) -- cycle;
+        % Draw the partition
+        \draw[piston] (0,1.5) -- (2,1.5);
+        % Draw the piston
+        \draw[piston, pattern=north east lines] (0,3) rectangle (2,3.25);
+        % Label partition
+        \draw[-stealth] (2.25,1.5) -- node[right] {Partition} ++(0,1);
+        % Label lower gas
+        \node at (1,0.75) {700 K};
+        % Label upper gas
+        \node at (1,2.25) {400 K};
+    \end{tikzpicture}
+\end{center} 
+
+\item Consider the partition to be rigidly fixed so that it does not move. When equilibrium is achieved, the final temperature of the gases will be
+    \begin{tasks}(4)
+        \task 550 K
+        \task 525 K
+        \task 513 K
+        \task 490 K
+    \end{tasks}
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{Let's assume the final temperature of the gases to be $T_f$ at equilibrium.}
+            \intertext{As the container is perfectly insulated, heat exchange must be zero.}
+            \Delta Q_{\textit{lower compartment}} + \Delta Q_{\textit{upper compartment}} &= 0\\
+            \intertext{Lower compartment will exchange heat at constant volume and upper compartment at constant pressure.}
+            nC_v \Delta T + n C_p \Delta T &=0\\ 
+            2 \left(\dfrac{3}{2} R\right) (T_f-700) + 2 \left(\dfrac{7}{2} R\right) (T_f - 400) &= 0\\
+            3(T_f - 700) + 7(T_f - 400) &= 0\\
+            3T_f - 2100 + 7T_f - 2800 &= 0\\
+            10T_f &= 4900\\
+            \Rightarrow T_f &= 490 \text{ K}
+            \intertext{Thus, the final temperature of the gases at equilibrium will be 490 K.}
+            \intertext{The correct option is (d).}
+        \end{align*}
+    \end{solution}
+    
+    
+
+\item Now consider the partition to be free to move without friction so that the pressure of gases in both compartments is the same. Then total work done by the gases till the time they achieve equilibrium will be
+    \begin{tasks}(4)
+        \task 250 R
+        \task 200 R
+        \task 100 R
+        \task $-100$ R
+    \end{tasks} 
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{Now, consider the partition to be free to move resulting in equal pressures on both compartments at equilibrium.}
+            \intertext{Again, total heat exchange must be zero.}
+            \Delta Q_{\textit{lower compartment}} + \Delta Q_{\textit{upper compartment}} &= 0\\
+            \intertext{This time both compartments will exchange heat at constant pressure.}
+            nC_p \Delta T + n C_p \Delta T &=0\\
+            2 \left(\dfrac{5}{2} R\right) (T_f-700) + 2 \left(\dfrac{7}{2} R\right) (T_f - 400) &= 0\\
+            5(T_f - 700) + 7(T_f - 400) &= 0\\
+            5T_f - 3500 + 7T_f - 2800 &= 0\\
+            12T_f &= 6300\\
+            \Rightarrow T_f &= 525 \text{ K}
+            \intertext{Thus, the final temperature of the gases at equilibrium will be 525 K.}
+            \intertext{Now, let's calculate the total work done by the gases.}
+            \intertext{The work done by the lower compartment will be}
+            Q_{\textit{system}} &= W_{\textit{system}} + \Delta U_{\textit{system}}\\
+            0 &= W_{\textit{system}} + \Delta U_{\textit{lower compartment}} + \Delta U_{\textit{upper compartment}}\\
+            W_{\textit{system}} &= -\left(nC_v \Delta T + nC_v \Delta T\right)\\
+            &= -2 \left(\dfrac{3}{2} R\right) (525 - 700) - 2 \left(\dfrac{5}{2} R\right) (525 - 400)\\
+            &= -3 R (-175) - 5 R (125)\\
+            &= 525 R - 625 R\\
+            &= -100 R
+            \intertext{Thus, the total work done by the gases till the time they achieve equilibrium will be $-100 R$.}
+            \intertext{The correct option is (d).}
+        \end{align*}
+    \end{solution}

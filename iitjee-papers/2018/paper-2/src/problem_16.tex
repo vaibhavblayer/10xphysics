@@ -1,0 +1,59 @@
+\item A planet of mass \( M \), has two natural satellites with masses \( m_1 \) and \( m_2 \). The radii of their circular orbits are \( R_1 \) and \( R_2 \) respectively. Ignore the gravitational force between the satellites. Define \( v_1 \), \( L_1 \), \( K_1 \) and \( T_1 \) to be, respectively, the orbital speed, angular momentum, kinetic energy and time period of revolution of satellite 1; and \( v_2 \), \( L_2 \), \( K_2 \) and \( T_2 \) to be the corresponding quantities of satellite 2. Given \( m_1/m_2 = 2 \) and \( R_1/R_2 = 1/4 \), match the ratios in List-I to the numbers in List-II.
+
+\begin{center}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{table}
+        \centering
+        \begin{tabular}{p{0.25cm}p{6cm}|p{0.25cm}p{6cm}}
+        \hline
+        & List-I & &List-II \\
+        \hline
+        P. & \( \frac{v_1}{v_2} \) & 1. & \( \frac{1}{8} \) \\
+        Q. & \( \frac{L_1}{L_2} \) & 2. & \( 1 \) \\
+        R. & \( \frac{K_1}{K_2} \) & 3. & \( 2 \) \\
+        S. & \( \frac{T_1}{T_2} \) & 4. & \( 8 \) \\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{center}
+
+\begin{tasks}(2)
+    \task \( P \rightarrow 4; \) \( Q \rightarrow 2; \) \( R \rightarrow 1; \) \( S \rightarrow 3 \)
+    \task \( P \rightarrow 3; \) \( Q \rightarrow 2; \) \( R \rightarrow 4; \) \( S \rightarrow 1 \)
+    \task \( P \rightarrow 2; \) \( Q \rightarrow 3; \) \( R \rightarrow 1; \) \( S \rightarrow 4 \)
+    \task \( P \rightarrow 2; \) \( Q \rightarrow 3; \) \( R \rightarrow 4; \) \( S \rightarrow 1 \)
+\end{tasks}
+
+\begin{solution}
+    Since the satellites are in circular orbits, we can use the following equations governing their motion:
+    \begin{align*}
+        v &= \sqrt{\frac{GM}{R}} \quad \text{(Orbital speed)} \\
+        L &= mRv \quad \text{(Angular momentum)} \\
+        K &= \frac{1}{2}mv^2 \quad \text{(Kinetic energy)} \\
+        T &= \frac{2\pi R}{v} \quad \text{(Time period)}
+    \end{align*}
+    where \( G \) is the gravitational constant.
+    \begin{align*}
+        \intertext{For the ratio \( P = \frac{v_1}{v_2} \), we use the orbital speed equation:}
+        v_1 &= \sqrt{\frac{GM}{R_1}} \\
+        v_2 &= \sqrt{\frac{GM}{R_2}} \\
+        \frac{v_1}{v_2} &= \sqrt{\frac{R_2}{R_1}} = \sqrt{\frac{4}{1}} = 2 \quad \Rightarrow P \rightarrow 3.
+        \intertext{For the ratio \( Q = \frac{L_1}{L_2} \), we use the angular momentum equation:}
+        L_1 &= m_1R_1v_1 \\
+        L_2 &= m_2R_2v_2 \\
+        \frac{L_1}{L_2} &= \frac{m_1R_1}{m_2R_2}\frac{v_1}{v_2} = \frac{2}{1}\frac{1}{4}\cdot2 = \frac{1}{1} = 1 \quad \Rightarrow Q \rightarrow 2.
+        \intertext{For the ratio \( R = \frac{K_1}{K_2} \), we use the kinetic energy equation:}
+        K_1 &= \frac{1}{2}m_1v_1^2 \\
+        K_2 &= \frac{1}{2}m_2v_2^2 \\
+        \frac{K_1}{K_2} &= \frac{m_1}{m_2}\left(\frac{v_1}{v_2}\right)^2 = \frac{2}{1}\cdot2^2 = 8 \quad \Rightarrow R \rightarrow 4.
+        \intertext{Finally, for the ratio \( S = \frac{T_1}{T_2} \), we use the time period equation:}
+        T_1 &= \frac{2\pi R_1}{v_1} \\
+        T_2 &= \frac{2\pi R_2}{v_2} \\
+        \frac{T_1}{T_2} &= \frac{R_1}{R_2}\frac{v_2}{v_1} = \frac{1}{4}\cdot\frac{1}{2} = \frac{1}{8} \quad \Rightarrow S \rightarrow 1.
+    \end{align*}
+    Thus, we have P matching with 3, Q with 2, R with 4, and S with 1. The final answer is
+    \begin{align*}
+        P \rightarrow 3; \quad Q \rightarrow 2; \quad R \rightarrow 4; \quad S \rightarrow 1.\\
+        \intertext{Therefore, option (b) is correct.}
+    \end{align*}
+\end{solution}

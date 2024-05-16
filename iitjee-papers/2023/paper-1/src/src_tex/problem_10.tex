@@ -1,0 +1,28 @@
+\item In an experiment for determination of the focal length of a thin convex lens, the distance of the object from the lens is \(10 \pm 0.1\) cm and the distance of its real image from the lens is \(20 \pm 0.2\) cm. The error in the determination of focal length of the lens is \(n \%\). The value of \(n\) is \underline{\hspace{3cm}}. \ansint{1}
+
+\begin{solution}
+    \begin{align*}
+        \intertext{The formula for the thin lens is given by:}
+        \dfrac{1}{f} &= \dfrac{1}{v} - \dfrac{1}{u}\\
+        \intertext{Lets calculate the focal length:}
+        \dfrac{1}{f} &= \dfrac{1}{20} - \dfrac{1}{-10}\\
+        &= \dfrac{1}{20} + \dfrac{1}{10}\\
+        &= \dfrac{3}{20}\\
+        \Rightarrow f &= \dfrac{20}{3} \; \text{cm}\\
+        \intertext{Now, differentiate the above equation with respect to $f$ or any variable:}
+        \dfrac{1}{f} &= \dfrac{1}{v} - \dfrac{1}{u}\\
+        -\dfrac{df}{f^2} &= -\dfrac{dv}{v^2} + \dfrac{du}{u^2}\\
+        \intertext{In error analysis, we try to maximize the error so we have to add the errors:}
+        \frac{\Delta f}{f^2} &= \pm \left(\frac{\Delta v}{v^2} + \frac{\Delta u}{u^2}\right)\\
+        \frac{\Delta f}{f} &= \pm \left(\frac{\Delta v}{v^2} + \frac{\Delta u}{u^2}\right)f\\
+        \intertext{Given that the object distance \(u = 10 \pm 0.1\) cm and the image distance \(v = 20 \pm 0.2\) cm.}
+        \frac{\Delta f}{f} &= \pm \left(\frac{0.2}{20^2} + \frac{0.1}{10^2}\right) \times \frac{20}{3}\\
+        \frac{\Delta f}{f} &= \pm \left(\frac{0.2}{400} + \frac{0.1}{100}\right) \times \frac{20}{3}\\
+        \frac{\Delta f}{f} &= \pm \left(\frac{1}{2000} + \frac{1}{1000}\right) \times \frac{20}{3}\\
+        \frac{\Delta f}{f} &= \pm \left(\frac{3}{2000}\right) \times \frac{20}{3}\\
+        \frac{\Delta f}{f} &= \pm 0.01\\
+        \frac{\Delta f}{f}\times 100 &= \pm 0.01 \times 100\\
+        \Rightarrow \frac{\Delta f}{f}\times 100 &= \pm 1\\
+        \intertext{Therefore, the error in the determination of focal length of the lens is 1\%.}
+    \end{align*}
+\end{solution}

@@ -1,0 +1,33 @@
+\item A particle of mass \(m\) moves in circular orbits with potential \(V(r) = -Fr\), where \(F\) is a positive constant and \(r\) is its distance from the origin. Its energies are calculated using the Bohr model. If the radius of the particle's orbit is denoted by \(R\) and its speed and energy are denoted by \(v\) and \(E\), respectively, then for the \(n^{th}\) orbit (here \(h\) is the Planck's constant)
+\begin{tasks}(2)
+\task \(R \propto n^{1/3}\) and \(v \propto n^{2/3}\)
+\task \(R \propto n^2\) and \(v \propto n^{1/3}\)
+\task \(E = \frac{3}{2}\frac{n^2h^2}{4\pi^2 m}\)
+\task \(E = 2\left(\frac{n^2h^2}{4\pi^2 m}\right)^{1/3}\)
+\end{tasks}
+
+\begin{solution}
+    \begin{align*}
+        \intertext{According to Bohr’s model, the angular momentum of the particle is quantized as:}
+        L &= n\frac{h}{2\pi} \\
+        \intertext{For circular orbits, angular momentum $L = mvr$. Therefore,}
+        mvr &= n\frac{h}{2\pi} \tag{angular momentum}\\
+        \intertext{The centripetal force for circular motion is provided by the attractive force due to the potential $V(r) = -Fr$. Hence,}
+        m\frac{v^2}{r} &= F\\
+        \intertext{Substituting $v = \frac{nh}{2\pi mr}$ from (\ref{eq:angular momentum}), we get}
+        m\frac{n^2h^2}{4\pi^2 m^2 r^2}\frac{1}{r} &= F\\
+        r^3 &= \frac{n^2h^2}{4\pi^2 mF}\\
+        \intertext{Taking cube root, we have }
+        r &\propto n^{2/3} \tag{radius} \\
+        \intertext{Similarly, using $r \propto n^{2/3}$ in $v = \frac{nh}{2\pi mr}$, we get}
+        v &\propto n^{1/3} \tag{speed} \\
+        \intertext{Using $v = \frac{nh}{2\pi mr}$ and $E = \frac{1}{2}mv^2 - Fr$ to find the total energy of the system, we have}
+        E &= \frac{1}{2}m\left(\frac{nh}{2\pi mr}\right)^2 - \frac{Fr^2}{r}\\
+        &= \frac{n^2h^2}{8\pi^2m}\frac{1}{r^2} - \frac{F}{r} \\
+        \intertext{Substituting $r^2 = \frac{n^2h^2}{4\pi^2 mF}$ from $r^3 = \frac{n^2h^2}{4\pi^2 mF}$, we get}
+        E &= \frac{n^2h^2}{8\pi^2m}\frac{4\pi^2 mF}{n^2h^2} - \frac{F}{r}\\
+        &= \frac{F}{2} - \frac{F}{r} \\
+        \intertext{Hence, the energy does not follow the given options (c) and (d). Therefore,}
+        \intertext{Options (a) and (b) are correct.}
+    \end{align*}
+\end{solution}

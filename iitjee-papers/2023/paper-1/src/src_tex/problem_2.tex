@@ -1,0 +1,96 @@
+\item A plane polarized blue light ray is incident on a prism such that there is no reflection from the surface of the prism. The angle of deviation of the emergent ray is \( \delta = 60^\circ \) (see Figure-1). The angle of minimum deviation for red light from the same prism is \( \delta_{\textit{min}} = 30^\circ \) (see Figure-2). The refractive index of the prism material for blue light is \( \sqrt{3} \). Which of the following statement(s) is(are) correct?
+    \begin{center}
+        \begin{tikzpicture}[thick]
+            \def\sidelength{3}
+            \tzcoor(0, 0)(O)
+            \tzcoor(\sidelength, 0)(A)
+            \tznode<0, -0.5>($(O)!0.5!(A)$){Figure-1}[scale=0.75]
+            \tzcoor(\sidelength*cos{60}, \sidelength*sin{60})(B)
+            \tzlines(O)(A)(B)(O);
+            \tzcoor($(O)!0.5!(B)$)(OB)
+            \tzcoor($(OB)+(210:2)$)(IR)
+            \tznode<-0.5, 0>(IR){Blue}[scale=0.75] 
+            \tzline[-->--](IR)(OB)
+            \tzline[dashed]"ILine"(OB)($(OB)!-1!(IR)$)
+
+            \tzcoor($(A)!0.5!(B)$)(AB)
+            \tzcoor($(AB)+(-25:2)$)(RR)
+            \tzline[-->--=0.5]"RLine"(AB)(RR)
+            
+            \tzline[dashed]"RLine"(AB)($(AB)!-0.46!(RR)$)
+            \tzXpoint{ILine}{RLine}(X)
+            \tzanglemark'(AB)(X)($(OB)!-1!(IR)$){$\delta=60^\circ$}[pos=2.5, scale=0.75]
+
+            \begin{scope}[xshift=7cm, thick]
+                \tzcoor(0, 0)(O)
+                \tzcoor(\sidelength, 0)(A)
+                \tznode<0, -0.5>($(O)!0.5!(A)$){Figure-2}[scale=0.75]
+
+                \tzcoor(\sidelength*cos{60}, \sidelength*sin{60})(B)
+                \tzlines(O)(A)(B)(O);
+                \tzcoor($(O)!0.5!(B)$)(OB)
+                \tzcoor($(OB)+(210:2)$)(IR)
+                \tznode<-0.5, 0>(IR){Red}[scale=0.75] 
+                \tzline[-->--](IR)(OB)
+                \tzline+[-->--](OB)(90:2)
+                \tzline[dashed]"ILine"(OB)($(OB)!-1!(IR)$)
+    
+                \tzcoor($(A)!0.5!(B)$)(AB)
+                \tzcoor($(AB)+(-25:2)$)(RR)
+                \tzline[-->--=0.5]"RLine"(AB)(RR)
+                
+                \tzline[dashed]"RLine"(AB)($(AB)!-0.46!(RR)$)
+                \tzXpoint{ILine}{RLine}(X)
+                \tzanglemark'(AB)(X)($(OB)!-1!(IR)$){$\delta_{\textit{min}}=30^\circ$}[pos=2.75, scale=0.75]
+            \end{scope}
+        \end{tikzpicture}  
+    \end{center}
+        \begin{tasks}(1)
+            \task The blue light is polarized in the plane of incidence. \ans
+            \task The angle of the prism is 45\(^{\circ}\).
+            \task The refractive index of the material of the prism for red light is \( \sqrt{2} \). \ans
+            \task The angle of refraction for blue light in air at the exit plane of the prism is 60\(^{\circ}\). \ans
+        \end{tasks}
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{Snell's Law: }
+            n_1 \sin i &= n_2 \sin r \\
+            \intertext{Given: } 
+            i &= i_p \text{ (angle of incidence)} \\
+            \intertext{Also, } 
+            r &< i \\
+            \intertext{Hence, }
+            r &< i_p \\
+            \intertext{Rearranging Snell's Law: } 
+            \sin i &= \frac{n_2}{n_1} \sin r \\
+            \sin i &= \frac{n_2}{n_1} \cdot 1 \quad \text{(since } r < i) \\
+            \sin i_p &= \frac{n_2}{n_1} \\
+            \text{Taking tangent of both sides: }
+            \tan i_p &= \frac{\sin i_p}{\cos i_p} = \frac{n_2}{n_1} \\
+            & \frac{n_2}{n_1} = \mu \quad \text{(refractive index of medium)} \\
+            \intertext{Therefore, } & \tan i_p = \mu
+        \end{align*}
+        
+        \begin{align*}
+            \intertext{Let } i &= \text{ angle of incidence} \\
+            \intertext{and } r &= \text{ angle of refraction} \\
+            \intertext{Using Snell's law, we have:} \\
+            \sin i &= \sqrt{3} \sin r \quad \text{(for blue light)} \\
+            \sin i &= \sqrt{2} \sin r \quad \text{(for red light)} \\
+            \text{Since the angle of deviation is } \delta &= 60^\circ, \text{ we have:} \\
+            i - r &= \frac{\delta}{2} \\
+            \intertext{Substituting the values, we get:} \\
+            \sqrt{3} \sin r - \sin r &= \frac{60^\circ}{2} \\
+            \sqrt{3} - 1 &= \frac{30^\circ}{\sin r} \\
+            \sin r &= \frac{30^\circ}{\sqrt{3} - 1} \\
+            \intertext{Similarly, for red light, we have:} \\
+            \sqrt{2} \sin r - \sin r &= \frac{30^\circ}{2} \\
+            \sqrt{2} - 1 &= \frac{15^\circ}{\sin r} \\
+            \sin r &= \frac{15^\circ}{\sqrt{2} - 1} \\
+            \intertext{Therefore, the correct statements are:} \\
+            \intertext{(a) The blue light is polarized in the plane of incidence.} \\
+            \intertext{(c) The refractive index of the material of the prism for red light is } \sqrt{2}. \\
+            \intertext{(d) The angle of refraction for blue light in air at the exit plane of the prism is } 60^\circ.
+        \end{align*}
+    \end{solution}

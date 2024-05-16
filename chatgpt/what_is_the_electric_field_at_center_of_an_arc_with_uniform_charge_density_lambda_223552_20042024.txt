@@ -1,0 +1,11 @@
+Q. What is the electric field at center of an arc with uniform charge density lambda?
+
+The electric field is not simply expressible for an arbitrary arc if only the linear charge density (lambda) and the assumption of uniform charge are provided. 
+
+The value of the electric field at the center of the arc will depend on additional specifics such as the radius of the arc and the angle it subtends.
+
+Assuming the arc is part of a circle and subtends an angle 2θ at the centre, we can write:
+
+E = λ/4πε₀ * (2θ/ sinθ)
+
+Where E is the electric field strength, λ is the charge density per unit length along the arc, ε₀ is the permittivity of free space or vacuum, and θ is half of the angle subtended by the arc at the centre.

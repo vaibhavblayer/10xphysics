@@ -1,0 +1,56 @@
+\begin{center}
+    \textsc{Comprehension-I}
+\end{center}
+A pendulum bob has mass $m$. The length of pendulum is $l$. It is initially at rest. A particle $P$ of mass $\dfrac{m}{2}$ moving horizontally along -ve x-direction with velocity $\sqrt{2gl}$ collides with the bob and comes to rest. When the bob comes to rest momentarily, another particle $Q$ of mass $m$ moving horizontally along +ve z-direction collides with the bob and sticks to it. It is observed that the bob now moves along a horizontal circle. The floor is a smooth horizontal surface at a distance $2l$ below the point of suspension of the pendulum. 
+
+\begin{center}
+    \begin{tikzpicture}
+        \def\L{2}
+        \def\A{40}
+        \pic[rotate=180] (ceiling) at (0, 0) {frame=4cm};
+        \tzcoor(ceiling-center)(O)
+        \tzline+(O)(0, -2*\L)
+        \tzellipse[dashed]($(O)+(0, -\L*cos{\A})$)(\L*sin{\A} and 0.3)
+        \tzcoor*($(O)+(-\L*sin{\A}, -\L*cos{\A})$)(BOB)(4pt)
+        \tzline[dashed](O)(BOB)
+        \tzcoor*($(O)+(0, -\L)$)(BOBTO)(4pt)
+        \tzline+[<-]<0.5, 0>(BOBTO)(1, 0)
+        \tzcoor*<0.5, 0>($(BOBTO)+(1, 0)$)(3pt)
+        \tzline+[|<->|]($(O)+(2, 0)$)(0, -2*\L){$2l$}[mr]
+        \tzline+[|<->|]($(O)+(2.75, 0)$)(0, -\L){$l$}[mr]
+        \begin{scope}[xshift=5cm, yshift=-2cm]
+            \tzaxes(0, 0)(1, 1){$x$}{$y$}
+            \draw[->](0, 0, 0)--(0, 0, -1.5) node[right]{$z$};
+            \tzline+[->](-0.25, 1)(0, -1){$g$}[ml]
+        \end{scope}
+        \begin{scope}[canvas is xz plane at y=-2*\L]
+            \draw[pattern=north east lines] (-2,-2) rectangle (2,2);
+        \end{scope}
+    \end{tikzpicture}
+\end{center} 
+
+\begin{enumerate}
+    \item Tension in the string immediately after the first collision is
+        \begin{tasks}(4)
+            \task $2mg$
+            \task $mg$
+            \task $\dfrac{3}{2}mg$\ans
+            \task $\dfrac{5}{2}mg$
+        \end{tasks}
+
+    \item The height of circular path of bob from the floor is
+        \begin{tasks}(4)
+            \task $\dfrac{3}{2}l$
+            \task $\dfrac{4}{3}l$
+            \task $\dfrac{5}{4}l$\ans
+            \task Data not sufficient
+        \end{tasks}
+
+    \item Time period of circular motion of bob is
+        \begin{tasks}(4)
+            \task $2\pi\sqrt{\dfrac{l}{g}}$
+            \task $2\pi\sqrt{\dfrac{\sqrt{7}l}{4g}}$
+            \task $2\pi\sqrt{\dfrac{\sqrt{7}l}{3g}}$
+            \task $2\pi\sqrt{\dfrac{3l}{4g}}$\ans
+        \end{tasks} 
+\end{enumerate}

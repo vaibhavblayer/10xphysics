@@ -1,0 +1,128 @@
+\item In a circuit shown in the figure, the capacitor \( C \) is initially uncharged and the key \( K \) is open. In this condition, a current of \( 1 \) A flows through the \( 1 \Omega \) resistor. The key is closed at time \( t = t_0 \). Which of the following statement(s) is(are) correct? (Given: \( e^{-1} = 0.36 \))
+    \begin{center}
+        \begin{tikzpicture}
+            [thick, cap=round]
+            \ctikzset{capacitors/scale=0.7}
+            \ctikzset{resistors/scale=0.7}
+            \ctikzset{batteries/scale=0.7}
+
+            \def\EL{3}
+            \def\EG{1.25}
+            \tzcoor(0, 0)(O)
+            \tzcoor(2*\EL, 0)(O')
+            
+            \draw (O) to[C, l=$2\mF$] ++(\EL, 0) to[R, l=$3\Omega$] ++(\EL, 0);
+            \draw ($(O')+(0, \EG)$) to [R, l_=$3\Omega$] ++(-\EL, 0) to [short, i>_=$I_1$]++(-\EL, 0);
+            \draw ($(O)+(0, 2*\EG)$) to [battery1, l=$5V$, invert] ++(\EL, 0) to [R, l=$1\Omega$]++(\EL, 0);
+            \draw ($(O)+(0, 3*\EG)$) to [battery1, l=$15V$, invert] ++(\EL, 0) to [R, l=$R$]++(\EL, 0); 
+
+            \draw (O) to[nos, l=$K$] ++(0, \EG);
+            \draw (O') to[short] ++(0, 3*\EG);
+            \draw ($(O)+(0, \EG)$) to[short] ++(0, 2*\EG);
+        \end{tikzpicture}
+    \end{center}
+    \begin{tasks}(1)
+        \task The value of the resistance \( R \) is \( 3 \; \Omega \). \ans
+        \task For \( t < t_0 \), the value of current \( I_1 \) is \( 2 \) A. \ans
+        \task At \( t = t_0 + 7.2 \upmu s \), the current in the capacitor is \( 0.6 \) A. \ans
+        \task For \( t \to \infty \), the charge on the capacitor is \( 12 \upmu C \). \ans
+    \end{tasks}
+
+\begin{solution}
+    \begin{align*}
+        \intertext{For \( t < t_0 \), the circuit can be redrawn as:}
+    \end{align*} 
+    \begin{center}
+        \begin{tikzpicture}
+            [thick, cap=round]
+            \ctikzset{capacitors/scale=0.7}
+            \ctikzset{resistors/scale=0.7}
+            \ctikzset{batteries/scale=0.7}
+
+            \def\EL{3}
+            \def\EG{1.25}
+            \tzcoor(0, 0)(O)
+            \tzcoor(2*\EL, 0)(O')
+            
+            % \draw (O) to[C, l=$2\mF$] ++(\EL, 0) to[R, l=$3\Omega$] ++(\EL, 0);
+            \draw ($(O')+(0, 0*\EG)$) to [R, l_=$3\Omega$] ++(-\EL, 0) to [short, i>_=$I_1$]++(-\EL, 0);
+            \draw ($(O)+(0, 1*\EG)$) to [battery1, l=$5V$, invert] ++(\EL, 0) to [R, l=$1\Omega$, i<^=$I-I_1$]++(\EL, 0);
+            \draw ($(O)+(0, 2*\EG)$) to [battery1, l=$15V$, invert] ++(\EL, 0) to [R, l=$R$]++(\EL, 0) to[short, i>_=$I$] ++(0, -\EG) to[short, i>_=$I_1$] ++(0, -\EG); 
+
+            % \draw (O) to[nos, l=$K$] ++(0, \EG);
+            % \draw (O') to[short] ++(0, 3*\EG);
+            \draw ($(O)+(0, 0*\EG)$) to[short] ++(0, 2*\EG);
+        \end{tikzpicture}
+    \end{center}
+    \begin{align*}
+        \intertext{Apply Kirchhoff's Voltage Law in the lower loop in clockwise:}
+        -I_1 \cdot 3 + 5 + (I-I_1)\cdot 1 &= 0\\
+        \intertext{As given, $I-I_1=1$}
+        -3I_1 + 5 + 1 &= 0\\
+        \Rightarrow I_1 &= 2 \; \text{A}\\
+        \intertext{Uisng the above value of $I_1$ and $I-I_1$, we can calculate $I$ as:}
+        I-I_1 &= 1\\
+        I -2 &= 1\\
+        \Rightarrow I &= 3 \; \text{A}\\
+        \intertext{Again, we can apply Kirchhoff's Voltage Law in the upper loop in clockwise:}
+        -(I-I_1) \cdot 1 - 5 + 15 -I\cdot R &= 0\\
+        -1 - 5 + 15 - 3R &= 0\\
+        \Rightarrow R &= 3 \; \Omega
+    \end{align*}
+    \begin{align*}
+        \intertext{For \( t > t_0 \), the circuit can be redrawn with $E_e$ and $R_e$:}
+        E_e &= \frac{\frac{15}{3} + \frac{5}{1} + \frac{0}{3}}{\frac{1}{3} + \frac{1}{1} + \frac{1}{3}}\\
+        &= \frac{5+5}{\frac{5}{3}}\\
+        \Rightarrow E_e &= 6 \; \text{V}\\
+        R_e &= \frac{1}{\frac{1}{3} + \frac{1}{1} + \frac{1}{3}} + 3\\
+        &= \frac{1}{\frac{5}{3}} + 3\\
+        \Rightarrow R_e &= \frac{18}{5} \; \Omega
+    \end{align*} 
+    \begin{center}
+        \begin{tikzpicture}
+            [thick, cap=round]
+            \ctikzset{capacitors/scale=0.7}
+            \ctikzset{resistors/scale=0.7}
+            \ctikzset{batteries/scale=0.7}
+
+            \def\EL{3}
+            \def\EG{1.25}
+            \tzcoor(0, 0)(O)
+            \tzcoor(2*\EL, 0)(O')
+            
+            \draw (O) to[C, l_=$2\mF$] ++(\EL, 0) to[R, l_=$\frac{18}{5}\Omega$] ++(\EL, 0);
+            \draw ($(O')+(0, \EG)$) to [battery1, l_=$6\V$] ++(-2*\EL, 0);
+            
+            \draw (O') to[short] ++(0, \EG);
+            \draw (O) to [short] ++(0, \EG);
+        \end{tikzpicture}
+    \end{center}
+    \begin{align*}
+        \intertext{The time constant of the circuit is:}
+        \tau &= R_e \cdot C\\
+        &= \frac{18}{5} \cdot 2 \times 10^{-6}\\
+        \Rightarrow \tau &= 7.2 \times 10^{-6} \; \text{s}\\
+        q &= q_0 \left(1 - e^{-\frac{t}{\tau}}\right)\\
+        q &= CV \left(1 - e^{-\frac{t}{\tau}}\right)\\
+        \intertext{As, $t\to\infty$}
+        q &= CV\\
+        q &= 2 \; \upmu \text{F}\times 6 \V\\
+        \Rightarrow q &= 12 \; \text{$\upmu$ C}
+        \intertext{For current in the capacitor at $t=t_0+7.2\upmu s$ as:}
+        I &= \frac{V}{R_e} e^{-\frac{t}{\tau}}\\
+        I &= \frac{6}{\frac{18}{5}} e^{-\frac{7.2\times 10^{-6}}{7.2\times 10^{-6}}}\\
+        I &= \frac{30}{18} \cdot 0.36\\
+        \Rightarrow I &= 0.6 \; \text{A}
+    \end{align*}
+    \begin{align*}
+        \intertext{Now, we can check for options:}
+        R &= 3 \; \Omega\\
+        \intertext{Option (a) is correct.}
+        I_1 &= 2 \; \text{A}\\
+        \intertext{Option (b) is correct.}
+        I &= 0.6 \; \text{A}\\
+        \intertext{Option (c) is correct.}
+        q &= 12 \; \upmu \text{C}\\
+        \intertext{Option (d) is correct.}
+    \end{align*}
+\end{solution}

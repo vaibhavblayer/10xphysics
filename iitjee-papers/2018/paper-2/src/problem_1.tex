@@ -1,0 +1,47 @@
+\item A particle of mass \( m \) is initially at rest at the origin. It is subjected to a force and starts moving along the x-axis. Its kinetic energy \( K \) changes with time as \( \frac{dK}{dt} = \gamma t \), where \( \gamma \) is a positive constant of appropriate dimensions. Which of the following statements is (are) true?
+    \begin{tasks}(1)
+        \task The force applied on the particle is constant
+        \task The speed of the particle is proportional to time
+        \task The distance of the particle from the origin increases linearly with time
+        \task The force is conservative
+    \end{tasks}
+    \begin{solution}
+        \begin{align*}
+            \intertext{Let's start with the definition of kinetic energy:}
+            K &= \frac{1}{2}mv^2\\
+            \intertext{According to the question:}
+            \frac{dK}{dt} &= \gamma t\\
+            \intertext{From the definition of kinetic energy:}
+            \frac{dK}{dt} &= mv\frac{dv}{dt}\\
+            \intertext{Comparing with the given equation:}
+            mv\frac{dv}{dt} &= \gamma t\\
+            \intertext{Integrating both sides with respect to time:}
+            \int_0^v mv dv &= \int_0^t \gamma t dt\\
+            \frac{1}{2}mv^2 &= \frac{1}{2}\gamma t^2 \\
+            v^2 &= \frac{\gamma}{m} t^2
+            \intertext{As Kinetic energy is always increasing, the velocity of the particle is always positive. Therefore,}
+            \Rightarrow v &= \sqrt{\frac{\gamma}{m}} t\\
+            \intertext{Now, we can get force using velocity:}
+            F &= m\frac{dv}{dt}\\
+            &= m\sqrt{\frac{\gamma}{m}}\\
+            \Rightarrow F &= \sqrt{m\gamma}
+            \intertext{Therefore, the force applied on the particle is constant. Option (a) is correct.}
+            \intertext{The speed of the particle is proportional to time. Option (b) is correct.}
+            \intertext{For distance, we can integrate speed with respect to time:}
+            x &= \int_0^t v dt\\
+            &= \int_0^t \sqrt{\frac{\gamma}{m}} t dt\\
+            &= \sqrt{\frac{\gamma}{m}} \int_0^t t dt\\
+            &= \sqrt{\frac{\gamma}{m}} \left[\frac{t^2}{2}\right]_0^t\\
+            \Rightarrow x &= \sqrt{\frac{\gamma}{m}} \frac{t^2}{2}
+            \intertext{Therefore, the distance of the particle from the origin increases quadratically with time. Option (c) is incorrect.}
+            \intertext{To check if the force is conservative, we can check if the work done by the force is path independent.}
+            \intertext{The work done by the force is given by:}
+            W &= \int \vec{F} \cdot d\vec{r}\\
+            &= \int_{x_i}^{x_f} F dx\\
+            &= \int_{x_i}^{x_f} \sqrt{m\gamma} dx\\
+            &= \sqrt{m\gamma} \int_{x_i}^{x_f} dx\\
+            &= \sqrt{m\gamma} \Delta x
+            \intertext{Therefore, the work done by the force is path independent. Option (d) is correct.}
+            \intertext{Therefore, the correct options are (a), (b) and (d).}
+        \end{align*}
+    \end{solution}

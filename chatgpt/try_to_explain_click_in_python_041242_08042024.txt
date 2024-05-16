@@ -1,0 +1,27 @@
+Q. Try to explain click in python
+
+Click is a Python package or library intended for creating command-line interfaces (CLI). It provides functionalities for creating beautifully designed and easy to use CLI applications. With Click, developers can add command-line options or arguments and handle the application’s behavior.
+
+Here are key features of Click:
+
+1. Arbitrary nesting of commands.
+2. Supports lazy loading of subcommands at runtime.
+3. Fully nested command line parsing.
+4. Defines parameters with options and arguments (supports types and validation automatically).
+5. Supports automatic help page generation.
+
+Here's a simple example of how to use Click:
+
+```python
+import click
+
+@click.command()
+@click.option('--name', prompt='Your name', help='The person to greet.')
+def hello(name):
+    click.echo(f'Hello {name}!')
+
+if __name__ == '__main__':
+    hello()
+```
+
+When you run this program in the command line and input your name when prompted, it will greet you with your name.

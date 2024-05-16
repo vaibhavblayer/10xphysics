@@ -1,0 +1,51 @@
+
+\item Four combinations of two thin lenses are given in List I. The radius of curvature of all curved surfaces is \( r \) and the refractive index of all the lenses is 1.5. Match lens combinations in List I with their focal length in List II and select the correct answer using the code given below the lists.
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.8,transform shape]
+    % Lens P
+    \draw (0,0) to [out=90,in=0] (-0.5,0.5) to [out=180,in=90] (-1,0) to [out=270,in=180] (-0.5,-0.5) to [out=0,in=270] (0,0);
+    % Lens Q
+    \draw (3,1) to [bend left] (3,-1) to [bend left] (3,1);
+    % Lens R
+    \draw (6,0) to [out=90,in=180] (6.5,0.5) to [out=0,in=90] (7,0) to [out=270,in=0] (6.5,-0.5) to [out=180,in=270] (6,0);
+    % Lens S
+    \draw (9.5,1) to [bend right] (9,-0.5) to [bend right] (9.5,1);
+    
+    % Labels for List I
+    \node at (0,-1.2) {P};
+    \node at (3,-1.2) {Q};
+    \node at (6,-1.2) {R};
+    \node at (9,-1.2) {S};
+    
+    % List II labels
+    \node[align=left] at (12,0.7) {\( 1.2r \)};
+    \node[align=left] at (12,0.1) {\( 2r/2 \)};
+    \node[align=left] at (12,-0.5) {\( -r \)};
+    \node[align=left] at (12,-1.1) {\( r \)};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{p{0.25cm}p{8cm}|p{0.25cm}p{5cm}}
+        \hline
+        & Column I & & Column II \\
+        \hline
+        (P)& & (1)& \( 1.2r \)\\
+        (Q)& & (2)& \( 2r/2 \)\\
+        (R)& & (3)& \( -r \)\\
+        (S)& & (4)& \( r \)\\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{center}
+
+\begin{tasks}(2)
+    \task \( P \rightarrow 1 \), \( Q \rightarrow 2 \), \( R \rightarrow 3 \), \( S \rightarrow 4 \)
+    \task \( P \rightarrow 2 \), \( Q \rightarrow 4 \), \( R \rightarrow 3 \), \( S \rightarrow 1 \)
+    \task \( P \rightarrow 4 \), \( Q \rightarrow 1 \), \( R \rightarrow 2 \), \( S \rightarrow 3 \)
+    \task \( P \rightarrow 2 \), \( Q \rightarrow 1 \), \( R \rightarrow 3 \), \( S \rightarrow 4 \)
+\end{tasks}

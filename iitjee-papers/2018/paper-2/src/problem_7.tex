@@ -1,0 +1,22 @@
+    \item A solid horizontal surface is covered with a thin layer of oil. A rectangular block of mass $m = 0.4\ \text{kg}$ is at rest on this surface. An impulse of $1.0\ \text{N s}$ is applied to the block at time $t = 0$ so that it starts moving along the x-axis with a velocity $v(t) = v_0 e^{-t/\tau}$, where $v_0$ is a constant and $\tau = 4\ \text{s}$. The displacement of the block, in \textit{metres}, at $t = \tau$ is \underline{\hspace{2cm}}. Take $e^{-1} = 0.37$.
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{Since the impulse is applied to the block at time $t = 0$, the initial velocity $v(0) = v_0$.}
+            \intertext{By using the definition of impulse, we have $J = \Delta p = m \Delta v$.}
+            J &= mv_0\\
+            v_0 &= \frac{1}{0.4}\\
+            \Rightarrow v_0 &= 2.5\ \text{m/s}
+            \intertext{Now, to find the displacement at $t = \tau$, we need to integrate the velocity function.}
+            s(\tau) &= \int_0^\tau v(t) dt\\
+            &= \int_0^\tau v_0 e^{-t/\tau} dt\\
+            &= v_0 \int_0^\tau e^{-t/\tau} dt\\
+            &= v_0 \left[-\tau e^{-t/\tau}\right]_0^\tau\\
+            &= v_0 \left[-\tau e^{-1} + \tau\right]\\
+            &= 2.5 \left[-4(0.37) + 4\right]\\
+            &= 2.5 \left[-1.48 + 4\right]\\
+            &= 2.5 \times 2.52\\
+            \Rightarrow s(\tau) &= 6.30\ \text{m}
+            \intertext{Therefore, the displacement of the block at $t = \tau$ is $6.30\ \text{m}$.}
+        \end{align*}
+    \end{solution}

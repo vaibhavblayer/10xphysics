@@ -1011,6 +1011,10 @@ INPUT ./wave_energy.tex
 INPUT wave_energy.tex
 INPUT ./wave_energy.tex
 INPUT wave_energy.tex
+INPUT ./superpositions.tex
+INPUT superpositions.tex
+INPUT ./superpositions.tex
+INPUT superpositions.tex
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/public/mathdesign/mdput/mdputri8t.vf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/mathdesign/mdput/md-utri8t.tfm
 INPUT main.aux

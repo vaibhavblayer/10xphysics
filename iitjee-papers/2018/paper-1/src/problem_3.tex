@@ -1,0 +1,30 @@
+
+\item A uniform capillary tube of inner radius \( r \) is dipped vertically into a beaker filled with water. The water rises to a height \( h \) in the capillary tube above the water surface in the beaker. The surface tension of water is \( \sigma \). The angle of contact between water and the wall of the capillary tube is \( \theta \). Ignore the mass of water in the meniscus. Which of the following statements is (are) true?
+    \begin{tasks}(1)
+        \task For a given material of the capillary tube, \( h \) decreases with increase in \( r \)
+        \task For a given material of the capillary tube, \( h \) is independent of \( \sigma \)
+        \task If this experiment is performed in a lift going up with a constant acceleration, then \( h \) decreases
+        \task \( h \) is proportional to contact angle \( \theta \)
+    \end{tasks}
+    \begin{solution}
+        \begin{align*}
+            \intertext{The height to which water rises in the capillary tube due to capillary action is given by Jurin's law, which states:}
+            h &= \frac{2\sigma\cos\theta}{r\rho g}\\
+            \intertext{where \( \sigma \) is the surface tension of water, \( \theta \) is the angle of contact, \( r \) is the radius of the capillary tube, \( \rho \) is the density of water, and \( g \) is the acceleration due to gravity.}
+            \intertext{(a) For a given material of the capillary tube, \( h \) decreases with increase in \( r \):}
+            \frac{\partial h}{\partial r} &= -\frac{2\sigma\cos\theta}{r^2\rho g} < 0\\
+            \intertext{Hence, \( h \) decreases as \( r \) increases. So, statement (a) is true.}
+            \intertext{(b) For a given material of the capillary tube, \( h \) is independent of \( \sigma \):}
+            \frac{\partial h}{\partial \sigma} &= \frac{2\cos\theta}{r\rho g} > 0\\
+            \intertext{Hence, \( h \) is dependent on \( \sigma \). So, statement (b) is false.}
+            \intertext{(c) If this experiment is performed in a lift going up with a constant acceleration, then \( h \) decreases:}
+            \intertext{In a lift accelerating upwards, the effective acceleration is \( g_{\text{eff}} = g + a \), where \( a \) is the acceleration of the lift.}
+            h_{\text{eff}} &= \frac{2\sigma\cos\theta}{r\rho(g + a)}\\
+            \frac{\partial h_{\text{eff}}}{\partial a} &= -\frac{2\sigma\cos\theta}{r\rho(g + a)^2} < 0\\
+            \intertext{Thus, \( h \) decreases as the acceleration of the lift increases. Statement (c) is true.}
+            \intertext{(d) \( h \) is proportional to contact angle \( \theta \):}
+            \frac{\partial h}{\partial \theta} &= \frac{2\sigma(-\sin\theta)}{r\rho g}\\
+            \intertext{The dependence of \( h \) on \( \theta \) is not directly proportional due to the \(-\sin\theta\) term. Statement (d) is false.}
+            \intertext{Therefore, the correct statements are (a) and (c).}
+        \end{align*}
+    \end{solution}

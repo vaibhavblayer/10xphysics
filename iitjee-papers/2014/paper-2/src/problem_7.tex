@@ -1,0 +1,41 @@
+
+\item A metal surface is illuminated by light of two different wavelengths \(248 \text{ nm}\) and \(310 \text{ nm}\). The maximum speeds of the photoelectrons corresponding to these wavelengths are \(v_1\) and \(v_2\), respectively. If the ratio \(v_1:v_2 = 2:1\) and \(hc = 1240 \text{ eV nm}\), the work function of the metal is nearly
+    \begin{tasks}(2)
+        \task \(3.7 \text{ eV}\)
+        \task \(3.2 \text{ eV}\)
+        \task \(2.8 \text{ eV}\)
+        \task \(2.5 \text{ eV}\)
+    \end{tasks}
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{Using the photoelectric equation, the kinetic energy \( K \) of the emitted electrons can be expressed as:}
+            K &= \frac{1}{2}mv^2 = h\nu - \phi\\
+            \intertext{where \( h \) is the Planck constant, \( \nu \) is the frequency of the incident light, and \( \phi \) is the work function of the metal.}
+            \intertext{The energy of the photons for each wavelength can be given by:}
+            E &= \frac{hc}{\lambda}\\
+            \intertext{For wavelength \( \lambda_1 = 248 \text{ nm} \), the energy \( E_1 \) is:} 
+            E_1 &= \frac{1240 \text{ eV nm}}{248 \text{ nm}} = 5 \text{ eV}\\
+            \intertext{For wavelength \( \lambda_2 = 310 \text{ nm} \), the energy \( E_2 \) is:} 
+            E_2 &= \frac{1240 \text{ eV nm}}{310 \text{ nm}} = 4 \text{ eV}\\
+            \intertext{Given the maximum speeds \( v_1 \) and \( v_2 \) of the photoelectrons, where \( v_1:v_2 = 2:1 \), we have:} 
+            \frac{1}{2}mv_1^2 &= 5 \text{ eV} - \phi\\
+            \frac{1}{2}mv_2^2 &= 4 \text{ eV} - \phi\\
+            \intertext{Since the kinetic energy is proportional to the square of the speed and \( v_1 = 2v_2 \):} 
+            \frac{1}{2}m(2v_2)^2 &= 5 \text{ eV} - \phi\\
+            2mv_2^2 &= 5 \text{ eV} - \phi\\
+            \intertext{and for \( v_2 \):}
+            \frac{1}{2}mv_2^2 &= 4 \text{ eV} - \phi\\
+            \intertext{Now, solving these two equations:} 
+            2mv_2^2 &= 5 \text{ eV} - \phi \quad \text{(i)}\\
+            \frac{1}{2}mv_2^2 &= 4 \text{ eV} - \phi \quad \text{(ii)}\\
+            \intertext{Multiply equation (ii) by 4 to align both equations:}
+            2mv_2^2 &= 16 \text{ eV} - 4\phi \quad \text{(iii)}
+            \intertext{We equate equation (i) and (iii) as follows:}
+            5 \text{ eV} - \phi &= 16 \text{ eV} - 4\phi\\
+            3\phi &= 11 \text{ eV}\\
+            \phi &= \frac{11}{3} \text{ eV}\\
+            \phi &\approx 3.67 \text{ eV} \approx 3.7 \text{ eV}\\
+            \intertext{Therefore, the correct option is (a).}
+        \end{align*}
+    \end{solution}

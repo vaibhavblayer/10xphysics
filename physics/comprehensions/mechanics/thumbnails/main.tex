@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage{v-equation}
+\vgeometry[6][3.375]
+\usepackage{circuitikz}
+\begin{document}
+\vtitle[Tikz Tutorial | Complete Diagram | Mechanics | 02]
+\vprofile[tikz]
+\vspace*{\fill}
+\begin{center}
+\begin{tikzpicture}
+[remember picture, overlay, thick, cap=round]
+\tzcoor($(current page.center)+(0, 2)$)(O)
+	%\tzline+[->, line width=5mm, cap=round, red!50!black](O)(5, 0)
+%	\foreach \a in {0, 60, ..., 360}{
+%	\tzcoor($(O)+(2, -0.5)+(\a:2)$)(M)
+%	\tzcoor($(O)+(2, -0.5)+(\a+60:2)$)(N)
+%		\tzline[line width=3mm, cap=round, red!50!black](M)(N)
+%	}
+
+%\tzcoor($(O)+(0, -1.5)$)(O')
+%\tzcoor($(O')+(5, 0)$)(M)
+%\tzcoor*($(O')!0.4!(M)$)(N)(5pt)
+%\tzline[ultra thick](O')(M)
+%\tzline+[ultra thick](N)(0, 2.5)
+	
+%	\begin{scope}[scale=0.75, xshift=2cm, yshift=1.5cm]
+%	\draw (-6, 0)--(7, 0);
+%	\draw[fill=red!45] (0, 0) ellipse(0.35cm and 3cm);
+%	\draw[ultra thick] (-5, 0)--+(120:1) coordinate(A);
+%	\tzanglemark(0, 0)(-5, 0)(A){$\frac{2\pi}{3}$}[r]
+%	
+%	\draw[ultra thick] (6, 0)--+(-120:2) coordinate(B);
+%	\tzanglemark(0, 0)(6, 0)(B){$\alpha$}
+%	
+%	\tzline[|<->|]<0, -0.5>(-5, 0)(0, 0){$\frac{40}{3}$}[midway, below]
+%	\tzline+[|<->|]<-0.5, 0> (B)(0, 2*sin{60}){$\frac{30\sqrt{3}}{13}$}[midway, left]
+%	\end{scope}
+	
+%	\begin{scope}[xshift=-2.5cm, yshift=-0.5cm]
+%	\foreach \x/\n in {0/A, 3/B, 6/C, 9/D}{
+%		\coordinate (\n) at (\x, 3);
+%	}
+%	
+%	\foreach \x/\n in {0/A', 3/B', 6/C', 9/D'}{
+%		\coordinate (\n) at (\x, 0);
+%	}
+%	
+%	\draw (A) to[battery1, l_=$6V$](A')to[C, l=$C_2$](B);
+%	\draw (A) to[C, l=$C_1$](B);
+%	
+%	\draw (A') to (D');
+%	\draw (B') to[C, l=$C_3$](B);
+%	\draw (C') to[C, l=$C_4$](B);
+%	\draw (C') to[C, l_=$C_5$](C);
+%	\draw (B) to (C) to (D);
+%	\draw (D) to[battery1, l=$2V$](D');
+%	\end{scope}
+	
+%	\begin{scope}[thick, scale=0.65, yshift=1cm, xshift=2cm]
+%	\coordinate (O) at (0, 0);
+%	
+%	
+%	\draw (O) to[battery1, l_=$\varepsilon_1$] (2.5, 0) to[R, l_=$R_1$] (5, 0);
+%	\draw (-5, 0) to[battery1, l_=$\varepsilon_2$] (-2.5, 0) to[R, l_=$R_3$] (O);
+%	
+%	\draw (O) to[R, l=$R_2$](0, 5);
+%	\draw (O) to[R, l=$R_4$](0, -5);
+%	\draw (5, 0) to[R, l_=$R_7$](0, 5);
+%	\draw (5, 0) to[R, l=$R_8$](0, -5);
+%	\draw (-5, 0) to[R, l=$R_6$](0, 5);
+%	\draw (-5, 0) to[R, l_=$R_5$](0, -5);
+%	\end{scope}
+%\begin{scope}[scale=0.75, xshift=-0.5cm]
+%\coordinate (A) at (-0.5, 3);
+%\coordinate (B) at (0.5, 3);
+%
+%	\draw (-3, 0) to [battery1, l_=$V$] (3, 0);
+%	\draw (-3, 0) to (-3, 3) to (A);
+%	\draw (3, 0) to (3, 3) to (B);
+%	\draw ($(A)+(0, -1)$) to ($(A)+(0, 1)$);
+%	\draw ($(B)+(0, -1)$) to ($(B)+(0, 1)$);
+%	\fill[pattern=north east lines, pattern color=red] ($(A)+(0, -1)$)rectangle ($(B)+(0, 1)$);
+%	\draw[|<->|]($(A)+(0, -1.25)$)--+(1, 0) node[midway, below]{$d$};
+%	
+%	\begin{scope}[xshift=7cm]
+%	\coordinate (A) at (-1.25, 3);
+%\coordinate (B) at (1.25, 3);
+%\coordinate (A') at (-0.5, 3);
+%\coordinate (B') at (0.5, 3);
+%
+%	\draw (-3, 0) to [battery1, l_=$V$] (3, 0);
+%	\draw (-3, 0) to (-3, 3) to (A);
+%	\draw (3, 0) to (3, 3) to (B);
+%	\draw ($(A)+(0, -1)$) to ($(A)+(0, 1)$);
+%	\draw ($(B)+(0, -1)$) to ($(B)+(0, 1)$);
+%	\fill[pattern=north east lines, pattern color=red] ($(A')+(0, -1)$)rectangle ($(B')+(0, 1)$);
+%	\draw[|<->|]($(A')+(0, -1.25)$)--+(1, 0) node[midway, below]{$d$};
+%	\draw[|<->|]($(A)+(0, -1.25)$)--+(0.75, 0) node[midway, below]{$d/2$};
+%	\draw[|<->|]($(B')+(0, -1.25)$)--+(0.75, 0) node[midway, below]{$d/2$};
+%	\end{scope}
+%\end{scope}
+
+%\begin{scope}[xshift=6cm, yshift=-1cm, scale=1.5, ultra thick, cap=round, >=latex]
+%\def\R{0.75} % radius of circle
+%\def\A{30} % angle of wedge
+%\def\H{6}
+%\def\a{45} % angle for force wrt center of the circle
+%\coordinate (O) at (0, 0);
+%\coordinate (B) at (-\H*cos{\A}, 0);
+%
+%\begin{scope}[rotate around={-\A:(O)}]
+%	\coordinate (A) at (-\H, 0);
+%	\coordinate (CC) at ($($(O)!0.5!(A)$)+(0, \R)$);
+%	\fill (CC) circle(1pt);
+%	\draw (O)--(A);
+%	
+%	\draw (CC) circle [radius=\R];
+%	
+%	\coordinate (RA) at ($(CC)+(\a:\R)$);
+%	\coordinate (LA) at ($(CC)+(180+\a:\R)$);
+%	
+%	\draw[<-](RA)--+(1, 0);
+%	\draw[<-](LA)--+(-1, 0);
+%	\draw[dashed] (CC)--+(0, \R*sin{\a})node[midway, left]{$r$}--(RA);
+%	\draw[dashed] (CC)--+(0, -\R*sin{\a})node[midway, right]{$r$}--(LA);
+%\end{scope}
+%
+%\draw (O)--(B)--(A);
+%\tzanglemark(A)(O)(B){$\theta$}
+%
+%\end{scope}
+
+
+
+        \def\L{2}
+        \def\A{40}
+        \pic[rotate=180] (ceiling) at (O) {frame=4cm};
+        % \tzcoor(ceiling-center)(O)
+        \tzline+(O)(0, -2*\L)
+        \tzellipse[dashed]($(O)+(0, -\L*cos{\A})$)(\L*sin{\A} and 0.3)
+        \tzcoor*($(O)+(-\L*sin{\A}, -\L*cos{\A})$)(BOB)(4pt)
+        \tzline[dashed](O)(BOB)
+        \tzcoor*($(O)+(0, -\L)$)(BOBTO)(4pt)
+        \tzline+[<-]<0.5, 0>(BOBTO)(1, 0)
+        \tzcoor*<0.5, 0>($(BOBTO)+(1, 0)$)(3pt)
+        \tzline+[|<->|]($(O)+(2, 0)$)(0, -2*\L){$2l$}[mr]
+        \tzline+[|<->|]($(O)+(2.75, 0)$)(0, -\L){$l$}[mr]
+        \begin{scope}[xshift=5cm, yshift=1cm]
+            \tzaxes(0, 0)(1, 1){$x$}{$y$}
+            \draw[->](0, 0, 0)--(0, 0, -1.5) node[right]{$z$};
+            \tzline+[->](-0.25, 1)(0, -1){$g$}[ml]
+        \end{scope}
+        \begin{scope}[canvas is xz plane at y=-1*\L]
+            \draw[pattern=north east lines] ($(O)+(2.5,5*\L)$) rectangle ++(4,4);
+        \end{scope}
+ 
+\end{tikzpicture}
+\end{center}
+
+\vspace*{\fill}
+\end{document}

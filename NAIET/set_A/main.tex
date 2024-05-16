@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{v-test-paper}
+\newenvironment{solution}{\par\noindent\color{red!85!black}$\Rightarrow$\vspace{0em}}{}
+
+\begin{document}
+\begin{itemize}
+    \item \includegraphics*[width=\textwidth]{main-6.png}
+    \begin{align*}
+        \intertext{Assume table as $U=0$ reference and conserve mechanical energy(Only conservative forces are acting):}
+        -\dfrac{m}{3} \cdot g \cdot \dfrac{l}{6} &= -m\cdot g\cdot \dfrac{l}{2} + \dfrac{1}{2}mv^2\\
+        \dfrac{1}{2}v^2 &= \dfrac{gl}{2} \left(1-\dfrac{1}{9}\right)\\
+        v &= \sqrt{\dfrac{8g l}{9}}\\
+        v &= \dfrac{2}{3}\sqrt{2gl}
+    \end{align*}
+\end{itemize}
+
+
+\begin{enumerate}
+    \item If \(\mathbf{\hat{i}}\) and \(\mathbf{\hat{j}}\) are two perpendicular non-zero vectors, then which of the following statements are correct
+    \begin{tasks}(2)
+        \task \(\mathbf{\hat{i}} \cdot \mathbf{\hat{j}} = 0\)
+        \task \(\mathbf{\hat{i}} \times \mathbf{\hat{j}} = 0\)
+        \task \(\lvert \mathbf{\hat{i}} + \mathbf{\hat{j}} \rvert = \sqrt{a^2 + b^2}\)
+        \task \(\mathbf{\hat{i}} + \mathbf{\hat{j}} = \mathbf{\hat{i}} - \mathbf{\hat{j}}\)
+    \end{tasks}
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{The dot product of two perpendicular vectors is 0, so Statement I is true. The cross product of two perpendicular unit vectors is a unit vector perpendicular to the plane formed by them, so Statement II is false. For Statement III, the magnitude of the sum of two perpendicular unit vectors is \(\sqrt{1^2 + 1^2} = \sqrt{2}\), so this is true. Statement IV is false as the equation given represents two different vectors.}
+            \intertext{The correct answers are:}
+            &\text{(A) I and III only}
+        \end{align*}
+    \end{solution}
+    
+    \item Consider the following relations,
+    \[
+    1m^3 = x\ L, 0.2\ cm^2 = y\ m^2, 0.5\ N = z\ dynes \quad [\text{dyne is the CGS unit of force}]
+    \]
+    The value of xyz is
+    \begin{tasks}(2)
+        \task 0.002
+        \task 500
+        \task 1000
+        \task None
+    \end{tasks}
+
+    \begin{solution}
+        \begin{align*}
+            \intertext{Converting the given units to a consistent system, we get:}
+            x &= \dfrac{1\ m^3}{1\ L} = \dfrac{1\ m^3}{10^{-3}\ m^3} = 1000,\\
+            y &= \dfrac{0.2\ cm^2}{1\ m^2} = \dfrac{0.2 \times 10^{-4}\ m^2}{1\ m^2} = 2 \times 10^{-5},\\
+            z &= \dfrac{0.5\ N}{1\ dyne} = \dfrac{0.5\ kg\cdot m/s^2}{10^{-5}\ kg\cdot m/s^2} = 5 \times 10^{4},\\
+            xyz &= 1000 \times 2 \times 10^{-5} \times 5 \times 10^{4}\\
+            &= 1000 
+        \end{align*}
+    \end{solution}
+    
+    % For this problem, since there are diagrams and figures, I will create TikZ environments for them
+    
+    % Since Q4 and Q5 require diagrams, I will create placeholders for them.
+    \item[4Q4.] On the top of a horizontal table surface a thin rod lies horizontally in the east-west direction nailed at its west end O and free to rotate about it. If a force is applied to rotate the rod as shown in the diagram, the direction of torque created by the force on the rod about point O will be
+    \begin{tasks}(2)
+    	\task Upwards
+        \task Downwards
+        \task Northwards
+        \task Southwards
+    \end{tasks}
+    
+    \begin{solution}
+        \begin{align*}
+            \intertext{Torque is given by \( \vec{\tau} = \vec{r} \times \vec{F} \). Since the force is applied in the northern direction and the displacement vector \( \vec{r} \) is towards the east from point O, their cross product using the right-hand rule points upwards.}
+            \intertext{The correct answer is:}
+            &\text{(A) Upwards}
+        \end{align*}
+    \end{solution}
+    
+    % Similarly, for Q6, I will write the placeholder for the diagram.
+    
+    % Placeholder for the PV diagram in Q8
+    \item[8Q.] The work done by an ideal gas in the reversible process \(\text{A} \rightarrow \text{B} \rightarrow \text{C}\) as shown in the \(P\text{V}\) plot will be
+    
+    \item[9Q.] A ray of light enters from vacuum into a glass slab of refractive index \( \mu = 1.5 \) as shown in the adjoining figure.
+    Find the value of angle \(\theta_0\).
+    \begin{tasks}(2)
+        \task \(\frac{\pi}{6}\)
+        \task \(\sin^{-1}\left(\frac{1}{\sqrt{3}}\right)\)
+        \task \(\frac{\pi}{2} - \sin^{-1}\left(\frac{1}{\sqrt{3}}\right)\)
+        \task \(\pi - \sin^{-1}\left(\frac{1}{\sqrt{3}}\right)\)
+    \end{tasks}
+    
+    \begin{solution}
+        \begin{align*}
+            \intertext{Using Snell's law \(n_1 \sin(\theta_1) = n_2 \sin(\theta_2)\), with \(n_1 = 1\) for vacuum and \(n_2 = \mu = 1.5\) for glass, and observing that \(\theta_2 = \frac{\pi}{6}\) or \(30^\circ\):}
+            \sin(\theta_0) &= 1.5 \sin\left(\frac{\pi}{6}\right)\\
+            &= 1.5 \cdot \frac{1}{2} = \frac{3}{4}.
+            \intertext{Since \(\sin(\frac{\pi}{2}) = 1\), and \(\sin\) is a monotonic increasing function from 0 to \(\frac{\pi}{2}\), there is no angle for which the sine gives \(\frac{3}{4}\). Therefore, none of the options is correct and the correct answer is:}
+            &\text{(D) None}
+        \end{align*}
+    \end{solution}
+    
+    % Skipping the diagram for Q10, since it's a circuit diagram.
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,92 @@
+\item A slide with a frictionless curved surface, which becomes horizontal at its lower end, is fixed on the terrace of a building of height \(3h\) from the ground, as shown in the figure. A spherical ball of mass \(m\) is released on the slide from rest at a height \(h\) from the top of the terrace. The ball leaves the slide with a velocity \(\vec{u}_0 = u_0\hat{x}\) and falls on the ground at a distance \(d\) from the building making an angle \(\theta\) with the horizontal. It bounces off with a velocity \(\vec{v}\) and reaches a maximum height \(h_1\). The acceleration due to gravity is \(g\) and the coefficient of restitution of the ground is \(1/\sqrt{3}\). Which of the following statement(s) is(are) correct?
+    \begin{center}
+        \begin{tikzpicture}
+            \def\H{0.75}
+            \def\R{2pt}
+            \pic (ground) at (0, 0){frame=10cm}; 
+            \tzcoor($(ground-center)+(-3.5, 0)$)(O)
+            \draw[pattern=north east lines] (O) rectangle ++(4*\H, 3*\H) coordinate (B);
+            \tzline+[|<->|]<-0.5, 0>(O)(0, 3*\H){$3h$}[ml]
+            \tzline+[->] ($(B)+(0.75*\H, -\H)$)(0, -\H){$g$}[mr]
+            \tzline+[->]($(B)+(-\R, \R)$)(\H, 0){$\vec{u}_0$}[r]
+            \fill($(B)+(-\R, \R)$) circle (\R);
+
+            \tzcoor($(O)+(1.5*\H, 4*\H)$)(A)
+            \fill ($(A)+(\R, 0)$) circle (\R);
+            
+            \tzline+[|<->|]<-0.5, 0>(A)(0, -\H){$h$}[ml] 
+            \draw[fill=gray!50] (A) to[out=-60, in=180] ++(2.5*\H, -\H) -- ++ (-2.5*\H, 0)-- ++(0, \H);
+            
+            \draw[dashed] (B) parabola ++(3*\H, -3*\H) coordinate (C);
+            \fill ($(C)+(0, \R)$) circle (\R);
+            \tzline[|<->|]<0, -0.5>($(B)+(0, -3*\H)$)(C){$d$}[mb]
+            \draw[dashed] (C) parabola[bend at end] ++ (2*\H, 1.5*\H) coordinate(D);
+            \fill (D) circle (\R);
+            \tzline+[|<->|]<0.5, 0>(D)(0, -1.5*\H){$h_1$}[mr]
+
+            \tzanglemark($(B)+(\H, \H)$)(C)(O){$\theta$}
+            \tzline+[->](C)(0.5, 0.8){$\vec{v}$}[ar]
+
+            \begin{scope}[xshift=4cm,  yshift=2cm]
+                \tzaxes(0, 0)(1, 1){$x$}{$z$}
+            \end{scope}
+
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{tasks}(2)
+        \task \(\vec{u}_0 = \sqrt{2gh}\hat{x}\) \ans
+        \task \(\vec{v} = \sqrt{2gh}(\hat{x} - \hat{z})\)
+        \task \(\theta = 60^\circ\) \ans
+        \task \(d/h_1 = 2\sqrt{3}\) \ans
+    \end{tasks}
+
+\begin{solution}
+\begin{align*}
+    \intertext{\textsc{Before collision\_}}
+    \intertext{Apply conservation of energy from the top of the slide to the terrace of the building(as there is only conservative forces are contributing in work done(gravity), no friction):}
+    mgh &= \frac{1}{2}mu_0^2\\
+    \Rightarrow u_0 &= \sqrt{2gh} \qquad \text{as $m$ is non-zero}
+    \intertext{Now, we can apply the equation between the terrace and the ground along the vertical direction(motion is under constant force means constant acceleration):}
+    v_z^2 &= u_z^2 + 2as\\
+    v_z^2 &= 0 + 2\cdot (-g) \cdot (-3h)\\
+    \Rightarrow v_z &= -\sqrt{6gh}
+    \intertext{To calculate the horizontal distance, we can apply the equation of motion along the horizontal direction, for time we can use $t=\sqrt{\frac{2h}{g}}$:}
+    d &= u_x t\\
+    d &= \sqrt{2gh} \cdot \sqrt{\dfrac{6h}{g}}\\
+    \Rightarrow d &= 2\sqrt{3}h
+    \intertext{\textsc{After collision\_}}
+    \intertext{Apply equation of restitution along the normal direction(impulsive force only acts along the normal direction):}
+    v_z' &= -e v_z\\
+    v_z' &= -\frac{1}{\sqrt{3}} \cdot \left(-\sqrt{6gh}\right)\\
+    \Rightarrow v_z' &= \sqrt{2gh}
+    \intertext{Along tangential direction velocity will remain same(no force along tangential direction hence linear momentum will be conserved):}
+    v_x' &= u_0\\
+    \Rightarrow v_x' &= \sqrt{2gh}
+    \intertext{Now, we can apply the equation of motion along the vertical direction:}
+    v_z^2 &= u_z^2 + 2as\\
+    0 &= \left(\sqrt{2gh}\right)^2 + 2 \cdot (-g) \cdot h_1\\
+    2gh_1 &= 2gh\\
+    \Rightarrow h_1 &= h\\
+\end{align*}
+
+\begin{align*}
+    \intertext{Now, we can check the options:}
+    \Rightarrow \vec{u}_0 &= \sqrt{2gh}\hat{x}
+    \intertext{Option (a) is correct.}
+    \intertext{Velocity after collision,}
+    \vec{v} &= \sqrt{2gh}\hat{x} + \sqrt{2gh}\hat{z}\\
+    \Rightarrow \vec{v} &= \sqrt{2gh}(\hat{x} + \hat{z})
+    \intertext{Option (b) is incorrect.}
+    \intertext{For angle,}
+    \tan\theta &= \frac{v_z}{u_x}\\
+    \tan\theta &= \frac{\sqrt{6gh}}{\sqrt{2gh}}\\
+    \Rightarrow \theta &= 60^\circ
+    \intertext{Option (c) is correct.}
+    \intertext{For ratio,}
+    \frac{d}{h_1} &= \frac{2\sqrt{3}h}{h}\\
+    \Rightarrow \frac{d}{h_1} &= 2\sqrt{3}
+    \intertext{Option (d) is correct.}
+\end{align*}
+
+\end{solution}
