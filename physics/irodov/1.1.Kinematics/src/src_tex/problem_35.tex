@@ -4,3 +4,24 @@
         \item the equation of the particle's trajectory \(y(x)\);
         \item the curvature radius of trajectory as a function of x.
     \end{enumerate}
+\begin{solution}
+    \begin{align*}
+        \intertext{The velocity vector of the particle}
+        \vec{v} &= ai + bxj \\
+        \frac{dx}{dt} &= a \quad \text{and} \quad \frac{dy}{dt} = bx \tag{1} \\
+        \intertext{From Eq. (1)}
+        \int_0^x dx &= a \int_0^t dt \quad \text{or} \quad x = at \tag{2} \\
+        \intertext{and}
+        dy &= bx dt = bat dt \\
+        \intertext{Integrating}
+        \int_0^y dy &= ab \int_0^t t dt \quad \text{or} \quad y = \frac{1}{2}abt^2 \tag{3} \\
+        \intertext{From Eqs. (2) and (3), we get,}
+        y &= \frac{b}{2a}(x^2) \tag{4} \\
+        \intertext{The curvature radius of trajectory \( y = f(x) \) is}
+        R &= \frac{[1 + (dy/dx)^2]^{3/2}}{|d^2y/dx^2|} \tag{5} \\
+        \intertext{Let us differentiate the path equation \( y = \frac{b}{2a}x^2 \) with respect to \( x \),}
+        \frac{dy}{dx} &= \frac{b}{a}x \quad \text{and} \quad \frac{d^2y}{dx^2} = \frac{b}{a} \tag{6} \\
+        \intertext{From Eqs. (5) and (6), the sought curvature radius is}
+        R &= \frac{a}{b} \left[ 1 + \left( \frac{b}{a} x \right)^2 \right]^{3/2}
+    \end{align*}
+\end{solution}

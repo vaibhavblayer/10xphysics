@@ -1,1 +1,25 @@
-\item A car moves with a constant tangential acceleration \( w_\tau = 0.62 \, \text{m/s}^2 \) along a horizontal surface circumscribing a circle of radius \( R = 40 \, \text{m} \). The coefficient of sliding friction between the wheels of the car and the surface is \( k = 0.20 \). What distance will the car ride without sliding if at the initial moment of time its velocity is equal to zero?
+\item A car moves with a constant tangential acceleration \( w_\tau = 0.62 \, \text{m/s}^2 \) along a horizontal surface circumscribing a circle of radius \( R = 40 \, \text{m} \). The coefficient of sliding friction between the wheels of the car and the surface is \( k = 0.20 \). What distance will the car ride without sliding if at the initial moment of time its velocity is equal to zero?```
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{As initial velocity is zero thus,}
+        v^2 &= 2w_{t}s = f(s) \tag{1}
+        \intertext{As \( w_{t} > 0 \) the speed of the car increases with time or distance. Till the moment, sliding starts, the static friction provides the required centripetal acceleration to the car.}
+        \intertext{Thus,}
+        fr &= mw_{t} \\
+        \text{but} \quad fr &\leq kmg
+        \intertext{So,}
+        w_{t}^2 &\leq k^{2}g^2 \quad \text{or} \quad w_{t}^2 + \left(\frac{v^2}{R}\right)^2 \leq k^{2}g^2 \\
+        \text{or} \quad v^2 &\leq R\left(k^{2}g^2 - w_{t}^2\right)
+        \intertext{Hence,}
+        v_{\max}^2 &= R\sqrt{k^{2}g^2 - w_{t}^2}
+        \intertext{So, from Eq. (1), the sought distance \( s \) is}
+        s &= \frac{v_{\max}^2}{2w_{t}} = \frac{R}{2} \sqrt{\left(\frac{kg}{w_t}\right)^2 - 1} = 60 \, \text{m}
+    \end{align*}
+\end{solution}
+```

@@ -9,3 +9,31 @@
         \item the velocity of the point as a function of time and as a function of the distance covered \( s \);
         \item the total acceleration of the point as a function of velocity and the distance covered.
     \end{enumerate}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0,0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{1.38 (a) According to the problem}
+        \left| w_l \right| &= \left| w_n \right| \\
+        \intertext{For \( v(t) \),}
+        -\frac{dv}{dt} &= \frac{v^2}{R} \\
+        \intertext{Integrating this equation from \( v_0 \leq v \leq v \) and \( 0 \leq t \leq t \), we get}
+        -\int_{v_0}^{v} \frac{dv}{v^2} &= \frac{1}{R} \int_{0}^{t} dt \quad \text{or} \quad v = \frac{v_0}{\left(1+\frac{v_0 t}{R}\right)} \tag{1}
+        \intertext{Now for \( v(s) \),}
+        -v \frac{dv}{ds} &= \frac{v^2}{R} \\
+        \intertext{Integrating this equation from \( v_0 \leq v \leq v \) and \( 0 \leq s \leq s \), we get}
+        \int_{v_0}^{v} \frac{dv}{v} &= -\frac{1}{R} \int_{0}^{s} ds \quad \text{or} \quad \ln \frac{v}{v_0} = -\frac{s}{R} \\
+        \intertext{Hence,}
+        v &= v_0 e^{-s/R} \tag{2}
+        \intertext{(b) The normal acceleration of the point}
+        w_n &= \frac{v^2}{R} = \frac{v_0^2 e^{-2s/R}}{R} \quad \text{(using Eq. 2)}
+        \intertext{In accordance with the problem}
+        \left| w_l \right| &= \left| w_n \right| \quad \text{and} \quad w_t \perp w_n \\
+        \intertext{So,}
+        w &= \sqrt{2} w_n = \sqrt{2} \frac{v_0^2 e^{-2s/R}}{R} = \sqrt{2} \frac{v_0^2}{R}
+    \end{align*}
+\end{solution}

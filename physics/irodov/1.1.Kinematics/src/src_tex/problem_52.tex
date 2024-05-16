@@ -4,3 +4,39 @@
         \item the modulus and the direction of the acceleration vector of the point \( A \);
         \item the total distance \( s \) traversed by the point \( A \) between the two successive moments at which it touches the surface.
     \end{enumerate}
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) The general plane motion of a solid can be imagined as the combination of translation with C.M. and rotation about C.M.}
+        \vec{v}_A &= \vec{v}_C + \vec{v}_{AC} = \vec{v}_C + \vec{\omega} \times \vec{r}_{AC} = \vec{v}_C + \vec{\omega} \times \vec{\rho}_{AC} \tag{1}\\
+        \vec{w}_A &= \vec{w}_C + \vec{w}_{AC} = \vec{w}_C + \vec{\omega} \times (\vec{\omega} \times \vec{r}_{AC}) + (\beta \times \vec{r}_{AC})\\
+        &= \vec{w}_C + \omega^2 (-\rho_{AC}) + (\beta \times \rho_{AC}) \tag{2}\\
+        \intertext{where $\rho$ is the component of $\vec{r}$ normal to the axis of rotation and directed away from it. In this problem $\rho_{AC} = r_{AC} = R$ and $\vec{v}_C = v$.}
+        \intertext{Let the point A touch the horizontal surface at $t=0$, further let us locate the point A at time $t$, when it makes an angle $\theta$ from vertical (see figure).}
+        \intertext{On the basis of Eqs. (1) and (2) the pictorial diagrams for velocity and acceleration are as follows:}
+    \end{align*}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{As the rolling is without slipping along a line, so, $v_C = \omega R$ and $w_C = \beta R$.}
+        \intertext{According to the problem $v_C = v$ (constant), so $\omega = v/R$, $w_C = 0$ and $\beta = 0$. Using these facts, $\vec{w}_A = v^2/R= 2.0 \, \text{m/s}^2$ and the vector $\vec{w}$, is directed toward centre C of the wheel:}
+        v_A &= \sqrt{v^2 + (\omega R)^2 + 2v (\omega R) \cos (\pi - \theta)}\\
+        &= \sqrt{v^2 + v^2 + 2v^2 \cos (\pi - \theta)} = v \sqrt{2(1 - \cos \theta)}\\
+        &= 2v \sin (\theta/2) = 2v \sin (\omega t/2)\\
+        \intertext{Hence, distance covered by the point A during time interval $2\pi/\omega$}
+        s &= \int_0^{2\pi/\omega} v_A dt = \int_0^{2\pi/\omega} 2v \sin (\omega t/2) dt\\
+        &= \dfrac{8v}{\omega} = 8R = 4.0 \, \text{m} \, (\text{on substituting values})\\
+        \intertext{Note: One can easily find $v_A$, assuming the body to rotate about the instantaneous centre of rotation of zero velocity (not of zero acceleration), which is the contact point of the rolling body in this case.}
+    \end{align*}
+\end{solution}

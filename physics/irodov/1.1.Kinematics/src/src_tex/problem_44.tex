@@ -1,2 +1,18 @@
 
 \item A wheel rotates around a stationary axis so that the rotation angle $\varphi$ varies with time as $\varphi = at^2$, where $a = 0.20 \text{ rad/s}^2$. Find the total acceleration $w$ of the point $A$ at the rim at the moment $t = 2.5 \text{ s}$ if the linear velocity of the point $A$ at this moment $v = 0.65 \text{ m/s}$.
+
+\begin{solution}
+    \begin{align*}
+        \intertext{Differentiating $\varphi(t)$ with respect to time}
+        \frac{d\varphi}{dt} &= \omega_z = 2at \tag{1}
+        \intertext{For fixed axis rotation, the speed of the point A}
+        v &= \omega R = 2atR \quad \text{or} \quad R = \frac{v}{2at} \tag{2} 
+        \intertext{Differentiating with respect to time}
+        w_t &= \frac{dv}{dt} = 2aR = \frac{v}{t} \quad \text{(using Eq. 1)}
+        \intertext{But,}
+        w_n &= \frac{v^2}{R} = \frac{v^2}{v/2at} = 2atv \quad \text{(using Eq. 2)}
+        \intertext{So,}
+        w &= \sqrt{w_t^2 + w_n^2} = \sqrt{(v/t)^2 + (2atv)^2} = \frac{v}{t}\sqrt{1 + 4a^2t^4}\\
+        &= 0.7 \text{ m/s}^2 \quad \text{(on substituting values)}
+    \end{align*}
+\end{solution}

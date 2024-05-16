@@ -3,3 +3,28 @@
         \item the acceleration \( w' \) of the particle relative to the disc;
         \item the dependence of \( F_{in} \) on the distance from the rotation axis.
     \end{enumerate}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The disk OBAC is rotating with angular velocity $\omega$ about the axis $OO'$ passing through the edge point $O$. The equation of motion in the rotating frame is}
+        m\vec{w}' &= \vec{F} + m\omega^2 \vec{R} + 2m(\vec{v}' \times \vec{\omega}) = \vec{F} + \vec{F}_{\text{in}}
+        \intertext{where $\vec{F}_{\text{in}}$ is the resultant inertial force (pseudo force) which is the vector sum of centrifugal and Coriolis forces.}
+        \intertext{(a) At $A$, $\vec{F}_{\text{in}}$ vanishes.}
+        0 &= -2m\omega^2 R \vec{n} + 2mv'\omega \vec{n}
+        \intertext{where $\vec{n}$ is the inward drawn unit vector to the centre, from the point in question, here $A$.}
+        v' &= \omega R\\
+        \Rightarrow w &= \frac{v'^2}{\rho} = \frac{v'^2}{R} = \omega^2 R
+        \intertext{(b) At $B$,}
+        \vec{F}_{\text{in}} &= m\omega^2 r + 2mv'\omega(-\vec{R})\\
+        v' &= \omega r = \text{constant} \quad (\text{from question})\\
+        \Rightarrow \vec{F}_{\text{in}} &= m\omega^2 r + 2m\omega^2 \vec{R}
+        \intertext{From geometry,}
+        r &= 2R \cos \theta \quad (\text{see figure})\\
+        \Rightarrow |\vec{F}_{\text{in}}| &= m\omega^2 \sqrt{4R^2 - r^2}
+    \end{align*}
+\end{solution}

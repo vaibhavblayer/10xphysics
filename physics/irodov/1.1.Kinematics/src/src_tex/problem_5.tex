@@ -1,2 +1,23 @@
 
 \item Two particles, 1 and 2, move with constant velocities \( \mathbf{v}_1 \) and \( \mathbf{v}_2 \). At the initial moment their radius vectors are equal to \( \mathbf{r}_1 \) and \( \mathbf{r}_2 \). How must these four vectors be interrelated for the particles to collide?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Let the particles collide at the point \( A \) (see figure), whose position vector is \(\vec{r}_3\) (say). If \( t \) be the time taken by each particle to reach point \( A \), then from triangle law of vector addition:}
+        \vec{r}_3 &= \vec{r}_1 + \vec{v}_1 t = \vec{r}_2 + \vec{v}_2 t\\
+        \intertext{So,}
+        \vec{r}_1 - \vec{r}_2 &= (\vec{v}_2 - \vec{v}_1)t \tag{1}\\
+        \intertext{Therefore,}
+        t &= \frac{|\vec{r}_1 - \vec{r}_2|}{|\vec{v}_2 - \vec{v}_1|} \tag{2}\\
+        \intertext{From Eqs. (1) and (2)}
+        \vec{r}_1 - \vec{r}_2 &= (\vec{v}_2 - \vec{v}_1) = \frac{|\vec{r}_1 - \vec{r}_2|}{|\vec{v}_2 - \vec{v}_1|} \\
+        \intertext{Thus,}
+        \frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|} &= \frac{\vec{v}_2 - \vec{v}_1}{|\vec{v}_2 - \vec{v}_1|}
+        \intertext{which is the sought relationship.}
+    \end{align*}
+\end{solution}

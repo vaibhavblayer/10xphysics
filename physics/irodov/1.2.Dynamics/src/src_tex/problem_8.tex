@@ -8,3 +8,31 @@
         \item what value of the angle \( \alpha \) will the time of sliding be the least?
         \item What will it be equal to?
     \end{enumerate}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Let us designate the $x$-axis (see figure) and apply $F_x = mw_x$ for body A}
+        mg \sin \alpha - kmg \cos \alpha &= mw \tag{1}\\
+        \intertext{or}
+        w &= g \sin \alpha - kg \cos \alpha \tag{2}\\
+        \intertext{Now, from kinematical equation:}
+        l \sec \alpha &= 0 + \left( \dfrac{1}{2} \right) wt^2\\
+        t &= \sqrt{2l \sec \alpha /(\sin \alpha - k \cos \alpha)g} \\
+        &= \sqrt{2l/(\sin 2\alpha/2 - k \cos^2 \alpha)g} \text{ (using Eq. 1)}
+    \end{align*}
+
+    \begin{align*}
+        \intertext{For $t_{min}$}
+        \dfrac{d \left( \dfrac{\sin 2\alpha}{2} - k \cos^2 \alpha \right)}{d \alpha} &= 0\\
+        \intertext{i.e.,}
+        \dfrac{2 \cos 2\alpha}{2} + 2k \cos \alpha \sin \alpha &= 0\\
+        \intertext{or}
+        \tan 2\alpha &= - \dfrac{1}{k} \Rightarrow \alpha = 49^\circ\\
+        \intertext{and putting the values of $\alpha$, $k$ and $l$ in Eq. (2) we get $t_{min}$ = 1s.}
+    \end{align*}
+\end{solution}

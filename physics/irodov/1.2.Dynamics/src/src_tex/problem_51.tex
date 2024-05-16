@@ -1,1 +1,20 @@
-\item A particle moves in a plane under the action of a force which is always perpendicular to the particle's velocity and depends on a distance to a certain point on the plane as \( 1/r^n \), where \( n \) is a constant. At what value of \( n \) will the motion of the particle along the circle be \textit{steady}?
+\item A particle moves in a plane under the action of a force which is always perpendicular to the particle's velocity and depends on a distance to a certain point on the plane as \( 1/r^n \), where \( n \) is a constant. At what value of \( n \) will the motion of the particle along the circle be \textit{steady}?\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{This is not central force problem unless the path is a circle about the said point. Rather here \(F_t ( \text{tangential force})\) vanishes. Thus, the equation of motion becomes}
+        v_t &= v_0 \quad \text{constant} \tag{1}\\
+        \intertext{and} 
+        \frac{m v_0^2}{r} &= \frac{A}{r^n} \quad (\text{for } r = r_0) \tag{2}\\
+        \intertext{We can consider the latter equation as the equilibrium under two forces. When the motion is perturbed, we write \(r = r_0 + x\) and the net force acting on the particle is}
+        -\frac{A}{(r_0 + x)^n} + \frac{m v_0^2}{r_0 + x} &= \frac{-A}{r_0^n} \left( 1 - \frac{nx}{r_0} \right) \tag{3}\\
+        \intertext{ }
+        &\quad+ \frac{m v_0^2}{r_0} \left( 1 - \frac{x}{r_0} \right) \tag{4}\\
+        & = \frac{m v_0^2}{r_0^2} (1 - n) x \tag{5}\\
+        \intertext{This opposes the displacement \(x\), if \( n < 1 \). (\( m \frac{v_0^2}{r} \) is an outward directed centrifugal force while \(\frac{A}{r^n}\) is the inward directed external force.)}
+    \end{align*}
+\end{solution}

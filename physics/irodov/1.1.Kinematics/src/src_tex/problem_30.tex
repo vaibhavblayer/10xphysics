@@ -1,2 +1,27 @@
 
 \item Using the conditions of the foregoing problem, draw the approximate time dependence of moduli of the normal \( w_n \) and tangent \( w_t \) acceleration vectors, as well as of the projection of the total acceleration vector \( w \) on the velocity vector direction.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{We have,}
+        v_x &= v_0 \cos \alpha, \quad v_y = v_0 \sin \alpha - gt \\
+        \intertext{Thus,}
+        v^2 &= v_x^2 + v_y^2 = v_0^2 = v_0^2 - 2gt v_0 \sin \alpha + g^2 t^2 \\
+        \intertext{Now,}
+        w_t &= \frac{dv_t}{dt} = \frac{1}{2v_t} \frac{d}{dt} (v_t)^2 = \frac{1}{v} (g^2 t - gv_0 \sin \alpha) \\
+        &= -\frac{g}{v} (v_0 \sin \alpha - gt) = -g \frac{v_y}{v_t} \\
+        \intertext{Hence,}
+        |w_t| &= g \left|\frac{v_y}{v}\right| \\
+        \intertext{Now,}
+        w_n &= \sqrt{w^2 - w_t^2} = \sqrt{g^2 - g^2 \frac{v_y^2}{v_t^2}} \\
+        \intertext{or}
+        w_n &= g \frac{v_x}{v_t} \quad \text{[where } v_x = \sqrt{v_t^2 - v_y^2} = \sqrt{v^2 - v_y^2} \text{]} \\
+        w_v &= w_t = -g \frac{v_y}{v}
+        \intertext{On the basis of obtained expressions or facts the sought plots can be drawn as shown in the figure of answer sheet.}
+    \end{align*}
+\end{solution}

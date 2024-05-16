@@ -1,2 +1,24 @@
 
 \item A train of length \( l = 350 \) m starts moving rectilinearly with constant acceleration \( w = 3.0 \cdot 10^{-2} \) m/s\(^2\); \( t = 30 \) s after the start the locomotive headlight is switched on (event 1), and \( t = 60 \) s after that event the tail signal light is switched on (event 2). Find the distance between these events in the reference frames fixed to the train and to the Earth. How and at what constant velocity \( V \) relative to the Earth must a certain reference frame \( K \) move for the two events to occur in it at the same point?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{In the reference frame fixed to the train, the distance between the two events is obviously equal to $l$. Suppose the train starts moving at time $t=0$ in the positive direction and take the origin $(x=0)$ at the head-light of the train at $t=0$. Then the coordinate of first event in the earth's frame is}
+        x_1 &= \dfrac{1}{2}wt^2 \tag{1}
+        \intertext{and similarly the coordinate of the second event is}
+        x_2 &= \dfrac{1}{2}w(t+\tau)^2 - l \tag{2}
+        \intertext{The distance between the two events is obviously}
+        x_1 - x_2 &= l - w\tau\left(t + \dfrac{\tau}{2}\right) = 0.242 \text{ km} \tag{3}
+        \intertext{in the reference frame fixed on the Earth.}
+        \intertext{For the two events to occur at the same point in the reference frame $K$, moving with constant velocity $V$ relative to the earth, the distance traveled by the frame in the time interval $\tau$ must be equal to the above distance.}
+        V\tau &= l - w\tau \left(t + \dfrac{\tau}{2}\right) \tag{4} \\
+        \intertext{So,}
+        V &= \dfrac{l}{\tau} - w \left(t + \dfrac{\tau}{2}\right) = 4.03 \text{ m/s}  \tag{5}
+        \intertext{The frame $K$ must clearly be moving in a direction opposite to the train so that if (for example) the origin of the frame coincides with the point $x_1$ on the earth at time $t$, it coincides with the point $x_2$ at time $t+\tau$.}
+    \end{align*}
+\end{solution}

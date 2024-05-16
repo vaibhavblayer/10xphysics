@@ -2,4 +2,29 @@
     \begin{enumerate}
         \item the acceleration of the load $m_1$ relative to the elevator shaft and relative to the car;
         \item the force exerted by the pulley on the ceiling of the car.
-    \end{enumerate}
+    \end{enumerate}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us write Newton's second law in vector form \( \vec{F} = m \vec{w} \), for both the blocks (in the frame of ground)}
+        T + m_1 g &= m_1 \vec{w}_1 \tag{1} \\
+        T + m_2 g &= m_2 \vec{w}_2 \tag{2} 
+        \intertext{These two equations contain three unknown quantities \( \vec{w}_1 \), \( \vec{w}_2 \) and \( T \). The third equation is provided by the kinematic relationship between the accelerations}
+        \vec{w}_1 &= \vec{w}_0 + \vec{w}' , \quad \vec{w}_2 = \vec{w}_0 - \vec{w}' \tag{3}
+        \intertext{where \( \vec{w} \) is the acceleration of the mass \( m_1 \) with respect to the pulley or elevator car.}
+        \intertext{Summing up term wise the left hand and the right-hand sides of these kinematical equations, we get}
+        \vec{w}_1 + \vec{w}_2 &= 2 \vec{w}_0 \tag{4}
+        \intertext{The simultaneous solution of Eqs. (1), (2) and (4) yields}
+        \vec{w}_1 &= \dfrac{(m_1 - m_2) \vec{g} + 2 m_2 \vec{w}_0}{m_1 + m_2}
+        \intertext{Using this result in Eq. (3), we get,}
+        \vec{w}' &= \dfrac{m_1 - m_2}{m_1 + m_2} (\vec{g} - \vec{w}_0) \text{and} \quad T = \dfrac{2 m_1 m_2}{m_1 + m_2} (\vec{w}_0 - \vec{g})
+        \intertext{Using the results in Eq. (3) we get, \(\vec{w} = \dfrac{m_1 - m_2}{m_1 + m_2} (\vec{g} - \vec{w}_0)\)}
+        \intertext{(b) Obviously the force exerted by the pulley on the ceiling of the car}
+        \vec{F} &= -2T = \dfrac{4 m_1 m_2}{m_1 + m_2} (\vec{g} - \vec{w}_0)
+        \intertext{Note: One could also solve this problem in the frame of elevator car.}
+    \end{align*}
+\end{solution}

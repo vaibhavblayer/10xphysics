@@ -4,3 +4,34 @@
         \item the horizontal drift of the balloon \( x(y) \);
         \item the total, tangential, and normal accelerations of the balloon.
     \end{enumerate}
+
+\begin{solution}
+    \begin{align*}
+        \intertext{According to the problem}
+        \dfrac{dy}{dt} &= v_0 \quad \text{or} \quad dy = v_0 \, dt \\
+        \intertext{Integrating}
+        \int_0^y dy &= v_0 \int_0^t dt \quad \text{or} \quad y = v_0 t \tag{1} \\
+        \intertext{Also, we have}
+        \dfrac{dx}{dt} &= ay \quad \text{or} \quad dx = ay \, dt = av_0 t \, dt \quad \text{(using Eq. 1)} \\
+        \intertext{So,}
+        \int_0^x dx &= av_0 \int_0^t t \, dt, \quad \text{or} \quad x = \dfrac{1}{2} av_0 t^2 = \dfrac{1}{2} a \dfrac{y^2}{v_0} \quad \text{(using Eq. 1)}
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{According to the problem}
+        v_y &= v_0 \quad \text{and} \quad v_x = ay \tag{2} \\
+        \intertext{So,}
+        v &= \sqrt{v_x^2 + v_y^2} = \sqrt{v_0^2 + ay^2} \\
+        \intertext{Therefore,}
+        w_t = \dfrac{dv}{dt} &= \dfrac{ay}{\sqrt{v_0^2 + ay^2}} \dfrac{dy}{dt} = \dfrac{a^2 y}{\sqrt{1 + (ay/v_0)^2}}
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{Differentiating Eq. (2) with respect to time.}
+        \dfrac{dy}{dt} &= w_y = 0 \quad \text{and} \quad \dfrac{dv_x}{dt} = w_x = a \dfrac{dy}{dt} = av_0 \\
+        \intertext{So,}
+        w = \left|w_x \right| &= av_0 \\
+        \intertext{Hence,}
+        w_n = \sqrt{w^2 - w_t^2} &= \sqrt{a^2 v_0^2 - \dfrac{a^2 y^2}{1 + (ay/v_0)^2}} = \dfrac{av_0}{\sqrt{1 + (ay/v_0)^2}}
+    \end{align*}
+\end{solution}

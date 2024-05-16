@@ -5,3 +5,38 @@
     
         \item with a constant acceleration \( w \) (and the zero initial velocity), while the disc rotates counterclockwise with a constant angular velocity \( \omega \).
     \end{enumerate}
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Therefore the velocity vector of an arbitrary point \( P \) of the solid can be represented as:}
+        \vec{v}_P &= \vec{w} \times r_{PI} = \vec{w} \times \rho_{PI} \tag{1}
+        \intertext{(where \( \rho_{PI} \) is normal location of point \( P \) relative to instantaneous rotation axis passing through point \( I \).)}
+        \intertext{So instantaneous rotation axis  \( I \) is at the perpendicular distance \( \rho_{PI} = v_P / \omega \) from point \( P \).}
+        \intertext{On the basis of Eq.~(1) for the centre of mass (C.M.) of the disk, velocity is}
+        \vec{v}_C &= \vec{w} \times \rho_{CI} \tag{2}
+        \intertext{According to the problem \( \vec{v}_C\ \shortparallel\ \hat{i} \) and \( \vec{w}\ \shortparallel\ \hat{k} \), so to satisfy the Eq.~(2), \( \rho_{CI} \) is directed towards \((- \hat{j})\). Hence point \( I \) is at a distance \( \rho_{CI} = y \), above the centre of the disk along y-axis. Using all these facts in Eq.~(2), we get}
+        v_C &= \omega y \quad \text{or} \quad y = \dfrac{v_C}{\omega} \tag{3}
+        \\
+        \intertext{(a) From the angular kinematical equation}
+        \omega_z &= \omega_{0z} + \beta_z t \tag{4} \\
+        \omega &= \beta t \\
+        \intertext{On the other hand}
+        x &= vt, \quad t = x/v \quad \text{(where \( x \) is the \( x \) coordinate of the C.M.)} \tag{5}
+        \intertext{From Eqs.~(4) and (5),}
+        \omega &= \dfrac{\beta x}{v}
+        \intertext{Using this value of \( \omega \) in Eq.~(3) we get}
+        y &= \dfrac{v_C}{\omega} = \dfrac{v}{\beta x/v} = \dfrac{v^2}{\beta x} \quad \text{(hyperbola)} \\
+        \intertext{(b) As centre \(C\) moves with constant acceleration \( w\), with zero initial velocity}
+        x &= \dfrac{1}{2} wt^2 \quad \text{and} \quad v_C = wt \\
+        \intertext{Therefore,}
+        v_C &= w\sqrt{\dfrac{2x}{w}} = \sqrt{2 x w} \\
+        \intertext{Hence,}
+        y &= \dfrac{v_C}{\omega} = \dfrac{\sqrt{2 w x}}{\omega}\quad \text{(parabola)}
+    \end{align*}
+\end{solution}

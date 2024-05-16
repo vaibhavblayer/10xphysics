@@ -6,3 +6,67 @@
         \item the distance \( s \) covered by the particle during the first 4.0 and 8.0 s; draw the approximate plot \( s(t) \).
     \end{enumerate}
 
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{As the particle leaves the origin at \(t = 0\)}
+        \Delta x = x &= \int v_x dt \tag{1}\\
+        \mathbf{v} &= v_0 \left(1 - \dfrac{t}{\tau}\right) 
+        \intertext{(where \(\mathbf{v}_0\) is directed towards the \(+\)ve \(x\)-axis).}
+        v_x &= v_0 \left(1 - \dfrac{t}{\tau} \right) \tag{2}
+        \intertext{From Eqs. (1) and (2),}
+        x &= \int_0^t v_0 \left(1 - \dfrac{t}{\tau} \right) dt = v_0 t \left(1 - \dfrac{t}{2\tau}\right) \tag{3}
+        \intertext{Hence \(x\) coordinate of the particle at \(t = 6\,s\)}
+        x &= 10 \times 6 \left(1 - \dfrac{6}{2 \times 5}\right) = 24\,\text{cm} = 0.24\,\text{m}
+        \intertext{Similarly at \(t = 10\,s\)}
+        x &= 10 \times 10 \left(1 - \dfrac{10}{2 \times 5}\right) = 0
+        \intertext{and at \(t = 20\,s\)}
+        x &= 10 \times 20 \left(1 - \dfrac{20}{2 \times 5}\right) = -200\,\text{cm} = -2\,\text{m}
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{(b) At the moment the particle is at a distance of 10 cm from the origin, \(x = \pm 10\,\text{cm}\).}
+        \intertext{Putting \(x = + 10\) in Eq. (3)}
+        10 &= 10t \left(1 - \dfrac{t}{10}\right) \quad \text{or} \quad t^2 - 10t + 10 = 0\\
+        t &= \dfrac{10 \pm \sqrt{100 - 40}}{2} = 5 \pm \sqrt{15}\,s
+        \intertext{Now putting \(x = - 10\) in Eq. (3)}
+        -10 &= 10 \left(1 - \dfrac{t}{10}\right)\\
+        t &= 5 \pm \sqrt{35}\,s
+        \intertext{As \(t\) cannot be negative, so,}
+        t &= \left(5 + \sqrt{35}\right)\,\text{s}
+        \intertext{Hence the particle is at a distance of 10 cm from the origin at three moments of time:}
+        t &= 5 \pm \sqrt{15}\,\text{s}, \quad 5 \pm \sqrt{35}\,\text{s}
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{(c) We have}
+        \mathbf{v} &= v_0 \left(1 - \dfrac{t}{\tau}\right)
+        \intertext{So,}
+        v = \lvert \mathbf{v}\rvert &= 
+        \begin{cases} 
+        v_0 \left(1 - \dfrac{t}{\tau}\right) & \text{for } t \le \tau \\
+        v_0 \left(\dfrac{t}{\tau} - 1\right) & \text{for } t > \tau 
+        \end{cases}
+        \intertext{So,}
+        s &= \int_0^t v_0 \left(1 - \dfrac{t}{\tau}\right) dt \quad \text{for } t \le \tau = v_0 t \left(1 - t / 2 \tau\right) \tag{4}\\
+        \intertext{and}
+        s &= \int_0^{\tau}v_0 \left(1 - \dfrac{t}{\tau}\right) dt + \int_{\tau}^{t}v_0\left(\dfrac{t}{\tau}-1\right)dt \quad \text{for } t > \tau\\
+        &= v_0 \tau [1 + (1 - t/\tau)^2/2] \quad \text{for } t > \tau \tag{5}
+        \intertext{For \(t = 4\,s\)}
+        s &= \int_0^4 v_0 \left(1 - \dfrac{t}{\tau}\right) dt = \int_0^4 10 \left(1 - \dfrac{t}{5}\right) dt = 24\,\text{cm}
+        \intertext{For \(t = 8\,s\)}
+        s &= \int_0^5 10 \left(1 - \dfrac{t}{5}\right)dt + \int_5^8 10\left(\dfrac{t}{5}-1\right) dt
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{On integrating and simplifying, we get}
+        s &= 34\,\text{cm}
+        \intertext{On the basis of Eqs. (3) and (4), \(x(t)\) and \(s(t)\) plots can be drawn as shown in the answer sheet.}
+    \end{align*}
+\end{solution}

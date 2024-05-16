@@ -1,2 +1,28 @@
 
 \item A ball starts falling with zero initial velocity on a smooth inclined plane forming an angle $\alpha$ with the horizontal. Having fallen the distance $h$, the ball rebounds elastically off the inclined plane. At what distance from the impact point will the ball rebound for the second time?
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The ball strikes the inclined plane \( O\alpha \) at point \( O \) (origin) with velocity}
+        v_0 &= \sqrt{2 gb} \tag{1}\\
+        \intertext{As the ball classically rebounds, it recalls with the same velocity \( v_0 \), at the same angle \( \alpha \) from the normal on y axis (see figure). Let the ball strike the incline second time at \( P \), which is at a distance \( l \) (say) from the point \( O \), along the incline. From the equation}
+        y &= v_{0_y} t + \frac{1}{2} w_y t^2\\
+        0 &= v_0 \cos \alpha \tau - \frac{1}{2} g \cos \alpha \tau^2\\
+        \intertext{where \( \tau \) is the time of motion of ball in air while moving from \( O \) to \( P \).}
+        \intertext{As \( \tau \neq 0 \), so,}
+        \tau &= \frac{2 v_0}{g} \tag{2}\\
+        \intertext{Now from the equation,}
+        x &= v_{0_x} t + \frac{1}{2} w_x t^2\\
+        l &= v_0 \sin \alpha \tau + \frac{1}{2} g \sin \alpha \tau^2\\
+        \intertext{So,}
+        l &= v_0 \sin \alpha \left( \frac{2 v_0}{g} \right) + \frac{1}{2} g \sin \alpha \left( \frac{2 v_0}{g} \right)^2 = \frac{4 v_0^2 \sin \alpha}{g} \quad \text{(using Eq. 2)}\\
+        \intertext{Hence the sought distance,}
+        l &= \frac{4 (2 gb) \sin \alpha}{g} = 8 b \sin \alpha \quad \text{(using Eq. 1)}
+    \end{align*}
+\end{solution}

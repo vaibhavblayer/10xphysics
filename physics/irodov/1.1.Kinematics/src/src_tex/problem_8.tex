@@ -1,2 +1,21 @@
 
 \item Two boats, A and B, move away from a buoy anchored at the middle of a river along the mutually perpendicular straight lines: the boat A along the river, and the boat B across the river. Having moved off an equal distance from the buoy the boats returned. Find the ratio of times of motion of boats $\tau_A / \tau_B$ if the velocity of each boat with respect to water is $\eta = 1.2$ times greater than the stream velocity.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let $l$ be the distance covered by the boat $A$ along the river as well as by the boat $B$ across the river. Let $v_0$ be the stream velocity and $v'$ the velocity of each boat with respect to water. Therefore time taken by the boat $A$ in its journey}
+        t_A &= \dfrac{l}{v' + v_0} + \dfrac{l}{v' - v_0} = \dfrac{2lv'}{v'^2 - v_0^2}\\
+        \intertext{and for the boat $B$}
+        t_B &= \dfrac{l}{\sqrt{v'^2 - v_0^2}} + \dfrac{l}{\sqrt{v'^2 - v_0^2}} = \dfrac{2l}{\sqrt{v'^2 - v_0^2}}\\
+        \intertext{Hence,}
+        \dfrac{t_A}{t_B} &= \dfrac{v'}{\sqrt{v'^2 - v_0^2}} = \dfrac{\eta}{\sqrt{\eta^2 - 1}} \quad \left( \text{where } \eta = \dfrac{v'}{v_0}\right)\\
+        \intertext{On substitution,}
+        \dfrac{t_A}{t_B} &= 1.8
+    \end{align*}
+\end{solution}

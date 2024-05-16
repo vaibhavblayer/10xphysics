@@ -4,4 +4,24 @@
             \node at (0, 0) {{samplediagram.png}};
             \node at (0, -2) {Fig. 1.28};
         \end{tikzpicture}
-    \end{center}
+    \end{center}\begin{solution}
+    
+    \begin{align*}
+        \intertext{The sleeve is free to slide along the rod $AB$. Thus the centrifugal force acts on it in the outward direction along the river.}
+        m\omega' &= m\omega^2 r \\
+        \intertext{where}
+        v' &= \frac{dr}{dt} \\
+        \intertext{But,}
+        w' &= \frac{vdv}{dr} = \frac{d}{dr} \left( \frac{1}{2} v^2 \right)
+    \end{align*}
+
+    \begin{align*}
+        \intertext{So,}
+        \frac{1}{2} v^2 &= \frac{1}{2} \omega^2 r^2 + \text{constant} \\
+        \intertext{or}
+        v^2 &= v_0^2 + \omega^2 r^2 \\
+        \intertext{$v_0$ being the initial velocity when $r = 0$. The Coriolis force is then}
+        2m\omega\sqrt{v_0^2 + \omega^2 r^2} &= 2m\omega r \sqrt{1 + \frac{v_0^2}{\omega^2 r^2}} = 2.83 \ \text{N \ (on substituting values)}
+    \end{align*}
+    
+\end{solution}

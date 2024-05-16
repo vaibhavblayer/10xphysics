@@ -1,2 +1,21 @@
 
 \item A point moves in the plane so that its tangential acceleration \( w_t = a \), and its normal acceleration \( w_n = bt^4 \), where \( a \) and \( b \) are positive constants, and \( t \) is time. At the moment \( t = 0 \) the point was at rest. Find how the curvature radius \( R \) of the point's trajectory and the total acceleration \( w \) depend on the distance covered \( s \).
+
+
+\begin{solution}
+    \begin{align*}
+        \intertext{As $w_t = a$ and at $t = 0$, the point is at rest.}
+        \intertext{So, $v(t)$ and $s(t)$ are}
+        v &= at \quad \text{and} \quad s = \frac{1}{2}at^2 \tag{1}
+        \intertext{Let $R$ be the curvature radius, then}
+        w_n &= \frac{v^2}{R} = \frac{a^2 t^2}{R} = \frac{2as}{R} \quad \text{(using Eq. 1)}
+        \intertext{But according to the problem}
+        w_n &= bt^4
+        \intertext{So,}
+        bt^4 &= \frac{a^2 t^2}{R} \quad \text{or} \quad R = \frac{a^2}{bt^2} = \frac{a^2}{2bs} \quad \text{(using Eq. 1)} \tag{2}
+        \intertext{Therefore,}
+        w &= \sqrt{w_t^2 + w_n^2} = \sqrt{a^2 + \left(\frac{2as}{R}\right)^2} = \sqrt{a^2 + \left(4bs^2 /a^2\right)^2} \quad \text{(using Eq. 2)}
+        \intertext{Hence,}
+        w &= a\sqrt{1 + \left(4bs^2 /a^3\right)^2}
+    \end{align*}
+\end{solution}

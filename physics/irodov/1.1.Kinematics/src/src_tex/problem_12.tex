@@ -1,2 +1,24 @@
 
 \item Three points are located at the vertices of an equilateral triangle whose side equals \(a\). They all start moving simultaneously with velocity \(v\) constant in modulus, with the first point heading continually for the second, the second for the third, and the third for the first. How soon will the points converge?
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{1.12 From the symmetry of the problem all the three points are always located at the vertices of equilateral triangles of varying side length and finally meet at the centroid of the initial equilateral triangle. Symmetry of the problem tells us that the velocity with which point 1 approaches 2 is equal to the velocity by which 2 approaches 3 and 3 approaches 1.}
+        \intertext{Method 1:}
+        \intertext{The rate at which 1 approaches 2 or the separation between 1 and 2 decreases with time is the projection of $(V_{12})$ towards $(r_{21})$. At an arbitrary instant when the equilateral triangle has edge length $l < a$, the velocity with which 1 approaches 2 becomes}
+        -\dfrac{dl}{dt} &= v-v \cos \left(\dfrac{2\pi}{3}\right)\\
+        \intertext{On integrating:}
+        \int_{a}^{0} -dl &= \dfrac{3v}{2} \int_{0}^{t} dt \quad (\text{where $t$ is the sought time})\\
+        a &= \dfrac{3}{2} vt \quad \text{so}, \quad t = \dfrac{2a}{3v}\\
+        \intertext{Method 2:}
+        \intertext{If we concentrate on the motion of any one point say 3, one can observe that at all the time its velocity makes an angle $30^\circ$ with $3O$ and is equal to $v \cos 30^\circ = \sqrt{3}/2v$.}
+        t &= \dfrac{a/\sqrt{3}}{(\sqrt{3}/2)v} = \dfrac{2a}{3v} \tag{8}\\
+        \intertext{(In the figure, velocity of point 3 has been resolved into two rectangular components, one pointing towards the centre of the triangle and other perpendicular to it.)}
+    \end{align*}
+\end{solution}

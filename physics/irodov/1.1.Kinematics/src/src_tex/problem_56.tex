@@ -4,3 +4,22 @@
         \item the moduli of the angular velocity and the angular acceleration at the moment $t = 10.0 \, \text{s}$;
         \item the angle between the vectors of the angular velocity and the angular acceleration at that moment.
     \end{enumerate}
+
+\begin{solution}
+    \begin{align*}
+        \intertext{We have}
+        \vec{\omega} &= ati + bt^2j \tag{1}\\
+        \intertext{So,}
+        \omega &= \sqrt{(at)^2 + (bt^2)^2}, \text{ thus, } \omega\bigg|_{t=10s} = 7.81 \text{ rad/s}
+        \intertext{Differentiating Eq. (1) with respect to time}
+        \vec{\beta} &= \dfrac{d\omega}{dt} = ai + 2btj \tag{2}\\
+        \intertext{So,}
+        \beta &= \sqrt{a^2 + (2bt)^2}
+        \intertext{and}
+        \vec{\beta}\bigg|_{t=10s} = 1.3 \text{ rad/s}^2
+        \intertext{(b)}
+        \cos \alpha &= \dfrac{\vec{\omega} \cdot \vec{\beta}}{\omega \beta} = \dfrac{(ati + bt^2j) \cdot (ai + 2btj)}{\sqrt{(at)^2 + (bt^2)^2} \sqrt{a^2 + (2bt)^2}}
+        \intertext{Putting the values of (a) and (b) and taking \( t = 10 \text{ s} \), we get}
+        \alpha &= 17^\circ
+    \end{align*}
+\end{solution}

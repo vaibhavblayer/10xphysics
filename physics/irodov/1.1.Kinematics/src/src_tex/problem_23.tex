@@ -1,3 +1,29 @@
 
 \item A point moves rectilinearly with deceleration whose modulus depends on the velocity \( v \) of the particle as \( w = -a\sqrt{v} \), where \( a \) is a positive constant. At the initial moment the velocity of the point is equal to \( v_0 \). What distance will it traverse before it stops? What time will it take to cover that distance?
     
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{According to the problem}
+        -\dfrac{v \, dv}{ds} &= a\sqrt{v} \quad \text{(as $v$ decreases with time)}\\
+        \intertext{or}
+        -\int_{v_0}^{0} \sqrt{v} \, dv &= a \int_{0}^{s} ds\\
+        \intertext{On integrating we get,}
+        s &= \dfrac{2}{3a} v_0^{3/2}
+    \end{align*}
+
+    \begin{align*}
+        \intertext{Again according to the problem}
+        -\dfrac{dv}{dt} &= a \sqrt{v} \quad \text{or} \quad -\dfrac{dv}{\sqrt{v}} = a \, dt \\
+        \intertext{or}
+        -\int_{v_0}^{0} \dfrac{dv}{\sqrt{v}} &= a \int_{0}^{t} dt\\
+        \intertext{Thus,}
+        t &= \dfrac{2 \sqrt{v_0}}{a}
+    \end{align*}
+\end{solution}

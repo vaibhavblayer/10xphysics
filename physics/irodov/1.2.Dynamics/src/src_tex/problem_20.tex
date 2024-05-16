@@ -5,3 +5,28 @@
         \end{tikzpicture}
     \end{center}
     only between the wedge and the body $m$, the friction coefficient being equal to $k$. The masses of the pulley and the thread are negligible. Find the acceleration of the body $m$ relative to the horizontal surface on which the wedge slides.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us draw free body diagram of each body and fix the coordinate system, as shown in the figure. After analysing the motion of $M$ and $m$ on the basis of force diagrams, let us draw the kinematic diagram for accelerations (see figure). As the length of thread is constant so,}
+        ds_{mM} &= ds_M \, \text{and as} \, \vec{v}_{mM} \, \text{and} \, \vec{v}_M \, \text{do not change their directions that’s why} \\
+        |\vec{w}_{mM}| &= |\vec{w}_M| = w \quad (\text{say})\\
+        \vec{w}_m &= \vec{w}_{mM} + \vec{w}_M \quad (1)\\
+        \intertext{As}
+        w_m &= \sqrt{2} \, w  
+        \intertext{From equation $F_x = muv_x$ for the wedge and the block,}
+        T - N &= Muw \quad (2)\\
+        N &= muv \quad (3)
+        \intertext{Now, from equation $F_y = muv_y$ for the block,}
+        mg - T - kN &= muw \quad (4)
+        \intertext{Simultaneous solution of Eqs. (2), (3) and (4) yields}
+        w &= \dfrac{mg}{(km+2m+M)} = \dfrac{g}{\left( k+2+\dfrac{M}{m} \right)}
+        \intertext{Hence, using Eq. (1)}
+        w_m &= \dfrac{g\sqrt{2}}{(2+k+\dfrac{M}{m})}
+    \end{align*}
+\end{solution}

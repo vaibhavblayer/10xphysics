@@ -4,3 +4,31 @@
         \item starts going up;
         \item is at rest.
     \end{enumerate}
+
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{At the initial moment, obviously the tension in the thread connecting $m_1$ and $m_2$ equals the weight of $m_2$.}
+        \intertext{(a) For the block } m_2 \text{ to come down or the block } m_1 \text{ to go up, the conditions is} \\
+        m_2g - T &\geq 0 \text{ and } T - m_1g \sin \alpha - fr \geq 0 \\
+        \intertext{where $T$ is tension and $fr$ is friction which in the limiting case equals $km_1g \cos \alpha$.}
+        \text{Then } m_2g - m_1g \sin \alpha &> km_1g \cos \alpha \\
+        \text{or } \dfrac{m_2}{m_1} &> (k \cos \alpha + \sin \alpha) \tag{a}
+    \end{align*}
+    \begin{align*}
+        \intertext{(b) Similarly in the case} \\
+        m_1g \sin \alpha - m_2g &> fr_{\lim} \\
+        \text{or } m_1g \sin \alpha - m_2g &> km_1g \cos \alpha \\
+        \text{or } \dfrac{m_2}{m_1} &< (\sin \alpha - k \cos \alpha) \tag{b}
+    \end{align*}
+    \begin{align*}
+        \intertext{(c) For this case, neither kind of motion is possible, and $fr$ need not be limiting.} \\
+        \intertext{Hence, } (k \cos \alpha + \sin \alpha) &> \dfrac{m_2}{m_1} > (\sin \alpha - k \cos \alpha) \tag{c}
+    \end{align*}
+\end{solution}

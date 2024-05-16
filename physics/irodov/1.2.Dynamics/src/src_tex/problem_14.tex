@@ -4,3 +4,27 @@
             \node at (0, 0) {{image.png}};
         \end{tikzpicture}
     \end{center}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us write Newton's second law for both, bar 1 and body 2 in terms of projection having taken the positive direction of $x_1$ and $x_2$ as shown in the figure and assuming that body 2 starts sliding, say, upward along the incline.}
+        T_1 - m_1 g \sin \alpha &= m_1 w_1 & \tag{1}\\
+        m_2 g - T_2 &= m_2 w & \tag{2}\\
+        \intertext{For the pulley, moving in vertical direction from the equation }
+        F_x &= m w_x\\
+        2T_2 - T_1 &= (m_p) w_1 = 0 \\
+        \intertext{(as mass of the pulley $m_p = 0$)}
+        T_1 &= 2T_2 & \tag{3}\\
+        \intertext{As the length of the threads are constant, the kinematic relationship of accelerations becomes}
+        w &= 2w_1 & \tag{4}\\
+        \intertext{Simultaneous solutions of all these equations yields}
+        w &= \dfrac{2g \left( 2 \eta - \sin \alpha \right)}{4 \eta + 1} = \dfrac{2g \left( \eta - \sin \alpha \right)}{4 \eta / m_1 + 1}\\
+        \intertext{As $\eta > 1$, $w$ is directed vertically downward, and hence in vector form}
+        \vec{w} &= \dfrac{2 \left( 2 \eta - \sin \alpha \right)}{4 \eta + 1} \vec{g}
+    \end{align*}
+\end{solution}

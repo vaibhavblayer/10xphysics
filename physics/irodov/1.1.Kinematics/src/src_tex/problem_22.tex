@@ -4,3 +4,31 @@
         \item the time dependence of the velocity and the acceleration of the particle;
         \item the mean velocity of the particle averaged over the time that the particle takes to cover the first \( s \) metres of the path.
     \end{enumerate}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) As particle is in unidirectional motion, it is directed along the x-axis all the time. At $t = 0$, $x = 0$.}
+        \Delta x &= x = s \quad \text{and} \quad w = \frac{dv}{dt} = v \frac{dv}{ds} = \frac{1}{2} \frac{d}{ds} \left( v^2 \right)\\
+        \intertext{According to the problem $v = \alpha \sqrt{x} = \alpha \sqrt{s}$}
+        v^2 &= \alpha^2 s \\
+        \intertext{and}
+        w &= \frac{1}{2} \frac{d}{ds} \left( v^2 \right) = \frac{1}{2} \frac{d}{ds} \left( \alpha^2 s \right) = \frac{\alpha^2}{2} \tag{1}
+        \intertext{As,}
+        w &= \frac{dv}{dt} = \frac{\alpha^2}{2} \quad \text{so,} \quad dv = \frac{\alpha^2}{2} dt
+        \intertext{On integrating,}
+        v &= \frac{\alpha^2}{2} t = v(t) \tag{2}
+    \end{align*}
+        
+    \begin{align*}
+        \intertext{(b) Let $t$ be the time to cover first $s \, \mathrm{m}$ of the path. From Eq. (2)}
+        s &= \int v\, dt = \int_{0}^{t} \frac{\alpha^2}{2} t\, dt = \frac{\alpha^2}{2} \frac{t^2}{2} = \frac{\alpha^2 t^2}{2}\\
+        t &= \frac{2}{\alpha} \sqrt{s} \tag{3}
+        \intertext{The mean velocity of particle}
+        \left< v \right> &= \frac{\int v(t)\, dt}{\int dt} = \frac{\int_{0}^{\frac{2 \sqrt{s}}{\alpha}} \frac{\alpha^2}{2} t\, dt}{\frac{2 \sqrt{s}}{\alpha}} = \frac{\alpha \sqrt{s}}{2}
+    \end{align*}
+\end{solution}

@@ -1,1 +1,28 @@
 \item A car moves uniformly along a horizontal sine curve \( y = a \sin (x/\alpha) \), where \( a \) and \( \alpha \) are certain constants. The coefficient of friction between the wheels and the road is equal to \( k \). At what velocity will the car ride without sliding?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Since the car follows a sinusoidal curve, so the maximum velocity at which it can ride without sliding is the point of minimum radius of curvature obviously in this case the static friction between the car and the road is limiting. Hence, from the equation}
+        F_n &= mu_n\\
+        \dfrac{mv^2}{R} &\le kmg\\
+        v &\le \sqrt{kRg}\\
+        v_{max} &= \sqrt{kR_{min}g} \tag{1}
+        \intertext{We know that the radius of curvature for a curve at any point $(x,y)$ is given as}
+        R &= \left|\dfrac{[1+(dy/dx)^2]^{3/2}}{(d^2y)/dx^2}\right| \tag{2}
+        \intertext{For the given curve,}
+        \dfrac{dy}{dx} &= \dfrac{a}{\alpha} \cos\left(\dfrac{x}{\alpha}\right) \quad \text{and} \quad \dfrac{d^2y}{dx^2} = \dfrac{-a}{\alpha^2} \sin \dfrac{x}{\alpha} \\
+        \intertext{Substituting this value in Eq. (2), we get}
+        R &= \dfrac{[1+(a^2/\alpha^2) \cos^2 (x/\alpha)]^{3/2}}{(a/\alpha^2) \sin (x/\alpha)}\\
+        \intertext{For the minimum $R$,}
+        \dfrac{x}{\alpha} &= \dfrac{\pi}{2}\\
+        \intertext{and therefore, corresponding radius of curvature}
+        R_{min} &= \dfrac{\alpha^2}{a} \tag{3}\\
+        \intertext{Hence, from Eqs. (1) and (3)}
+        v_{max} &= \alpha \sqrt{\dfrac{kg}{a}}
+    \end{align*}
+\end{solution}

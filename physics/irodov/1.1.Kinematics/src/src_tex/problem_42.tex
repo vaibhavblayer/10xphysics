@@ -4,3 +4,42 @@
         \item of a parabola \(y = ax^2\).
         \item of an ellipse \(\left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2 = 1\); \(a\) and \(b\) are constants here.
     \end{enumerate}
+
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) Let us differentiate twice the path equation \(y(x)\) with respect to time,}
+        \frac{dy}{dt} &= 2ax \frac{dx}{dt} , \quad \frac{d^2y}{dt^2} = 2a \left[ \left( \frac{dx}{dt} \right)^2 + x \frac{d^2x}{dt^2} \right] \\
+        \intertext{Since the particle moves uniformly, its acceleration at all points of the path is normal and at the point \(x=0\) it coincides with the direction of derivative \(\frac{d^2y}{dt^2}\).}
+        \intertext{Keeping in mind that at the point \(x=0\), \(\left| \frac{dx}{dt} \right| = v\),}
+        w &= \left. \frac{d^2y}{dt^2} \right|_{x=0} = 2av^2 = w_n \\
+        \intertext{So,}
+        w_n &= 2av^2 = \frac{v^2}{R} \quad \text{or} \quad R = \frac{1}{2a} \\
+        \intertext{Note: We can also calculate it from the formula of problem 1.35(b).}
+        \intertext{(b) Differentiating the equation of the trajectory with respect to time we see that}
+        b^2 x \frac{dx}{dt} + a^2 y \frac{dy}{dt} &= 0 \tag{1} \\
+        \intertext{which implies that the vector \((b^2 x \vec{i} + a^2 y \vec{j})\) is normal to the velocity vector}
+        \vec{v} &= \frac{dx}{dt} \vec{i} + \frac{dy}{dt} \vec{j} \text{ which, of course, is along the tangent. Thus the former vector is along the normal and the normal component of acceleration is clearly} \\       
+        w_n &= \frac{b^2 x \frac{d^2x}{dt^2} + a^2 y \frac{d^2y}{dt^2}}{(b^4 x^2 + a^4 y^2)^{1/2}}
+        \intertext{At \(x = 0\), \(y = \pm b\), so at \(x = 0\)}
+        w_n &= \pm \left. \frac{d^2y}{dt^2} \right|_{x=0}
+        \intertext{Differentiating Eq. (1)}
+        b^2 \left( \frac{dx}{dt} \right)^2 + b^2 x \left( \frac{d^2x}{dt^2} \right) + a^2 \left( \frac{dy}{dt} \right)^2 + a^2 y \left( \frac{d^2 y}{dt} \right) &= 0
+        \intertext{Also from Eq. (1)}
+        \frac{dy}{dt} &= 0 \quad \text{at \(x=0\)} \\
+        \intertext{So,}
+        \left( \frac{dx}{dt} \right) &= \pm v \quad \text{(since tangential velocity is constant \(=v\))} \\
+        \intertext{Thus,}
+        \left( \frac{d^2 y}{dt^2} \right) &= \pm \frac{b}{a^2} v^2 \\
+        \intertext{and}
+        \left| w_n \right| &= \frac{bv^2}{a^2} = \frac{v^2}{R} \\
+        \intertext{This gives}
+        R &= \frac{a^2}{b}
+    \end{align*}
+\end{solution}

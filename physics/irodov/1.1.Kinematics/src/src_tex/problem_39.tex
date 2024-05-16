@@ -1,2 +1,19 @@
 
 \item A point moves along an arc of a circle of radius \( R \). Its velocity depends on the distance covered \( s \) as \( v = \alpha\sqrt{s} \), where \( \alpha \) is a constant. Find the angle \( \alpha \) between the vector of the total acceleration and the vector of velocity as a function of \( s \).
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{From the equation}
+        v &= a\sqrt{s}\\
+        w_t &= \frac{dv}{dt} = \frac{a}{2\sqrt{s}} \frac{ds}{dt} = \frac{a}{2\sqrt{s}} a\sqrt{s} = \frac{a^2}{2}
+        \intertext{and}
+        w_n &= \frac{v^2}{R} = \frac{a^2 s}{R}
+        \intertext{As \(w_t\) is a positive constant, the speed of the particle increases with time, and the tangential acceleration vector and velocity vector coincides in direction. Hence the angle between \(\mathbf{v}\) and \(\mathbf{w}\) is equal to angle between \(\mathbf{w_t}\) and \(\mathbf{w_n}\) and \(\alpha\) can be found by the formula}
+        \tan \alpha &= \left| \frac{w_n}{w_t} \right| = \frac{\frac{a^2 s}{R}}{a^2/2} = \frac{2s}{R}
+    \end{align*}
+\end{solution}

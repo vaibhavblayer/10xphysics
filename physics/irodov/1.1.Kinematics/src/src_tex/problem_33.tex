@@ -1,2 +1,23 @@
 
 \item A cannon fires successively two shells with velocity \( v_0 = 250 \ \text{m/s} \); the first at the angle \( \theta_1 = 60^\circ \) and the second at the angle \( \theta_2 = 45^\circ \) to the horizontal, the azimuth being the same. Neglecting the air drag, find the time interval between firings leading to the collision of the shells.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let the shells collide at the point \( P(x, y) \). If the first shell takes \( t \) to collide with the second and \( \Delta t \) be the time interval between the firings, then}
+        x &= v_0 \cos \theta_1 \, t = v_0 \cos \theta_2 \, (t - \Delta t) \tag{1}\\
+        \intertext{and}
+        y &= v_0 \sin \theta_2 \, (t - \Delta t) - \dfrac{1}{2} \, g \, (t - \Delta t)^2 \tag{2}\\
+        \intertext{From Eq. (1)}
+        t &= \dfrac{\Delta t \cos \theta_2}{\cos \theta_2 - \cos \theta_1} \tag{3}\\
+        \intertext{From Eqs. (2) and (3)}
+        \Delta t &= \dfrac{2 v_0 \sin(\theta_1 - \theta_2)}{g (\cos \theta_2 + \cos \theta_1)} 
+        \intertext{as \( \Delta t \neq 0 \)}
+        &= 11\text{s } \text{(on substituting values)}
+    \end{align*}
+\end{solution}

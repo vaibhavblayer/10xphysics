@@ -4,3 +4,43 @@
         \item the magnitude of the total acceleration of the particle at the points \( l = 0 \) and \( l = \pm a \);
         \item the minimum value of the total acceleration \( w_{\text{min}} \) and the corresponding displacement \( l_m \).
     \end{enumerate}
+
+
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Differentiating the equation $l = a \sin \omega t$}
+        \dfrac{dl}{dt} &= v = a\omega \cos \omega t\\
+        w_t = \dfrac{dv}{dt} &= -a\omega^2 \sin \omega t \tag{1}
+        \intertext{and}
+        w_n = \dfrac{v^2}{R} &= \dfrac{a^2 \omega^2 \cos^2 \omega t}{R} \tag{2} 
+        \intertext{(a) At the point $l = 0$, $\sin \omega t = 0$ and $\cos \omega t = \pm 1$ so, $\omega t = 0, \pi$, etc.}
+        \intertext{Hence,}
+        w = w_n &= \dfrac{a^2 \omega^2}{R} = 2.6 \, \text{m/s$^2$} \quad \text{(on substituting values)}
+        \intertext{Similarly at $l = \pm a$, $\sin \omega t = \pm 1$ and $\cos \omega t = 0$, so, $w_n = 0$.}
+        \intertext{Hence,}
+        w = |w_t| &= a\omega^2 = 3.2 \, \text{m/s$^2$} \quad \text{(on substituting values)}
+        \intertext{(b) Using $\sin \omega t = l / a$ in Eqs. (1) and (2) we get}
+        w_t &= -\omega^2 l
+        \intertext{and}
+        w_n &= \dfrac{\omega^2}{R} \left(a^2 - l^2 \right)
+        \intertext{Therefore,}
+        w_l &= \sqrt{\omega^4 l^2 + \dfrac{\omega^4}{R^2} \left( a^2 - l^2\right)^2} = f(l)
+        \intertext{On differentiating with respect to $l$ and putting}
+        \dfrac{dw_l}{dl} &= 0
+        \intertext{we get,}
+        l^2 = l_m^2 &= a^2 - \dfrac{R^2}{2} = a^2 \left(1 - \dfrac{R^2}{2a^2} \right)
+        \intertext{So,}
+        l_m &= \pm a \sqrt{1 - \dfrac{R^2}{2a^2}} = \pm 0.37 \, \text{m} \quad \text{(on substituting values)}
+        \intertext{The corresponding $w_{min}$ at $l = l_m$ is}
+        w_{min} &= \sqrt{\omega^4 \left(a^2 - \dfrac{R^2}{2} \right) + \dfrac{\omega^4}{R^2} \left( \dfrac{R^2}{2}\right)^2}\\
+        &= a\omega^2 \sqrt{1 - \dfrac{R^2}{2a^2} + \dfrac{R^2}{4a^2}}\\
+        &= a\omega^2 \sqrt{1 - \left( \dfrac{R}{2a}\right)^2} = 2.5 \, \text{m/s$^2$} \quad \text{(on substituting values)}
+    \end{align*}
+\end{solution}

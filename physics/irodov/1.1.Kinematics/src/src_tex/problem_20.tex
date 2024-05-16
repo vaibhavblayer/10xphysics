@@ -5,3 +5,42 @@ Find:
     \item the velocity $v$ and the acceleration $w$ of the particle as functions of time;
     \item the time interval $\Delta t$ taken by the particle to return to the initial points, and the distance $s$ covered during that time.
 \end{enumerate}
+
+\begin{solution}
+    
+    \begin{align*}
+        \intertext{(a) We have}
+        \vec{r} &= at(1-\alpha t)\\
+        \intertext{So,}
+        \vec{v} &= \frac{d\vec{r}}{dt} = a(1-2\alpha t)\\
+        \intertext{and}
+        \vec{w} &= \frac{d\vec{v}}{dt} = -2\alpha a\\
+        \intertext{(b) From the equation}
+        \vec{r} &= at(1-\alpha t)\\
+        \vec{r} &= 0, \text{ at } t=0 \text{ and also at } t=\Delta t = \frac{1}{\alpha}
+    \end{align*}
+    
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+        
+    \begin{align*}
+        \intertext{So, the sought time}
+        \Delta t & = \frac{1}{\alpha} \\
+        \intertext{As}
+        \vec{v} & = a (1-2\alpha t) \\
+        \intertext{So,}
+        v = |\vec{v}| & = 
+        \begin{cases}
+            a(1-2\alpha t) & \text{for } t \leq \frac{1}{2\alpha}\\
+            a(2\alpha t-1) & \text{for } t > \frac{1}{2\alpha}
+        \end{cases}\\
+        \intertext{Hence, the sought distance}
+        s & = \int \vec{v} \, dt = \int_{0}^{\frac{1}{2\alpha}}a(1-2\alpha t) \, dt + \int_{\frac{1}{2\alpha}}^{\frac{1}{\alpha}} a(2\alpha t-1) \, dt\\
+        \intertext{Simplifying, we get}
+        s & = \frac{a}{2\alpha}
+    \end{align*}
+
+\end{solution}

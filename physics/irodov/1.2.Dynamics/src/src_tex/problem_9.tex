@@ -4,3 +4,25 @@
             \node at (0, 0) {{image.png}};
         \end{tikzpicture}
     \end{center}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us fix the $x - y$ co-ordinate system to the wedge, taking the $x$-axis up along the incline and the $y$-axis perpendicular to it (see figure).}
+        \intertext{Now, we draw the free body diagram for the bar.}
+        \intertext{Let us apply Newton’s second law in projection form along $x-$ and $y-$axes for the bar}
+        T \cos \beta - mg \sin \alpha - fr &= 0 \tag{1}\\
+        T \sin \beta + N - mg \cos \alpha &= 0 \tag{2}
+        \intertext{or $N = mg \cos \alpha - T \sin \beta$}
+        \intertext{But, $fr = kN$ and using Eq. (2) in Eq. (1), we get}
+        T &= mg \sin \alpha + kmg \cos \alpha / (\cos \beta + k \sin \beta) \tag{3}
+        \intertext{For $T_{\min}$ the value of $(\cos \beta + k \sin \beta)$ should be maximum}
+        \frac{d (\cos \beta + k \sin \beta)}{d\beta} &= 0 \quad \text{or}\quad \tan \beta = k
+        \intertext{Putting this value of $\beta$ in Eq. (3), we get}
+        T_{\min} &= \dfrac{mg \left( \sin \alpha + k \cos \alpha \right)}{\sqrt{1+k^{2}}}
+    \end{align*}
+\end{solution}

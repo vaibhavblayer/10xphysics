@@ -1,1 +1,20 @@
-\item A chain of length \( l \) is placed on a smooth spherical surface of radius \( R \) with one of its ends fixed at the top of the sphere. What will be the acceleration \( w \) of each element of the chain when its upper end is released? It is assumed that the length of the chain \( l < \frac{1}{2} \pi R \).
+\item A chain of length \( l \) is placed on a smooth spherical surface of radius \( R \) with one of its ends fixed at the top of the sphere. What will be the acceleration \( w \) of each element of the chain when its upper end is released? It is assumed that the length of the chain \( l < \frac{1}{2} \pi R \).\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us consider an element of length $ds$ at an angle $\varphi$ from the vertical diameter. As the speed of this element is zero at initial instant of time, its centripetal acceleration is zero, and hence, $dN-\lambda ds \, g \cos \varphi = 0$, where $\lambda$ is the linear mass density of the chain. Let $T$ and $T + dT$ be the tension at the upper and the lower ends of $ds$, then we have from $F_t = m w_t$,}
+        (T + dT) + \lambda\,ds\,g\,\sin \varphi - T & = \lambda\,ds\,w_t\\ 
+        \intertext{or}
+        dT + \lambda \, R\,d\varphi\,g\,\sin \varphi & = \lambda \, ds\,w_t
+        \intertext{If we sum the above equation for all elements, the term $\int dT =0$, because there is no tension at the free ends, so}
+        \lambda g R \int_0^{l/R} \sin \varphi \, d\varphi & = \lambda w_t \int_0^l ds = \lambda l w_t\\
+        \intertext{Hence,}
+        w_t & = \frac{gR}{l} \left(1-\cos\frac{l}{R} \right) \tag{1}
+        \intertext{As $w_n = a$ at initial moment, so}
+        w = |w_t| & = \frac{gR}{l} \left(1-\cos\frac{l}{R} \right) \tag{2}
+    \end{align*}
+\end{solution}

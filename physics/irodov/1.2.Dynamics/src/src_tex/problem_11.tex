@@ -1,1 +1,21 @@
 \item A bar of mass $m$ resting on a smooth horizontal plane starts moving due to the force $F = mg/3$ of constant magnitude. In the process of its rectilinear motion the angle $\alpha$ between the direction of this force and the horizontal varies as $\alpha = as$, where $a$ is a constant, and $s$ is the distance traversed by the bar from its initial position. Find the velocity of the bar as a function of the angle $\alpha$.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Newton's second law of motion in projection form, along horizontal or $x$-axis, i.e.,}
+        F_x &= mw_x \text{ gives} \tag{1}\\
+        F \cos (\alpha s) &= mv \dfrac{dv}{ds} & \text{(as $\alpha = as$)} \tag{2}\\
+        F \cos (\alpha s) ds &= mv dv \tag{3}\\
+        \intertext{Integrating, over the limits for $v(s)$}
+        \dfrac{F}{m} \int_{0}^{x} \cos (\alpha x) dx &= \dfrac{v^2}{2} \tag{4}\\
+        \intertext{or}
+        v &= \sqrt{\dfrac{2F \sin \alpha}{ma}} & \text{(as $\alpha = as$)} \tag{5}\\
+        &= \sqrt{2g \sin \alpha / 3a} & \text{(using $F = mg/3$)} \tag{6}
+        \intertext{This is the sought relationship.}
+    \end{align*}
+\end{solution}

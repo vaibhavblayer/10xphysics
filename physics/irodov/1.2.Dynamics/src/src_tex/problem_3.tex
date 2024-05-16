@@ -8,3 +8,35 @@
         \item the force of interaction of the bars in the process of motion;
         \item the minimum value of the angle \(\alpha\) at which the bars start sliding down.
     \end{enumerate}
+
+    \begin{solution}
+        \begin{center}
+            \begin{tikzpicture}
+                \pic at (0, 0) {frame=3cm};
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{enumerate}
+            \item 
+            \begin{align*}
+                \intertext{Let us indicate the positive direction of \( x \)-axis along the incline (see figure). The figures show the force diagram for the blocks.}
+                \intertext{Let \( R \) be the force of interaction between the bars and they are obviously sliding down with the same constant acceleration \( w \).}
+                \intertext{Newton's second law of motion in projection form along \( x \)-axis for the blocks gives}
+                m_1 g \sin \alpha - k_1 m_1 g \cos \alpha + R &= m_1 w \tag{1}\\
+                m_2 g \sin \alpha - R - k_2 m_2 g \cos \alpha &= m_2 w \tag{2}
+                \intertext{Solving Eqs. (1) and (2) simultaneously, we get}
+                w &= g \sin \alpha - g \cos \alpha \dfrac{k_1 m_1 + k_2 m_2}{m_1 + m_2} \tag{3}\\
+                \intertext{and}
+                R &= \dfrac{m_1 m_2 (k_1 - k_2) g \cos \alpha}{m_1 + m_2}            
+            \end{align*}
+        \item 
+            \begin{align*}
+                \intertext{When the blocks just slide down the plane, \( w = 0 \), then from Eq. (3)}
+                g \sin \alpha - g \cos \alpha \dfrac{k_1 m_1 + k_2 m_2}{m_1 + m_2} &= 0\\
+                \intertext{or}
+                (m_1 + m_2) \sin \alpha &= (k_1 m_1 + k_2 m_2) \cos \alpha
+                \intertext{Hence,}
+                \tan \alpha &= \dfrac{k_1 m_1 + k_2 m_2}{m_1 + m_2}
+            \end{align*}
+    \end{enumerate}
+    \end{solution}

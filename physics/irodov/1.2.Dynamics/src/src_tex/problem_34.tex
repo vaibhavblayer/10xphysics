@@ -1,1 +1,20 @@
 \item A chain of mass $m$ forming a circle of radius $R$ is slipped on a smooth round cone with half-angle $\theta$. Find the tension of the chain if it rotates with a constant angular velocity $\omega$ about a vertical axis coinciding with the symmetry axis of the cone.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The sought tensile stress acts on each element of the chain. Hence divide the chain into small, similar elements so that each element may be assumed as a particle. We consider one such element of mass $dm$, which subtends angle $d\alpha$ at the centre. The chain moves along a circle of known radius $R$ with known angular speed $\omega$ and certain forces act on it. We have to find one of these forces.}
+        F_x &= m\omega_x^2
+        \intertext{From Newton's second law in projection form, $F_x = m \omega_x^2$, we get}
+        2T \sin (d\alpha/2) - dN \cos \theta &= dm \, \omega^2 R \tag{1} \\
+        F_z &= m \omega_z
+        \intertext{and from $F_z = m \omega_z$, we get}
+        dN \sin \theta &= (dm) \, g  \tag{2}
+        \intertext{Then putting $dm = md\alpha/2\pi$ and $\sin(d\alpha/2) = d\alpha /2$ and solving, we get}
+        T &= \frac{m \left( \omega^2 R + g \cot \theta \right)}{2\pi} \tag{3}
+    \end{align*}
+\end{solution}

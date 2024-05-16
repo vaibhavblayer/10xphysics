@@ -1,2 +1,29 @@
 
 \item A particle moves in the plane $xy$ with constant acceleration $w$ directed along the negative $y$ axis. The equation of motion of the particle has the form $y = ax - bx^2$, where $a$ and $b$ are positive constants. Find the velocity of the particle at the origin of coordinates.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{According to the problem}
+        \vec{w} &= w(-\hat{j})\\
+        \text{So,} \quad w_x &= \dfrac{dv_x}{dt} = 0 \quad \text{and} \quad w_y = \dfrac{dv_y}{dt} = -w \tag{1}\\
+        \intertext{Differentiating equation of trajectory, $y = ax - bx^2$, with respect to time}
+        \dfrac{dy}{dt} &= a\dfrac{dx}{dt} - 2bx\dfrac{dx}{dt} \tag{2}\\
+        \text{So,} \quad \dfrac{dy}{dt}\bigg|_{x=0} & = a\dfrac{dx}{dt}\bigg|_{x=0}
+        \intertext{Again differentiating with respect to time}
+        \dfrac{d^2y}{dt^2} &= a\dfrac{d^2x}{dt^2} - 2b\left( \dfrac{dx}{dt}\right)^2 - 2bx\dfrac{d^2x}{dt^2}\\
+        \text{or} \quad -w &= a(0) - 2b\left( \dfrac{dx}{dt}\right)^2 - 2bx(0) \quad (\text{using Eq. 1})\\
+        \text{or} \quad \dfrac{dx}{dt} &= \sqrt{\dfrac{w}{2b}} \quad (\text{using Eq. 1}) \tag{3}\\
+        \text{Using Eq. (3) in Eq. (2)}\\
+        \dfrac{dy}{dt}\bigg|_{x=0} &= a\sqrt{\dfrac{w}{2b}} \tag{4}\\
+        \intertext{Hence, the velocity of the particle at the origin}
+        v &= \sqrt{\left( \dfrac{dx}{dt}\bigg|_{x=0}\right)^2 + \left( \dfrac{dy}{dt}\bigg|_{x=0}\right)^2}\\
+        &= \sqrt{\dfrac{w}{2b} + a^2\dfrac{w}{2b}} \quad (\text{using Eqs. 3 and 4})\\
+        \text{Hence,} \quad v &= \sqrt{\dfrac{w}{2b}(1 + a^2)}
+    \end{align*}
+\end{solution}

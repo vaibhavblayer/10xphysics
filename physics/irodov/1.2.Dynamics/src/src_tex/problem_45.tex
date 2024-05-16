@@ -1,4 +1,15 @@
 \item A body of mass \( m \) rests on a horizontal plane with the friction coefficient \( k \). At the moment \( t = 0 \) a horizontal force is applied to it, which varies with time as \( \mathbf{F} = at \), where \( a \) is a constant vector.
     \begin{enumerate}
         \item Find the distance traversed by the body during the first \( t \) seconds after the force action began.
-    \end{enumerate}
+    \end{enumerate}\begin{solution}
+    \begin{align*}
+        \intertext{Since the applied force is proportional to the time and the frictional force also exists, the motion does not start just after applying the force. The body starts its motion when \( F \) equals the limiting friction. Let the motion start after time \( t_0 \), then}
+        F &= at_0 = kmg \quad \text{or} \quad t_0 = \dfrac{kmg}{a}
+        \intertext{So, for \( t \leq t_0 \), the body remains at rest and for \( t > t_0 \) obviously}
+        \dfrac{mdv}{dt} &= a (t - t_0) \quad \text{or} \quad mdv = a(t - t_0) \, dt
+        \intertext{Integrating, and noting \( v = 0 \) at \( t = t_0 \), we have for \( t > t_0 \)}
+        \int_{0}^{v} mdv &= a \int_{0}^{t} (t - t_0) \, dt \quad \text{or} \quad v = \dfrac{a}{2m}(t - t_0)^2
+        \intertext{Thus,}
+        s &= \int_{t_0}^{t} v dt = \dfrac{a}{2m} \int_{t_0}^{t} (t - t_0)^2 \, dt = \dfrac{a}{6m} (t - t_0)^3
+    \end{align*}
+\end{solution}

@@ -1,2 +1,20 @@
 
 \item A point traversed half the distance with a velocity \( v_0 \). The remaining part of the distance was covered with velocity \( v_1 \) for half the time, and with velocity \( v_2 \) for the other half of the time. Find the mean velocity of the point averaged over the whole time of motion.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Let \(s\) be the total distance traversed by the point and \(t_1\) the time taken to cover half the distance. Further let \(2t\) be the time to cover the rest half of the distance.}
+        \intertext{Therefore,}
+        \dfrac{s}{2} &= v_0 t_1 \quad \text{or} \quad t_1 = \dfrac{s}{2v_0}\\
+        \intertext{and}
+        \dfrac{s}{2} &= (v_1 + v_2)t \quad \text{or} \quad 2t = \dfrac{s}{v_1 + v_2}
+        \intertext{Hence the sought average velocity is given by}
+        \langle u \rangle &= \dfrac{s}{t_1 + 2t} = \dfrac{s}{[s/2v_0] + [s/[(v_1 + v_2)]} = \dfrac{2v_0 (v_1 + v_2)}{v_1 + v_2 + 2v_0}
+    \end{align*}
+\end{solution}

@@ -4,3 +4,31 @@
         \item the distance $s$ traversed by the point during the time $t$;
         \item the angle between the point's velocity and acceleration vectors.
     \end{enumerate}
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Differentiating motion law: \(x = a \sin \omega t, y = a(1 - \cos \omega t)\), with respect to time,}
+        v_x &= a \omega \cos \omega t \tag{1}\\
+        v_y &= a \omega \sin \omega t \tag{1}
+        \intertext{So,}
+        \vec{v} &= a \omega \cos \omega t \hat{i} + a \omega \sin \omega t \hat{j} \tag{2}
+        \intertext{and}
+        v &= a \omega = \text{constant} \tag{2}
+        \intertext{Differentiating Eq. (1) with respect to time}
+        \vec{w} &= \frac{d \vec{v}}{dt} = -a \omega^2 \sin \omega t \hat{i} + a \omega^2 \cos \omega t \hat{j} \tag{3}
+        \intertext{(a) The distance \(s\) traversed by the point during the time \(\tau\) is given by}
+        s &= \int_{0}^{\tau} v \, dt = \int_{0}^{\tau} a \omega \, dt = a \omega \tau \tag{using Eq. 2}
+        \intertext{(b) Taking scalar product of \(\vec{v}\) and \(\vec{w}\)}
+        \vec{v} \cdot \vec{w} &= (a \omega \cos \omega t \hat{i} + a \omega \sin \omega t \hat{j}) \cdot (-a \omega^2 \sin \omega t \hat{i} + a \omega^2 \cos \omega t \hat{j})
+    \end{align*}
+    \begin{align*}
+        \text{So,} \quad \vec{v} \cdot \vec{w} &= -a^2 \omega^2 \sin \omega t \cos \omega t + a^2 \omega^3 \sin \omega t \cos \omega t = 0
+        \intertext{Thus, \(\vec{v} \perp \vec{w}\), i.e., the angle between velocity vector and acceleration vector equals \(\pi/2\).}
+    \end{align*}
+\end{solution}

@@ -7,4 +7,29 @@
     \begin{enumerate}
         \item its velocity as a function of time;
         \item the distance covered by the particle between two successive stops, and the mean velocity over this time.
-    \end{enumerate}
+    \end{enumerate}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us fix $x - y$ co-ordinate system to the given plane, taking $x$-axis in the direction along which the force vector was oriented at the moment $t = 0$, then the fundamental equation of dynamics expressed via the projection on $x$ and $y$ axes gives,}
+        F \cos \omega t &= m \dfrac{dv_x}{dt}\\
+        F \sin \omega t &= m \dfrac{dv_y}{dt}
+        \intertext{(a) Using the condition $v(0) = 0$, we obtain}
+        v_x &= \dfrac{F}{m \omega} \sin \omega t\\
+        v_y &= \dfrac{F}{m \omega} (1 - \cos \omega t)\\
+        \intertext{Hence,}
+        v &= \sqrt{v_x^2 + v_y^2} = \left( \dfrac{2F}{m \omega} \right) \left| \sin \left( \dfrac{\omega t}{2} \right) \right|
+        \intertext{(b) It is seen from this that the velocity $v$ turns into zero after the time interval $\Delta t$, which can be found from the relation,}
+        \omega \dfrac{\Delta t}{2} &= \pi
+        \intertext{Consequently, the sought distance is}
+        s &= \int_0^{\Delta t} v dt = \dfrac{8F}{m \omega^2}
+        \intertext{Average velocity,}
+        <u> &= \dfrac{\int v dt}{\int dt}\\
+        \intertext{So,}
+        <u> &= \dfrac{\int_0^{2\pi/\omega} \dfrac{2F}{m \omega} \sin \left( \dfrac{\omega t}{2} \right) dt}{2\pi/\omega} = \dfrac{4F}{\pi m \omega}
+    \end{align*}
+\end{solution}

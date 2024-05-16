@@ -3,4 +3,22 @@
         \begin{tikzpicture}
             \node at (0, 0) {Diagram};
         \end{tikzpicture}
-    \end{center}
+    \end{center}\begin{solution}
+    \begin{align*}
+        \intertext{We have}
+        F &= F_0\sin \omega t\\
+        \intertext{or}
+        m \dfrac{d\vec{v}}{dt} &= F_0\sin \omega t \quad \text{or} \quad m d\vec{v} = F_0\sin \omega t \, dt\\
+        \intertext{On integrating,}
+        mv &= \dfrac{-F_0}{\omega} \cos \omega t + C \quad \text{(where $C$ is integration constant)}\\
+        \intertext{When $t=0, v=0,$ so}
+        C &= \dfrac{F_0}{m \omega}\\
+        \intertext{Hence,}
+        \vec{v} &= \dfrac{-F_0}{m \omega} \cos \omega t + \dfrac{F_0}{m \omega}\\
+        \intertext{As $\cos \omega t \leq 1$ so,}
+        \vec{v} &= \dfrac{F_0}{m \omega} (1 - \cos \omega t)\\
+        \intertext{Thus,}
+        s &= \int_{0}^{t} \vec{v}\, dt = \dfrac{F_0 t}{m \omega} - \dfrac{F_0 \sin \omega t}{m \omega^2} = \dfrac{F_0}{m \omega^2} (\omega t - \sin \omega t).
+    \end{align*}
+    \begin{center}(See figure in the answer sheet)\end{center}
+\end{solution}

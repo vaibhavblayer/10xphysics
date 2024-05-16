@@ -1,2 +1,21 @@
 
 \item A point moves along a circle with a velocity \( v = at \), where \( a = 0.50 \, \text{m/s}^2 \). Find the total acceleration of the point at the moment when it covered the \( n \)-th (\( n = 0.10 \)) fraction of the circle after the beginning of motion.
+\begin{solution}
+    \begin{align*}
+        \intertext{The velocity of the particle \(\nu = at\).}
+        \dfrac{dv}{dt} &= w_{t} = a \tag{1} \\
+        \intertext{and}
+        w_{n} &= \dfrac{v^2}{R} = \dfrac{a^2 t^2}{R} \quad \text{(using \(v = at\))} \tag{2} \\
+        \intertext{From}
+        s &= \int v\, dt \\
+        2 \pi R \eta &= \int_{0}^{t} v\, dt = \int_{0}^{t} at\, dt \\
+        \dfrac{4 \pi \eta}{a} &= \dfrac{t^2}{R} \tag{3} \\
+        \intertext{So,}
+        w_{n} &= 4 \pi a \eta \\
+        \intertext{From Eqs. (2) and (3),}
+        w_{n} &= 4 \pi a \eta \\
+        \intertext{Hence,}
+        w &= \sqrt{w_{t}^2 + w_{n}^2} \\
+        &= \sqrt{a^2 + (4 \pi a \eta)^2} = a \sqrt{1 + 16 \pi^2 \eta^2} = 0.8 \,\text{m/s}^2
+    \end{align*}
+\end{solution}

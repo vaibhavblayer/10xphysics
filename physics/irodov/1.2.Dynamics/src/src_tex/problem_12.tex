@@ -1,1 +1,17 @@
-\item A horizontal plane with the coefficient of friction \( k \) supports two bodies: a bar and an electric motor with a battery on a block. A thread attached to the bar is wound on the shaft of the electric motor. The distance between the bar and the electric motor is equal to \( l \). When the motor is switched on, the bar, whose mass is twice as great as that of the other body, starts moving with a constant acceleration \( w \). How soon will the bodies collide?
+\item A horizontal plane with the coefficient of friction \( k \) supports two bodies: a bar and an electric motor with a battery on a block. A thread attached to the bar is wound on the shaft of the electric motor. The distance between the bar and the electric motor is equal to \( l \). When the motor is switched on, the bar, whose mass is twice as great as that of the other body, starts moving with a constant acceleration \( w \). How soon will the bodies collide?\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{From the Newton’s second law in projection form}
+        \text{For the bar,} \quad T - 2 \ k \ m \ g &= (2m) \ w \tag{1}\\
+        \text{For the motor,} \quad T - kmg &= mw' \tag{2}\\
+        \intertext{Now, from the equation of kinematics in the frame of bar or motor}
+        l &= \frac{1}{2} (w + w') \ t^2 \tag{3}\\
+        \intertext{From Eqs. (1), (2) and (3) we get on eliminating $T$ and $w'$}
+        t &= \sqrt{\frac{2l}{kg + 3w}}
+    \end{align*}
+\end{solution}

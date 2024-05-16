@@ -1,1 +1,25 @@
-\item A rifle was aimed at the vertical line on the target located precisely in the northern direction, and then fired. Assuming the air drag to be negligible, find how much off the line, and in what direction, will the bullet hit the target. The shot was fired in the horizontal direction at the latitude $\varphi = 60^\circ$, the bullet velocity $v = 900$ m/s, and the distance from the target equals $s = 1.0$ km.
+\item A rifle was aimed at the vertical line on the target located precisely in the northern direction, and then fired. Assuming the air drag to be negligible, find how much off the line, and in what direction, will the bullet hit the target. The shot was fired in the horizontal direction at the latitude $\varphi = 60^\circ$, the bullet velocity $v = 900$ m/s, and the distance from the target equals $s = 1.0$ km.\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Define the axes as shown with \( z \) along the local vertical, \( x \) due east and \( y \) due north. (We assume we are in the northern hemisphere.) Then the Coriolis force has the components as}
+        F_{\text{cor}} &= -2m\left( \vec{\omega} \times \vec{v} \right)
+        \intertext{Hence,}
+        &= 2m\omega \left[ v_y \cos\theta - v_z \sin\theta\right)\hat{i} - v_x \cos\theta \, \hat{j} + v_x \cos\theta \left(\right] \hat{k}\\
+        &= 2m\omega \left( v_y \cos\theta - v_z \sin\theta\right) \hat{i}
+        \intertext{Since \( v_x \) is small when the direction in which the gun is fired is due north. Thus the equations of motion (neglecting centrifugal forces) are}
+        x &= 2m\omega \left( v_y \sin\varphi - v_z \cos\varphi \right),\, \ddot{y} = 0, \text{ and } \ddot{z} = -g
+        \intertext{Integrating we get}
+        y &= v \quad (\text{constant})\\
+        z &= -gt \text{ and } x = 2\omega v \sin\varphi t + \omega g t^{2} \cos\varphi
+        \intertext{Finally,}
+        x &= \omega vt^{2} \sin\varphi + \dfrac{1}{3}\omega g t^{3} \cos\varphi
+        \intertext{Now, \( v \gg gt \) in the present case. So,}
+        x &= \omega v \sin\varphi \left(\dfrac{s}{v}\right)^{2} = \omega \sin\theta \dfrac{s^2}{v}\\
+        &= 7 \text{ cm (to the east)}
+    \end{align*}
+\end{solution}

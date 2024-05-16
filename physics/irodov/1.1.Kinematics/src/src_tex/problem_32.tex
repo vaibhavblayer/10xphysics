@@ -1,2 +1,26 @@
 
 \item A cannon and a target are \(5.10 \text{ km}\) apart and located at the same level. How soon will the shell launched with the initial velocity \(240 \text{ m/s}\) reach the target in the absence of air drag?
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Total time of motion}
+        \tau &= \dfrac{2v_0\sin\alpha}{g}  \; \text{or} \; \sin\alpha = \dfrac{\tau g}{2v_0} = \dfrac{9.8\tau}{2 \times 240} \tag{1} \\
+        \intertext{and horizontal range}
+        R &= v_0\cos\alpha\tau  \; \text{or}  \; \cos\alpha = \dfrac{R}{v_0\tau} = \dfrac{5100}{240\tau} = \dfrac{85}{4\tau} \tag{2} \\
+        \intertext{From Eqs. (1) and (2)}
+        \dfrac{(9.8)^2\tau^2}{(480)^2} + \dfrac{(85)^2}{(4\tau)^2} &= 1 \\
+        \intertext{On simplifying}
+        \tau^4 - 2400\tau^2 + 1083750 &= 1 \\
+        \intertext{Solving for \(\tau^2\), we get}
+        \tau^2 &= \dfrac{2400 \pm \sqrt{1425000}}{2} = \dfrac{2400 \pm 1194}{2} \\
+        \intertext{Thus,}
+        \tau &= 42.39\, \text{s} = 0.71 \, \text{min} \\
+        \text{and} \quad \tau &= 24.55\, \text{s} = 0.41 \, \text{min} \, (\text{depending on the angle } \alpha)
+    \end{align*}
+\end{solution}

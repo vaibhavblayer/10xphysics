@@ -1,2 +1,20 @@
 
 \item A car starts moving rectilinearly, first with acceleration $w = -5.0\ m/s^2$ (the initial velocity is equal to zero), then uniformly, and finally, decelerating at the same rate $w$, comes to a stop. The total time of motion equals $\tau = 25\ s$. The average velocity during that time is equal to $\langle v \rangle = 72\ km$ per hour. How long does the car move uniformly?
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{As the car starts from rest and finally comes to a stop, and the rate of acceleration and deceleration are equal, the distances covered as well as the times taken are same in these phases of motion.}
+        \intertext{Let $\Delta t$ be the time for which the car moves uniformly. Then the acceleration/deceleration time is $(\tau - \Delta t)/2$ each. So,}
+        \langle u \rangle \tau &= 2\left\{ \dfrac{1}{2}w \dfrac{(\tau - \Delta t)^2}{4} + w \dfrac{(\tau - \Delta t)}{2} \Delta t \right\}
+        \intertext{or}
+        \Delta t^2 &= \tau^2 - \dfrac{4 \langle u \rangle \tau}{w}
+        \intertext{Hence,}
+        \Delta t &= \tau \sqrt{1 - \dfrac{4 \langle u \rangle}{w \tau}} = 15 \, s
+    \end{align*}
+\end{solution}

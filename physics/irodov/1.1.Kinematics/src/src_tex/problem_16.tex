@@ -1,2 +1,36 @@
 
 \item Two particles, 1 and 2, move with constant velocities \(v_1\) and \(v_2\) along two mutually perpendicular straight lines toward the intersection point O. At the moment \(t = 0\) the particles were located at the distances \(l_1\) and \(l_2\) from the point O. How soon will the distance between the particles become the smallest? What is it equal to?
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{After time \( t > 0 \), the separation between the particles}
+        l &= \sqrt{(l_1 - v_1 t)^2 + (l_2 - v_2 t)^2}\\
+        \intertext{For \( l \) and hence \( l^2 \) to be minimum}
+        \dfrac{dl^2}{dt} &= 0\\
+        \intertext{or}
+        \dfrac{d}{dt} \left\{(l_1 + v_1 t)^2 + (l_2 - v_2 t)^2\right\} &= 0\\
+        \intertext{which gives}
+        t &= \dfrac{(v_1 l_1 - v_2 l_2)}{v_1^2 + v_2^2}
+        \intertext{On using the value of \( t \), in the expression of \( l \)}
+        l_{\min} &= \dfrac{|v_1 l_2 - v_2 l_1|}{\sqrt{v_1^2 + v_2^2}}
+        \intertext{Alternate:}
+        \intertext{Let the particles 1 and 2 be at points \( B \) and \( A \) respectively at \( t = 0 \), at the distances \( l_1 \) and \( l_2 \) from intersection point \( O \).}
+        \intertext{Let us fix the inertial frame with the particle 2. Now the particle 1 moves relative to this reference frame with a relative velocity \( \vec{v}_{12} = \vec{v}_1 - \vec{v}_2 \), and its trajectory is the straight line \( BP \). Obviously, the minimum distance between the particles is equal to the length of the perpendicular \( AP \) dropped from point \( A \) onto the straight line \( BP \) (Fig. (a)).}
+        \intertext{From Fig. (b), \( v_{12} = \sqrt{v_1^2 + v_2^2} \), \( \tan \theta = \dfrac{v_1}{v_2} \)}
+        \intertext{So,}
+        \cos \theta &= \dfrac{v_2}{\sqrt{v_1^2 + v_2^2}} \quad \text{and} \quad \sin \theta = \dfrac{v_1}{\sqrt{v_1^2 + v_2^2}} \tag{1}
+        \intertext{From Fig. (a), the shortest distance}
+        AP &= AM \sin \theta = (OA - OM) \sin \theta = (l_2 - l_1 \cot \theta) \sin \theta\\
+        \intertext{or}
+        AP &= \left(l_2 - l_1 \dfrac{v_2}{v_1}\right) \dfrac{v_1}{\sqrt{v_1^2 + v_2^2}} = \dfrac{|v_1 l_2 - v_2 l_1|}{\sqrt{v_1^2 + v_2^2}} \tag{using Eq. 1}
+        \intertext{The sought time \( t \) is}
+        t &= \dfrac{BP}{|\vec{v}_{12}|} = \dfrac{BM + MP}{|\vec{v}_{12}|} = \dfrac{l_1 \csc \theta + (l_2 - l_1 \cot \theta) \cos \theta}{\sqrt{v_1^2 + v_2^2}}\\
+        &= \dfrac{l_2 \cos \theta + l_1 \sin \theta}{\sqrt{v_1^2 + v_2^2}} = \dfrac{l_2 v_2 + l_1 v_1}{v_1^2 + v_2^2} \tag{using Eq. 1}
+    \end{align*}
+\end{solution}

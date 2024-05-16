@@ -1,2 +1,32 @@
 
 \item Two bodies were thrown simultaneously from the same point: one, straight up, and the other, at an angle of $\theta = 60^\circ$ to the horizontal. The initial velocity of each body is equal to $v_0 = 25$ m/s. Neglecting the air drag, find the distance between the bodies $t = 1.70$ s later.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us suppose one of the bodies, say 1, is thrown upwards and the other body (say 2) at an angle $\theta$ to the horizontal. Indicate $y$-axis vertically upward and $x$-axis along horizontal. Let after the time interval $t$, the particles 1 and 2 have coordinates $(0, y_1)$ and $(x_2, y_2)$.}
+        \text{For body 1,} \\
+        y_1 &= v_0 t - \dfrac{1}{2}gt^2\\
+        \intertext{and for body 2,}
+        x_2 &= v_0 \cos{\theta} \, t \quad \text{and} \quad y_2 = v_0 \sin{\theta} \, t - \dfrac{1}{2}gt^2\\
+        \intertext{Thus the sought separation between the particles 1 and 2 after the time interval $t$}
+        l &= \sqrt{x_2^2 + (y_1 - y_2)^2} = \sqrt{(v_0 \cos{\theta} \, t)^2 + \{v_0t(1 - \sin{\theta})\}^2}\\
+        &= v_0 t \sqrt{2(1 - \sin{\theta})}= \text{22 m, on putting the values of } v_0, t \text{ and } \theta
+        \intertext{Alternate: The solution of this problem becomes interesting in the frame attached with one of the bodies. Let the body thrown straight up be 1 and the other body be 2, then for the body 1 in the frame of 2 from the kinematical equation for constant acceleration (since both are moving under constant acceleration) is}
+        \vec{r}_{12} &= \vec{r}_{0(12)} + \vec{v}_{0(12)} t + \dfrac{1}{2} \vec{w}_{12} t^2
+        \intertext{So,}
+        \vec{r}_{12} &= \vec{v}_{0(12)} t \quad (\text{because} \; \vec{w}_{12} = 0 \; \text{and} \; \vec{r}_{0(12)}=0)\\
+        \left| \vec{r}_{12} \right| &= \left| \vec{v}_{0(12)} \right| t\\
+        \intertext{But,}
+        \left| \vec{v}_{01} \right| &= \left| \vec{v}_{02} \right| = v_0\\
+        \intertext{So, from properties of triangle}
+        \left| \vec{v}_{0(12)} \right| &= \sqrt{v_0^2 + v_0^2 - 2v_0v_0 \cos{\left( \dfrac{\pi}{2} - \theta_0 \right) }}\\
+        \intertext{Hence, the sought distance}
+        \left| \vec{r}_{12} \right| &= v_0 t \sqrt{2 \left(1 - \sin{\theta_0}\right)} = \text{22 m}
+    \end{align*}
+\end{solution}

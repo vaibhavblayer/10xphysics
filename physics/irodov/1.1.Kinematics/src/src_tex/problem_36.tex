@@ -1,2 +1,19 @@
 
 \item A particle A moves in one direction along a given trajectory with a tangential acceleration \( w_t = at \), where \( a \) is a constant vector coinciding in direction with the \( x \) axis (Fig. 1.4), and \( \tau \) is a unit vector coinciding in direction with the velocity vector at a given point. Find how the velocity of the particle depends on \( x \) provided that its velocity is negligible at the point \( x = 0 \).
+
+\begin{solution}
+    \begin{align*}
+        \intertext{In accordance with the problem}
+        w_t &= \mathbf{a} \cdot \tau\\
+        \intertext{But,}
+        w_t &= \frac{vdv}{ds} \quad \text{or} \quad vdv = w_t ds\\
+        \intertext{So,}
+        vdv &= (\mathbf{a} \cdot \tau) ds = \mathbf{a} \cdot ds \tau = \mathbf{a} \cdot d \mathbf{r}\\
+        \intertext{or}
+        vdv &= a i \cdot d \mathbf{r} = adx \quad \text{(because} \quad \mathbf{a} \text{ is directed towards the x-axis)}\\
+        \intertext{So,}
+        \int_0^v v \, dv &= a \int_0^x \, dx\\
+        \intertext{Hence,}
+        v^2 &= 2ax \quad \text{or} \quad v = \sqrt{2ax}
+    \end{align*}
+\end{solution}

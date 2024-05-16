@@ -1,1 +1,27 @@
 \item A ball suspended by a thread swings in a vertical plane so that its acceleration values in the extreme and the lowest position are equal. Find the thread deflection angle in the extreme position.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{1.86 The ball has only normal acceleration at the lowest position and only tangential acceleration at either of the extreme positions, Let \( v \) be the speed of the ball at its lowest position and \( l \) be length of the thread, then according to the problem}
+        \dfrac{v^2}{l} &= g \sin \alpha \tag{1} 
+        \intertext{where \(\alpha\) is the maximum deflection angle.}
+        \intertext{From Newton’s law in projection form: }
+        F_t &= m v_t\\
+        -mg \sin \theta &= m v \dfrac{dv}{l d\theta}\\
+        -gl \sin \theta d\theta &= v dv
+        \intertext{On integrating both the sides within their limits.}
+        - gl \int_0^\alpha \sin \theta d\theta &= \int_v^0 v dv\\
+        \intertext{or\quad \quad \quad \quad \( v^2 = 2gl (1 - \cos \alpha)\) \tag{2}}
+        \intertext{Note: Eq. (2) can easily be obtained by the conservation of mechanical energy of the ball in the uniform field of gravity.}
+        \intertext{From Eqs. (1) and (2) with \(\theta = \alpha\)}
+        \sin \alpha &= 2 (1 - \cos \alpha)\\
+        \sin \alpha + 2 \cos \alpha &= 2
+        \intertext{On solving we get,}
+        \alpha &\approx 53^\circ
+    \end{align*}
+\end{solution}

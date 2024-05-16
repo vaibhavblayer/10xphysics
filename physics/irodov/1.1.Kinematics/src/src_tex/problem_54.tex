@@ -1,1 +1,24 @@
 \item A cylinder rolls without slipping over a horizontal plane. The radius of the cylinder is equal to \( r \). Find the curvature radii of trajectories traced out by the points \( A \) and \( B \) (see Fig. 1.7).
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{In the frame of horizontal plane the direction of velocity at a point is along the tangent of the curve at that point, so normal acceleration at that point is perpendicular to the direction of velocity vector and directed inwards. We make the pictorial diagram as in solution of problem 1.53.}
+        w_n &= \dfrac{v^2}{R}\\
+        \intertext{So, for point A,}
+        w_{A(n)} &= \dfrac{v_A^2}{R_A}\\
+        \intertext{or}
+        \omega^2 r &= \dfrac{(2v_C)^2}{R_A}\\
+        \intertext{which gives}
+        R_A &= 4r \quad (\text{on using } v_C = \omega r)\\
+        \intertext{Similarly for point B,}
+        w_{B(n)} &= \dfrac{v_B^2}{R_B}\\
+        \intertext{or}
+        \omega^2 r \cos 45^\circ &= \dfrac{(\sqrt{2} v_C)^2}{R_B}\\
+        R_B &= 2\sqrt{2}\dfrac{v_C^2}{\omega^2 r} = 2\sqrt{2}r \quad (\text{again on using } v_C = \omega r)
+    \end{align*}
+\end{solution}

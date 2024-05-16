@@ -4,3 +4,22 @@
             \node at (0,0) {{cyclistdiagram.png}}; % Assume the diagram is saved as cyclist_diagram.png
         \end{tikzpicture}
     \end{center}
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{According to the question, the cyclist moves along the circular path and the centripetal force is provided by the frictional force. Thus from the equation}
+        F_n &= mw_n\\
+        fr &= \dfrac{mv^2}{r} \quad \text{or} \quad kmg = \dfrac{mv^2}{r}\\
+        k_0 \left( 1 - \dfrac{r}{R} \right) g &= \dfrac{v^2}{r} \quad \text{or} \quad v^2 = k_0 \left( r - \dfrac{r^2}{R} \right) g \tag{1}\\
+        \intertext{For $v_{\text{max}}$ we should have}
+        \dfrac{d}{dr} \left( r - \dfrac{r^2}{R} \right) &= 0\\
+        1 - \dfrac{2r}{R} &= 0, \quad \text{so} \quad r = \dfrac{R}{2}\\
+        \text{Hence,} \quad v_{\text{max}} &= \dfrac{1}{2} \sqrt{k_0 gR}
+    \end{align*}
+\end{solution}

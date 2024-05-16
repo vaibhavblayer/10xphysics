@@ -3,4 +3,35 @@
         \item how long the motorboat moved with the shutdown engine;
         \item the velocity of the motorboat as a function of the distance covered with the shutdown engine, as well as the total distance covered till the complete stop;
         \item the mean velocity of the motorboat over the time interval (beginning with the moment \( t = 0 \)), during which its velocity decreases \( \eta \) times.
-    \end{enumerate}
+    \end{enumerate}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) From the problem $\mathbf{F} = - r \mathbf{v}$ so, $m \dfrac{d \mathbf{v}}{dt} = - r \mathbf{v}$}
+        m \dfrac{dv}{dt} &= - rv \quad \text{[as $\mathbf{dv} \uparrow \downarrow \mathbf{v}$]} \\
+        \dfrac{dv}{v} &= \dfrac{- r}{m} dt \\
+        \intertext{On integrating}
+        \ln v &= \dfrac{- r}{m} t + C \\
+        \intertext{But at $t = 0$, $v = v_0$ so, $C = \ln v_0$}
+        \ln \dfrac{v}{v_0} &= \dfrac{- r}{m} t \quad \text{or} \quad v = v_0 e^{(- r / m) t} \\
+        \intertext{Thus, for $t \to \infty$, $v = 0$.}
+        \intertext{(b) We have $m \dfrac{dv}{dt} = - rv$ so, $\dfrac{dv}{v} = \dfrac{- r}{m} ds$}
+        \intertext{Integrating within the given limits to obtain $v(s)$, we get}
+        \int_{v_0}^{v} dv &= \dfrac{- r}{m} \int_{0}^{s} ds \quad \text{or} \quad v = v_0 - \dfrac{rs}{m} \tag{1} \\
+        \intertext{Thus for $v = 0$, $s = s_{total} = \dfrac{mv_0}{r}$}
+        \intertext{(c) We have $m \dfrac{dv}{dt} = - rv$ or $\dfrac{dv}{v} = \dfrac{- r}{m} dt$}
+        \begin{cases}
+            \int_{0}^{v_0/ \eta} \dfrac{dv}{v} = \dfrac{- r}{m} \int_{0}^{t} dt \quad \text{or} \quad \ln \dfrac{v_0}{\eta v_0} = \dfrac{- r}{m} t \\
+            \ln \dfrac{1}{\eta} = \dfrac{- r}{m} t
+        \end{cases}
+        \quad \text{or} \quad t = \dfrac{- m \ln \eta}{r}
+        \intertext{So, $t = \dfrac{m \ln \eta}{r}$}
+        \intertext{Now, average velocity over this time interval}
+        <v> = \dfrac{\int v dt}{\int dt} &= \dfrac{\int_{0}^{tm \ln \eta} v_0 e^{-rt/m} dt}{tm / r \ln \eta} \\
+        &= \dfrac{v_0 (\eta -1)}{\eta \ln \eta}
+    \end{align*}
+\end{solution}

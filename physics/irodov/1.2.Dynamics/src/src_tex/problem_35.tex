@@ -3,3 +3,35 @@
         \item the friction coefficient;
         \item the acceleration of the masses when $m_{2}/m_{1} = \eta > \eta_{0}$.
     \end{enumerate}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Applying Newton's second law of motion in projection form, $F_n = mw_n$ for this element,}
+        (T + dT) \sin (d\theta/2) + T \sin (d\theta/2) - dN &= dm\omega^2R = 0\\
+        \intertext{or}
+        2T \sin (d\theta/2) &= dN \quad [\text{neglecting the term } (dT \sin d\theta/2)]\\
+        \intertext{or}
+        T \, d\theta &= dN \left( \text{as } \sin \dfrac{d\theta}{2} \approx \dfrac{d\theta}{2} \right) \tag{1}\\
+        \intertext{Also,}
+        dfr &= kdN = (T + dT) - T = dT \tag{2}\\
+        \intertext{From Eqs. (1) and (2)}
+        kT \, d\theta &= dT \quad \text{or} \quad \dfrac{dT}{T} = kd\theta \\
+        \intertext{Integrating $\theta \text{ from } 0 \text{ to } \theta = \pi$, we get}
+        \ln \dfrac{T_2}{T_1} &= k\pi \tag{3}\\
+        \intertext{So,}
+        k &= \dfrac{1}{\pi} \ln \dfrac{T_2}{T_1} = \dfrac{1}{\pi} \ln \eta_0\\
+        \left( \dfrac{T_2}{T_1} = \dfrac{m_2g}{m_1g} = \dfrac{m_2}{m_1} = \eta_0 \right)\\
+        \intertext{When $m_2/m_1 = \eta > \eta_0$, the blocks will move with the same value of acceleration (say $w$) and clearly $m_2$ moves downward. From Newton's second law in projection form (downward for $m_2$ and upward for $m_1$), we get}
+        m_2g - T_2 &= m_2w \tag{4}\\
+        T_2 - m_1g &= m_1w \tag{5}\\
+        \intertext{Also}
+        \dfrac{T_2}{T_1} &= \eta_0 \tag{6}\\
+        \intertext{Simultaneous solution of Eqs. (4), (5), and (6) yields}
+        w &= \dfrac{(m_2 - \eta_0 m_1) g}{(m_2 + \eta_0 m_1)} = \dfrac{(\eta - \eta_0)}{(\eta + \eta_0)} g \quad \left( \dfrac{m_2}{m_1} = \eta \right)
+    \end{align*}
+\end{solution}

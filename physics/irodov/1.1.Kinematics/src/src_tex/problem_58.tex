@@ -1,2 +1,25 @@
 
 \item A solid body rotates with a constant angular velocity \(\omega_0 = 0.50\) rad/s about a horizontal axis AB. At the moment \(t = 0\) the axis AB starts turning about the vertical with a constant angular acceleration \(\beta_0 = 0.10\) rad/s\(^2\). Find the angular velocity and angular acceleration of the body after \(t = 3.5\) s.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The axis \(AB\) acquired the angular velocity}
+        \omega' &= \beta_0 t
+        \intertext{Using the facts of the solution of problem 1.57, the angular velocity of the body is}
+        \omega &= \sqrt{\omega_0^2 + \omega'^2}\\
+        &= \sqrt{\omega_0^2 + \beta_0^2 t^2} = 0.6 \text{ rad/s}
+        \intertext{The angular acceleration,}
+        \beta &= \frac{d\omega'}{dt} = \frac{d(\omega' + \omega_0)}{dt} = \frac{d\omega'}{dt} + \frac{d\omega_0}{dt}
+        \intertext{But,}
+        \frac{d\omega_0}{dt} &= \omega' \times \omega_0 \quad \text{and} \quad \frac{d\omega'}{dt} = \beta_0
+        \intertext{So,}
+        \beta &= (\beta_0 + \omega' \times \omega_0) = \beta_0 + (\beta_0 t \times \omega_0) \quad \text{(because $\omega' = \beta_0 t$)}
+        \intertext{As, $\beta_0 \perp \omega_0$ so, $\beta = \sqrt{(\omega_0 \beta_0 t)^2 + \beta_0^2} = \beta_0 \sqrt{1 + (\omega_0 t)^2} = 0.2$ rad/s$^2$}
+    \end{align*}
+\end{solution}

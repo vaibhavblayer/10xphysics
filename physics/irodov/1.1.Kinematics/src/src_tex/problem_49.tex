@@ -2,4 +2,15 @@
     \begin{enumerate}
         \item the rotation angle;
         \item the angular velocity.
-    \end{enumerate}
+    \end{enumerate}\begin{solution}
+    \begin{align*}
+        \intertext{We have}
+        \omega &= \omega_{0} - a\varphi = \dfrac{d\varphi}{dt}\\
+        \intertext{Integrating this Eq. within its limit for $(\varphi)\ t$}
+        \int_{0}^{\varphi} \dfrac{d\varphi}{\omega_{0} - a\varphi} &= \int_{0}^{t} dt \quad \text{or} \quad \ln \dfrac{\omega_{0} - k\varphi}{\omega_{0}} = -kt\\
+        \intertext{Hence,}
+        \varphi &= \dfrac{\omega_{0}}{k} (1 - e^{-kt}) \tag{1}
+        \intertext{(b) From the equation, $\omega = \omega_{0} - k\varphi$ and Eq. (1) or by differentiating Eq. (1)}
+        \omega &= \omega_{0} e^{-kt}
+    \end{align*}
+\end{solution}

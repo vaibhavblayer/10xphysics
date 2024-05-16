@@ -1,1 +1,16 @@
-\item Find the magnitude and direction of the force acting on the particle of mass \( m \) during its motion in the plane \( xy \) according to the law \( x = a \sin \omega t \), \( y = b \cos \omega t \), where \( a \), \( b \), and \( \omega \) are constants.
+\item Find the magnitude and direction of the force acting on the particle of mass \( m \) during its motion in the plane \( xy \) according to the law \( x = a \sin \omega t \), \( y = b \cos \omega t \), where \( a \), \( b \), and \( \omega \) are constants.\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Obviously the radius vector describing the position of the particle relative to the origin of the coordinate is,}
+        \vec{r} &= x\hat{\imath} + y\hat{\jmath} = a \sin \omega t \hat{\imath} + b \cos \omega t \hat{\jmath}\\
+        \intertext{Differentiating twice with respect to time}
+        \vec{w} &= \dfrac{d^2 \vec{r}}{dt^2} = -\omega^2 \left( a \sin \omega t \hat{\imath} + b \cos \omega t \hat{\jmath} \right) = -\omega^2 \vec{r} \tag{1}\\
+        \intertext{Thus,}
+        \vec{F} &= m \vec{w} = - m \omega^2 \vec{r} \quad \text{(using Eq. 1)}
+    \end{align*}
+\end{solution}

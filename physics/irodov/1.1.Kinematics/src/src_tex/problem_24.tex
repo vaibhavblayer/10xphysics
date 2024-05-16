@@ -6,3 +6,40 @@
         \item the time dependence of the angle \( \alpha \) between the vectors \( \mathbf{w} \) and \( \mathbf{v} \);
         \item the mean velocity vector averaged over the first \( t \) seconds of motion, and the modulus of this vector.
     \end{enumerate}
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) As}
+        \vec{r} &= at\hat{i} - bt^2\hat{j} \\
+        \intertext{So,}
+        x &= at,\ y = -bt^2 \\
+        \intertext{and therefore}
+        y &= \dfrac{-bx^2}{a^2}
+        \intertext{which is equation of a parabola, whose graph is shown in the figure.}
+        \intertext{(b) As}
+        \vec{r} &= at\hat{i} - bt^2\hat{j} \\
+        \intertext{So,}
+        \vec{v} &= \dfrac{d\vec{r}}{dt} = a\hat{i} - 2bt\hat{j} \tag{1} \\
+        v &= \sqrt{a^2 + (-2bt)^2} = \sqrt{a^2 + 4b^2t^2}
+        \intertext{Differentiating Eq. (1) with respect to time, we get}
+        \vec{w} &= \dfrac{d\vec{v}}{dt} = -2b\hat{j} \\
+        \intertext{So,}
+        |\vec{w}| &= w = 2b \\
+        \intertext{(c)}
+        \cos{\alpha} &= \dfrac{\vec{v} \cdot \vec{w}}{vw} = \dfrac{(a\hat{i} - 2bt\hat{j}) \cdot (-2b\hat{j})}{(\sqrt{a^2 + 4b^2 t^2}) 2b} \\
+        \intertext{or}
+        \cos{\alpha} &= \dfrac{2bt}{\sqrt{a^2 + 4b^2 t^2}} \\
+        \intertext{So,}
+        \tan{\alpha} &= \dfrac{a}{2bt}\ \text{or}\ \alpha = \tan^{-1}\left(\dfrac{a}{2bt}\right)
+        \intertext{(d) The mean velocity vector}
+        \left<\vec{v}\right> &= \dfrac{\int{\vec{v} dt}}{\int dt} = \dfrac{\int_0^t (a\hat{i} - 2bt\hat{j}) dt}{t} = a\hat{i} - bt\hat{j} \\
+        \intertext{Hence,}
+        \left<|\vec{v}|\right> &= \sqrt{a^2 + (-bt)^2} = \sqrt{a^2 + b^2 t^2}
+    \end{align*}
+\end{solution}

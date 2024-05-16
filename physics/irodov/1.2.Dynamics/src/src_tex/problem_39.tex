@@ -2,4 +2,31 @@
     \begin{enumerate}
         \item the momentum of the particle when the action of the force is discontinued;
         \item the distance covered by the particle while the force acted.
-    \end{enumerate}
+    \end{enumerate}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{1.97 From the equation of the given time dependence force \(\vec{F} = a\,t\,(\tau - t)\) at \(t = \tau\), the force vanishes.}
+        (a)\ \text{Thus,} \quad \Delta \vec{p} = \vec{p} &= \int_0^{\tau} \vec{F}\,dt \tag{1}\\
+        \intertext{or}
+        \vec{p} &= \int_0^{\tau} a\,t\,(\tau - t)\,dt = \dfrac{a\tau^3}{6} \tag{2}\\
+        \intertext{But,}
+        \vec{p} = m\vec{v} \quad \text{so,} \quad \vec{v} &= \dfrac{a\tau^3}{6m} \tag{3}
+        \intertext{(b) Again from the equation \(\vec{F} = m\vec{w}\)}
+        at\,(\tau - t) &= m \dfrac{d\vec{v}}{dt} \tag{4}\\
+        \intertext{or}
+        a\,(\tau t - t^2) \,dt &= m \,d\vec{v} \tag{5}\\
+        \intertext{Integrating within the limits for \(\vec{v}(t)\)}
+        \int_0^t a\,(\tau t - t^2) \,dt &= m \int_0^{\vec{v}} \,d\vec{v} \tag{6}\\
+        \intertext{or}
+        \vec{v} &= \dfrac{a}{m} \left( \dfrac{\tau t^2}{2} - \dfrac{t^3}{3} \right) = \dfrac{at^2}{m} \left( \dfrac{\tau}{2} - \dfrac{t}{3} \right) \tag{7}\\
+        \intertext{Thus,}
+        v &= \dfrac{at^2}{m} \left( \dfrac{\tau}{2} - \dfrac{t}{3} \right) \quad \text{for} \quad t \leq \tau \tag{8}\\
+        \intertext{Hence, distance covered during the time interval \(t = \tau \) is given by}
+        s &= \int_0^\tau \vec{v}\,dt = \dfrac{a}{m} \int_0^\tau t^2 \left( \dfrac{\tau}{2} - \dfrac{t}{3} \right) dt = \dfrac{a}{m} \dfrac{\tau^4}{12} \tag{9}
+    \end{align*}
+\end{solution}

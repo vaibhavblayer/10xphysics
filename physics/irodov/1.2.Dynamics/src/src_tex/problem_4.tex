@@ -1,2 +1,37 @@
 
 \item A small body was launched up an inclined plane set at an angle $\alpha = 15^\circ$ against the horizontal. Find the coefficient of friction, if the time of the ascent of the body is $\eta = 2.0$ times less than the time of its descent.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Case 1: When the body is launched up.}
+        \intertext{Let \( k \) be the coefficient of friction, \( u \) the velocity of projection and \( l \) the distance traversed along the incline. Retarding force on the block \( = mg \sin \alpha + kmg \cos \alpha \) and hence the retardation \( = g \sin \alpha + kg \cos \alpha \).}
+        \intertext{Using the equation of particle kinematics along the incline,}
+        0 &= u^2 - 2(g \sin \alpha + kg \cos \alpha) \, l \\
+        \intertext{or}
+        l &= \dfrac{u^2}{2(g \sin \alpha + kg \cos \alpha)} \tag{1} \\
+        \intertext{and}
+        0 &= u - \left( g \sin \alpha + kg \cos \alpha \right) t \\
+        \intertext{or}
+        u &= (g \sin \alpha + kg \cos \alpha) \, t \tag{2} \\
+        \intertext{Using Eq. (2) in Eq. (1) we get}
+        l &= \dfrac{1}{2} \left( g \sin \alpha + kg \cos \alpha \right) t^2 \tag{3} \\
+        \intertext{Case 2: When the block comes downward.}
+        \intertext{The net force on the body \( = mg \sin \alpha - kmg \cos \alpha \) and hence its acceleration \( = g \sin \alpha - kg \cos \alpha \).}
+        \intertext{Let \( t' \) be the time required, then}
+        l &= \dfrac{1}{2} \left( g \sin \alpha - kg \cos \alpha \right) t'^2 \tag{4} \\
+        \intertext{From Eqs. (3) and (4)}
+        \dfrac{t^2}{t'^2} &= \dfrac{\sin \alpha - k \cos \alpha}{\sin \alpha + k \cos \alpha} \\
+        \intertext{But,}
+        \dfrac{t}{t'} &= \dfrac{1}{\eta} \quad \text{(according to the question)}
+    \end{align*}
+
+    \begin{align*}
+        \intertext{Hence, on solving we get}
+        k &= \dfrac{\eta^2 - 1}{\eta^2 + 1} \tan \alpha = 0.16
+    \end{align*}
+\end{solution}

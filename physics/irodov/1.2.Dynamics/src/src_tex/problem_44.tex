@@ -1,1 +1,27 @@
 \item A small bar starts sliding down an inclined plane forming an angle $\alpha$ with the horizontal. The friction coefficient depends on the distance $x$ covered as $k = ax$, where $a$ is a constant. Find the distance covered by the bar till it stops, and its maximum velocity over this distance.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+  
+    \begin{align*}
+        \intertext{From Newton's second law for the bar in projection form, $F_x = mw_x$, along $x$ direction, we get}
+        mg \sin \alpha - kmg \cos \alpha &= mw\\
+        \intertext{or}
+        v\dfrac{dv}{dx} &= g \sin \alpha - ax g \cos \alpha \quad (\text{as } k = ax)\\
+        \intertext{or}
+        vdv &= \left(g \sin \alpha - ax g \cos \alpha\right) dx\\
+        \intertext{or}
+        \int_0^v vdv &= g \int_0^x \left(\sin \alpha - x \cos \alpha\right) dx\\
+        \intertext{So,}
+        \dfrac{v^2}{2} &= g\left( x \sin \alpha - \dfrac{x^2}{2} a \cos \alpha \right) \tag{1}
+        \intertext{From Eq. (1),}
+        v &= 0 \text{ at either } x = 0 \text{ or } x = \dfrac{2}{a}\tan \alpha\\
+        \intertext{As the motion of the bar is unidirectional it stops after going through a distance of $\dfrac{2}{a} \tan \alpha$. From Eq. (1), for $v_{\text{max}}$,}
+        \dfrac{d}{dx} \left(x \sin \alpha - \dfrac{x^2}{2} a \cos \alpha \right) &= 0 \quad \text{or} \quad x = \dfrac{1}{a} \tan \alpha\\
+        \intertext{Hence, the maximum velocity will be at the distance, $x = \tan \alpha/a$. Putting this value of $x$ in Eq. (1), the maximum velocity,}
+        v_{\text{max}} &= \sqrt{\dfrac{g \sin \alpha \tan \alpha}{a}}
+    \end{align*}
+\end{solution}

@@ -2,4 +2,27 @@
     \begin{enumerate}
         \item the magnitude and direction of the lateral force that the train exerts on the rails if it moves along a meridian with a velocity \( v = 54 \) km per hour;
         \item in what direction and with what velocity the train should move for the resultant of the inertial forces acting on the train in the reference frame fixed to the Earth to be equal to zero.
-    \end{enumerate}
+    \end{enumerate}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) When the train is moving along a meridian only the Coriolis force has a lateral component and its magnitude (see the previous problem) is,}
+        2m\omega v \cos \theta &= 2m \omega \sin \lambda \quad (\text{here we have put } R \dot{\theta} \rightarrow v)\\
+        \intertext{So,}
+        F_{\text{lateral}} &= 2 \times 2000 \times 10^3 \times \dfrac{2\pi}{86400} \times \dfrac{54000}{3600} \times \dfrac{\sqrt{3}}{2}\\
+        &= 3.77 \ \text{kN} \quad (\text{we write } \lambda \text{ for the latitude})
+        \intertext{(b) The resultant of the inertial forces acting on the train is,}
+        \vec{F}_{\text{in}} &= -2m\omega R\dot{\theta} \cos \theta \ e_{\varphi} + (m\omega^2 R \sin \theta \cos \theta + 2m \omega R \sin \theta \cos \theta \dot{\varphi}) e_{\theta}\\
+        &\quad + (m\omega^2 R \sin^2 \theta + 2m \omega R \sin^2 \theta \dot{\varphi}) e_r\\
+        \intertext{This vanishes if } \dot{\theta} &= 0, \ \dot{\varphi} = -\dfrac{1}{2}\omega\\
+        \intertext{Thus,}
+        \vec{v} &= v_{\varphi} e_{\varphi}, \ v_{\varphi} = -\dfrac{1}{2}\omega R \sin \theta = -\dfrac{1}{2}\omega R \cos \lambda\\
+        &\quad (\text{we write } \lambda \text{ for the latitude here})
+        \intertext{Thus the train must move from the east to west along the 60th parallel with a speed,}
+        \dfrac{1}{2}\omega R \cos \lambda &= \dfrac{1}{4} \times \dfrac{2\pi}{8.64} \times 10^{-4} \times 6.37 \times 10^6 = 115.8 \ \text{m/s} \approx 420 \ \text{km/h}
+    \end{align*}
+\end{solution}

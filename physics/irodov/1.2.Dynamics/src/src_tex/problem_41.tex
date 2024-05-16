@@ -1,1 +1,15 @@
-\item At the moment \( t = 0 \) a particle of mass \( m \) starts moving due to a force \( \mathbf{F} = F_0 \cos \omega t \), where \( F_0 \) and \( \omega \) are constants. How long will it be moving until it stops for the first time? What distance will it traverse during that time? What is the maximum velocity of the particle over this distance?
+\item At the moment \( t = 0 \) a particle of mass \( m \) starts moving due to a force \( \mathbf{F} = F_0 \cos \omega t \), where \( F_0 \) and \( \omega \) are constants. How long will it be moving until it stops for the first time? What distance will it traverse during that time? What is the maximum velocity of the particle over this distance?\begin{solution}
+    
+    \begin{align*}
+        \intertext{According to the problem, the force acting on the particle of mass $m$ is, $\mathbf{F} = F_0 \cos \omega t$.}
+        m \dfrac{d\mathbf{v}}{dt} &= F_0 \cos \omega t \quad \text{or} \quad d\mathbf{v} = \dfrac{F_0}{m} \cos \omega t \, dt\\
+        \intertext{Integrating, within the limits}
+        \int_0^\mathbf{v} d\mathbf{v} &= \dfrac{F_0}{m} \int_0^t \cos \omega t \, dt \quad \text{or} \quad \mathbf{v} = \dfrac{F_0}{m \omega} \sin \omega t \tag{1}\\
+        \intertext{It is clear from Eq. (1), that after starting at $t = 0$, the particle comes to rest for the first time at $t = \pi / \omega$. From Eq. (1)}
+        v &= |\mathbf{v}| = \dfrac{F_0}{m \omega} \sin \omega t \quad \text{for} \quad t \leq \dfrac{\pi}{\omega} \tag{2}\\
+        \intertext{Thus during the time interval $t = \pi/\omega$, the sought distance}
+        s &= \dfrac{F_0}{m \omega} \int_0^{\pi/\omega} \sin \omega t \, dt = \dfrac{2 F}{m \omega^2}\\
+        \intertext{From Eq. (1)}
+        v_{\max} &= \dfrac{F_0}{m \omega} \quad \text{as} \quad |\sin \omega t| \leq 1
+    \end{align*}
+\end{solution}

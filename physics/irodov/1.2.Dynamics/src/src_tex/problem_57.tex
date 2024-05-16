@@ -1,1 +1,42 @@
-\item A small body of mass \( m = 0.30 \, \text{kg} \) starts sliding down from the top of a smooth sphere of radius \( R = 1.00 \, \text{m} \). The sphere rotates with a constant angular velocity \( \omega = 6.0 \, \text{rad/s} \) about a vertical axis passing through its centre. Find the centrifugal force of inertia and the Coriolis force at the moment when the body breaks off the surface of the sphere in the reference frame fixed to the sphere.
+\item A small body of mass \( m = 0.30 \, \text{kg} \) starts sliding down from the top of a smooth sphere of radius \( R = 1.00 \, \text{m} \). The sphere rotates with a constant angular velocity \( \omega = 6.0 \, \text{rad/s} \) about a vertical axis passing through its centre. Find the centrifugal force of inertia and the Coriolis force at the moment when the body breaks off the surface of the sphere in the reference frame fixed to the sphere.```latex
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The equation of motion in the rotating coordinate system is}
+        m\vec{w}' &= \vec{F} + m\omega^2 \rho + 2m\left(\vec{v}' \times \vec{\omega}\right) \tag{1.115}\\
+        \intertext{Now,}
+        \vec{v}' &= R\dot{\theta} \, \vec{e_\theta} + R \sin{\theta} \, \dot{\varphi} \, \vec{e_\varphi}\\
+        \omega &= \omega \cos{\theta} \, \vec{e_r} - \omega \sin{\theta} \, \vec{e_\theta}\\
+        1 &\over2m\vec{F}_{\text{cor}} = 
+        \begin{vmatrix}
+            \vec{e_r} & \vec{e_\theta} & \vec{e_\varphi} \\
+            0 & R\dot{\theta} & \left(R\sin{\theta}\right)\dot{\varphi} \\
+            \omega \cos{\theta} & -\omega \sin{\theta} & 0
+        \end{vmatrix}\\ 
+        &= \vec{e_r}\left(\omega R \sin^2{\theta} \, \dot{\varphi}\right) 
+        + \left[\omega R \sin{\theta} \cos{\theta} \, \dot{\varphi}\right]\vec{e_\theta} 
+        - \left(\omega R \dot{\theta} \cos{\theta}\right) \vec{e_\varphi}\\
+        \intertext{Now, on the sphere,}
+        \vec{w}' &= (-R \ddot{\theta} - R \sin^2{\theta} \, \ddot{\varphi}) \vec{e_r} 
+        + (R \ddot{\theta} - R \sin{\theta} \, \ddot{\varphi}) \vec{e_\theta}
+        + (R \sin{\theta} \, \ddot{\varphi} + 2R \cos{\theta} \, \dot{\theta} \, \dot{\varphi}) \vec{e_\varphi}\\
+        \intertext{Thus the equations of motion are}
+        m(-R \ddot{\theta} - R \sin^2{\theta} \, \ddot{\varphi}^2) &= N - mg \cos{\theta} + m \omega^2 R \sin^2{\theta} + 2m \omega R \sin^2{\theta} \dot{\varphi}\\
+        m(R \ddot{\theta} - R \sin{\theta} \, \ddot{\varphi}^2) &= mg \sin{\theta} + m \omega^2 R \sin{\theta} \cos{\theta} + 2m \omega R \sin{\theta} \cos{\theta} \dot{\varphi}\\
+        m(R \sin{\theta} \, \dot{\varphi} + 2R \cos{\theta} \, \dot{\theta} \, \dot{\varphi}) &= -2 m \omega R \dot{\theta} \cos{\theta}\\
+        \intertext{From the third equation, we get, \(\dot{\varphi} = -\omega\). A result that is easy to understand by considering the motion in non-rotating frame.}
+        \intertext{Eliminating \(\dot{\varphi}\) we get,}
+        mR \ddot{\theta} &= mg \cos{\theta} - N\\
+        mR\ddot{\theta} &= mg \sin{\theta}\\
+        \intertext{Integrating the last equation}
+        \dfrac{1}{2} mR \ddot{\theta}^2 &= mg \left(1 - \cos{\theta}\right) \tag{1}\\
+        \intertext{Hence,}
+        N &= (3 \cos{\theta} - 2)mg\\
+        \intertext{So the body must fly off for \(\theta = \theta_0 = \cos^{-1}\dfrac{2}{3}\), exactly as if the sphere were non-rotating.}
+        \end{align*}
+\end{solution}

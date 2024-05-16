@@ -5,3 +5,32 @@
         \item the modulus of the mean velocity vector \( |\langle v \rangle| \);
         \item the modulus of the mean vector of the total acceleration \( |\langle w \rangle| \) if the point moved with constant tangent acceleration.
     \end{enumerate}
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{(a) Mean velocity}
+        \langle v \rangle &= \dfrac{\text{Total distance covered}}{\text{Time elapsed}}\\
+        &= \dfrac{s}{t} = \dfrac{\pi R}{\tau} = 50 \ \text{cm/s} \tag{1} 
+        \intertext{(b) Modulus of mean velocity vector}
+        |\langle \vec{v} \rangle| &= \left|\dfrac{\Delta r}{\Delta t}\right| = \dfrac{2R}{\tau} = 32 \ \text{cm/s} \tag{2}
+        \intertext{(c) Let the point moves from \( i \) to \( f \) along the half circle (see figure) and \( v_0 \) and \( v \) be the speed at the points respectively. We have}
+        \dfrac{dv}{dt} &= w_t 
+		\intertext{or}
+		v &= v_0 + w_t t \ \ (\text{as }\ w_t \text{ is constant, according to the problem})\\
+        \int_{0}^{t} (v_0 + w_t t) dt &= \dfrac{v_0 + (v_0 + w_t t)}{2} = \dfrac{v_0 + v}{2}
+        \intertext{So,}
+        \langle v \rangle &= \dfrac{v_0 + v}{2} \tag{3}
+        \intertext{So, from Eqs. (1) and (3)}
+        \dfrac{v_0 + v}{2} &= \dfrac{\pi R}{\tau} \tag{4}
+        \intertext{Now, the modulus of the mean vector of total acceleration}
+        |\langle \vec{w} \rangle| &= \left|\dfrac{\Delta \vec{v}}{\Delta t}\right| = \left|\dfrac{\vec{v} - \vec{v}_0}{\tau}\right| = \left|\dfrac{v_0 + v}{\tau}\right|\ \ \ (\text{see figure}) \tag{5}
+        \intertext{Using Eq. (4) in Eq. (5), we get}
+        |\langle \vec{w} \rangle| &= \dfrac{2\pi R}{\tau^2} = 10 \ \text{cm/s}^2 \ \ (\text{on substituting values})\\
+    \end{align*}
+\end{solution}

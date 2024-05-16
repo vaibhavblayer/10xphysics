@@ -4,3 +4,36 @@
         \item the displacement of the body as a function of time \( r(t) \);
         \item the mean velocity vector \( \langle v \rangle \) averaged over the first \( t \) seconds and over the total time of motion.
     \end{enumerate}
+\begin{solution}
+    \begin{align*}
+        \intertext{As the body is under gravity of constant acceleration $\mathbf{g}$, its velocity vector and displacement vectors are:}
+        \mathbf{v} &= \mathbf{v}_0 + \mathbf{g}t \tag{1}\\
+        \mathbf{\Delta r} &= \mathbf{r} = \mathbf{v}_0 t + \frac{1}{2} \mathbf{g} t^2 \quad (\text{as } \mathbf{r} = 0 \text{ at } t = 0) \tag{2}
+    \end{align*}
+    
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{So, $\langle \mathbf{v} \rangle$ over the first $t$ seconds}
+        \langle \mathbf{v} \rangle &= \frac{\Delta r}{\Delta t} = \frac{r}{t} = \mathbf{v}_0 + \frac{1}{2} \mathbf{g} t \tag{3}\\
+        \intertext{Hence from Eq. (3), $\langle \mathbf{v} \rangle$ over the first $\tau$ seconds}
+        \langle \mathbf{v} \rangle &= \mathbf{v}_0 + \frac{\mathbf{g}}{2} \tau \tag{4}\\
+        \intertext{For evaluating $t$, take}
+        \mathbf{v} \cdot \mathbf{v} &= (\mathbf{v}_0 + \mathbf{g}t) \cdot (\mathbf{v}_0 + \mathbf{g}t) = v_0^2 + 2(\mathbf{v}_0 \cdot \mathbf{g})t + g^2 t^2\\
+        \intertext{or}
+        v^2 &= v_0^2 + 2(\mathbf{v}_0 \cdot \mathbf{g})t + g^2 t^2
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{But we have $\mathbf{v} = \mathbf{v}_0$ at $t=0$ and also at $t = \tau$ (also from energy conservation). Hence using this property in Eq. (5),}
+        v_0^2 &= v_0^2 + 2 (\mathbf{v}_0 \cdot \mathbf{g}) \tau + g^2 \tau^2\\
+        \intertext{As}
+        \tau &\neq 0, \quad \text{so,} \quad \tau = -\frac{2(\mathbf{v}_0 \cdot \mathbf{g})}{g^2}\\
+        \intertext{Putting this value of $\tau$ in Eq. (4), the average velocity over the time of flight}
+        \langle \mathbf{v} \rangle &= \mathbf{v}_0 - \frac{(\mathbf{v}_0 \cdot \mathbf{g})}{g^2}
+    \end{align*}
+\end{solution}

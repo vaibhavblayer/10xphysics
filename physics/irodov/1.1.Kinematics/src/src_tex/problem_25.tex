@@ -5,3 +5,23 @@
     \item the velocity $v$ and the acceleration $w$ of the point as functions of time;
     \item the moment $t_0$ at which the velocity vector forms an angle $\pi/4$ with the acceleration vector.
 \end{enumerate}
+
+\begin{solution}
+    \begin{align*}
+        \intertext{(a) We have}
+        x &= at \quad \text{and} \quad y = at(1 - \alpha t) \tag{1}\\
+        \intertext{Hence, \( y(x) \) becomes}
+        y &= \frac{ax}{a} \left( 1 - \frac{ax}{a} \right) = x - \frac{\alpha}{a} x^2 \quad (\text{parabola})
+        \intertext{(b) Differentiating Eq. (1) we get}
+        v_x &= a \quad \text{and} \quad v_y = a (1 - 2 \alpha t) \tag{2}\\
+        \text{So,} \quad v &= \sqrt{v_x^2 + v_y^2} = a \sqrt{1 + (1 - 2 \alpha t)^2}
+        \intertext{Differentiating Eq. (2) with respect to time}
+        w_x &= 0 \quad \text{and} \quad w_y = -2 \alpha a\\
+        \text{So,} \quad w &= \sqrt{w_x^2 + w_y^2} = 2 \alpha a  \tag{3}
+        \intertext{(c) From Eqs. (2) and (3) we have \( \vec{v} = a\hat{i} + a(1 - 2 \alpha t)\hat{j} \) and \( \vec{w} = 2 \alpha a \hat{j} \).}
+        \text{So at} \quad t - t_0, \quad \cos \frac{\pi}{4} &= \frac{1}{\sqrt{2}} = \frac{\vec{v} \cdot \vec{w}}{v w} = \frac{-a(1 - 2 \alpha t_0)2 \alpha a}{a \sqrt{1 + (1 - 2 \alpha t_0)^2} 2 \alpha a}\\
+        \intertext{On simplifying,}
+        1 - 2 \alpha t_0 &= \pm 1\\
+        \text{As} \quad t_0 \ne 0, \quad t_0 &= \frac{1}{\alpha}
+    \end{align*}
+\end{solution}

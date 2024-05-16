@@ -1,2 +1,25 @@
 
 \item Two particles move in a uniform gravitational field with an acceleration \( g \). At the initial moment the particles were located at one point and moved with velocities \( v_1 = 3.0 \) m/s and \( v_2 = 4.0 \) m/s horizontally in opposite directions. Find the distance between the particles at the moment when their velocity vectors become mutually perpendicular.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Let the velocities of the particles (say $\vec{v}_1'$ and $\vec{v}_2'$) become mutually perpendicular after time $t$. Then their velocities become}
+        \vec{v}_1' &= \vec{v}_1 + g\vec{t}; \quad \vec{v}_2' = \vec{v}_2 + g\vec{t}
+        \intertext{As $\vec{v}_1' \perp \vec{v}_2'$ so, $\vec{v}_1' \cdot \vec{v}_2' = 0$}
+        (\vec{v}_1 + gt) \cdot (\vec{v}_2 + gt) &= 0\\
+        -v_1 v_2 + g^2 t^2 &= 0\\
+        t &= \sqrt{\dfrac{v_1 v_2}{g}}
+        \intertext{In the frame attached with 2 for the particle 1}
+        \vec{r} &= \vec{r}_0 + \vec{v}_0 t + \dfrac{1}{2} \vec{w} t^2
+        \intertext{Both the particles are initially at the same position and have same acceleration $g$, so $\vec{r}_0 = 0$, $\vec{w} = 0$, and $\vec{v}_0 = |\vec{v}_1 - \vec{v}_2|$. Thus the sought distance is}
+        |\vec{r}| &= |\vec{v}_0| t = (v_1 + v_2)t\\
+        &= \dfrac{v_1 + v_2}{g} \sqrt{v_1 v_2} \quad (\text{using value of } t)\\
+        &= 2.5 \, \text{m, on putting the values of} \, v_1, \, v_2  \, \text{and} \, g
+    \end{align*}
+\end{solution}

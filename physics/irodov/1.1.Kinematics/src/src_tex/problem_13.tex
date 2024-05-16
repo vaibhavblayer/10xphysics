@@ -1,2 +1,22 @@
 
 \item Point A moves uniformly with velocity \( v \) so that the vector \( v \) is continually "aimed" at point B which in its turn moves rectilinearly and uniformly with velocity \( u < v \). At the initial moment of time \( v \perp u \) and the points are separated by a distance \( l \). How soon will the points converge?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us locate the points $A$ and $B$ at an arbitrary instant of time (see figure).}
+        \intertext{If $A$ and $B$ are separated by the distance $s$ at this moment, then the points converge or point $A$ approaches $B$ with velocity $-ds/dt = v - u \cos \alpha$ where angle $\alpha$ varies with time. On integrating,}
+        -\int_{l}^{0} ds &= \int_{0}^{T} (v - u \cos \alpha) dt \quad \text{(where $T$ is the sought time)}\\
+        l &= \int_{0}^{T} (v - u \cos \alpha) dt\\
+        &= vT - u \int_{0}^{T} \cos \alpha \, dt \tag{1}\\
+        \intertext{As both $A$ and $B$ cover the same distance in $x$-direction during the sought time interval, so the other condition which is required, can be obtained by the equation,}
+        uT &= \int_{0}^{T} v \cos \alpha \, dt \tag{2}\\
+        \intertext{Solving Eqs. (1) and (2), we get}
+        T &= \dfrac{ul}{v^2 - u^2}\\
+        \intertext{One can see that if $u = v$, or $u < v$, point $A$ cannot catch $B$.}
+    \end{align*}
+\end{solution}

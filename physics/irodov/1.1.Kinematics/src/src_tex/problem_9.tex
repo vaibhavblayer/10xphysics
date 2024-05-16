@@ -1,2 +1,47 @@
 
 \item A boat moves relative to water with a velocity which is \( n = 2.0 \) times less than the river flow velocity. At what angle to the stream direction must the boat move to minimize drifting?
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let \( v_0 \) be the stream velocity and \( v' \) the velocity of boat with respect to water. As \( \dfrac{v_0}{v'} = n = 2 > 0 \), some drifting of the boat is inevitable.}
+        \intertext{Let \( \vec{v'} \) make an angle \( \theta \) with flow direction (see figure), then the time taken to cross the river}
+        t &= \dfrac{d}{v'\sin\theta} \quad (\text{where } d \text{ is the width of the river}) \\
+        \intertext{In this time interval, the drifting of the boat}
+        x &= (v'\cos\theta + v_0)t \\
+        &= (v'\cos\theta + v_0)\dfrac{d}{v'\sin\theta} \\
+        &= (\cot\theta + n \csc\theta)d
+        \intertext{For \( x_{\min} \) (minimum drifting)}
+        \dfrac{d}{d\theta} (\cot \theta + n \csc \theta) &= 0, \text{ which yields}\\
+        \cos\theta &= -\dfrac{1}{n} = -\dfrac{1}{2}\\
+        \intertext{Hence,}
+        \theta &= 120^\circ
+    \end{align*}
+    
+    \textbf{Alternate:}
+    \begin{align*}
+        \intertext{Let \( v_0 \) be the stream velocity, \( \vec{v'} \) the velocity of boat with respect to water and \( \vec{v} \) be the resultant velocity of boat, i.e., \( \vec{v} = \vec{v_0} + \vec{v'} \).}
+        \intertext{The angle \( \theta \) from the direction of stream at which boat can be rowed lies in the interval \( 0 \) to \( \pi \) \( (0 \le \theta \le \pi) \). Now let us draw the vector diagram of velocity vectors. In the figure, a semicircle has been drawn whose radius is \( v' \). The tip of vector \( v' \) lies on this semicircle. One can observe that for minimum drifting, angle \( \alpha \) should be maximum and the line \( AB \) representing vector \( \vec{v} \) becomes tangent to the semicircle so that line \( OB \) representing \( \vec{v'} \) becomes perpendicular to it. The minimum drifting is \( CD \).}
+        \intertext{From the figure}
+        \sin \alpha &= \dfrac{OB}{AO} = \dfrac{v'}{v_0} = \dfrac{1}{n} \tag{1}\\
+        \intertext{Therefore,}
+        \theta &= \dfrac{\pi}{2} + \alpha \quad \text{(see figure)}\\
+        \intertext{Hence,}
+        \theta &= \sin^{-1}(1/n) + \pi/2 = 120^\circ \quad \text{(on substituting values)}\\
+        \intertext{In the triangle \( OCD \)}
+        \sin \alpha &= \dfrac{OC}{OD} \tag{2}\\
+        \intertext{From Eqs. (1) and (2)}
+        \dfrac{OC}{OD} &= \dfrac{1}{n}\\
+        \intertext{or }
+        OD &= n (OC)\\
+        \intertext{So,}
+        OC &= \sqrt{(OD)^2 - (OC)^2} = OC \sqrt{n^2 - 1}\\
+        \intertext{Hence,}
+        x_{\min} &= d \sqrt{n^2 - 1}
+    \end{align*}
+\end{solution}

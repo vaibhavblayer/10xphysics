@@ -2,4 +2,31 @@
     \begin{enumerate}
         \item the velocity of the body relative to the sphere at the moment of break-off;
         \item the angle $\theta_0$ between the vertical and the radius vector drawn from the centre of the sphere to the break-off point; calculate $\theta_0$ for $w_0 = g$.
-    \end{enumerate}
+    \end{enumerate}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{At an arbitrary moment, when the body is at an angle \(\theta\) with the vertical, we sketch the force diagram for the body and write the second law of motion in projection form \(F_n = mw_n\) as,}
+        mg \cos \theta - N - mw_0 \sin \theta &= \frac{mv^2}{R} \tag{1}\\
+        \intertext{At the break off point, \(N = 0\), \(\theta = \theta_0\) and let \(v = v_0\), so Eq. (1) becomes,}
+        \frac{{v_0}^2}{R} &= g \cos \theta_0 - w_0 \sin \theta_0 \tag{2}\\
+        \intertext{From \(F_t = mw_t\)}
+        mg \sin \theta - mw_0 \cos \theta &= m\frac{vdv}{ds} = m\frac{v}{R} \frac{dv}{d\theta}\\
+        v dv &= R (g \sin \theta + w_0 \cos \theta) d \theta\\
+        \intertext{Integrating}
+        \int_{0}^{v_0} v dv &= \int_{0}^{\theta_0} R (g \sin \theta + w_0 \cos \theta) d\theta\\
+        \frac{{v_0}^2}{2R} &= g (1 - \cos \theta_0) + w_0 \sin \theta_0 \tag{3}\\
+        \intertext{Note that Eq. (3) can also be obtained by the work-energy theorem \(A = \Delta T\) (in the frame of sphere). Therefore,}
+        mgR(1 - \cos \theta_0) + mw_0 R \sin \theta_0 &= \frac{1}{2} m {v_0}^2\\
+        \intertext{[here \(mw_0 R \sin \theta_0\) is the work done by the pseudoforce (\(-mw_0\))]}
+        \frac{{v_0}^2}{2R} &= g (1 - \cos \theta_0) + w_0 \sin \theta_0\\
+        \intertext{Solving Eqs. (2) and (3), we get}
+        v_0 &= \sqrt{\frac{2gR}{3}} \quad \text{and} \quad \theta_0 = \cos^{-1} \left[ \frac{2 + k \sqrt{5 + 9k^2}}{3(1 + k^2)} \right] \quad  \left(\text{where} \, k = \frac{w_0}{g}\right)\\
+        \intertext{Hence,}
+        \theta_0 \biggr|_{w_0 = g} &= 17^\circ
+    \end{align*}
+\end{solution}

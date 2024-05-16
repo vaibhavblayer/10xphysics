@@ -6,3 +6,48 @@
         \item the equation of trajectory $y(x)$, where $y$ and $x$ are displacements of the body along the vertical and the horizontal respectively;
         \item the curvature radii of trajectory at its initial point and at its peak.
     \end{enumerate}
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) From the equation}
+        \Delta y &= v_{0,y}t + \dfrac{1}{2}wt^2\\
+        \intertext{or}
+        0 &= v_0 \sin \alpha \tau - \dfrac{1}{2} g \tau^2\\
+        \intertext{As $\tau \neq 0$, so, time of motion $\tau = \dfrac{2v_0 \sin \alpha}{g}$}
+        \intertext{(b) At the maximum height of ascent, $v_y = 0$ so, from the equation}
+        v^2_y &= v^2_{0,y} + 2wy \Delta y\\
+        0 &= (v_0 \sin \alpha)^2 - 2gH\\
+        \intertext{Hence maximum height $H = \dfrac{v_0^2 \sin^2 \alpha}{2g}$}
+        \intertext{During the time of motion the net horizontal displacement or horizontal range, will be obtained by the equation}
+        \Delta x &= v_{0,x}t + \dfrac{1}{2} w_x \tau^2
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{or}
+        R &= v_0 \cos \alpha \tau - \dfrac{1}{2} (0) \tau^2 = v_0 \cos \alpha \tau = \dfrac{v_0^2 \sin 2 \alpha}{g}\\
+        \intertext{when $R = H$}
+        \dfrac{v_0^2 \sin 2 \alpha}{g} &= \dfrac{v_0^2 \sin^2 \alpha}{2g} \tag{1}\\
+        \intertext{or}
+        \tan \alpha &= 4, \text{ so, } \alpha = \tan^{-1} 4
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{(c) For the body, \( x(t) \) and \( y(t) \) are}
+        x &= v_0 \cos \alpha t\\
+        y &= v_0 \sin \alpha t - \dfrac{1}{2} gt^2 \tag{2}
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{Hence putting the value of $t$ from Eq. (1) into Eq. (2) we get}
+        y &= v_0 \sin \alpha \left( \dfrac{x}{v_0 \cos \alpha} \right) - \dfrac{1}{2} g \left( \dfrac{x}{v_0 \cos \alpha} \right)^2\\
+        &= x \tan \alpha - \dfrac{gx^2}{2 v_0^2 \cos^2 \alpha}\\
+        \intertext{Note: One can use the formula of curvature radius of a trajectory $y (x)$, to solve part (d),}
+        R &= \dfrac{[1 + (dy/dx)^2]^{3/2}}{|d^2y/dx^2|}
+    \end{align*}
+\end{solution}

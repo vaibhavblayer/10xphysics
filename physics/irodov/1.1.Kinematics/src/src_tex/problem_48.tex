@@ -1,2 +1,15 @@
 
 \item A solid body rotates with deceleration about a stationary axis with an angular deceleration \(\beta \propto \sqrt{\omega}\), where \(\omega\) is its angular velocity. Find the mean angular velocity of the body averaged over the whole time of rotation if at the initial moment of time its angular velocity was equal to \(\omega_0\).
+
+\begin{solution}
+    \begin{align*}
+        \intertext{In accordance with the problem, $\beta_x < 0$.}
+        \text{Thus} \quad -\dfrac{d\omega}{dt} &= k \sqrt{\omega} \quad (\text{where } k \text{ is proportionality constant})\\
+        \text{or} \quad -\int_{\omega_0}^{\omega} \dfrac{d\omega}{\sqrt{\omega}} &= k \int_{0}^{t} dt \quad \text{or} \quad \sqrt{\omega} = \sqrt{\omega_0} - \dfrac{kt}{2} \tag{1}\\
+        \intertext{When \(\omega = 0\), total time of rotation \(t = \tau = \dfrac{2\sqrt{\omega_0}}{k}\)}
+        \text{Average angular velocity} \quad <\omega> &= \dfrac{\int_{0}^{t} \omega \, dt}{\int_{0}^{t} dt} = \dfrac{\int_{0}^{2\sqrt{\omega_0}/k} \left(\omega_0 + \dfrac{k^2 t^2}{4} - kt \sqrt{\omega_0}\right) dt}{2\sqrt{\omega_0}/k}\\
+        &= \dfrac{\left[ \omega_0 t + \dfrac{k^2 t^3}{12} - \dfrac{k}{2} \sqrt{\omega_0} t^2 \right]_0^{2\sqrt{\omega_0}/k}}{2\sqrt{\omega_0}/k}\\
+        \intertext{Hence,}
+        <\omega> &= \dfrac{\omega_0}{3}
+    \end{align*}
+\end{solution}

@@ -1,1 +1,17 @@
 \item Having gone through a plank of thickness \( h \), a bullet changed its velocity from \( v_0 \) to \( v \). Find the time of motion of the bullet in the plank, assuming the resistance force to be proportional to the square of the velocity.
+\begin{solution}
+    \begin{align*}
+        \intertext{According to the problem}
+        m \dfrac{dv}{dt} &= -kv^2 \quad \text{or} \quad m \dfrac{dv}{v^2} = -kdt\\
+        \intertext{Integrating, within the limits}
+        \int_{v_0}^{v} \dfrac{dv}{v^2} &= -\dfrac{k}{m} \int_{0}^{t} dt \quad \text{or} \quad t = \dfrac{m}{k} \left( \dfrac{v_0 - v}{v_0v} \right) \tag{1}
+        \intertext{To find the value of \( k \), rewrite}
+        mv \dfrac{dv}{ds} &= -kv^2 \quad \text{or} \quad \dfrac{dv}{v} = -\dfrac{k}{m} ds
+        \intertext{On integrating}
+        \int_{v_0}^{v} \dfrac{dv}{v} &= -\dfrac{k}{m} \int_{0}^{b} ds\\
+        \intertext{So,}
+        k &= \dfrac{m}{b} \ln \dfrac{v_0}{v} \tag{2}
+        \intertext{Putting the value of \( k \) from Eq. (2) in Eq. (1), we get}
+        t &= \dfrac{b \left( v_0 - v \right)}{v_0v \ln \dfrac{v_0}{v}} 
+    \end{align*}
+\end{solution}

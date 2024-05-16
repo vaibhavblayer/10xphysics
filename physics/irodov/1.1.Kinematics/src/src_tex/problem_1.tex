@@ -1,2 +1,23 @@
 
 \item A motorboat going downstream overcame a raft at a point \( A \); \( \tau = 60 \) min later it turned back and after some time passed the raft at a distance \( l = 6.0 \) km from the point \( A \). Find the flow velocity assuming the duty of the engine to be constant.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let $v_0$ be the stream velocity and $v'$ the velocity of motorboat with respect to water. The motorboat reached point $B$ while going downstream with velocity $(v_0+v')$ and then returned with velocity $(v' - v_0)$ and passed the raft at point $C$. Let $t$ be the time for the raft (which flows with stream with velocity $v_0$) to move from point $A$ to $C$, during which the motorboat moves from $A$ to $B$ and then from $B$ to $C$.}
+        t &= \dfrac{l}{v_0} = \tau + \frac{\left(v_0 + v'\right)\tau - l}{(v' - v_0)}\\
+        \intertext{On solving, we get}
+        v_0 &= \dfrac{l}{2\tau} = 3\ \text{km/h} \quad \text{(on substituting values)}
+    \end{align*}
+
+    \textbf{Alternate:}
+    
+    \begin{align*}
+        \intertext{In the frame of reference moving with the stream velocity the raft becomes stationary. The boat travels for time $\tau$ and turns and then travels back to reach the raft. As the raft is still at its original position, hence it would take exactly further time $\tau$ (the same time interval) for the boat to reach the raft. The boat thus takes time $2\tau$ to reach the raft in the frame of stream. In Newtonian mechanics time interval between two events is frame independent, so $2\tau$ is also the time interval in the frame of river bank. In the mean time the raft has travelled $l$. Hence the speed $v_0$ of the river is}
+        v_0 &= \dfrac{l}{2\tau} = 3\ \text{km/h}
+    \end{align*}
+\end{solution}

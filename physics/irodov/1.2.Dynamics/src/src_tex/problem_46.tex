@@ -1,1 +1,15 @@
-\item A body of mass \( m \) is thrown straight up with velocity \( v_0 \). Find the velocity \( v' \) with which the body comes down if the air drag equals \( kv^2 \), where \( k \) is a constant and \( v \) is the velocity of the body.
+\item A body of mass \( m \) is thrown straight up with velocity \( v_0 \). Find the velocity \( v' \) with which the body comes down if the air drag equals \( kv^2 \), where \( k \) is a constant and \( v \) is the velocity of the body.\begin{solution}
+    \begin{align*}
+        \intertext{While going upward, from Newton’s second law, in vertical direction}
+        m\dfrac{vdv}{ds} &= -(mg + kv^2)  \ \ \  \text{or}  \ \ \  \dfrac{vdv}{g + \left(kv^2 / m\right)} = -ds\\
+        \intertext{At the maximum height \( h \), the speed \( v=0 \), so}
+        \int_{v_0}^{0} \dfrac{vdv}{g + \left(kv^2 / m\right)} &= -\int_{0}^{b} ds\\
+        \intertext{Integrating and solving, we get}
+        h &= \dfrac{m}{2k} \ln{\left(1 +  \dfrac{kv_0^2}{mg} \right)}  \tag{1}\\
+        \intertext{When the body falls downward, the net force acting on the body in downward direction equals \( mg - kv^2 \). Hence net acceleration, in downward direction, according to second law of motion}
+        \dfrac{vdv}{ds} &= g - \dfrac{kv^2}{m}  \ \ \ \ \text{or} \ \ \  \dfrac{vdv}{g - \left(kv^2 / m\right)} = ds\\
+        Thus, \int_{0}^{v'} \dfrac{vdv}{g - \left(kv^2 / m\right)} &= \int_{0}^{b} ds\\\
+        \intertext{Integrating and putting the value of \textit{h} from Eq. \((1)\), we get}
+        v' &= \dfrac{v_0}{\sqrt{1 + \dfrac{kv_0'^2}{mg}}}
+    \end{align*}
+\end{solution}

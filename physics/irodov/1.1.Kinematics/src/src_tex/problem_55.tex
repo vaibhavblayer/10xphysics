@@ -1,2 +1,24 @@
 
 \item Two solid bodies rotate about stationary mutually perpendicular intersecting axes with constant angular velocities \(\omega_1 = 3.0 \text{ rad/s}\) and \(\omega_2 = 4.0 \text{ rad/s}\). Find the angular velocity and angular acceleration of one body relative to the other.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The angular velocity is a vector as infinitesimal rotation commute. As for relative linear velocity, the relative angular velocity of the body 1 with respect to the body 2 is clearly}
+        \vec{\omega}_{12} &= \vec{\omega}_1 - \vec{\omega}_2\\
+        \intertext{As $\vec{\omega}_1 \perp \vec{\omega}_2$, so, $|\vec{\omega}_{12}| = \sqrt{\omega_1^2 + \omega_2^2} = 5 \text{ rad/s}$ (on substituting values)}
+        \intertext{If frame $K'$ rotates with angular velocity $\vec{\omega}$ with respect to frame $K$, the relation between the time derivatives of any vector $\vec{a}$, seen from different frames is:}
+        \left.\dfrac{d \vec{a}}{dt}\right|_K &= \left.\dfrac{d \vec{a}}{dt}\right|_{K'} + \vec{\omega} \times \vec{a}
+        \intertext{If frame attached with the intersection point of two axes (about which solids are rotating) is K and the frame attached with rotating solid with angular velocity $\vec{\omega}_2$ is $K'$}
+        \text{Then,} \qquad \left.\dfrac{d \vec{\omega}_1}{dt}\right|_K &= \left.\dfrac{d \vec{\omega}_1}{dt}\right|_{K'} + \vec{\omega}_2 \times \vec{\omega}_1
+        \intertext{However,} \qquad \left.\dfrac{d \vec{\omega}_1}{dt}\right|_K &=0 \quad \text{(as the first body rotates with constant angular velocity in space)}\\
+        \text{and} \qquad \left.\dfrac{d \vec{\omega}_1}{dt}\right|_{K'} &= \vec{\beta}_{12} \quad \text{(the sought angular velocity)}\\
+        \text{Hence,} \qquad \vec{\beta}_{12} &= \vec{\omega}_1 \times \vec{\omega}_2\\
+        \text{So,} \qquad |\vec{\beta}_{12}| &= \omega_1 \omega_2 = 12 \text{ rad/s}^2 \quad \text{(on substituting values)}
+    \end{align*}
+\end{solution}

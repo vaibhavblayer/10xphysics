@@ -1,2 +1,22 @@
 
 \item A ship moves along the equator to the east with velocity \( v_0 = 30 \) km/hour. The southeastern wind blows at an angle \( \varphi = 60^\circ \) to the equator with velocity \( v = 15 \) km/hour. Find the wind velocity \( v' \) relative to the ship and the angle \( \varphi' \) between the equator and the wind direction in the reference frame fixed to the ship.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{We have}
+        \vec{v}' &= \vec{v} - \vec{v_0}\\
+        \intertext{In the vector diagram for above relation, let us drop a dotted perpendicular from the tip of \(\vec{v}\) onto the line of action of \(\vec{v_0}\). Using the property of right angle triangle,}
+        v' &= \sqrt{(v \cos \varphi + v_0)^2 + (v \sin \varphi)^2} = \sqrt{v_0^2 + v^2 + 2v_0 v \cos \varphi}\\
+        &= 39.7 \text{ km/h (on substituting values)}
+        \intertext{and}
+        \tan \varphi' &= \dfrac{v \sin \varphi}{v \cos \varphi + v_0}\\
+        \intertext{On substitution}
+        \varphi' &= 19.1^\circ
+    \end{align*}
+\end{solution}

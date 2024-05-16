@@ -1,1 +1,15 @@
-\item A particle of mass \( m \) moves along the internal smooth surface of a vertical cylinder of radius \( R \). Find the force with which the particle acts on the cylinder wall if at the initial moment of time its velocity equals \( v_0 \) and forms an angle \( \alpha \) with the horizontal.
+\item A particle of mass \( m \) moves along the internal smooth surface of a vertical cylinder of radius \( R \). Find the force with which the particle acts on the cylinder wall if at the initial moment of time its velocity equals \( v_0 \) and forms an angle \( \alpha \) with the horizontal.\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The force with which the cylinder wall acts on the particle will provide centripetal force necessary for the motion of the particle, and since there is no acceleration acting in the horizontal direction, horizontal component of the velocity will remain constant throughout the motion.}
+        \text{So,} \quad v_x &= v_0 \cos \alpha \tag{1.94}
+        \intertext{Using, $F_n = mw_n$, for the particle of mass $m$}
+        N &= \dfrac{mv_x^2}{R} = \dfrac{mv_0^2 \cos^2 \alpha}{R}\\
+        \intertext{which is the required normal force.}
+    \end{align*}
+\end{solution}

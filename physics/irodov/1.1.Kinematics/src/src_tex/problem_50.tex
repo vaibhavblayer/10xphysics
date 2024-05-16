@@ -1,2 +1,23 @@
 
 \item A solid body starts rotating about a stationary axis with an angular acceleration \(\beta = \beta_0 \cos \varphi\), where \(\beta_0\) is a constant vector and \(\varphi\) is an angle of rotation from the initial position. Find the angular velocity of the body as a function of the angle \(\varphi\). Draw the plot of this dependence.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us choose the positive direction of \(z\)-axis (stationary rotation axis) along the vector \(\beta_0\). In accordance with the equation}
+        \frac{d\omega_z}{dt} &= \beta_z \quad \text{or} \quad \omega_z \frac{d\omega_z}{d\varphi} = \beta_z\\
+        \intertext{or}
+        \omega_z d\omega_z &= \beta_z d\varphi = \beta \cos \varphi \, d\varphi\\
+        \intertext{Integrating this equation within its limit for \(\omega_z (\varphi)\)}
+        \int_0^{\omega_1} \omega_z d\omega_z &= \beta_0 \sin \varphi\\
+        \intertext{Hence,}
+        \omega_z &= \pm \sqrt{2 \beta_0 \sin \varphi}
+    \end{align*}
+
+    The plot \(\omega_z(\varphi)\) is shown in the figure. It can be seen that as the angle \(\varphi\) grows, the vector \(\omega\) first increases, coinciding with the direction of the vector \(\beta_0 (\omega_z > 0)\), reaches the maximum at \(\varphi = \pi/2\), then starts decreasing and finally turns into zero at \(\varphi = \pi\). After that, the body starts rotating in the opposite direction in a similar fashion \((\omega_z < 0)\). As a result, the body will oscillate about the position \(\varphi = \pi/2\) with an amplitude equal to \(\pi/2\).
+\end{solution}
