@@ -1,0 +1,26 @@
+\item A particle moves along a closed trajectory in a central field of force where the particle's potential energy \( U = kr^2 \) ( \( k \) is a positive constant, \( r \) is the distance of the particle from the centre \( O \) of the field). Find the mass of the particle if its minimum distance from the point \( O \) equals \( r_1 \) and its velocity at the point farthest from \( O \) equals \( v_2 \).
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{If $ \dot{r} = $ radial velocity of the particle then the total energy of the particle at any instant is}
+        \frac{1}{2} m\dot{r}^2 + \frac{M^2}{2mr^2} + kr^2 &= E \tag{1}
+        \intertext{where the second term is the kinetic energy of angular motion about the centre $ O $.}
+        \intertext{Then the extreme values of $ r $ are determined by $ \dot{r} = 0 $ and solving the resulting quadratic equation}
+        k(r^2)^2 - E r^2 + \frac{M^2}{2m} &= 0\\
+        \intertext{we get}
+        r^2 &= \frac{E \pm \sqrt{E^2 - 2M^2 k / m}}{2k}
+        \intertext{From this we see that}
+        E &= k(r_1^2 + r_2^2)\\
+        \intertext{So,}
+        \frac{1}{2} mv_2^2 + kr_2^2 &= k(r_1^2 + r_2^2)\\
+        \intertext{Hence,}
+        m &= \frac{2kr_1^2}{v_2^2}
+    \intertext{Note: Eq. (1) can be derived from the standard expression for kinetic energy and angular momentum in plane polar coordinates:}
+        T &= \frac{1}{2} m\dot{r}^2 + \frac{1}{2} mr^2 \dot{\theta}^2 & \text{and} \quad M = mr^2 \dot{\theta}, \quad \text{respectively}
+    \end{align*}
+\end{solution}

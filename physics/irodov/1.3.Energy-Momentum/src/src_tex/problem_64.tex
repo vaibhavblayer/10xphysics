@@ -1,0 +1,16 @@
+\item A spaceship of mass \( m_0 \) moves in the absence of external forces with a constant velocity \( v_0 \). To change the motion direction, a jet engine is switched on. It starts ejecting a gas jet with velocity \( u \) which is constant relative to the spaceship and directed at right angles to the spaceship motion. The engine is shut down when the mass of the spaceship decreases to \( m \). Through what angle \( \alpha \) did the motion direction of the spaceship deviate due to the jet engine operation?\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{As \( \mathbf{F} = 0 \), from the equation of dynamics of a body with variable mass,}
+        m\dfrac{d\mathbf{v}}{dt} &= \mathbf{u} \dfrac{dm}{dt} \quad\text{or}\quad d\mathbf{v} = \mathbf{u} \dfrac{dm}{m} \tag{1}
+        \intertext{Now \( d\mathbf{v} \perp \mathbf{u} \) and since \( \mathbf{u} \perp \mathbf{v} \), we must have \( |\mathbf{d}\mathbf{v}| = v_0 d\alpha \) (because \( v_0 \) is constant), where \( d\alpha \) is the angle by which the spaceship turns in time \( dt \).}
+        -\mathbf{u} \dfrac{dm}{m} &= v_0 d\alpha \quad\text{or}\quad d\alpha = -\dfrac{\mathbf{u}}{v_0} \dfrac{dm}{m} 
+        \intertext{or}
+        \alpha &= - \dfrac{\mathbf{u}}{v_0} \int_{m_0}^{m} \dfrac{dm}{m} = \dfrac{\mathbf{u}}{v_0} \ln \left( \dfrac{m_0}{m} \right)
+    \end{align*}
+\end{solution}

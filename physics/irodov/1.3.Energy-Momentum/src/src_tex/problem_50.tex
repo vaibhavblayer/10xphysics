@@ -1,0 +1,21 @@
+\item Find the increment of the kinetic energy of the closed system comprising two spheres of masses \( m_1 \) and \( m_2 \) due to their perfectly inelastic collision, if the initial velocities of the spheres were equal to \( \mathbf{v_1} \) and \( \mathbf{v_2} \).
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{For perfectly inelastic collision, in the C.M. frame, final kinetic energy of the colliding system (both spheres) becomes zero. Hence initial kinetic energy of the system in C.M. frame completely turns into the internal energy (Q) of the formed body.}
+        Q &= T_i = \dfrac{1}{2}\mu|\vec{v}_1-\vec{v}_2|^2 \tag{1.167}\\
+        \intertext{Now from energy conservation}
+        \Delta T &= -Q = -\dfrac{1}{2}\mu|\vec{v}_1 - \vec{v}_2|^2
+    \end{align*}
+
+    \begin{align*}
+        \intertext{In laboratory frame the same result is obtained as}
+        \Delta \tilde{T} &= \dfrac{1}{2}\left(\dfrac{m_1\vec{v}_1 + m_2\vec{v}_2}{m_1 + m_2}\right)^2 - \dfrac{1}{2}m_1|\vec{v}_1|^2 + \dfrac{1}{2}m_2|\vec{v}_2|^2\\
+        &= -\dfrac{1}{2}\mu|\vec{v}_1 - \vec{v}_2|^2
+    \end{align*}
+\end{solution}

@@ -1,0 +1,16 @@
+\item A system consists of two springs connected in series and having the stiffness coefficients $k_1$ and $k_2$. Find the minimum work to be performed in order to stretch this system by $\Delta l$.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Since the springs are connected in series, the combination may be treated as a single spring of spring constant.}
+        \kappa &= \dfrac{\kappa_1 \kappa_2}{\kappa_1 + \kappa_2}\\
+        \intertext{From the equation of increment of mechanical energy,}
+        \Delta T + \Delta U_{\text{spring}} &= A_{\text{ext}}\\
+        0 + \dfrac{1}{2} \kappa \Delta l^2 &= A_{\text{ext}} \quad \text{or} \quad A_{\text{ext}} = \dfrac{1}{2} \left( \dfrac{\kappa_1 \kappa_2}{\kappa_1 + \kappa_2} \right) \Delta l^2
+    \end{align*}
+\end{solution}

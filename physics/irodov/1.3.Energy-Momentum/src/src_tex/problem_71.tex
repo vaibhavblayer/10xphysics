@@ -1,0 +1,26 @@
+\item A small ball of mass \(m\) suspended from the ceiling at a point \(O\) by a thread of length \(l\) moves along a horizontal circle with a constant angular velocity \(\omega\). Relative to which points does the angular momentum \(M\) of the ball remain constant? Find the magnitude of the increment of the vector of the ball’s angular momentum relative to the point \(O\) picked up during half a revolution.\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) The ball is under the influence of forces \(T\) and \(mg\) at all the moments of time, while moving along a horizontal circle. Obviously, the vertical component of \(T\) balances \(mg\) and so, the net moment of these two about any point becomes zero. The horizontal component of \(T\), which provides the centripetal acceleration to the ball is already directed toward the center (\(C\)) of the horizontal circle, thus its moment about the point \(C\) equals zero at all the moments of time. Hence, the net moment of the force acting on the ball about the point \(C\) equals zero and that's why the angular momentum of the ball is conserved about the horizontal circle.}
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{(b) Let \(\alpha\) be the angle which the thread forms with the vertical. Now from the equation of particle dynamics}
+        T \cos \alpha &= mg & \text{and} & & T \sin \alpha = m \omega^2 l \sin \alpha\\
+        \intertext{Hence on solving,}
+        \cos \alpha &= \dfrac{g}{\omega^2 l} \tag{1} \\
+        \intertext{As \(|\vec{M}|\) is constant in magnitude, so from the figure}
+        |\Delta \vec{M}| &= 2M \cos \alpha \\
+        \intertext{where} 
+        M &= |\vec{M}_i| = |\vec{M}_f|\\
+        &= |\vec{r}_{bo} \times m \vec{v}| = mvl & \text{(as \(\vec{r}_{bo} \perp \vec{v}\))}\\
+        \intertext{Thus,}
+        |\Delta \vec{M}| &= 2mvl \cos \alpha = 2 m \omega l^2 \sin \alpha \cos \alpha\\
+        &= \dfrac{2mgl}{\omega} \sqrt{1 - \left( \dfrac{g}{\omega^2 t} \right)^2 } & \text{(using Eq. 1)}
+    \end{align*}
+\end{solution}

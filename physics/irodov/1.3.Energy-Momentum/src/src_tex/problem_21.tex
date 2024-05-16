@@ -1,0 +1,27 @@
+\item A horizontal plane supports a stationary vertical cylinder of radius \(R\) and a disc \(A\) attached to the cylinder by a horizontal thread \(AB\) of length \(l_0\) (Fig. 1.32, top view). An initial velocity \(v_0\) is imparted to the disc as shown in the figure. How long will it move along the plane until it strikes against the cylinder? The friction is assumed to be absent.
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (0, 0) {{diagram1.png}};
+            \node[anchor=north] at (4, -2) {Fig. 1.33.};
+        \end{tikzpicture}
+    \end{center}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Since the tension is always perpendicular to the velocity vector, the work done by the tension force will be zero. Hence, according to the work energy theorem, the kinetic energy or velocity of the disk will remain constant during it’s motion. Hence, the sought time \( t = \frac{s}{v_0} \), where \( s \) is the total distance traversed by the small disk during it’s motion.}
+        \intertext{Now, at an arbitrary position (see figure)}
+        ds &= (l_0 - R\theta) d\theta \\
+        \intertext{So,}
+        s &= \int\limits_{0}^{\frac{l_0}{R}} (l_0 - R\theta)d\theta \\
+        \intertext{or}
+        s &= \frac{l_0^2}{R} - \frac{Rl_0^2}{2R^2} = \frac{l_0^2}{2R} \\
+        \intertext{Hence, the required time}
+        t &= \frac{l_0^2}{2Rv_0}
+        \intertext{Note: It should be clearly understood that the only uncompensated force acting on the disk A in this case is the tension T, of the thread. It is easy to see that there is no point here, relative to which the moment of force T is invariable in the process of motion. Hence conservation of angular momentum is not applicable here.}
+    \end{align*}
+\end{solution}

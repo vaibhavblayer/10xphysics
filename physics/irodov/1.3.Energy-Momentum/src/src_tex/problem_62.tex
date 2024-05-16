@@ -1,0 +1,13 @@
+\item A rocket moves in the absence of external forces by ejecting a steady jet with velocity \( u \) constant relative to the rocket. Find the velocity \( v \) of the rocket at the moment when its mass is equal to \( m \), if at the initial moment it possessed the mass \( m_0 \) and its velocity was equal to zero. Make use of the formula given in the foregoing problem.
+\begin{solution}
+    
+    \begin{align*}
+        \intertext{According to the question, $\vec{F} = 0$ and $\mu = -\dfrac{dm}{dt}$ so the equation for this system becomes,}
+        m\dfrac{d\vec{v}}{dt} &= \dfrac{dm}{dt} \vec{u}
+        \intertext{As $d\vec{v} \downarrow \uparrow \vec{u}$, so, $m \, d\vec{v} = -u\, dm$.}
+        \intertext{Integrating within the limits}
+        \dfrac{1}{u}\int_{0}^{v} d\vec{v} &= -\int_{m_0}^{m} \dfrac{dm}{m} \quad\text{or} \quad \dfrac{v}{u} = \ln\dfrac{m_0}{m}\\
+        \text{Thus,} \quad v &= u \ln\dfrac{m_0}{m}
+        \intertext{As $d\vec{v} \downarrow \uparrow \vec{u}$, so in vector form $\vec{v} = -\vec{u} \ln\dfrac{m_0}{m}$.}
+    \end{align*}
+\end{solution}

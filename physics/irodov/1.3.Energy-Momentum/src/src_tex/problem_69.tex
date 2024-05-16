@@ -1,0 +1,24 @@
+\item A ball of mass \( m \) is thrown at an angle \( \alpha \) to the horizontal with the initial velocity \( v_0 \). Find the time dependence of the magnitude of the ball's angular momentum vector relative to the point from which the ball is thrown. Find the angular momentum \( M \) at the highest point of the trajectory if \( m = 130 \, \text{g} \), \( \alpha = 45^\circ \), and \( v_0 = 25 \, \text{m/s} \). The air drag is to be neglected.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{}
+        \text{M}(t) &= r \times p = \left(v_0 t + \dfrac{1}{2} gt^2 \right) \times m (v_0 + gt) \\
+        &= mv_0 gt^2 \sin \left( \dfrac{\pi}{2} + \alpha \right) (-\hat{k}) + \dfrac{1}{2} mv_0 gt^2 \sin \left( \dfrac{\pi}{2} + \alpha \right) \hat{k}\\
+        &= \dfrac{1}{2} mv_0 gt^2 \cos \alpha (-\hat{k}) \\
+        \intertext{Thus}
+        M(t) &= \dfrac{mv_0 gt^2 \cos \alpha}{2} \\
+        \intertext{Thus, angular momentum at maximum height, i.e., at $t$}
+        \dfrac{\tau}{2} &= \dfrac{v_0 \sin \alpha}{g} \\
+        M \left(\dfrac{\tau}{2} \right) &= \left( \dfrac{mv_0^3}{2g} \right) \sin^2 \alpha \cos \alpha \\
+        &= 37 \, \text{kg m}^2/\text{s} \\
+        \intertext{Alternate:}
+        M(0) &= 0 \quad \text{so} \quad M(t) = \int_{0}^{t} N \, dt = \int_{0}^{t} (r \times mg) \\
+        &= \int_{0}^{t} \left[ \left( v_0 t + \dfrac{1}{2} gt^2 \right) \times mg \right] \, dt = (v_0 \times mg ) \dfrac{t^2}{2}
+    \end{align*}
+\end{solution}

@@ -1,0 +1,19 @@
+\item A uniform sphere of mass \(m\) and radius \(R\) starts rolling without slipping down an inclined plane at an angle \(\alpha\) to the horizontal. Find the time dependence of the angular momentum of the sphere relative to the point of contact at the initial moment. How will the obtained result change in the case of a perfectly smooth inclined plane?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let the point of contact of sphere at initial moment $(t = 0)$ be at $O$. At an arbitrary moment, the forces acting on the sphere are shown in the figure.}
+        \intertext{As $N = mg \cos \alpha$ and both $(N$ and $mg \cos \alpha)$ pass through the same line, their net torque about any point is zero. The force of static friction passes through the point $O$, thus its moment about point $O$ becomes zero. Hence $mg \sin \alpha$ is the only force which has effective torque about point $O$, and is given by $|\mathbf{N}| = mgR \sin \alpha$ normally emerging from the plane of figure.}
+        \intertext{As}
+        \mathbf{M}(t = 0) &= 0\\
+        \Delta \mathbf{M} &= \mathbf{M}(t)\\
+        &= \int N \, dt
+        \intertext{Hence,}
+        \mathbf{M}(t) &= Nt = mg R \sin \alpha \, t
+    \end{align*}
+\end{solution}

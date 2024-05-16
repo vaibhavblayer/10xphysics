@@ -1,0 +1,21 @@
+
+\item A body of mass \( m \) is thrown at an angle \( \alpha \) to the horizontal with the initial velocity \( v_0 \). Find the mean power developed by gravity over the whole time of motion of the body, and the instantaneous power of gravity as a function of time.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The velocity of the body, \(t\) seconds after the beginning of the motion becomes}
+        \vec{v} &= \vec{v}_0 + g\vec{t}.
+        \intertext{The power developed by the gravity (\(mg\)) at that moment, is}
+        P &= mg \cdot \vec{v} = m(g \cdot \vec{v}_0 + g^2t) = mg(gt - \vec{v}_0 \sin{\alpha}). \tag{1}
+        \intertext{As \(mg\) is a constant force, so the average power}
+        \langle P \rangle &= \frac{A}{\tau} = \frac{mg \cdot \Delta \vec{r}}{\tau}, \tag{2}
+        \intertext{where \(\Delta \vec{r}\) is the net displacement of the body during time of flight.}
+        \intertext{As,}
+        mg \perp \Delta \vec{r}, & \quad \text{so} \quad \langle P \rangle = 0. \tag{3}
+    \end{align*}
+\end{solution}

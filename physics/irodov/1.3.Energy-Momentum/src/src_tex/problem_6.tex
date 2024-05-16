@@ -1,0 +1,19 @@
+\item Two bars of masses $m_1$ and $m_2$ connected by a non-deformed light spring rest on a horizontal plane. The coefficient of friction between the bars and the surface is equal to $k$. What minimum constant force has to be applied in the horizontal direction to the bar of mass $m_1$ in order to shift the other bar?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Let \(x\) be the compression in the spring when the bar \(m_2\) is about to shift. Therefore at this moment spring force on \(m_2\) is equal to the limiting friction between the bar \(m_2\) and horizontal floor. Hence}
+        \kappa x &= km_2 g \quad \text{[where \(\kappa\) is the spring constant (say)]} \quad \tag{1}
+        \intertext{For the block \(m_1\) from work-energy theorem:}
+        A &= \Delta T = 0 \text{ for minimum force. (A here includes the work done in stretching the spring.)}
+        \intertext{So,}
+        Fx - \dfrac{1}{2} \kappa x^2 - km_1 g x &= 0 \quad \text{or} \quad \kappa \dfrac{x}{2} = F - km_1 g \quad \tag{2}
+        \intertext{From Eqs. (1) and (2),}
+        F &= kg \left(m_1 + \dfrac{m_2}{2}\right)
+    \end{align*}
+\end{solution}

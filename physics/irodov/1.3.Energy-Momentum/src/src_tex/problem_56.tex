@@ -1,0 +1,20 @@
+\item A particle of mass $m$ having collided with a stationary particle of mass $M$ deviated by an angle $\pi/2$ whereas the particle $M$ recoiled at an angle $\theta = 30^\circ$ to the direction of the initial motion of the particle $m$. How much (in per cent) and in what way has the kinetic energy of this system changed after the collision, if $M/m = 5.0$?\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{From conservation of linear momentum in the initial motion direction of striking particle 1 and perpendicular to it gives}
+        mv_1 &= Mv_1' \cos \theta \tag{1}\\
+        mv_1' &= Mv_2' \sin \theta \tag{2}
+        \intertext{Thus,}
+        v_1' &= v_1 \tan \theta \tag{3}
+        \intertext{Percentage change in the kinetic energy of the system}
+        &= \left( \dfrac{T_{\text{system}}'}{T_{\text{system}}} - 1 \right) \times 100 \\
+        &= \left( \dfrac{\dfrac{1}{2} m v_1'^2 \tan^2 \theta + \dfrac{1}{2} M \left(\dfrac{mv_1}{M \cos \theta} \right)^2}{\dfrac{1}{2} mv_1^2} - 1 \right) \times 100 \\
+        &= \left( \tan^2 \theta + \dfrac{m}{M} \sec^2 \theta - 1 \right) \times 100
+        \intertext{Putting the values of \(\theta\) and \(m/M\), we get \% of change in kinetic energy \(= -40\% \).}
+    \end{align*}
+\end{solution}

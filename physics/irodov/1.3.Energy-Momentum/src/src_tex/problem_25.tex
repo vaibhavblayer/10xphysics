@@ -1,0 +1,19 @@
+\item A smooth light horizontal rod \(AB\) can rotate about a vertical axis passing through its end \(A\). The rod is fitted with a small sleeve of mass \(m\) attached to the end \(A\) by a weightless spring of length \(l_0\) and stiffness \(\kappa\). What work must be performed to slowly get this system going and reaching the angular velocity \(\omega\)?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let the deformation in the spring be $\Delta l$, when the rod $AB$ has attained the angular velocity $\omega$. From the second law of motion in projection form $F_n = mwv_n$.}
+        \kappa \Delta l &= m \omega^2 \left(l_0 + \Delta l \right)  \quad \text{or} \quad \Delta l = \dfrac{m\omega^2 l_0}{\kappa - m \omega^2}
+        \intertext{From the energy equation, $A_{ext}$}
+        A_{ext} &= \dfrac{1}{2} mv^2 + \dfrac{1}{2} \kappa \Delta l^2\\
+        &= \dfrac{1}{2} m \omega^2 \left(l_0 + \Delta l\right)^2 + \dfrac{1}{2} \kappa \Delta l^2\\
+        &= \dfrac{1}{2} m \omega^2 \left( l_0 + \dfrac{m \omega^2 l_0}{\kappa - m \omega^2}\right)^2 + \dfrac{1}{2} \kappa \left(\dfrac{m \omega^2 l_0}{\kappa - m \omega^2}\right)^2
+        \intertext{On solving}
+        A_{ext} &= \dfrac{\kappa l_0^2 \eta \left(1 + \eta\right)}{2 \left(1 - \eta\right)^2}, \quad \text{where} \quad \eta = \dfrac{m \omega^2}{\kappa}
+    \end{align*}
+\end{solution}

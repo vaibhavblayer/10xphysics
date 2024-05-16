@@ -1,0 +1,30 @@
+\item Two small identical discs, each of mass \(m\), lie on a smooth horizontal plane. The discs are interconnected by a light non-deformed spring of length \(l_0\) and stiffness \(\kappa\). At a certain moment one of the discs is set in motion in a horizontal direction perpendicular to the spring with velocity \(v_0\). Find the maximum elongation of the spring in the process of motion, if it is known to be considerably less than unity.\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{In the C.M. frame of the system (both the disks + spring), the linear momentum of the disks are related by the relation,}
+        \vec{p_1} &= -\vec{p_2}, \text{ at all the moments of time.}
+        \intertext{Where,}
+        \vec{p_1} = \vec{p_2} &= \vec{p} = \mu v_{rel}
+        \intertext{And the total kinetic energy of system,}
+        T &= \dfrac{1}{2} \mu v^2_{rel} \quad \text{[see solution of problem 1.147(b)]}
+        \intertext{Bearing in mind that at the moment of maximum deformation of the spring, the projection of } v_{rel} \text{ along the length of the spring becomes zero, i.e., } v_{rel (x)} = 0.
+        \intertext{The conservation of mechanical energy of the considered system in the C.M. frame gives}
+        \dfrac{1}{2} \left(\dfrac{m}{2}\right)v^2_0 &= \dfrac{1}{2} \kappa x^2 + \dfrac{1}{2} \left(\dfrac{m}{2}\right)v^2_{rel (y)} \tag{1}
+        \intertext{Now from the conservation of angular momentum of the system about the C.M.,}
+        \dfrac{1}{2} \left(\dfrac{l_0}{2}\right)\left(\dfrac{m}{2}v_0\right) &= 2 \left(\dfrac{l_0 + x}{2}\right) \dfrac{m}{2} v_{rel (y)}
+        \intertext{or}
+        v_{rel (y)} &= \dfrac{v_0 l_0}{(l_0 + x)} = v_0 \left(1 + \dfrac{x}{l_0}\right)^{-1} = v_0 \left(1 - \frac{x}{l_0}\right) \quad \text{(as } x<<l_0) \tag{2}
+        \intertext{Using Eq. (2) in Eq. (1),}
+        \dfrac{1}{2} mv^2_0 \left[1 - \left(1 - \dfrac{x}{l_0}\right)^2\right] &= \kappa x^2
+        \intertext{or}
+        \dfrac{1}{2} mv^2_0 \left(1 - \left[1 - \dfrac{2x}{l_0} + \dfrac{x^2}{l^2_0}\right]\right) &= \kappa x^2
+        \intertext{or}
+        \dfrac{mv^2_0 x}{l_0} &= \kappa x^2 \quad \text{[neglecting } x^2 / l^2_0\text{]}
+        \intertext{As } x \neq 0, \text{ thus } x &= \dfrac{mv^2_0}{\kappa l_0}
+    \end{align*}
+\end{solution}

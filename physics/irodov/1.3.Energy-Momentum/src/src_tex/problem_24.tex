@@ -1,0 +1,29 @@
+\item A horizontal plane supports a plank with a bar of mass \( m = 1.0 \text{ kg} \) placed on it and attached by a light elastic non-deformed cord of length \( l_0 = 40 \text{ cm} \) to a point \( O \) (Fig. 1.35). The coefficient of friction between the bar and the plank equals \( k = 0.20 \). The plank is slowly shifted to the right until the bar starts sliding over it. It occurs at the moment when the cord deviates from the vertical by an angle \( \theta = 30^\circ \). Find the work that has been performed by that moment by the friction force acting on the bar in the reference frame fixed to the plane.
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (0, 0) {Diagram};
+        \end{tikzpicture}
+    \end{center}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Obviously the elongation in the cord, \( \Delta l = l_0 (\sec \theta - 1) \), at the moment the sliding first starts and at the moment horizontal projection of spring force equals the limiting friction.}
+        \kappa \Delta l \sin \theta &= kN \tag{1} \\
+        \intertext{(where \( \kappa \) is the elastic constant)}
+        \intertext{From Newton's law in projection form along vertical direction:}
+        \kappa \Delta l \cos \theta + N &= mg \\
+        N &= mg - \kappa \Delta l \cos \theta \tag{2}
+        \intertext{From Eqs. (1) and (2),}
+        \kappa \Delta l \sin \theta &= k (mg - \kappa \Delta l \cos \theta) \\
+        \kappa &= \frac{k mg}{\Delta l \sin \theta + k \Delta l \cos \theta} \\
+        \intertext{From the equation of the increment of mechanical energy: \( \Delta U + \Delta T = A_{fr} \),}
+        \left( \frac{1}{2} \kappa \Delta l^2 \right) &= A_{fr} \\
+        \frac{k mg \Delta l^2}{2 \Delta l (\sin \theta + k \cos \theta)} &= A_{fr} \\
+        \intertext{Thus,}
+        A_{fr} &= \left( \frac{k mg l_0 ( \sec \theta - 1)}{2 (\sin \theta - k \cos \theta)} \right) = 0.09 \text{ J (on substituting values)}
+    \end{align*}
+\end{solution}

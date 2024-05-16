@@ -1,0 +1,21 @@
+\item A closed chain \( A \) of mass \( m = 0.36 \) kg is attached to a vertical rotating shaft by means of a thread (Fig. 1.37), and rotates with a constant angular velocity \( \omega = 35 \) rad/s. The thread forms an angle \( \theta = 45^\circ \) with the vertical. Find the distance between the chain's centre of gravity and the rotation axis, and the tension of the thread.
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (0, 0) {Diagram};
+        \end{tikzpicture}
+    \end{center}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{First of all, it is clear that the chain does not move in the vertical direction during the uniform rotation. This means that the vertical component of the tension \( T \) balances gravity. As for the horizontal component of the tension \( T \), it is constant in magnitude and permanently directed toward the rotation axis. It follows from this that the centre of mass of the chain, the point \( C \), travels along horizontal circle of radius \( \rho \) (say). Therefore we have}
+        T \cos{\theta} &= mg \quad \text{and} \quad T \sin{\theta} = m \omega^{2} \rho 
+        \intertext{Thus}
+        \rho &= \dfrac{g \tan{\theta}}{\omega^{2}} = 0.8 \, \text{cm}
+        \intertext{and}
+        T &= \dfrac{mg}{\cos{\theta}} = 5 \, \text{N} \quad \text{(on substituting values)}
+    \end{align*}
+\end{solution}

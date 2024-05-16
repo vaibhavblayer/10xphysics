@@ -1,0 +1,13 @@
+\item Two identical buggies move one after the other due to inertia (without friction) with the same velocity \( v_0 \). A man of mass \( m \) rides the rear buggy. At a certain moment the man jumps into the front buggy with a velocity \( u \) relative to his buggy. Knowing that the mass of each buggy is equal to \( M \), find the velocities with which the buggies will move after that.
+\begin{solution}
+    \begin{align*}
+        \intertext{From momentum conservation, for the system (rear buggy + man)}
+        (M + m)v_0 &= m(u + \vec{v}_R) + M\vec{v}_R \tag{1}
+        \intertext{From momentum conservation, for the system (front buggy + man coming from rear buggy)}
+        Mv_0 + m(u + \vec{v}_R) &= (M + m)\vec{v}_F
+        \intertext{So,}
+        \vec{v}_F &= \dfrac{Mv_0}{M + m} + \dfrac{m}{M + m}(u + \vec{v}_R)
+        \intertext{Putting the value of \(\vec{v}_R\) from Eq. (1), we get}
+        \vec{v}_F &= v_0 + \dfrac{mM}{(M + m)^2}u
+    \end{align*}
+\end{solution}

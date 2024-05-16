@@ -1,0 +1,27 @@
+\item A body of mass \( M \) (Fig. 1.43) with a small disc of mass \( m \) placed on it rests on a smooth horizontal plane. The disc is set in motion in the horizontal direction with velocity \( v \). To what height (relative to the initial level) will the disc rise after breaking off the body \( M \)? The friction is assumed to be absent.
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (-4, 0) {{image2.png}};
+            \node at (-4, -2) {Fig. 1.42.};
+            \node at (4, -2) {Fig. 1.43.};
+        \end{tikzpicture}
+    \end{center}\begin{solution}
+    
+    \begin{align*}
+        \intertext{When the disk breaks off the body $M$, its velocity towards the right (along x-axis) equals the velocity of the body $M$, and let the disk's velocity in the upward direction (along y-axis) at that moment be $v'_y$.}
+        \intertext{From conservation of momentum, along x-axis for the system (disk + body)}
+        mv &= (m+M) v'_x \quad \text{or} \quad v'_x = \dfrac{mv}{m+M} \tag{1}
+        \intertext{And from energy conservation, for the same system in the field of gravity:}
+        \dfrac{1}{2} mv^2 &= \dfrac{1}{2} (m+M)v_x'^2 + \dfrac{1}{2} mv_y'^2 + mgh' 
+        \intertext{where $h'$ is the height of the break-off point from the initial level.}
+        \dfrac{1}{2} mv^2 &= \dfrac{1}{2} (m+M) \dfrac{m^2 v^2}{(M+m)^2} + \dfrac{1}{2} mv_y'^2 + mgh' \quad \text{(using Eq. 1)}
+        \intertext{or}
+        v_y'^2 &= v^2 - \dfrac{mv^2}{(m+M)} - 2gh'
+        \intertext{Also, if $h''$ is the height of the disk from the break-off point, then,}
+        v_y'^2 &= 2gh'' 
+        \intertext{So,}
+        2g (h'' + h') &= v^2 - \dfrac{mv^2}{(M+m)}
+        \intertext{Hence, the total height, raised from the initial level is}
+        h' + h'' &= \dfrac{Mv^2}{2g (M+m)}
+    \end{align*}
+\end{solution}

@@ -1,0 +1,24 @@
+\item A pulley fixed to the ceiling carries a thread with bodies of masses $m_1$ and $m_2$ attached to its ends. The masses of the pulley and the thread are negligible, friction is absent. Find the acceleration $w_C$ of the centre of inertia of this system.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{We know that acceleration of centre of mass of the system is given by the expression.}
+        \vec{w}_C &= \dfrac{m_1\vec{w}_1 + m_2\vec{w}_2}{m_1 + m_2} \\
+        \intertext{Since}
+        \vec{w}_1 &= -\vec{w}_2 \\
+        \vec{w}_C &= \dfrac{(m_1 - m_2)\vec{w}_1}{m_1 + m_2} \tag{1} \\
+        \intertext{Now from Newton's second law $\vec{F}= m\vec{w}$, for bodies $m_1$ and $m_2$, respectively,}
+        \vec{T} + m_1\vec{g} &= m_1\vec{w}_1 \tag{2} \\
+        \intertext{and}
+        \vec{T} + m_2\vec{g} &= m_2\vec{w}_2 = -m_2\vec{w}_1 \tag{3} \\
+        \intertext{Solving Eqs. (2) and (3)}
+        \vec{w}_1 &= \dfrac{(m_1 - m_2)\vec{g}}{m_1 + m_2} \tag{4} \\
+        \intertext{Thus, from Eqs. (1) and (4),}
+        \vec{w}_C &= \dfrac{(m_1 - m_2)^2\vec{g}}{(m_1 + m_2)^2}
+    \end{align*}
+\end{solution}

@@ -1,0 +1,50 @@
+\item A particle of mass $m_1$ experienced a perfectly elastic collision with a stationary particle of mass $m_2$. What fraction of the kinetic energy does the striking particle lose, if
+    \begin{enumerate}
+        \item it recoils at right angles to its original motion direction;
+        \item the collision is a head-on one?
+    \end{enumerate}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) From conservation of linear momentum}
+        \vec{p}_1 &= \vec{p}_1' + \vec{p}_2' \quad \text{or} \quad  \vec{p}_1 - \vec{p}_1' = \vec{p}_2'\\
+        \intertext{As} 
+        p_1' &\perp p_1 \quad \text{so,} \quad p_1^2 + p_1'^2 = p_2'^2 \tag{1}\\
+        \intertext{From conservation of kinetic energy} 
+        \dfrac{p_1^2}{2m_1} &= \dfrac{p_1'^2}{2m_1} + \dfrac{p_2'^2}{2m_2} \tag{2}\\
+        \intertext{Using Eq. (1) in Eq. (2) we get} 
+        \dfrac{p_1^2}{2m_1} &= \dfrac{p_1'^2}{2m_1} + \dfrac{(p_1^2 + p_1'^2)}{2m_2}\\
+        \intertext{which yields} 
+        \dfrac{p_1'^2}{p_1^2} &= \left(\dfrac{m_2 - m_1}{m_2 + m_1}\right) \tag{3}\\
+        \intertext{So, sought fraction of kinetic energy $\eta = 1-\dfrac{T_1'}{T_1} = 1-\dfrac{p_1'^2/2m_1}{p_1^2/2m_1} = 1-\dfrac{p_1'^2}{p_1^2}$}
+        \eta &= 1 - \left(\dfrac{m_2 - m_1}{m_2 + m_1}\right) = \dfrac{2m_1}{m_1 + m_2}
+        \intertext{(b) For two particles closed system momentum of each particle in their C.M. frame are always equal and opposite. In C.M. frame the kinetic energy of the two particle system $\tilde{T} = \dfrac{\tilde{p}^2}{2\mu}$ where $\mu$ is the reduced mass. In perfectly elastic collision, the kinetic energy of the system is conserved.}
+        \dfrac{\tilde{p}_1^2}{2\mu} &= \dfrac{\tilde{p}_2^2}{2\mu} \quad \text{which gives} \quad \tilde{p}' = \tilde{p}\\
+        \intertext{Being head on collision, both the particles have to keep their motion along the same straight line before and after the collision. On collision, momentum vector of each particle has to change due to the reaction force by the other particle. So only choice left to each of the particle is to reverse the direction of its momentum after the collision keeping the magnitude constant, i.e., $\tilde{P_i}' = -\tilde{P_i}$, where $i = 1, 2$.}
+    \end{align*}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{The same can be said about the velocity of each particle in the C.M. frame}
+        \tilde{v_i}' &= -\tilde{v_i}\\
+        \intertext{but} 
+        \vec{v_i}' &= \vec{v_C} + \tilde{v_i}' = \vec{v_C} - \tilde{v_i} = \vec{v_C} - (\vec{v_i} - \vec{v_C}) = 2\vec{v_C} - \vec{v_i}\\
+        \intertext{Hence the velocity of i-th particle after collision.}
+        \vec{v_i}' &= 2\vec{v_C} - \vec{v_i} \quad \text{(where i = 1, 2)}
+        \intertext{So velocity of particle 1 just after the collision from above relation is}
+        \vec{v_1}' &= 2\vec{v_C} - \vec{v_1} =  2 \left( \dfrac{m_1 \vec{v_1}}{m_1 + m_2}\right) - \vec{v_1} = \left( \dfrac{m_1 - m_2}{m_1 + m_2}\right) \vec{v_1}\\
+        \intertext{Therefore,}
+        \dfrac{v_1'^2}{v_1^2} &= \left( \dfrac{m_1 - m_2}{m_1 + m_2}\right)^2
+        \intertext{Thus sought fraction $= 1-\dfrac{T_1'}{T_1} = 1 - \dfrac{v_1'^2}{v_1^2} = 1-\left( \dfrac{m_1 - m_2}{m_1 + m_2}\right)^2 = \dfrac{4m_1m_2}{(m_1+m_2)^2}$}
+    \end{align*}
+\end{solution}

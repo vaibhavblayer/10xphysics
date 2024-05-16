@@ -1,0 +1,61 @@
+\item Two bars connected by a weightless spring of stiffness \( \kappa \) and length (in the non-deformed state) \( l_0 \) rest on a horizontal plane. A constant horizontal force \( F \) starts acting on one of the bars as shown in Fig. 1.40. Find the maximum and minimum distances between the bars during the subsequent motion of the system, if the masses of the bars are:
+   \begin{enumerate}
+       \item equal;
+       \item equal to \( m_1 \) and \( m_2 \), and the force \( F \) is applied to the bar of mass \( m_2 \).
+   \end{enumerate}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let us consider both blocks and spring as the physical system. The centre of mass of the system moves with acceleration \(a = \frac{F}{(m_{1} + m_{2})}\) towards right. Let us work in the frame of centre of mass. As this frame is a non-inertial frame (accelerated with respect to the ground) we have to apply a pseudo force \(m_{1}a\) towards left on the block \(m_{1}\) and \(m_{2}a\) towards left on the block \(m_{2}\).}\\
+        \intertext{As the centre of mass is at rest in this frame, the blocks move in opposite directions and come to instantaneous rest at some instant. The elongation of the spring will be maximum or minimum at this instant. Assume that the block \(m_1\) is displaced by the distance \(x_1\) and the block \(m_2\) through a distance \(x_2\) from the initial positions.}\\
+        \intertext{From the equation of increment of mechanical energy in C.M. frame}
+        \Delta \widetilde{T} + \Delta U &= A_{\text{ext}}\\
+        \intertext{where \(A_{\text{ext}}\) also includes the work done by the pseudo forces.}\\
+        \Delta \widetilde{T} &= 0, \quad \Delta U = \frac{1}{2}k(x_{1} + x_{2})^{2} \quad \text{and}\\
+        W_{\text{ext}} &= \left(F - \frac{m_{2}F}{m_{1} + m_{2}}\right)x_{2} + \frac{m_{1}F}{m_{1} + m_{2}}x_{1} = \frac{m_{1}F (x_{1} + x_{2})}{m_{1} + m_{2}}\\
+        \intertext{or}
+        \frac{1}{2}k(x_{1} + x_{2})^{2} &= \frac{m_{1}(x_{1} + x_{2})F}{m_{1} + m_{2}}\\
+        \intertext{So,}
+        x_{1} + x_{2} &= 0 \quad \text{or} \quad x_{1} + x_{2} = \frac{2m_{1}F}{k(m_{1} + m_{2})}\\
+        \intertext{Hence, the maximum and minimum separations between the blocks are}\\
+        l_{0} + \frac{2m_{1}F}{k (m_{1} + m_{2})} \quad \text{and} \quad l_{0}, \quad \text{respectively.}
+        \intertext{Alternate:}
+        \intertext{Let us link the inertial frame with horizontal floor and point the coordinate axis as shown in figure.}\\
+        \intertext{At an arbitrary instant of time the separation between the blocks is \(l\) and the \(x\) coordinate of the block \(m_1\) is \(x_1\). From Newton's second law for the block \(m_1\),}
+        m_{1} \frac{d^{2} x_{1}}{dt^{2}} &= k \left( l - l_{0} \right) \tag{1}\\
+        \intertext{Similarly for block \(m_{2}\)}
+        m_{2} \frac{d^{2} (x_{1} + l)}{dt^{2}} &= F - k \left( l - l_{0} \right) \tag{2}\\
+        \intertext{Multiplying Eq. (2) by \(m_1\) and Eq. (1) by \(m_2\), and then further subtracting Eq. (1) from Eq. (2), we get}
+        m_{1}m_{2} \frac{d^{2} (x + l)}{dt^{2}} - m_{1}m_{2} \frac{d^{2} x_{1}}{dt^{2}} &= m_{1}F = (m_{1} + m_{2})k (l - l_{0})\\
+        \intertext{or}
+        m_{1} m_{2} \frac{d^{2} l}{dt^{2}} &= m_{1}F - (m_{1} + m_{2}) k (l - l_{0}) \tag{3}\\
+        \intertext{or}
+        m_{1} m_{2} \frac{d^{2} (l - l_{0})}{dt^{2}} &= m_{1}F - (m_{1} + m_{2}) k (l - l_{0})\\
+        \intertext{or}
+        \frac{d^{2} (l - l_{0})}{dt^{2}} + \frac{k (m_{1} + m_{2})}{m_{1} m_{2}} (l - l_{0}) &= \frac{F}{m_{2}} \tag{4}\\
+        \intertext{Putting \(\frac{k (m_{1} + m_{2})}{m_{1} m_{2}} = \omega^{2}\) and \(\frac{F}{m_{2}} = A\)}\\
+        \intertext{and comparing with differential equation \(\frac{d^{2}x}{dt^{2}} + \omega^{2}x = A\), we get}
+        l - l_{0} &= \frac{A}{\omega^{2}} + B \sin (\omega t + \delta ) \tag{5}\\
+        \intertext{But at time \(t = 0\),}
+        l - l_{0} &= 0 \quad \text{and} \quad \frac{d (l - l_{0})}{dt} = 0\\
+        \intertext{So, \( B \omega \cos (\omega t + \delta) \vert_{t=0} = 0 \) and hence \(\delta = \frac{\pi}{2} \).}\\
+        \intertext{Therefore, Eq. (5) becomes}
+        l - l_{0} &= \frac{A}{\omega^{2}} + B \cos \omega t \tag{6}\\
+        \intertext{But at \(t = 0\),}
+        l - l_{0} &= 0, \quad \text{so,} \quad B = -\frac{A}{\omega^{2}}\\
+        \intertext{Hence, Eq. (6) becomes}
+        l - l_{0} &= \frac{A}{\omega^{2}} \left( 1 - \cos \omega t \right) \tag{7}\\
+        \intertext{But \((l - l_{0})\) will be maximum, when \(\cos \omega t = -1\)}\\
+        \intertext{Therefore, from Eq. (7)}
+        l - l_{0} &= \frac{2A}{\omega^{2}} = \frac{2Fm_{1}m_{2}}{km_{2} (m_{1} + m_{2})}\\
+        \intertext{or}
+        l &= l_{0} + \frac{2Fm_{1}}{k(m_{1} + m_{2})}\\
+        \intertext{Similarly \((l - l_{0})\) will be minimum when \(\cos \omega t = 1\)}
+        \intertext{Therefore, from Eq. (7)}
+        l - l_{0} &= 0 \quad \text{or} \quad l = l_{0}
+    \end{align*}
+\end{solution}

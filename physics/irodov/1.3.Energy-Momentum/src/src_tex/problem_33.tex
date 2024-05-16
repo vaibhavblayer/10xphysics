@@ -1,0 +1,37 @@
+\item A system consists of two small spheres of masses \( m_1 \) and \( m_2 \) interconnected by a weightless spring. At the moment \( t = 0 \) the spheres are set in motion with the initial velocities \( \mathbf{v_1} \) and \( \mathbf{v_2} \) after which the system starts moving in the Earth's uniform gravitational field. Neglecting the air drag, find the time dependence of the total momentum of this system in the process of motion and of the radius vector of its centre of inertia relative to the initial position of the centre.
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Velocities of masses $m_1$ and $m_2$ after $t$ seconds are, respectively,}
+        \vec{v}_1' &= \vec{v}_1 + gt \tag{1.150}\\
+        \vec{v}_2' &= \vec{v}_2 + gt
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{Hence the final momentum of the system}
+        \vec{p} &= m_1 \vec{v}_1 + m_2 \vec{v}_2 = m_1 \vec{v}_1 + m_1 \vec{v}_2 + (m_1 + m_2)gt\\
+        &= \vec{p_0} + mgt \quad (\text{where, } \vec{p_0} = m_2 \vec{v}_1 + m_2 \vec{v}_2 \text{ and } m = m_1 + m_2)
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{Radius vector is given by}
+        \vec{r}_c &= \vec{v}_c t + \dfrac{1}{2} \vec{w}_c t^2\\
+        &= \left( \dfrac{m_1 \vec{v}_1 + m_2 \vec{v}_2}{m_1 + m_2} \right)t + \dfrac{1}{2} gt^2 = \vec{v_0} t + \dfrac{1}{2} gt^2 \quad \text{where } \vec{v}_0 = \dfrac{m_1 \vec{v}_1 + m_2 \vec{v}_2}{m_1 + m_2}
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{After releasing, bar 2 acquires velocity $v_2$, obtained by the energy conservation:}
+        \dfrac{1}{2} m_2 v_2^2 &= \dfrac{1}{2} \kappa x^2 \quad \text{or} \quad v_2 = x \sqrt{\dfrac{\kappa}{m_2}}
+    \end{align*}
+    
+    \begin{align*}
+        \intertext{Thus, the sought velocity of C.M.}
+        \vec{v}_C &= \dfrac{0 + m_2 x \sqrt{\kappa / m_2}}{m_1 + m_2} = \dfrac{x \sqrt{m_2 \kappa}}{m_1 + m_2}
+    \end{align*}
+\end{solution}

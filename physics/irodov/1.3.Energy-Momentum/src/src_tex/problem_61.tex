@@ -1,0 +1,22 @@
+\item A rocket ejects a steady jet whose velocity is equal to $u$ relative to the rocket. The gas discharge rate equals $\mu$ kg/s. Demonstrate that the rocket motion equation in this case takes the form 
+    \begin{center}
+        \[
+        mw = \mathbf{F} - \mu u,
+        \]
+    \end{center}
+where $m$ is the mass of the rocket at a given moment, $w$ is its acceleration, and $\mathbf{F}$ is the external force.\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Suppose that at time \( t \), the rocket has the mass \( m \) and the velocity \( \vec{v} \), relative to the reference frame, employed. Now consider the inertial frame moving with the velocity that the rocket has at the given moment. In this reference frame, the momentum increment that the rocket and ejected gas system acquires during time \( dt \) is,}
+        d\vec{p} &= m d \vec{v} + \mu dt\, \vec{u} = \vec{F} \, dt \tag{1.178} \\
+        \intertext{or}
+        m \dfrac{d \vec{v}}{dt} &= \vec{F} - \mu \vec{u} \\
+        \intertext{or}
+        m \vec{w} &= \vec{F} - \mu \vec{u}
+    \end{align*}
+\end{solution}

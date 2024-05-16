@@ -1,0 +1,34 @@
+\item A small body of mass \( m \) is located on a horizontal plane at the point \( O \). The body acquires a horizontal velocity \( v_0 \). Find:
+    \begin{enumerate}
+        \item the mean power developed by the friction force during the whole time of motion, if the friction coefficient \( k = 0.27 \), \( m = 1.0 \, \text{kg} \), and \( v_0 = 1.5 \, \text{m/s} \);
+        \item the maximum instantaneous power developed by the friction force, if the friction coefficient varies as \( k = \alpha x \), where \( \alpha \) is a constant, and \( x \) is the distance from the point \( O \).
+    \end{enumerate}\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let the body $m$ acquire the horizontal velocity $v_0$ along positive x-axis at the point $O$.}
+        \intertext{(a) Velocity of the body $t$ seconds after the beginning of the motion,}
+        \vec{v} &= v_0 + \vec{w}t = \left(v_0 - kg \, t \right) \hat{i} \tag{1}\\
+        \intertext{Instantaneous power $P = \vec{F} \cdot \vec{v} = \left(-kmg \, \hat{i} \right) \cdot \left(v_0 - kgt \right) \hat{i} = -kmg \left(v_0 - kgt \right)$}
+        \intertext{From Eq. (1), the time of motion $\tau = \dfrac{v_0}{kg}$.}
+        \intertext{Hence sought average power during the time of motion}
+        \langle P \rangle &= \frac{1}{\tau} \int_{0}^{\tau} -kmg \left(v_0 - kgt \right) dt\\
+        &= \frac{kmg \, v_0}{2} = -2 \, W \quad \text{(on substituting values)} 
+        \intertext{(b) From}
+        F_x &= mw_x \\
+        -kmg &= mw_x = m \, w_x \frac{dv_x}{dx}\\
+        v_x dv_x &= -kg \, dx = - \alpha gx \, dx\\
+        \intertext{To find $v(x)$, let us integrate the above equation}
+        \int_{v_0}^{v} v_x dv_x &= - \alpha g \int_{0}^{x} x dx \quad \text{or} \quad v^2 = v_0^2 - \alpha gx^2
+        \intertext{Now,}
+        P &= \vec{F} \cdot \vec{v} = -m \alpha xg \sqrt{v_0^2 - \alpha gx^2} \tag{2}\\
+        \intertext{For maximum power,}
+        \frac{d}{dt} \left( \sqrt{v_0^2 \alpha^2 - \lambda gx^4} \right) = 0 \quad \text{which yields} \quad x = \frac{v_0}{\sqrt{2 \alpha g}}\\
+        \intertext{Putting this value of x in Eq. (2), we get}
+        P_{\text{max}} &= - \frac{1}{2}mv_0^2 \sqrt{\alpha g}
+    \end{align*}
+\end{solution}

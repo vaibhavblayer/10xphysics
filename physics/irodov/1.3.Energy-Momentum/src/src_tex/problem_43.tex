@@ -1,0 +1,30 @@
+\item A stationary pulley carries a rope whose one end supports a ladder with a man and the other end the counterweight of mass \( M \). The man of mass \( m \) climbs up a distance \( l' \) with respect to the ladder and then stops. Neglecting the mass of the rope and the friction in the pulley axle, find the displacement \( l \) of the centre of inertia of this system.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{The displacement of the C.M. of the system, man $(m)$, ladder $(M - m)$ and the counterweight $(M)$, is described by radius vector}
+        \Delta r_C &= \frac{\sum m_i \Delta r_i}{\sum m_i} = \frac{M \Delta r_M + (M - m) \Delta r_{(M-m)} + m \Delta r_m}{2M} \tag{1}\\
+        \intertext{But,}
+        \Delta r_m &= - \Delta r_{(M-m)}\\
+        \intertext{and}
+        \Delta r_m &= \Delta r_{m(M-m)} + \Delta r_{(M-m)} \tag{2}\\
+        \intertext{Using Eq. (2) in Eq. (1) we get}
+        \Delta r_C &= \frac{m l}{2M}
+    \intertext{Alternate:}
+    \intertext{Initially all the bodies of the system are at rest, and therefore the increments of linear momentum of the bodies in their motion are equal to the momentum themselves. The rope tension is the same both on the left and on the right-hand side, and consequently the momentum of the counter-balancing mass $(p_1)$ and the ladder with the man $(p_2)$ are equal at any instant of time, i.e., $p_1 = p_2$}
+        M v_1 &= m v + (M - m) v_2\\
+        \intertext{where $v_1,\;v,\; \text{and}\; v_2$ are the velocities of the mass, the man, and the ladder, respectively. Taking into account that $v_2 = -v_1 \; \text{and}\;v = v_2 + v'$, where $v'$ is the man's velocity relative to the ladder, we obtain}
+        v_1 &= (m/2M) v'\\
+        \intertext{On the other hand, the momentum of the whole system}
+            p &= p_1 + p_2 = 2 p_1 \quad 2 M v_C = 2 M v_1 \tag{1}\\
+        \intertext{where $V_C$ is the velocity of the centre of inertia of the system. With allowance made for Eq. (1) we get}
+            V_C &= v_1 = (m/2M) v'\\
+        \intertext{Finally, the sought displacement is}
+        \Delta r_C &= \int V_C \, dt = (m/2M) \int v' \, dt = (m/2M) \Delta r'
+    \end{align*}
+\end{solution}

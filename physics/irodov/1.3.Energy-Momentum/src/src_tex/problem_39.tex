@@ -1,0 +1,30 @@
+\item Two men, each of mass $m$, stand on the edge of a stationary buggy of mass $M$. Assuming the friction to be negligible, find the velocity of the buggy after both men jump off with the same horizontal velocity $u$ relative to the buggy:
+    \begin{enumerate}
+        \item simultaneously;
+        \item one after the other.
+    \end{enumerate}
+    In what case will the velocity of the buggy be greater and how many times?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Let $\vec{v}_1$ be the velocity of the buggy after both men jump off simultaneously. For the closed system (two men + buggy), from the conservation of linear momentum,} 
+        M\vec{v}_1 + 2m(u + \vec{v}_1) &= 0\\
+        \intertext{or} 
+        \vec{v}_1 &= \dfrac{-2mu}{M + 2m} \tag{1} 
+        \intertext{(ii) Let $\vec{v}$ be the velocity of buggy with man, when one man jumps off the buggy. For the closed system (buggy with one man + other man) from the conservation of linear momentum:} 
+        0 &= (M + m) \vec{v} + m (u + \vec{v}) \tag{2} 
+        \intertext{Let $\vec{v}_2$ be the sought velocity of the buggy when the second man jumps off the buggy; then from conservation of linear momentum of the system (buggy + one man):} 
+        (M + m)\vec{v} &= M\vec{v}_2 + m(u + \vec{v}_2) \tag{3} 
+        \intertext{Solving Eqs. (2) and (3) we get} 
+        \vec{v}_2 &= \dfrac{m(2M + 3m)u}{(M + m)(M + 2m)} \tag{4} 
+        \intertext{From Eqs. (1) and (4)} 
+        \dfrac{v_2}{v_1} &= 1 + \dfrac{m}{2(M + m)} &> 1 
+        \intertext{Hence,} 
+        v_2 &> v_1 
+    \end{align*}
+\end{solution}

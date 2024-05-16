@@ -1,0 +1,37 @@
+\item In a certain two-dimensional field of force the potential energy of a particle has the form \(U = \alpha x^2 + \beta y^2\), where \(\alpha\) and \(\beta\) are positive constants whose magnitudes are different. Find out:
+    \begin{enumerate}
+        \item whether this field is central;
+        \item what is the shape of the equipotential surfaces and also of the surfaces for which the magnitude of the vector of force \(F = \text{const}\).
+    \end{enumerate}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{(a) We have}
+        F_x &= -\dfrac{\partial U}{\partial x} = -2\alpha x \quad \text{and} \quad F_y = -\dfrac{\partial U}{\partial y} = -2\beta y\\
+        \vec{F} &= 2\alpha x \hat{i} - 2\beta y \hat{j} \quad \text{and} \quad F = 2\sqrt{\alpha^2 x^2 + \beta^2 y^2}\\
+        \intertext{For a central force, $\vec{r} \times \vec{F} = 0$.}
+        \vec{r} \times \vec{F} &= (x\hat{i} + y\hat{j}) \times (-2\alpha x \hat{i} - 2\beta y\hat{j})\\
+        &= -2\beta xy \hat{k} - 2\alpha xy \hat{k} \neq 0\\
+        \intertext{Hence the force is not a central force.}
+        \intertext{(b) As $U = \alpha x^2 + \beta y^2$}
+        F_x &= \dfrac{\partial U}{\partial x} = -2\alpha x \quad \text{and} \quad F_y = -\dfrac{\partial U}{\partial y} = -2\beta y\\
+        F &= \sqrt{F_x^2 + F_y^2} = \sqrt{4\alpha^2 x^2 + 4\beta^2 y^2}\\
+        \intertext{According to the problem}
+        F &= 2\sqrt{\alpha^2 x^2 + \beta^2 y^2} = C \quad (\text{constant}) \tag{1}
+        \intertext{or}
+        \alpha^2 x^2 + \beta^2 y^2 &= \dfrac{C^2}{2} \tag{2}
+        \intertext{or}
+        \dfrac{x^2}{\beta^2} + \dfrac{y^2}{\alpha^2} &= \dfrac{C^2}{2\alpha^2 \beta^2} = k \quad (\text{say}) \tag{3}
+        \intertext{Therefore, the surface for which $F$ is constant is an ellipse.}
+        \intertext{For an equipotential surface $U$ is constant.}
+        \alpha x^2 + \beta y^2 &= C_0 \quad (\text{constant}) \tag{4}
+        \intertext{or}
+        \dfrac{x^2}{\sqrt{\beta^2}} + \dfrac{y^2}{\sqrt{\alpha^2}} &= \dfrac{C_0}{\alpha \beta} = K_0 \quad (\text{constant}) \tag{5}
+        \intertext{Hence, the equipotential surface is also an ellipse.}
+    \end{align*}
+\end{solution}

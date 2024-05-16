@@ -1,0 +1,18 @@
+\item A stone falls down without initial velocity from a height $h$ onto the Earth's surface. The air drag assumed to be negligible, the stone hits the ground with velocity $v_0 = \sqrt{2gh}$ relative to the Earth. Obtain the same formula in terms of the reference frame "falling" to the Earth with a constant velocity $v_0$.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{In a frame moving relative to the Earth, one has to include the kinetic energy of the Earth as well as Earth's acceleration to be able to apply conservation of energy to the problem. In a reference frame falling to the Earth with velocity $v_0$, the stone is initially going up with velocity $v_0$ and so is the Earth. The final velocity of the stone is $0 = v_0 - gt$ and that of the Earth is $v_0 + (m/M)gt$ (M is the mass of the Earth), from Newton's third law, where $t = \text{time of fall}$. From conservation of energy}
+        \dfrac{1}{2} mv_0^2 + \dfrac{1}{2} Mv_0^2 + mgb &= \dfrac{1}{2} M \left( v_0 + \dfrac{m}{M} v_0 \right)^2\\
+        \intertext{Hence,}
+        \dfrac{1}{2} v_0^2 \left( m + \dfrac{m^2}{M} \right) &= mgb\\
+        \intertext{Neglecting $m/M$ in comparison with 1, we get}
+        v_0^2 &= 2gb \quad \text{or} \quad v_0 = \sqrt{2gb}\\
+        \intertext{The point in this is that in the Earth's rest frame the effect of Earth's acceleration is of order $m/M$ and can be neglected but in a frame moving with respect to the Earth the effect of Earth's acceleration must be kept because it is of order one (i.e., large).}
+    \end{align*}
+\end{solution}

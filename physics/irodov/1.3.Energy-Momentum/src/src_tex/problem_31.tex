@@ -1,0 +1,26 @@
+\item The reference frame, in which the centre of inertia of a given system of particles is at rest, translates with a velocity \( V \) relative to an inertial reference frame \( K \). The mass of the system of particles equals \( m \), and the total energy of the system in the frame of the centre of inertia is equal to \( \tilde{E} \). Find the total energy \( E \) of this system of particles in the reference frame \( K \).
+
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (-3,0) {{Example1.png}};
+            \node at (3,0) {{Example2.png}};
+            \node at (-3, -2.5) {Fig. 1.37.};
+            \node at (3, -2.5) {Fig. 1.38.};
+        \end{tikzpicture}
+    \end{center}
+\begin{solution}
+    
+    \begin{align*}
+        \intertext{To find the relationship between the values of the mechanical energy of a system in the \( K \) and \( C \) reference frames, let us begin with the kinetic energy \( T \) of the system.}
+        \intertext{The velocity of the \( i \)-th particle in the \( K \) frame may be represented as \( \vec{v}_i = \vec{\tilde{v}}_i + \vec{v}_C \).}
+        \intertext{Now we can write}
+        T &= \sum \frac{1}{2} m_i v_i^2 = \sum \frac{1}{2} m_i (\vec{\tilde{v}}_i + \vec{v}_C) \cdot (\vec{\tilde{v}}_i + \vec{v}_C) \\
+        &= \sum \frac{1}{2} m_i \vec{\tilde{v}}_i^2 + \vec{v}_C \sum m_i \vec{\tilde{v}}_i + \sum \frac{1}{2} m_i v_C^2 \\
+        \intertext{Since in the \( C \) frame \( \sum m_i \vec{\tilde{v}}_i = 0 \), the previous expression takes the form}
+        T &= \tilde{T} + \frac{1}{2} m \vec{\tilde{v}}_C^2 = \tilde{T} + \frac{1}{2} m V^2 \tag{1}
+        \intertext{(since according to the problem \( \vec{v}_C = V \))}
+        \intertext{Since the internal potential energy \( U \) of a system depends only on its configuration, the magnitude \( U \) is the same in all reference frames.}
+        \intertext{Adding \( U \) to the left and right hand sides of Eq. (1), we obtain the sought relationship,}
+        E &= \tilde{E} + \frac{1}{2} m V^2
+    \end{align*}
+\end{solution}

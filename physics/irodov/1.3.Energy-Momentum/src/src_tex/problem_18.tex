@@ -1,0 +1,24 @@
+\item A small disc \( A \) slides down with initial velocity equal to zero from the top of a smooth hill of height \( H \) having a horizontal portion (Fig. 1.30). What must be the height of the horizontal portion \( h \) to ensure the maximum distance \( s \) covered by the disc? What is it equal to?
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (0, 0) {Diagram};
+        \end{tikzpicture}
+    \end{center}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Velocity of the body at height $h$, $v_b = \sqrt{2g(H - h)}$, horizontally (from the figure given in the problem book). Time taken in falling through the distance $h$ is given by}
+        t &= \sqrt{\dfrac{2h}{g}} \quad \text{(as initial vertical component of the velocity is zero)}
+        \intertext{Now,}
+        s &= v_b t = \sqrt{2g(H + h)} \times \sqrt{\dfrac{2h}{g}} = \sqrt{4(Hh - h^2)}
+        \intertext{For $s_{\text{max}}$,}
+        \dfrac{d}{ds} \left(Hh - h^2\right) &= 0, \quad \text{which yields} \quad h = \dfrac{H}{2}
+        \intertext{Putting this value of $h$ in the expression obtained for $s$, we get}
+        s_{\text{max}} &= H
+    \end{align*}
+\end{solution}

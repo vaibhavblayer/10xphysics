@@ -1,0 +1,29 @@
+\item A particle of mass \( m \) moves along a circle of radius \( R \) with a normal acceleration varying with time as \( w_n = at^2 \), where \( a \) is a constant. Find the time dependence of the power developed by all the forces acting on the particle, and the mean value of this power averaged over the first \( t \) seconds after the beginning of motion.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{We have $\dfrac{v^2}{R} = at^2$ or $v = \sqrt{aR}\, t$}
+        \intertext{where $t$ is defined to start from the beginning of motion from rest.}
+        \intertext{So,}
+        w_t &= \dfrac{dv}{dt} = \sqrt{aR}
+    \end{align*}
+    
+    \vspace{-0.5cm}
+    % \hrulefill
+    \vspace{0.3cm}
+    
+    \begin{align*}
+        \intertext{Instantaneous power, $P = \mathbf{F} \cdot \mathbf{v} = m \left( w_t \mathbf{t} + w_n \mathbf{n} \right) \cdot \left( \sqrt{aR}\, t \mathbf{t} \right)$, where $\mathbf{t}$ and $\mathbf{n}$ are unit vectors along the direction of tangent (velocity) and normal, respectively.}
+        \intertext{So,}
+        P &= mw_t \sqrt{aR}\, t = maRt
+        \intertext{Hence the sought average power}
+        \left< P \right> &= \dfrac{\int_{0}^{t} P \, dt}{\int_{0}^{t} dt} = \dfrac{\int_{0}^{t} maRt \, dt}{t}
+        \intertext{Hence,}
+        \left< P \right> &= \dfrac{maRt^2}{2t} = \dfrac{maRt}{2}
+    \end{align*}
+\end{solution}

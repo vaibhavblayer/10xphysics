@@ -1,0 +1,18 @@
+\item A ball of mass \( m \) falls down without initial velocity from a height \( h \) over the Earth's surface. Find the increment of the ball's angular momentum vector picked up during the time of falling (relative to the point \( O \) of the reference frame moving translationally in a horizontal direction with a velocity \( V \)). The ball starts falling from the point \( O \). The air drag is to be neglected.\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{During the free fall, time $\tau = \sqrt{2b/g}$, the reference point $O$ moves in horizontal direction by the distance $V\tau$. In the translating frame as $\mathbf{M}_i(O) = 0$, so}
+        \Delta \mathbf{M} &= \mathbf{M}_f = \mathbf{r}_f \times m\mathbf{v}_f\\
+        &= \left(\dfrac{1}{2} g\tau^2 - V\tau\right) \times m \left(g\tau - \mathbf{V}\right)\\
+        &= \dfrac{1}{2} m (g \times \mathbf{V}) \tau^2
+        \intertext{So,}
+        |\mathbf{M}_f| &= \dfrac{1}{2} mgV \left(\dfrac{2b}{g}\right) \tag{using the value of $\tau$ and taking into account $\mathbf{V} \perp g$}\\
+        \intertext{Hence,}
+        |\Delta \mathbf{M}| &= mbV
+    \end{align*}
+\end{solution}

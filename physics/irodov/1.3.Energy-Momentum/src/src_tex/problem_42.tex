@@ -1,0 +1,25 @@
+\item A raft of mass $M$ with a man of mass $m$ aboard stays motionless on the surface of a lake. The man moves a distance $l$ relative to the raft with velocity $\vec{v}(t)$ and then stops. Assuming the water resistance to be negligible, find:
+    \begin{enumerate}
+        \item the displacement of the raft $l$ relative to the shore;
+        \item the horizontal component of the force with which the man acted on the raft during the motion.
+    \end{enumerate}
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{Since the resistance of water is negligibly small the resultant of all external forces acting on the system “a man and a raft” is equal to zero. This means that the position of the C.M. of the given system does not change in the process of motion.}
+        \vec{r}_C &= \text{constant} \quad \text{or} \quad \Delta \vec{r}_C = 0, \quad \sum m_i \Delta r_i = 0\\
+        &\text{or} \quad m (\Delta r_{mM} + \Delta r_{Mp}) + M \Delta r_M  = 0\\
+        &\text{Thus,} \quad m(l' + l) + M l = 0 \quad \text{or} \quad l = - \dfrac{ml'}{m + M}\\
+        \intertext{(b) As net external force on “man-raft” system is equal to zero, therefore the momentum of this system does not change.}
+        &\text{So,} \quad 0 = m[\vec{v}'(t) + \vec{v}_2(t)] + M \vec{v}_2(t)\\
+        &\text{or} \quad \vec{v}_2(t) = - \dfrac{m \vec{v}'(t)}{m + M} \tag{1}\\
+        &\text{Thus, the sought force on the raft}\\
+        M \dfrac{d \vec{v}_2(t)}{dt} &= - \dfrac{Mm}{m + M} \dfrac{d \vec{v}'(t)}{dt}
+        \intertext{Note: We may get the result of part (a), if we integrate Eq. (1) over the time of motion of man or raft.}
+    \end{align*}
+\end{solution}

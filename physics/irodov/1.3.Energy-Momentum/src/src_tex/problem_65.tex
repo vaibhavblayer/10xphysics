@@ -1,0 +1,20 @@
+\item A cart loaded with sand moves along a horizontal plane due to a constant force \( F \) coinciding in direction with the cart's velocity vector. In the process, sand spills through a hole in the bottom with a constant velocity \( \mu \) kg/s. Find the acceleration and the velocity of the cart at the moment \( t \), if at the initial moment \( t = 0 \) the cart with loaded sand had the mass \( m_0 \) and its velocity was equal to zero. The friction is to be neglected.\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{We have}
+        \dfrac{dm}{dt} &= -\mu \quad \text{or} \quad dm = -\mu dt\\
+        \intertext{Integrating}
+        \int_{m_0}^m dm &= -\mu \int_{0}^t dt \quad \text{or} \quad m = m_0 - \mu t\\
+        \intertext{As $\mathbf{u} = 0$ so, from the equation of variable mass system}
+        \left( m_0 - \mu t \right) \dfrac{d \mathbf{v}}{dt} &= \mathbf{F} \quad \text{or} \quad \dfrac{d \mathbf{v}}{dt} = \dfrac{\mathbf{F}}{\left( m_0 - \mu t \right)}\\
+        \intertext{or}
+        \int_{0}^{\mathbf{v}} d \mathbf{v} &= \mathbf{F} \int_{0}^{t} \dfrac{dt}{\left( m_0 - \mu t \right)}\\
+        \intertext{Hence,}
+        \mathbf{v} &= \dfrac{\mathbf{F}}{\mu} \ln \left( \dfrac{m_0}{m_0 - \mu t} \right)
+    \end{align*}
+\end{solution}

@@ -1,0 +1,26 @@
+\item The angular momentum of a particle relative to a certain point \( O \) varies with time as \( \mathbf{M} = \mathbf{a} + \mathbf{b}t^2 \), where \( \mathbf{a} \) and \( \mathbf{b} \) are constant vectors, with \( \mathbf{a} \perp \mathbf{b} \). Find the force moment \( \mathbf{N} \) relative to the point \( O \) acting on the particle when the angle between the vectors \( \mathbf{N} \) and \( \mathbf{M} \) equals \( 45^\circ \).
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{The angular momentum of the particle relative to point O is given as function of a time as \( \mathbf{M} = a + bt^2 \).}
+        \intertext{So, force moment relative to point \( O \) is given by}
+        \mathbf{N} &= \frac{d\mathbf{M}}{dt} = 2bt \\
+        \intertext{As force moment \( \mathbf{N} = 2bt \), so vector \( \mathbf{N} \) coincides with vector b.}
+        \intertext{Let us depict the vectors \( \mathbf{N} \) and \( \mathbf{M} \) at an arbitrary instant of time \( t \), when angle between \( \mathbf{M} \) and \( \mathbf{N} \) is \( \alpha \) (see figure). It is obvious from the figure that \( \tan \alpha = a/bt^2 \), therefore \( \alpha = 45^\circ \), the time}
+        t &= t_0 = \sqrt{a/b}.
+        \intertext{Thus, \( \mathbf{N} = 2b \sqrt{a/b} \), when vector \( \mathbf{N} \) forms \( \alpha = 45^\circ \) with vector \( \mathbf{M} \).}
+        \intertext{Alternate:}
+        \intertext{Let the angle between \( \mathbf{M} \) and \( \mathbf{N} \), \( \alpha = 45^\circ \) at \( t = t_0 \).}
+        \text{Then} \quad \frac{1}{\sqrt{2}} &= \frac{\mathbf{M} \cdot \mathbf{N}}{|\mathbf{M}| |\mathbf{N}|} = \frac{(a + bt_0^2) \cdot (2bt_0)}{\sqrt{a^2 + b^2 t_0^4} \ 2bt_0} \\
+        &= \frac{2b t_0^3}{ \sqrt{a^2 + b^2 t_0^4} \ 2bt_0} = \frac{b t_0^2}{\sqrt{a^2 + b^2 t_0^4}}
+        \intertext{So,}
+        2b^2 t_0^4 &= a^2 + b^2 t_0^4 \quad \text{or} \quad t_0 = \sqrt{\frac{a}{b}} \ \text{(as \( t_0 \) cannot be negative)}
+        \intertext{Hence,}
+        \mathbf{N} &= 2b \sqrt{\frac{a}{b}}
+    \end{align*}
+\end{solution}

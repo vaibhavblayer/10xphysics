@@ -1,0 +1,48 @@
+\item A particle of mass \( m_1 \) collides elastically with a stationary particle of mass \( m_2 \) (\( m_1 > m_2 \)). Find the maximum angle through which the striking particle may deviate as a result of the collision.
+
+
+
+
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{From conservation of momentum}
+        \vec{p}_1 &= \vec{p}_1' + \vec{p}_2 \quad \text{or} \quad \vec{p}_1 - \vec{p}_1' = \vec{p}_2\\
+        \intertext{So,}
+        p_1^2 - 2p_1p_1' \cos \theta_1 + p_1'^2 &= p_2'^2, \quad \text{where } \theta \text{ is the angle between } \vec{p}_1 \text{ and } \vec{p}_1'
+        \intertext{From conservation of energy}
+        \frac{p_1^2}{2m_1} &= \frac{p_1'^2}{2m_1} + \frac{p_2'^2}{2m_2}
+        \intertext{Eliminating } p_2' \text{ we get}
+        0 &= p_1'^2 \left( 1 + \frac{m_2}{m_1} \right) - 2p_1'p_1 \cos \theta_1 + p_1^2 \left( 1 - \frac{m_2}{m_1} \right)
+        \intertext{This quadratic equation for \( p_1' \) has a real solution in terms of \( p_1 \) and \( \cos \theta_1 \) only if}
+        4 \cos^2 \theta_1 &\geq 4 \left( 1 - \frac{m_2^2}{m_1^2} \right)
+        \intertext{or}
+        \sin^2 \theta_1 &\leq \frac{m_2^2}{m_1^2} \quad \text{or} \quad \sin \theta_1 \geq -\frac{m_2}{m_1}
+        \intertext{This clearly implies (since only \(+ \) sign makes sense) that}
+        \sin \theta_{1 \max} &= \frac{m_2}{m_1}
+    \intertext{Alternate:}
+    \intertext{The solution of the problem becomes standard in the frame of C.M., which is moving with velocity \( \vec{v}_C = \frac{m_1 v_1}{(m_1 + m_2)} \) in the frame of laboratory. In the frame of C.M., the momenta of the particles must always be equal and opposite.}
+    \vec{\tilde{p}}_1 &= \vec{\tilde{p}}_2,\\
+    \intertext{but \( | \vec{\tilde{p}}_1 | = | \vec{\tilde{p}}_2 | = \tilde{p} = \mu v_{\text{rel}} = \mu v_1 \) (where \( \mu = \frac{m_1 m_2}{(m_1 + m_2)} \) is the reduced mass of the system).}
+    \intertext{The initial kinetic energy of the system in the frame of C.M.}
+    \tilde{T}_i &= \frac{\tilde{p}^2}{2 \mu}
+    \intertext{As the collision is perfectly elastic and the reduced mass the system is constant.}
+    \tilde{T}_i &= \tilde{T}_f \quad \text{or} \quad \frac{\tilde{p}^2}{2 \mu} = \frac{\tilde{p}'^2}{2 \mu}
+    \intertext{Hence,}
+    \tilde{p} &= \tilde{p}'
+    \intertext{In the frame of the laboratory from the conservation of linear momentum}
+    \vec{p}_1' + \vec{p}_2' &= \vec{p}_1 = (m_1 + m_2) \vec{v}_C
+    \intertext{Now let us draw the so-called vector diagram (see figure) of momenta. First we depict the vector \( \vec{p}_1 \) as the section \( AB \) and the \( \vec{p}_1 \) and \( \vec{p}_2 \) each of which represents according to}
+    \vec{p}_1' &= \vec{\tilde{p}}_1 + m_1 \vec{v}_C \\ 
+    \vec{p}_2' &= \vec{\tilde{p}}_2 + m_2 \vec{v}_C
+    \intertext{Note that this diagram is valid regardless of the angle \( \theta \). The point C (centre of mass) therefore can be located only on the circle of radius \( \tilde{p} \) having its center at the point O, which divides the section AB into two parts in the ratio \( AO : OB = m_1 : m_2 \). In our case, this circle passes through the point B, the endpoint of vector \( \vec{\tilde{p}}_1 \) since the section \( OB = m_2 v_C = \mu v_1 = \tilde{p} \). This circle is the locus of all possible locations of the apex \(C\) of the momenta triangle ABC, whose side \( AC \) and \( CB \) represent the possible momentum of particles \( \vec{p}_1' \) and \( \vec{p}_2' \) after the collision in the frame of laboratory.}
+        \intertext{Depending on the particle mass ratio \( (m_1 = m_2) \) the point A, the beginning of the vector \( \vec{p}_1 \) can be located inside the given circle, on it, or outside it. In our case, point A will lie outside the circle and it is also another interesting fact that the particle \( m_1 \) can be scattered by the same angle \( \theta_1 \), where it possesses the momentum \( AC \) or \( AD \) (figure) The same is true for particle \( m_2 \). The maximum scattering in the laboratory \( \theta_{1 \max} \) corresponds to the case when the velocity vector in the frame of laboratory become a tangent (A’C’ to the circle (see figure). It then follows that}
+    \sin \theta_{1 \max} &= \frac{OC'}{AO} =  \frac{\tilde{p}}{m_1 \vec{v}_C} = \left( \frac{m_1 m_2}{m_1 + m_2} \right) \frac{v_1}{(m_1^2 / m_1 + m_2}) \frac{v_1}{m_1 v_C} = \frac{m_2}{m_1}
+    \intertext{Note: It is clear that \( \theta_m \) is limited to \( \frac{\pi}{2} \) for \( m_1 = m_2 \), for the case \( m_2 > m_1 \), point A will be inside the sphere, and all angles of scattering from \( 0 \) to \( \frac{\pi}{2} \) are permitted.}
+\end{align*}
+\end{solution}

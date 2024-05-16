@@ -1,0 +1,21 @@
+\item Two identical buggies \( 1 \) and \( 2 \) with one man in each move without friction due to inertia along the parallel rails toward each other. When the buggies get opposite each other, the men exchange their places by jumping in the direction perpendicular to the motion direction. As a consequence, buggy \( 1 \) stops and buggy \( 2 \) keeps moving in the same direction, with its velocity becoming equal to \( v \). Find the initial velocities of the buggies \( v_1 \) and \( v_2 \) if the mass of each buggy (without a man) equals \( M \) and the mass of each man \( m \).
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Due to ejection of mass from a moving system (which moves due to inertia) in a direction perpendicular to it, the velocity of moving system does not change. The momentum change being adjusted by the forces on the rails. Hence in our problem velocities of buggies change only due to the entrance of the man coming from the other buggy. From conservation of linear momentum for the system (buggy 1 + man coming from buggy 2) in the direction of motion of buggy 1,}
+        Mv_1 - mv_2 &= 0 \tag{1}\\
+        \intertext{Similarly from conservation of linear momentum for the system (buggy 2 + man coming from buggy 1) in the direction of motion of buggy 2,}
+        Mv_2 - mv_2 &= (M + m)v \tag{2}\\
+        \intertext{Solving Eqs. (1) and (2), we get}
+        v_1 &= \dfrac{mv}{M - m} \quad \text{and} \quad v_2 = \dfrac{Mv}{M - m}\\
+        \intertext{As} 
+        \vec{v_1} &\uparrow \downarrow \vec{v} \quad \text{and} \quad \vec{v_2} \uparrow \uparrow \vec{v}
+        \intertext{So,}
+        v_1 &= \dfrac{-mv}{M - m} \quad \text{and} \quad v_2 = \dfrac{Mv}{M - m}
+    \end{align*}
+\end{solution}

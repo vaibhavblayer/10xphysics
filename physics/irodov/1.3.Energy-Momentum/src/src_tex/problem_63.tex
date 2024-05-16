@@ -1,0 +1,22 @@
+\item Find the law according to which the mass of the rocket varies with time, when the rocket moves with a constant acceleration \( w \), the external forces are absent, the gas escapes with a constant velocity \( u \) relative to the rocket, and its mass at the initial moment equals \( m_{0} \).
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{According to the question, $\mathbf{F}$ (external force) $= 0$}
+        m\dfrac{d\vec{v}}{dt} &= \dfrac{dm}{dt} \vec{u}\\
+        \intertext{As,}
+        d\vec{v} & \uparrow \downarrow \vec{u}\\
+        \intertext{So, in scalar form}
+        mdv &= -udm \\
+        \dfrac{wdt}{u} &= -\dfrac{dm}{m} \\
+        \intertext{or}
+        \dfrac{wt}{u} & = -\int_{m_0}^{m} \dfrac{dm}{m} \quad \text{or} \quad \dfrac{v}{u} = -\ln\dfrac{m}{m_0}\\
+        \intertext{Hence,}
+        m &= m_0 e^{-(wt/u)}
+    \end{align*}
+\end{solution}

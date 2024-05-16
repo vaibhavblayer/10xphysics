@@ -1,0 +1,18 @@
+\item A locomotive of mass \( m \) starts moving so that its velocity varies according to the law \( v = a\sqrt{\frac{s}{s}} \), where \( a \) is a constant, and \( s \) is the distance covered. Find the total work performed by all the forces which are acting on the locomotive during the first \( t \) seconds after the beginning of motion.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+
+    \begin{align*}
+        \intertext{As locomotive is in unidirectional motion, its acceleration}
+        w &= \frac{dv}{dt} = \frac{1}{2} \frac{dv^2}{ds} = \frac{a^2}{2}\\
+        \intertext{Hence, force acting on the locomotive $F = mw = \dfrac{ma^2}{2}$}
+        \intertext{Let, $v = 0$ at $t = 0$, then the distance covered during the first $t$ seconds}
+        s &= \frac{1}{2} wt^2 = \frac{1}{2} \frac{a^2}{2} t^2 = \frac{a^2}{4} t^2
+        \intertext{Hence the sought work,}
+        A &= Fs = \frac{ma^2}{2} \left(\frac{a^2 t^2}{4}\right) = \frac{ma^4 t^2}{8}
+    \end{align*}
+\end{solution}

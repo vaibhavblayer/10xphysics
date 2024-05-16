@@ -1,0 +1,27 @@
+\item A ball of mass \( m \) is suspended by a thread of length \( l \). With what minimum velocity has the point of suspension to be shifted in the horizontal direction for the ball to move along the circle about that point? What will be the tension of the thread at the moment it will be passing the horizontal position?
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{Let the point of suspension be shifted with velocity \(v_A\) in the horizontal direction towards left, then in the rest frame of point of suspension the ball starts with same velocity horizontally towards right. Let us work in this frame. From Newton’s second law in projection form towards the point of suspension at the upper most point (say \(B\):}
+        mg + T &= \dfrac{mv_B^2}{l} \quad \text{or} \quad T = \dfrac{mv_B^2}{l} - mg \tag{1} 
+        \intertext{Condition required to complete the vertical circle is that \(T \geq 0\). }
+        \dfrac{1}{2}mv_A^2 &= mg(2l) + \dfrac{1}{2}mv_B^2 \tag{2} 
+        \intertext{But,}
+        v_B^2 &= v_A^2 - 4gl \tag{3}
+        \intertext{From Eqs. (1), (2) and (3)}
+        T &= \dfrac{m}{l}(v_A^2 - 4gl) - mg \geq 0 \quad \text{or} \quad v_A \geq \sqrt{5gl} \tag{4}
+        \intertext{Thus}
+        v_{A(\text{min})}  &= \sqrt{5gl}
+        \intertext{From the equation \(F_n = mv_n\) at point \(C\)}
+        T' &= \dfrac{mv_C^2}{l} \tag{5}
+        \intertext{Again from energy conservation}
+        \dfrac{1}{2} mv_A^2 &= \dfrac{1}{2} mv_C^2 + mgl \tag{6}
+        \intertext{From Eqs. (4) and (5)}
+        T &= 3mg
+    \end{align*}
+\end{solution}

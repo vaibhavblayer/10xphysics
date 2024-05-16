@@ -1,0 +1,24 @@
+\item Demonstrate that the angular momentum $\mathbf{M}$ of the system of particles relative to a point $O$ of the reference frame $K$ can be represented as
+    \[
+    \mathbf{M} = \widetilde{\mathbf{M}} + [ \mathbf{r}_C\mathbf{p} ],
+    \]
+    where $\widetilde{\mathbf{M}}$ is its proper angular momentum (in the reference frame moving translationally and fixed to the centre of inertia), $\mathbf{r}_C$ is the radius vector of the centre of inertia relative to the point $O$, $\mathbf{p}$ is the total momentum of the system of particles in the reference frame $K$.
+\begin{solution}
+    \begin{center}
+        \begin{tikzpicture}
+            \pic at (0, 0) {frame=3cm};
+        \end{tikzpicture}
+    \end{center}
+    
+    \begin{align*}
+        \intertext{On the basis of solution of problem 1.196. we have concluded that; "in the C.M. frame, the angular momentum of system of particles is independent of the choice of the point, relative to which it is determined" and in accordance with the problem this is denoted by $\mathbf{M}$.}
+        \intertext{We denote the angular momentum of the system of particles, relative to the point $O$, by $\mathbf{M}$. Since the internal and proper angular momentum $\mathbf{\tilde{M}}$, in the C.M. frame, does not depend on the choice of the point $O'$, this point may be taken coincident with the point $O$ of the \textit{K}-frame, at a given moment of time. Then at that moment, the radius vectors of all the particles, in both reference frames, are equal ($r'_i = r_i$) and the velocities are related by the equation}
+        \mathbf{v}_i &= \mathbf{\tilde{v}}_i + \mathbf{v}_C\\
+        \intertext{where $\mathbf{v}_C$ is the velocity of C.M. frame, relative to the \textit{K}-frame. Consequently, we may write}
+        \mathbf{M} &= \sum m_i(\mathbf{r}_i \times \mathbf{v}_i) = \sum m_i(\mathbf{r}_i \times \mathbf{\tilde{v}}_i) + \sum m_i(\mathbf{r}_i \times \mathbf{v}_C)\\
+        \intertext{or}
+        \mathbf{M} &= \mathbf{\tilde{M}} + m(\mathbf{r}_C \times \mathbf{v}_C), \quad \text{as}\quad \sum m_i \mathbf{r}_i = m \mathbf{r}_C \quad ( \text{where } m = \sum m_i)\\
+        \intertext{or}
+        \mathbf{M} &= \mathbf{\tilde{M}} + (\mathbf{r}_C \times m\mathbf{v}_C) = \mathbf{\tilde{M}} + (\mathbf{r}_C \times \mathbf{p})
+    \end{align*}
+\end{solution}

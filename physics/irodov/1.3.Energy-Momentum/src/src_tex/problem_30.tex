@@ -1,0 +1,33 @@
+\item In the reference frame $K$ two particles travel along the $x$ axis, one of mass $m_1$ with velocity $\mathbf{v}_1$, and the other of mass $m_2$ with velocity $\mathbf{v}_2$. Find:
+    \begin{enumerate}
+        \item The velocity $V$ of the reference frame $K'$ in which the cumulative kinetic energy of these particles is minimum;
+        \item The cumulative kinetic energy of these particles in the $K'$ frame.
+    \end{enumerate}\begin{solution}
+
+\begin{align*}
+    \intertext{(a) Total kinetic energy in frame $K'$ is}
+    T &= \dfrac{1}{2} m_1 (\mathbf{v}_1 - \mathbf{V})^2 + \dfrac{1}{2} m_2 (\mathbf{v}_2 - \mathbf{V})^2 \tag{1} \\
+    \intertext{This is minimum with respect to variation in $\mathbf{V}$, when}
+    \dfrac{\partial T}{\partial \mathbf{V}} &= 0,
+    \quad \text{i.e.,} \quad m_1(\mathbf{v}_1 - \mathbf{V}) + m_2(\mathbf{v}_2 - \mathbf{V}) = 0\\
+    \mathbf{V} &= \dfrac{m_1 \mathbf{v}_1 + m_2 \mathbf{v}_2}{m_1 + m_2} = \mathbf{v}_C \tag{2} \\
+    \intertext{Hence, it is the frame of centre of mass in which kinetic energy of a system is minimum.}
+    \intertext{(b) Linear momentum of the particle 1 in the $K'$ or C frame}
+    \tilde{\mathbf{p}}_1 &= m_1 (\mathbf{v}_1 - \mathbf{v}_C) = \dfrac{m_1 m_2}{m_1 + m_2} (\mathbf{v}_1 - \mathbf{v}_2)\\
+    \intertext{or}
+    \tilde{\mathbf{p}}_1 &= \mu (\mathbf{v}_1 - \mathbf{v}_2),
+    \quad \text{where} \quad \mu = \dfrac{m_1 m_2}{m_1 + m_2} = \text{reduced mass} \tag{3} \\ \intertext{Similarly,}
+    \tilde{\mathbf{p}}_2 &= \mu (\mathbf{v}_2 - \mathbf{v}_1) \\
+    \intertext{So,}
+    \left| \tilde{\mathbf{p}}_1 \right| &= \left| \tilde{\mathbf{p}}_2 \right| = \tilde{\mathbf{p}} = \mu v_{\text{rel}},
+    \quad \text{where} \quad v_{\text{rel}} = \left| \mathbf{v}_1 - \mathbf{v}_2 \right| \tag{4}
+\end{align*}
+
+\begin{align*}
+    \intertext{Now the total kinetic energy of the system in the C frame is}
+    \tilde{T} &= \tilde{T}_1 + \tilde{T}_2 = \dfrac{\tilde{p}^2}{2m_1} + \dfrac{\tilde{p}^2}{2m_2} = \dfrac{\tilde{p}^2}{2\mu}\\
+    \intertext{Hence,}
+    \tilde{T} &= \dfrac{1}{2} \mu v_{\text{rel}}^2 = \dfrac{1}{2} \mu \left| \mathbf{v}_1 - \mathbf{v}_2 \right|^2 \tag{5}
+\end{align*}
+
+\end{solution}
