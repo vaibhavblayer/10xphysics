@@ -1,27 +1,20 @@
-\item Match List I with List II
-
-\begin{center}
-    \renewcommand{\arraystretch}{2}
-    \begin{table}[h]
-        \centering
-        \begin{tabular}{p{0.25cm}p{8cm}|p{0.25cm}p{5cm}}
-        \hline
-        & List I & & List II \\
-        \hline
-        (A) & AM Broadcast & (I) & 88 -- 108 MHz \\
-        (B) & FM Broadcast & (II) & 540 -- 1600 kHz \\
-        (C) & Television & (III) & 3.7 -- 4.2 GHz \\
-        (D) & Satellite Communication & (IV) & 54 MHz -- 890 MHz \\
-        \hline
-        \end{tabular}
-    \end{table}
-\end{center}
-
-Choose the correct answer from the options given below:
-
-\begin{tasks}(2)
-    \task A-IV, B-III, C-I, D-II
-    \task A-II, B-III, C-I, D-IV
-    \task A-I, B-I, C-IV, D-III
-    \task A-I, B-III, C-II, D-IV
-\end{tasks}
+\item Find the mutual inductance in the arrangement, when a small circular loop of wire of radius ‘R’ is placed inside a large square loop of wire of side L (L>>R). The loops are coplanar and their centres coincide:
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[blue] (0, 0) rectangle (4, 4);
+            \draw[red, thick] (2, 2) circle (1);
+            \node at (0, 2) {L};
+            \node at (4, 2) {L};
+            \node at (2, 0) {L};
+            \node at (2, 4) {L};
+            \node at (2.5, 2) {O};
+            \draw[red, ->] (2, 2) -- (3, 2);
+            \node at (3.4, 2) {R};
+        \end{tikzpicture}
+    \end{center}
+    \begin{tasks}(2)
+        \task $\displaystyle M = \frac{\sqrt{2} \mu_0 R^2}{L}$
+        \task $\displaystyle M = \frac{\sqrt{2} \mu_0 R}{L^2}$
+        \task $\displaystyle M = \frac{2 \sqrt{2} \mu_0 R^2}{L}$
+        \task $\displaystyle M = \frac{2 \sqrt{2} \mu_0 R}{L^2}$
+    \end{tasks}

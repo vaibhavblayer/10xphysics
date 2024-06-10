@@ -1,0 +1,59 @@
+
+
+
+\begin{align*}
+(j) \quad \frac{d(\sin(x + a))}{dx} &= \frac{d (\sin(x + a))}{d(x + a)} \cdot \frac{d(x + a)}{dx} = \cos (x + a) \cdot \left( \frac{dx}{dx} + \frac{da}{dx} \right) \\
+&= \cos (x + a) \cdot (1 + 0) = \cos (x + a) \\
+(k) \quad \frac{d (\sin (x^2))}{dx} & = \frac{d (\sin (x^2))}{d (x^2)} \cdot \frac{d (x^2)}{dx} \\[8pt]
+& = \cos (x^2) \cdot 2x = 2x \cos (x^2) \\[8pt]
+(l) \quad \frac{d (\sin^{-1} x)}{dx}
+\end{align*}
+Let \( y = \sin^{-1} x \Rightarrow x = \sin y \)
+
+Differentiating both sides with respect to \( x \),
+
+\begin{align*}
+\frac{dx}{dx} &= \frac{d (\sin y)}{dx} \\[8pt]
+1 & = \frac{d (\sin y)}{dy} \cdot \frac{dy}{dx} \\[8pt]
+& = \cos y \cdot \frac{dy}{dx} \\[8pt]
+\frac{dy}{dx} &= \sec y \\[8pt]
+\intertext{therefore,}
+\sin y &= x \\[8pt]
+\sec y &= \frac{1}{\sqrt{1 - x^2}} \quad (y = \sin^{-1} x, -\frac{\pi}{2} \leq y \leq \frac{\pi}{2} \text{ therefore, } \sec y \text{ is positive}) \\[8pt]
+\frac{dy}{dx} & = \frac{1}{\sqrt{1 - x^2}}
+\end{align*}
+
+\begin{align*}
+(m) \quad \frac{d (\ln (\tan x) \cdot e^{\cos x})}{dx} & = \ln (\tan x) \cdot \frac{d (e^{\cos x})}{dx} + e^{\cos x} \cdot \frac{d (\ln (\tan x))}{dx} \\[8pt]
+& = \ln (\tan x) \cdot \frac{d (e^{\cos x})}{d(\cos x)} \cdot \frac{d (\cos x)}{dx} + e^{\cos x} \cdot \frac{d (\ln (\tan x))}{d (\tan x)} \cdot \frac{d (\tan x)}{dx} \\[8pt]
+& = \ln (\tan x) \cdot e^{\cos x} \cdot (-\sin x) + e^{\cos x} \cdot \frac{1}{\tan x} \cdot \sec^2 x \\[8pt]
+& = - \sin x \cdot \ln (\tan x) \cdot e^{\cos x} + \sec x \cdot \cosec x \cdot e^{\cos x}
+\end{align*}
+
+\section*{Example 2. Check the differentiability of the function \( f(x) = | x | \)}
+
+Solution. 
+\[
+f(x) = 
+\begin{cases} 
+ x, & x \geq 0 \\ 
+ -x, & x < 0 
+\end{cases}
+\]
+
+\(x\) and \(-x\) are differentiable functions of \(x\) over \(\mathbb{R}\).
+
+Hence, the only doubtful point where differentiability needs to be checked is \( x = 0 \).
+
+\begin{align*}
+\lim_{h \to 0^{-}} \frac{f(0 + h) - f(0)}{h} & = \lim_{h \to 0^{-}} \frac{h - 0}{h} = -1 \\[8pt]
+\lim_{h \to 0^{+}} \frac{f(0 + h) - f(0)}{h} & = \lim_{h \to 0^{+}} \frac{h - 0}{h} = 1
+\end{align*}
+
+Left hand derivative \(\neq\) Right hand derivative.
+
+Hence, the function is not differentiable at \( x = 0 \).
+
+Thus, the function is differentiable at all points in \( \mathbb{R} \) except 0.
+
+

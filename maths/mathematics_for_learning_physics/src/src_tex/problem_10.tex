@@ -1,0 +1,38 @@
+
+
+\section*{Solved Examples}
+
+\begin{itemize}
+  \item[\textbf{Example 1.}] Find the differential coefficient or derivative of the following functions with respect to \(x\).
+  \begin{align*}
+    (a) & \quad x^{-5/3} \\
+    (b) & \quad x^2 - x + 2 \\
+    (c) & \quad x^2 + \sin x \\
+    (d) & \quad \ln x - \tan x \\
+    (e) & \quad x^2 \cos x \\
+    (f) & \quad \frac{\tan x}{\ln x} \\
+    (g) & \quad \sin 2x \\
+    (h) & \quad \sin^2 x \\
+    (i) & \quad e^{\sin x}
+  \end{align*}
+\end{itemize}
+
+\section*{Solution}
+
+\begin{align*}
+(a) & \quad \frac{d(x^{-5/3})}{dx} = \frac{5}{3} x^{\left(-\frac{5}{3} - 1\right)} = \frac{5}{3} x^{-8/3} \intertext{since} \frac{dx^n}{dx} = n \cdot x^{n-1} \\
+(b) & \quad \frac{d(x^2 - x + 2)}{dx} = \frac{d(x^2)}{dx} - \frac{d(x)}{dx} + \frac{d(2)}{dx} = 2x - 1 + 0 = 2x - 1 \intertext{since} \frac{d(u + v)}{dx} = \frac{du}{dx} + \frac{dv}{dx} \\
+(c) & \quad \frac{d(x^2 + \sin x)}{dx} = \frac{d(x^2)}{dx} + \frac{d(\sin x)}{dx} = 2x + \cos x \\
+(d) & \quad \frac{d(\ln x - \tan x)}{dx} = \frac{d(\ln x)}{dx} - \frac{d(\tan x)}{dx} = \frac{1}{x} - \sec^2 x \\
+(e) & \quad \frac{d(x^2 \cos x)}{dx} = x^2 \frac{d(\cos x)}{dx} + \cos x \frac{d(x^2)}{dx} \\
+    & \quad = -x^2 \sin x + 2x \cos x \intertext{since} \frac{d(uv)}{dx} = u \frac{dv}{dx} + v \frac{du}{dx} \\
+(f) & \quad \frac{d \left( \frac{\tan x}{\ln x} \right)}{dx} = \frac{\ln x \frac{d(\tan x)}{dx} - \tan x \frac{d(\ln x)}{dx}}{(\ln x)^2} \\
+    & \quad = \frac{\ln x \cdot \sec^2 x - \tan x \cdot \frac{1}{x}}{(\ln x)^2} \\
+    & \quad = \frac{\ln x \cdot \sec^2 x - \frac{\tan x}{x}}{(\ln x)^2} \intertext{since} \frac{d \left( \frac{u}{v} \right)}{dx} = \frac{u \frac{dv}{dx} - v \frac{du}{dx}}{v^2} \\
+(g) & \quad \frac{d(\sin 2x)}{dx} = \cos 2x \cdot 2 \frac{dx}{dx} = 2 \cos 2x \\
+(h) & \quad \frac{d(\sin^2 x)}{dx} = 2 \sin x \cos x = \sin 2x \intertext{Let} \sin x = z \\
+    & \quad \frac{d(\sin^2 x)}{d(\sin x)} \cdot \frac{d(\sin x)}{dx} = \frac{d(z^2)}{dz} \cdot \frac{dz}{\sin x} = (\sin x) \cdot \cos x = \cos x \cdot \sin x \intertext{since} \frac{dy}{dt} = \frac{dy}{dx} \cdot \frac{dx}{dt} \\
+(i) & \quad \frac{d(e^{\sin x})}{dx} = (e^{\sin x}) \cdot \cos x 
+\end{align*}
+
+
