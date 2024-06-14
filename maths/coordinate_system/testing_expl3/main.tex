@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{xparse}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\customtext}{O{} m}
+{
+  \textscale{#1}{#2}
+}
+
+\NewDocumentCommand{\textscale}{ m m}
+{
+  \tl_if_empty:nTF {#1}
+  {
+    \textsc{#2}
+  }
+  {
+    \scalebox{#1}{\textsc{#2}}
+  }
+}
+% Define the custom ctikz environment
+\NewDocumentEnvironment{ctikz}{O{} +b}
+{
+  \begin{tikzpicture}[#1]
+}
+{
+  \end{tikzpicture}
+}
+
+
+
+
+\NewDocumentCommand{\vbdefinition}{m}
+{
+  \begin{quote}
+  \textit{#1}
+  \end{quote}
+}
+
+
+
+\ExplSyntaxOff
+
+\begin{document}
+
+% Usage example of the ctikz environment
+\begin{ctikz}[scale=1.5]
+  \draw[->] (0,0) -- (4,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,4) node[above] {$y$};
+  \draw[thick, red] (0,0) -- (3,3);
+  \draw[dashed] (0,3) -- (3,3) -- (3,0);
+  \node at (3,3) [circle,fill,inner sep=1.5pt] {};
+  \node[below left] at (3,3) {$(3,3)$};
+\end{ctikz}
+
+\begin{ctikz}
+  \draw[blue] (0,0) circle (2cm);
+  \draw[green] (-2,0) -- (2,0);
+  \draw[green] (0,-2) -- (0,2);
+\end{ctikz}
+
+
+\customtext{This is the default size text.}
+\customtext[2.0]{This is scaled up text.}
+\customtext[0.5]{This is scaled down text.}
+\vbdefinition{
+    Another example of using the custom environment to nest\textit inside\\[5mm] the quote environment.
+}
+    
+
+This is some regular text.
+
+\begin{quote}
+This is the quoted text. 
+
+It will be indented on both sides, distinguishing it from the surrounding text.
+\end{quote}
+
+This is more regular text.
+
+\end{document}

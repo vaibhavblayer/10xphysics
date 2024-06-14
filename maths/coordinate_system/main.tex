@@ -1,6 +1,63 @@
 \documentclass{article}
 \usepackage{v-test-paper}
 \usepackage{mathtools}
+\usepackage{tikz-3dplot}
+\usepackage[pages=some]{background}
+
+
+\backgroundsetup{
+  scale=1,
+  color=black!90,
+  opacity=1,
+  angle=0,
+  position=current page.south west,
+  vshift=0,
+  hshift=0,
+  contents={
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[pattern=dots, pattern color=black!35] (current page.south west) rectangle (current page.north east);
+    \end{tikzpicture}
+  },
+}
+
+\newenvironment{solution}{\par\noindent\color{red!85!black}$\Rightarrow$\vspace{0em}}{}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\vbsubtitle}{O{} m}
+{
+  \textscale{#1}{#2}
+}
+
+\NewDocumentCommand{\textscale}{ m m}
+{
+  \tl_if_empty:nTF {#1}
+  {
+    \textsc{#2}
+  }
+  {
+    \scalebox{#1}{\textsc{#2}}
+  }
+}
+
+
+\NewDocumentCommand{\vbdefinition}{m}
+{
+  \begin{quote}
+  \textit{#1}
+  \end{quote}
+}
+
+
+\NewDocumentCommand{\vbtitle}{O{\large} m}
+{
+  \begin{center}
+    #1 \textsc{#2}
+  \end{center}
+}
+
+\ExplSyntaxOff
+
+
 
 \title{\textsc{Coordinate System}}
 
@@ -8,15 +65,12 @@
 \maketitle
 
 
-    % \input{src/coordinate}
-    % \include{src/slope}
-    % \include{src/locus}
-    
-    \begin{center}
-        \textsc{\large\textbf{Illustrations: Line}}
-    \end{center}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
+    \input{src/coordinate}
+    % \include{src/illustrations_coordinate}
+    \include{src/slope}
+    \include{src/locus}
+    \include{src/illustrations_slope_line}
+    \include{src/circle}
+    \include{src/illustrations_circle}
 
 \end{document}

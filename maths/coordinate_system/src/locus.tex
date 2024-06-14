@@ -142,4 +142,36 @@
             \Aboxed{\frac{x}{a} + \frac{y}{b} &= 1}
         \end{align*}
 
+    \item \textbf{Intersection of two lines:}\\[2mm]
+    Let's consider two lines with equations \( y =m_1x + c_1 \) and \( y = m_2x + c_2 \). We are interested in finding the point of intersection of these two lines.\\[2mm]
+        \begin{center}
+            \begin{tikzpicture}
+                \tzaxes(-2, -1.5)(7, 4){$x$}{$y$}
+                \tzcoors*(3, 2)(P) (1, 0)(A) (5, 0)(B);
+                \tzLFn(A)(P)[-0.5:5]{$y=m_1x+c_1$}[r]
+                \tzLFn(B)(P)[0.5:6]{$y=m_2x+c_2$}[l]
+                \tzanglemark(B)(A)(P){$\theta_1$}[pos=2]
+                \tzanglemark(6, 0)(B)(P){$\theta_2$}[pos=2]
+                \tzanglemark(A)(P)(B){$\theta$}[pos=2]
+            \end{tikzpicture}
+        \end{center}
+        \begin{align*}
+            \intertext{There are two angles formed by the intersection of the two lines. But generally, we consider the smaller angle between the lines.}
+            \intertext{Angle between the two lines:}
+            \theta + \theta_1 &= \theta_2 \\
+            \theta &= \theta_2 - \theta_1 \\
+            \tan\theta &= \tan\left(\theta_2 - \theta_1\right) \\
+            \intertext{As we are interested in smaller angle, $\tan\theta \geq 0$}
+            \tan\theta &= \left|\frac{\tan\theta_2 - \tan\theta_1}{1 + \tan\theta_1\tan\theta_2}\right| \\
+            \intertext{As the slopes of the lines are \( m_1 \) and \( m_2 \),}
+            \tan\theta &= \left|\frac{m_2 - m_1}{1 + m_1m_2}\right| \\
+            \Aboxed{\theta &= \tan^{-1}\left|\frac{m_2 - m_1}{1 + m_1m_2}\right|}
+            \intertext{Other angle can be calculated as \( 180^\circ - \theta \).}\\[5mm]
+            \intertext{If lines are parallel, $\tan\theta = 0$}
+            \Aboxed{m_1 &= m_2} \\
+            \intertext{If lines are perpendicular, $\tan\theta \to \infty$}
+            1 + m_1m_2 &= 0 \\
+            \Aboxed{m_1m_2 &= -1}
+        \end{align*}
+
 \end{itemize}
