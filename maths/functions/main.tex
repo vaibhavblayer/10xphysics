@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{v-test-paper}
+% \usetikzlibrary{calc}
+
+\usepackage{mathtools}
+
+
+\usepackage[pages=some]{background}
+
+
+\backgroundsetup{
+  scale=1,
+  color=black!90,
+  opacity=1,
+  angle=0,
+  position=current page.south west,
+  vshift=0,
+  hshift=0,
+  contents={
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[pattern=dots, pattern color=black!35] (current page.south west) rectangle (current page.north east);
+    \end{tikzpicture}
+  },
+}
+
+\title{\textsc{Functions}}
+\begin{document}
+\maketitle
+
+
+\end{document}

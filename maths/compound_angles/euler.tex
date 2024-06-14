@@ -1,0 +1,76 @@
+
+
+
+\pagebreak
+Euler's formula states that for any real number \( x \):
+\[
+e^{ix} = \cos(x) + i\sin(x)
+\]
+
+%We will prove this using differential equations and initial conditions.
+
+\begin{align*}
+&\text{Let } f(x) = e^{ix}
+\intertext{ We aim to show that}\\
+ f(x) &= \cos(x) + i\sin(x)\\
+\intertext{Differentiate $f(x)$:}\\
+\frac{d}{dx} f(x) &= \frac{d}{dx} e^{ix} = ie^{ix} = if(x) \\
+\intertext{Solve the differential equation: Assume \( f(x) = u(x) + iv(x) \), where \( u(x) \) and \( v(x) \) are real-valued functions representing the real and imaginary parts of \( f(x) \).}
+\frac{d}{dx} f(x) &= \frac{d}{dx} [u(x) + iv(x)]\\
+if(x) &= u'(x) + iv'(x) \\
+i[u(x) + iv(x)] &= u'(x) + iv'(x) \\
+-v(x) + iu(x) &= u'(x) + iv'(x) \\[5mm]
+\intertext{Equating the real and imaginary parts gives us two equations:}
+u'(x) &= -v(x) \\
+v'(x) &= u(x)
+\end{align*}
+
+\begin{align*}
+\intertext{Solve the system of differential equations. Differentiate the first equation with respect to \( x \):}
+u''(x) &= -v'(x) \\
+\intertext{Substitute \( v'(x) = u(x) \) from the second equation:}
+u''(x) &= -u(x)
+\end{align*}
+
+\begin{align*}
+\intertext{This is a second-order differential equation. The general solution is:}
+u(x) &= A\cos(x) + B\sin(x)
+\end{align*}
+
+\begin{align*}
+\intertext{Similarly, differentiate the second equation:}
+v''(x) &= u'(x) \\
+\intertext{Substitute \( u'(x) = -v(x) \):}
+v''(x) &= -v(x)
+\end{align*}
+
+\begin{align*}
+\intertext{The general solution is:}
+v(x) &= C\cos(x) + D\sin(x)
+\end{align*}
+
+\begin{align*}
+\intertext{Determine constants using initial conditions. Evaluate \( f(x) \) at \( x = 0 \):}
+f(0) &= e^{i \cdot 0} = 1 \\
+\intertext{Since \( f(x) = u(x) + iv(x) \):}
+u(0) + iv(0) &= 1 \\
+\intertext{This means:}
+u(0) &= 1 \\
+v(0) &= 0
+\end{align*}
+
+\begin{align*}
+\intertext{Thus, \( u(x) \) and \( v(x) \) must satisfy:}
+A\cos(0) + B\sin(0) &= A = 1 \\
+C\cos(0) + D\sin(0) &= C = 0
+\end{align*}
+
+\begin{align*}
+\intertext{Therefore, \( u(x) = \cos(x) \) and \( v(x) = \sin(x) \), giving:}
+f(x) &= \cos(x) + i\sin(x)
+\end{align*}
+
+\begin{align*}
+\intertext{We have shown that:}
+e^{ix} &= \cos(x) + i\sin(x)
+\end{align*}

@@ -4,6 +4,25 @@
 
 \usepackage{mathtools}
 
+
+\usepackage[pages=some]{background}
+
+
+\backgroundsetup{
+  scale=1,
+  color=black!90,
+  opacity=1,
+  angle=0,
+  position=current page.south west,
+  vshift=0,
+  hshift=0,
+  contents={
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[pattern=dots, pattern color=black!35] (current page.south west) rectangle (current page.north east);
+    \end{tikzpicture}
+  },
+}
+
 \title{\textsc{Compound Angles}}
 \begin{document}
 \maketitle
@@ -120,14 +139,22 @@ To unlock the secret of \(\sin(A + B)\), you imagine triangles forming between t
     \begin{align*}
         \intertext{Using the sine addition formula, put \(A = B = \theta\):}
         \sin\left(\theta + \theta\right) &= \sin \theta \cos \theta + \cos \theta \sin \theta\\
-        \Aboxed{\sin\left(2\theta\right) &= 2\sin \theta \cos \theta}
+        \Aboxed{\sin\left(2\theta\right) &= 2\sin \theta \cos \theta}\\
+        \intertext{Multiply and divide both numerator and denominator by $\cos^2\theta$:}
+        \sin\left(2\theta\right) &= \frac{2\sin \theta \cos \theta \cdot \cos^2\theta}{\cos^2 \theta}\\
+        &= \frac{2\tan \theta}{\sec^2 \theta}\\
+        \Aboxed{\sin\left(2\theta\right) &= \frac{2\tan \theta}{1+\tan^2 \theta}}
     \end{align*}
 
     \item $\cos\left(2\theta\right) = \cos^2 \theta - \sin^2 \theta$
     \begin{align*}
         \intertext{Using the cosine addition formula, put \(A = B = \theta\):}
         \cos\left(\theta + \theta\right) &= \cos^2 \theta - \sin^2 \theta\\
-        \Aboxed{\cos\left(2\theta\right) &= \cos^2 \theta - \sin^2 \theta}
+        \Aboxed{\cos\left(2\theta\right) &= \cos^2 \theta - \sin^2 \theta}\\
+        \intertext{Multiply and divide both numerator and denominator by $\cos^2\theta$:}
+        \cos\left(2\theta\right) &= \frac{\left(\cos^2 \theta - \sin^2 \theta \right)\cdot \cos^2\theta}{\cos^2 \theta}\\
+        &= \frac{1-\tan^2\theta}{\sec^2\theta}\\
+        \Aboxed{\cos\left(2\theta\right) &= \frac{1-\tan^2\theta}{1+\tan^2\theta}}
     \end{align*}
 
     \item $\tan\left(2\theta\right) = \frac{2\tan \theta}{1-\tan^2 \theta}$
@@ -142,7 +169,7 @@ To unlock the secret of \(\sin(A + B)\), you imagine triangles forming between t
 
 \pagebreak
 \begin{center}
-    \textsc{\textbf{Using Euler's Formula to Derive the Sine and Cosine Addition Formulas}}
+    \textsc{\textbf{Using Euler's Formula}}
 \end{center}
 
 \begin{center}
@@ -169,86 +196,11 @@ To unlock the secret of \(\sin(A + B)\), you imagine triangles forming between t
     \Aboxed{\cos\left(A+B\right) &= \sin A\sin B - \cos A\cos B}\\
     \Aboxed{\sin\left(A+B\right) &= \sin A\cos B + \cos A\sin B}
 \end{align*}
+\BgThispage
 
 
 
-
-
-
-\pagebreak
-Euler's formula states that for any real number \( x \):
-\[
-e^{ix} = \cos(x) + i\sin(x)
-\]
-
-%We will prove this using differential equations and initial conditions.
-
-\begin{align*}
-&\text{Let } f(x) = e^{ix}
-\intertext{ We aim to show that}\\
- f(x) &= \cos(x) + i\sin(x)\\
-\intertext{Differentiate $f(x)$:}\\
-\frac{d}{dx} f(x) &= \frac{d}{dx} e^{ix} = ie^{ix} = if(x) \\
-\intertext{Solve the differential equation: Assume \( f(x) = u(x) + iv(x) \), where \( u(x) \) and \( v(x) \) are real-valued functions representing the real and imaginary parts of \( f(x) \).}
-\frac{d}{dx} f(x) &= \frac{d}{dx} [u(x) + iv(x)]\\
-if(x) &= u'(x) + iv'(x) \\
-i[u(x) + iv(x)] &= u'(x) + iv'(x) \\
--v(x) + iu(x) &= u'(x) + iv'(x) \\[5mm]
-\intertext{Equating the real and imaginary parts gives us two equations:}
-u'(x) &= -v(x) \\
-v'(x) &= u(x)
-\end{align*}
-
-\begin{align*}
-\intertext{Solve the system of differential equations. Differentiate the first equation with respect to \( x \):}
-u''(x) &= -v'(x) \\
-\intertext{Substitute \( v'(x) = u(x) \) from the second equation:}
-u''(x) &= -u(x)
-\end{align*}
-
-\begin{align*}
-\intertext{This is a second-order differential equation. The general solution is:}
-u(x) &= A\cos(x) + B\sin(x)
-\end{align*}
-
-\begin{align*}
-\intertext{Similarly, differentiate the second equation:}
-v''(x) &= u'(x) \\
-\intertext{Substitute \( u'(x) = -v(x) \):}
-v''(x) &= -v(x)
-\end{align*}
-
-\begin{align*}
-\intertext{The general solution is:}
-v(x) &= C\cos(x) + D\sin(x)
-\end{align*}
-
-\begin{align*}
-\intertext{Determine constants using initial conditions. Evaluate \( f(x) \) at \( x = 0 \):}
-f(0) &= e^{i \cdot 0} = 1 \\
-\intertext{Since \( f(x) = u(x) + iv(x) \):}
-u(0) + iv(0) &= 1 \\
-\intertext{This means:}
-u(0) &= 1 \\
-v(0) &= 0
-\end{align*}
-
-\begin{align*}
-\intertext{Thus, \( u(x) \) and \( v(x) \) must satisfy:}
-A\cos(0) + B\sin(0) &= A = 1 \\
-C\cos(0) + D\sin(0) &= C = 0
-\end{align*}
-
-\begin{align*}
-\intertext{Therefore, \( u(x) = \cos(x) \) and \( v(x) = \sin(x) \), giving:}
-f(x) &= \cos(x) + i\sin(x)
-\end{align*}
-
-\begin{align*}
-\intertext{We have shown that:}
-e^{ix} &= \cos(x) + i\sin(x)
-\end{align*}
-
+% \include{euler}
 
 
 
