@@ -1,0 +1,29 @@
+\section*{Some Rules of Differentiation}
+\begin{enumerate}
+    \item Let $c$ be a constant and $u$ and $v$ be functions of $x$. Assume that $u$ and $v$ are differentiable functions over their domains of definition. Following results directly follow from the definition of differentiation.
+    \begin{align*}
+        \intertext{(a) } \frac{d(cu)}{dx} & = c \frac{du}{dx} \\
+        \intertext{(b) } \frac{d(u + v)}{dx} & = \frac{du}{dx} + \frac{dv}{dx} \\
+        \intertext{(c) } \frac{d(u - v)}{dx} & = \frac{du}{dx} - \frac{dv}{dx} \\
+        \intertext{(d) } \frac{d(uv)}{dx} & = u \frac{dv}{dx} + v \frac{du}{dx} \\
+        \intertext{(e) } \frac{d(u/v)}{dx} & = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2} \quad \text{ provided } v \ne 0.
+    \end{align*}
+    \item Let $y$ be a function of $x$ and $x$ be a function of $t$.
+    \[
+    y = f(x), \; x = g(t)
+    \]
+    Assume that $f(x)$ and $g(t)$ are differentiable functions. Then,
+    \begin{align*}
+        \frac{dy}{dt} & = \frac{dy}{dx} \cdot \frac{dx}{dt} \\
+        & = f'(x) \cdot g'(t)
+    \end{align*}
+
+    \textbf{Proof:}
+    \begin{align*}
+        \frac{dy}{dt} & = \lim_{\Delta t \to 0} \frac{\Delta y}{\Delta t} \\
+        & = \lim_{\Delta t \to 0} \frac{\Delta y}{\Delta x} \cdot \frac{\Delta x}{\Delta t} \\
+        & = \lim_{\Delta t \to 0} \frac{\Delta y}{\Delta x} \cdot \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} \\
+        & = \left( \lim_{\Delta x \to 0} \frac{ \Delta y}{\Delta x} \right) \left( \lim_{\Delta t \to 0} \frac{ \Delta x}{\Delta t} \right) \quad (\text{$\because$~As } \Delta t \to 0, \Delta x \to 0) \\
+        & = \frac{dy}{dx} \cdot \frac{dx}{dt} = f'(x) \cdot g'(t)
+    \end{align*}
+\end{enumerate}

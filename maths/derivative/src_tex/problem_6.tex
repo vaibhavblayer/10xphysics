@@ -1,0 +1,57 @@
+
+
+
+\textbf{Example.} Consider the function \( f(x) = 
+   \begin{cases} 
+   x^2, & x \geq 0 \\
+   -x, & x < 0 
+   \end{cases} \)
+
+Left hand derivative at \( x = 0 \)
+
+\begin{align*}
+    &= \lim_{h \to 0 - 0} \frac{f(0 + h) - f(0)}{h} \\
+    &= \lim_{h \to 0 - 0} \frac{-h - 0}{h} \\
+    &= -1
+\end{align*}
+
+Right hand derivative at \( x = 0 \)
+
+\begin{align*}
+    &= \lim_{h \to 0 + 0} \frac{f(0 + h) - f(0)}{h} \\
+    &= \lim_{h \to 0 + 0} \frac{h^2 - 0}{h} \\
+    &= \lim_{h \to 0 + 0} h \\
+    &= 0
+\end{align*}
+
+Left hand derivative \(\neq\) Right hand derivative at \( x = 0 \). \\
+Hence, \( f(x) \) is not differentiable at \( x = 0 \). \\
+A function is said to be a differentiable function if it is differentiable at all points in its domain of definition.
+
+\textbf{Continuity and Differentiability}
+
+Suppose a function \( f(x) \) is differentiable at \( x = a \) i.e., \( f'(a) \) exists.
+
+\begin{align*}
+    \text{Now,} \quad \lim_{h \to 0} [f(a + h) - f(a)] &= \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} \cdot h \\
+    &= \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} \cdot \lim_{h \to 0} h \\
+    &= f'(a) \cdot 0 = 0 \\
+    \therefore \lim_{h \to 0} [f(a + h) - f(a)] &= 0
+\intertext{or}
+    \lim_{h \to 0} f(a + h) &= f(a)
+\end{align*}
+
+Thus, \( f(x) \) is continuous at \( x = a \). \\
+Hence, if a function \( f(x) \) is differentiable at some point \( x = a \), then it is continuous at that point. But, the converse need not be true.
+
+\textbf{Higher Order Derivatives}
+
+\( f'(x) \), as defined earlier, is called the first order derivative of \( f(x) \) with respect to \( x \). Derivative of \( f'(x) \) with respect to \( x \), denoted by \( f''(x) \), is called the second order derivative of \( f(x) \) with respect to \( x \). Similarly, \( n \)th order derivative of \( f(x) \), denoted by \( f^n(x) \), is defined.
+
+\textbf{Let} \\
+\( y = f(x) \)
+
+We know that
+\begin{equation}
+    \frac{dy}{dx} = f'(x)
+\end{equation}

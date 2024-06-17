@@ -1,0 +1,25 @@
+
+
+\begin{align*}
+  &= \lim_{\Delta x \to 0} \frac{(x + \Delta x)^2 - x^2}{\Delta x} \\
+  &= \lim_{\Delta x \to 0} \frac{2x \cdot \Delta x + (\Delta x)^2}{\Delta x} \\
+  &= \lim_{\Delta x \to 0} \frac{2x + \Delta x}{\Delta x} = 2x \\
+  \intertext{4. $f(x) = x^n$, $n$ is a rational number.}
+  f'(x) &= \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} \\
+  &= \lim_{\Delta x \to 0} \frac{(x + \Delta x)^n - x^n}{\Delta x} \\
+  &= x^n \lim_{\Delta x \to 0} \frac{\left(1 + \frac{\Delta x}{x}\right)^n - 1}{\Delta x} \\
+  &= x^n \lim_{\Delta x \to 0} \frac{ \left[ 1 + n \left(\frac{\Delta x}{x}\right) + \frac{n(n-1)}{2!} \left(\frac{\Delta x}{x}\right)^2 + \cdots \right] - 1}{\Delta x} \\
+  &= x^n \lim_{\Delta x \to 0} \frac{n}{x} \left[ \frac{\Delta x}{\Delta x} \right] \left(1 + \frac{n(n - 1)}{2!}\frac{\Delta x}{x} + \cdots\right) - 1 \\
+  &= \lim_{ \Delta x \to 0} x^{n - 1} \left[ n \left( 1 + \frac{n(n-1)}{2!}\frac{\Delta x}{x} + \cdots\right) \right] = nx^{n - 1}
+  \intertext{5. $f(x) = \sin x$}
+  f'(x) &= \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} \\
+  &= \lim_{\Delta x \to 0} \frac{\sin(x + \Delta x) - \sin x}{\Delta x} \\
+  &= \lim_{\Delta x \to 0} \frac{2 \cos \left(x + \frac{\Delta x}{2}\right) \cdot \sin \left( \frac{\Delta x}{2}\right)}{\Delta x} \\
+  &= \lim_{\Delta x \to 0} \cos \left(x + \frac{\Delta x}{2}\right) \cdot \frac{\sin \left( \frac{\Delta x}{2}\right)}{\frac{\Delta x}{2}} \\
+  &= \cos x \cdot 1 = \cos x
+  \intertext{Similarly, we can prove following five results (6, 7, 8, 9, and 10).}
+  \frac{d(\cos x)}{dx} &= -\sin x \\
+  \frac{d(\tan x)}{dx} &= \sec^2 x
+\end{align*}
+
+

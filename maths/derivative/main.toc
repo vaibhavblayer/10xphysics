@@ -1,0 +1,5 @@
+\contentsline {section}{Introduction}{1}{section*.1}%
+\contentsline {paragraph}{Example 6.}{11}{section*.15}%
+\contentsline {paragraph}{Example 7.}{12}{section*.16}%
+\contentsline {paragraph}{Example 8.}{12}{section*.17}%
+\contentsline {subsection}{Introduction}{12}{section*.17}%

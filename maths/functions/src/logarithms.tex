@@ -1,0 +1,175 @@
+\vbtitle{Logarithmic Functions}
+\begin{align*}
+    8 &= 2^3\\
+    \intertext{In the equation above, we know that \( 2^3 = 8 \), but what if we want to find the exponent to which 2 must be raised to obtain 8? This is where logarithms come into play.}
+\end{align*}
+\begin{itemize}
+    \item \textbf{Exponents:} find the final result of growth
+        \vbdefinition{
+            Exponents are the operations that show how many times a number is multiplied by itself. They help us find the final result of growth.
+            \begin{align*}
+                2^3 &= 8
+            \end{align*}
+        }
+    \item \textbf{Logarithms:} reveal the inputs that caused the growth
+        \vbdefinition{
+            Logarithms are the inverse operations of exponentiation. They help us find the exponent to which a given base must be raised to obtain a specific number.
+            \begin{align*}
+                \log_2 8 &= 3\\
+                \intertext{In the equation above, the logarithm of 8 to the base 2 is 3, which means that 2 must be raised to the power of 3 to get 8.}
+            \end{align*}
+            \begin{itemize}
+                \item[\textsc{\textbf{Argument:}}] the number whose logarithm is being found, in the above example, 8 is the argument.\\
+                Is it possible to find the logarithm of a negative number? Let's explore this question.
+                    \begin{align*}
+                        \log_2 (-8) &= \text{?}
+                        \intertext{Above equation tell us that to get -8, to what power 2 must be raised.}
+                        -8 &= 2^x
+                        \intertext{There is no real number \( x \) that satisfies the equation above. Therefore, the logarithm of a negative number is undefined.}
+                    \end{align*}
+                \item[\textsc{\textbf{Base:}}] the number that is raised to the power of the logarithm, in the above example, 2 is the base.\\
+                Is it possible to find the logarithm of a number to the base 1? Let's explore this question.
+                    \begin{align*}
+                        \log_1 8 &= \text{?}
+                        \intertext{Above equation tell us that to get 8, to what power 1 must be raised.}
+                        8 &= 1^x
+                        \intertext{The equation above is true for any real number \( x \). Therefore, the logarithm of a number to the base 1 is undefined.}
+                    \end{align*}
+                \item[\textsc{\textbf{Negative Base:}}] Is it possible to find the logarithm of a number with a negative base? Let's explore this question.
+                    \begin{align*}
+                        \log_{-2} 8 &= \text{?}
+                        \intertext{The equation above asks to what power -2 must be raised to get 8.}
+                        8 &= (-2)^x
+                        \intertext{Let's consider different values of \( x \):}
+                        (-2)^1 &= -2\\
+                        (-2)^2 &= 4\\
+                        (-2)^3 &= -8\\
+                        (-2)^4 &= 16
+                        \intertext{We observe that \( (-2)^x \) can only result in positive values when \( x \) is an even integer and negative values when \( x \) is an odd integer. There is no real \( x \) that results in 8 being always positive. Therefore, the logarithm with a negative base is not defined.}
+                    \end{align*}
+            \end{itemize}
+            Now, we can conclude that the logarithm of a negative number and the logarithm to the base 1 or a negative base are undefined.\\[2mm]
+            \textbf{Most of the time, we will deal with logarithms with base 10 and \( e \):}
+            \begin{itemize}
+                \item[\textsc{\textbf{Base 10:}}] The logarithm with base 10 is called the common logarithm and is denoted as \( \log_{10}(x) \) or simply \( \log(x) \). For example, \( \log_{10}(100) = 2 \) because \( 10^2 = 100 \).
+                \item[\textsc{\textbf{Base \( e \):}}] The logarithm with base \( e \) is called the natural logarithm and is denoted as \( \ln(x) \). For example, \( \ln(e^2) = 2 \) because \( e^2 = e^2 \).
+            \end{itemize}
+        }
+\end{itemize}
+    \vbdefinition{
+        The logarithm of a number \( x \) to the base \( b \) is the exponent to which the base \( b \) must be raised to obtain the number \( x \). The logarithm is denoted by \( \log_b x \), read as "log of \( x \) to the base \( b \)".
+    }
+
+    \[ f(x)=\log_b x \qquad \textit{where } x,b > 0 \textit{ and } b \neq 1 \]
+
+    \vspace*{10mm}
+
+\vbsubtitle{Properties of Logarithms:}
+\begin{enumerate}
+    \item Log to exponential
+        \begin{align*}
+            \log_b a &= c \\
+            \Rightarrow a &= b^c
+        \end{align*}
+    
+    \item $\log_b x^n = n\log_b x$ 
+        \begin{align*}
+            \log_b x^n &= t_L \tag{LHS}\\
+            \Rightarrow x^n &= b^{t_L} \tag{1}\\ 
+            n\log_b x &= t_R \tag{RHS}\\
+            \log_b x &= \frac{t_R}{n}\\
+            x &= b^{t_R/n}\\
+            \intertext{Raise both sides to the power of \( n \)}
+            \Rightarrow x^n &= b^{t_R} \tag{2}\\
+            \intertext{From the above two equations, we can say that}
+            t_L &= t_R\\
+            \Aboxed{\log_b x^n &= n\log_b x}
+        \end{align*}
+
+    \item $\log_b a = \frac{\log_k a}{\log_k b}$
+        \begin{align*}
+            \log_b(a) &= c
+            \intertext{This implies:}
+            b^c &= a
+            \intertext{Take the logarithm of both sides with respect to a new base \( k \):}
+            \log_k(b^c) &= \log_k(a)
+            \intertext{Using the power rule of logarithms \( \log_k(b^c) = c \cdot \log_k(b) \), we get:}
+            c \cdot \log_k(b) &= \log_k(a)
+            \intertext{Since \( c = \log_b(a) \), substitute \( c \) back into the equation:}
+            \log_b(a) \cdot \log_k(b) &= \log_k(a)
+            \intertext{Divide both sides by \( \log_k(b) \):}
+            \Aboxed{\log_b(a) &= \frac{\log_k(a)}{\log_k(b)}}
+        \end{align*}
+    
+
+    \item $\log_{a^m} x = \frac{1}{m} \log_a x$
+        \begin{align*}
+            \log_{a^m} x &= t_L \tag{LHS}\\
+            \Rightarrow x &= a^{mt_L} \tag{1}\\
+            \frac{1}{m}\log_a x &= t_R \tag{RHS}\\
+            \log_a x &= mt_R\\
+            x &= a^{mt_R}\\
+            \intertext{Raise both sides to the power of \( m \)}
+            \Rightarrow x &= a^{mt_R} \tag{2}\\
+            \intertext{From the above two equations, we can say that}
+            t_L &= t_R\\
+            \Aboxed{\log_{a^m} x &= \frac{1}{m} \log_a x}
+        \end{align*}
+
+    \item $\log_{b^m} x^n = \left(\frac{n}{m}\right)\log_b x$ \hfill \textit{Combine rule 2 and 4.}
+
+    \item $\log_b (xy) = \log_b x + \log_b y$
+        \begin{align*}
+            \intertext{From RHS:}
+            \log_b x &= m \\ 
+            x &= b^m \tag{1}\\
+            \log_b y &= n\\
+            y &= b^n \tag{2}\\
+            \intertext{Multiply the equations (1) and (2)} 
+            xy &= b^{m+n} \tag{3}\\
+            \intertext{Take the logarithm of both sides with respect to base \( b \)}
+            \log_b(xy) &= \log_b b^{m+n}\\
+            \log_b(xy) &= m+n\\
+            \Aboxed{\log_b(xy) &= \log_b x + \log_b y}
+        \end{align*}
+
+    \item $\log_b \left(\frac{x}{y}\right) = \log_b x - \log_b y$
+        \begin{align*}
+            \intertext{From RHS:}
+            \log_b x &= m \\ 
+            x &= b^m \tag{1}\\
+            \log_b y &= n\\
+            y &= b^n \tag{2}\\
+            \intertext{Divide the equations (1) and (2)} 
+            \frac{x}{y} &= b^{m-n} \tag{3}\\
+            \intertext{Take the logarithm of both sides with respect to base \( b \)}
+            \log_b\left(\frac{x}{y}\right) &= \log_b b^{m-n}\\
+            \log_b\left(\frac{x}{y}\right) &= m-n\\
+            \Aboxed{\log_b\left(\frac{x}{y}\right) &= \log_b x - \log_b y}
+        \end{align*}
+
+    \item $b^{\log_b x} = x$
+        \begin{align*}
+            y &= \log_b(x)
+            \intertext{This implies by the definition of logarithms:}
+            b^y &= x
+            \intertext{Since \( y = \log_b(x) \), we substitute \( y \) back into the equation:}
+            \Aboxed{b^{\log_b(x)} &= x}
+        \end{align*}
+\end{enumerate}
+
+
+\vbsubtitle{Change of Base Formula:}
+\begin{align*}
+    \ln(x) &= \log_e(x)
+    \intertext{Using the change of base formula with base \( e \) and new base 10:}
+    \log_e(x) &= \frac{\log_{10}(x)}{\log_{10}(e)}
+    \intertext{Since \( \log_e(x) = \ln(x) \), we write:}
+    \ln(x) &= \frac{\log_{10}(x)}{\log_{10}(e)}
+    \intertext{To isolate \( \log_{10}(x) \), multiply both sides by \( \log_{10}(e) \):}
+    \ln(x) \cdot \log_{10}(e) &= \log_{10}(x)
+    \intertext{Rearranging gives us:}
+    \ln(x) &= \log_{10}(x) \cdot \log_{10}(e)
+    \intertext{Since \( \log_{10}(e) \) is a constant, we often write it as \( \ln(10) \):}
+    \ln(x) &= \log_{10}(x) \cdot \ln(10)
+\end{align*}

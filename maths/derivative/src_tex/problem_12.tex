@@ -1,0 +1,68 @@
+
+
+\subsection*{Example 3}
+Discuss the continuity and differentiability of following function.
+
+\[
+f(x) = 
+\begin{cases} 
+-x^2, & x \geq 0 \\
+x + 3, & x < 0 
+\end{cases}
+\]
+
+Solution. The only doubtful point at which \(f(x)\) may be discontinuous is \(x=0\). Hence, we examine its continuity at this point.
+\begin{align*}
+\lim_{x \to 0-0} f(x) &= \lim_{x \to 0-0} (x + 3) = 0 + 3 = 3 \\
+\lim_{x \to 0+0} f(x) &= \lim_{x \to 0+0} (-x^2) = 0 \\
+\lim_{x \to 0-0} f(x) &\neq \lim_{x \to 0+0} f(x)
+\intertext{Therefore, \(f(x)\) is discontinuous at \(x = 0\).}
+\end{align*}
+
+Thus, \(f(x)\) is continuous at all points in \(\mathbb{R}\) except 0.
+\(-x^2\) and \(x + 3\) are differentiable functions of \(x\) in \(\mathbb{R}\).
+
+Hence, the only doubtful point at which \(f(x)\) may be non-differentiable is \(x=0\).
+
+At \(x=0\), \(f(x)\) is discontinuous.
+\[
+\Rightarrow f(x) \text{ is not differentiable at } x=0 \text{. (} \\
+\text{Differentiability } \Rightarrow \text{ continuity at any point)}
+\]
+
+Hence, \(f(x)\) is continuous and differentiable at all points in \(\mathbb{R}\) except 0.
+
+\subsection*{Example 4}
+Find \(\frac{d(a^x)}{dx}\), \(a \in \mathbb{R}, a>0\).
+
+Solution.
+\[
+a^x = e^{x \ln a}
+\]
+\begin{align*}
+\frac{d(a^x)}{dx} &= \frac{d (e^{x \ln a})}{dx} \\
+&= \frac{d (e^{x \ln a})}{d (x \ln a)} \cdot \frac{d (x \ln a)}{dx} \\
+&= e^{x \ln a} \cdot \ln a \cdot \frac{dx}{dx} \\
+&= \ln a \cdot e^{x \ln a} \\
+&= \ln a \cdot a^x
+\end{align*}
+
+\subsection*{Example 5}
+\(y = \sin (x^2 + y^2)\), Find \(\frac{dy}{dx}\).
+
+Solution. 
+\[
+y = \sin (x^2 + y^2)
+\]
+Differentiating both sides with respect to \(x\),
+
+\[
+\frac{dy}{dx} = \frac{d (\sin (x^2 + y^2))}{dx}
+\]
+\begin{align*}
+\frac{dy}{dx} &= \frac{d (\sin (x^2 + y^2))}{d (x^2 + y^2)} \cdot \frac{d (x^2 + y^2)}{dx} \\
+&= \cos (x^2 + y^2) \cdot \left( 2x + 2y \frac{dy}{dx} \right)
+\end{align*}
+\begin{align*}
+\frac{dy}{dx} &= \frac{2x \cos (x^2 + y^2)}{1 - 2y \cos (x^2 + y^2)}
+\end{align*}

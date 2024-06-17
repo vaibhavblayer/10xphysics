@@ -1,0 +1,59 @@
+
+
+\section*{Mathematics For Learning Physics}
+
+With the help of results and rules discussed in this chapter, we can find the differential coefficient of any function.
+
+\subsection*{Example 1.}
+
+\begin{align*}
+    y & = x^2 \sin x \\
+    \frac{dy}{dx} & = \frac{d(x^2 \sin x)}{dx} \\[8pt]
+    & = x^2 \frac{d(\sin x)}{dx} + \sin x \cdot \frac{d(x^2)}{dx} \intertext{(See the rule for $\frac{d(uv)}{dx}$, $u = x^2$, $v = \sin x$)} \\[8pt]
+    & = x^2 \cos x + 2x \sin x
+\end{align*}
+
+\subsection*{Example 2.}
+
+\begin{align*}
+    y & = x \cdot e^{\sin x} \\
+    \frac{dy}{dx} & = \frac{d(x \cdot e^{\sin x})}{dx} \\[8pt]
+    & = x \cdot \frac{d(e^{\sin x})}{dx} + e^{\sin x} \cdot \frac{d(x)}{dx} \\[8pt]
+    \intertext{Let $\sin x = z$}
+    \frac{d(e^{\sin x})}{d(\sin x)} & = \frac{d(e^z)}{dz} = e^z = e^{\sin x} \\[8pt]
+    \frac{dy}{dx} & = x \cdot \frac{e^{\sin x} \cdot \frac{d(\sin x)}{dx}}{d(\sin x)} + e^{\sin x} \cdot 1 \\[8pt]
+    & = x \cos x \cdot e^{\sin x} + e^{\sin x}
+\end{align*}
+
+\section*{Chapter Crux}
+
+1. The technique of differentiation makes the description of motion precise.
+
+2. Differential coefficient or derivative of a function $f(x)$ with respect to $x$, denoted by $f'(x)$, is defined as
+   \[
+   f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}
+   \]
+   
+3. Let $y = f(x)$,
+   \[
+   \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = f'(x)
+   \]
+   \[
+   \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} \text{ is denoted by } \frac{dy}{dx}
+   \]
+
+4. Differential coefficients of some functions:
+   \begin{itemize}
+   \item[(i)] $\frac{dc}{dx} = 0$, $c$ is a constant.
+   \item[(ii)] $\frac{d(x^n)}{dx} = n \cdot x^{n-1}$, $n$ is a rational number.
+   \item[(iii)] $\frac{d(\sin x)}{dx} = \cos x$
+   \item[(iv)] $\frac{d(\cos x)}{dx} = -\sin x$
+   \item[(v)] $\frac{d(\tan x)}{dx} = \sec^2 x$
+   \item[(vi)] $\frac{d(\cot x)}{dx} = -\cosec^2 x$
+   \item[(vii)] $\frac{d(\sec x)}{dx} = \sec x \cdot \tan x$
+   \item[(viii)] $\frac{d(\cosec x)}{dx} = -\cosec x \cdot \cot x$
+   \item[(ix)] $\frac{d(e^x)}{dx} = e^x$
+   \item[(x)] $\frac{d(\ln x)}{dx} = \frac{1}{x}$
+   \end{itemize}
+   
+
