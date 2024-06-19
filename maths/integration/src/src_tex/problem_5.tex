@@ -1,0 +1,60 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Solved Examples}
+\maketitle
+
+\textbf{Example 1 --- Find}
+
+\begin{align*}
+    \text{(a)} & \int (2x + x^2) dx \\
+    \text{(b)} & \int \left( \frac{3}{x} - 4x^2 + 5\sqrt{x} - \frac{1}{x^{2/3}} \right) dx \\
+    \text{(c)} & \int \frac{dx}{1 + 2x} \\
+    \text{(d)} & \int \sin 2x dx \\
+    \text{(e)} & \int \cos^3 x dx \\
+    \text{(f)} & \int \sin^2 x dx \\
+    \text{(g)} & \int \sec x \cdot \tan x \cdot dx \\
+    \text{(h)} & \int \cosec x \cdot (\cosec x - 1) dx \\
+    \text{(i)} & \int \left( \frac{e^{2x} + e^{3x}}{e^x} \right) dx \\
+    \text{(j)} & \int \cos^2 x \cdot \sin x dx \\
+    \text{(k)} & \int \csc^2 x \cdot (\tan x) dx \\
+    \text{(l)} & \int \sec^2 x \cdot (\tan x) dx \\
+    \text{(m)} & \int x^2 \sin (x^2) dx \\
+    \text{(n)} & \int \frac{dx}{x} \\
+    \text{(o)} & \int \frac{dx}{1 - x^2} \\
+    \text{(p)} & \int \frac{dx}{\sqrt{4 - x^2}} \\
+    \text{(q)} & \int \frac{dx}{1 + x^2} \\
+    \text{(r)} & \int \frac{dx}{2x + 2 - x^2} \\
+    \text{(s)} & \int \frac{dx}{\sqrt{2x + 5}} \\
+    \text{(t)} & \int \ln x dx \\
+    \text{(u)} & \int x^2 e^{-x} dx \\
+    \text{(v)} & \int \sin x \cdot \cos x \cdot e^{\sin^2 x} dx
+\end{align*}
+
+\textbf{Solution.}
+
+\begin{align*}
+    \text{(a)} & \quad \int (2x + x^2) dx = \int 2x dx + \int x^2 dx \\
+    \intertext{(∵ \( \int [f(x) \pm g(x)] dx = \int f(x) dx \pm \int g(x) dx + c \) and \( \int f'(x) dx = f(x) + c \))}
+    & = 2 \int x dx + \int x^2 dx \\
+    \intertext{(∵ \( \int x^n dx = \frac{x^{n+1}}{n + 1} + c, n \neq -1 \))}
+    & = 2 \cdot \frac{x^2}{2} + \frac{x^3}{3} + c \\
+    & = x^2 + \frac{x^3}{3} + c 
+\end{align*}
+
+\begin{align*}
+    \text{(b)} & \quad \int \left( \frac{3}{x} - 4x^2 + 5\sqrt{x} - \frac{1}{x^{2/3}} \right) dx = \int \frac{3}{x} dx - \int 4x^2 dx + \int 5\sqrt{x} dx - \int \frac{dx}{x^{2/3}} \\
+    & = 3 \int \frac{dx}{x} - 4 \int x^2 dx + 5 \int x^{1/2} dx - \int x^{-2/3} dx \\
+    & = 3 \ln x - 4 \cdot \frac{x^3}{3} + 5 \cdot \frac{x^{3/2}}{3/2} - \frac{x^{1/3}}{1/3} + c \\
+    & = 3 \ln x - \frac{4x^3}{3} + \frac{10x^{3/2}}{3} - 3 x^{1/3} + c
+\end{align*}
+
+\begin{align*}
+    \text{(c)} & \quad \int \frac{dx}{1 + 2x} \\
+    & \text{Let } 1 + 2x = y \\
+\end{align*}
+
+\end{document}

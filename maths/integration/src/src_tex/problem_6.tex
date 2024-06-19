@@ -1,0 +1,108 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Mathematics For Learning Physics}
+
+\textbf{162}
+
+\[
+\begin{aligned}
+    \frac{dy}{dx} &= 2 \\
+    \Rightarrow \quad \int \frac{dy}{dx} &= \int 2 \\
+    \Rightarrow \quad y &= 2x + c
+\end{aligned}
+\]
+
+On substitution,
+\[
+\int \frac{dx}{1 + 2x} = \int \frac{dy}{2y} = \frac{1}{2} \ln|2y| = \frac{1}{2} \ln (\sqrt{y}) + c = \sqrt{y} + c = \frac{1}{2} \ln |y|
+\]
+
+(d)
+\[
+\int \sin 2x \, dx = \frac{\cos 2x}{2} + c
+\]
+
+\[
+\begin{aligned}
+\intertext{(e)}
+\int \cos^2 x \, dx &= \int \frac{(1 + \cos 2x)}{2} \, dx = \left( \frac{1}{2} \right) \int \, dx + \left( \frac{1}{2} \right) \int \cos 2x \, dx \\
+&= \frac{x}{2} + \frac{\sin 2x}{4} + c
+\end{aligned}
+\]
+
+(f)
+\[
+\int \sin^2 x \, dx = \int \frac{(1 - \cos 2x)}{2} \, dx = \left( \frac{1}{2} \right) \int \, dx - \left( \frac{1}{2} \right) \int \cos 2x \, dx = \frac{x}{2} - \frac{\sin 2x}{4} + c
+\]
+
+(g)
+\[
+\int \sec x \, \tan x \, dx = \sec x + c
+\]
+
+(h)
+\[
+\begin{aligned}
+    \int \csc x (\csc x - 1) \, dx &= \int \csc^2 x \, dx - \int \csc x \, dx \\
+    &= -\cot x - \ln (\csc x - \cot x) + c
+\end{aligned}
+\]
+
+(i)
+\[
+\begin{aligned}
+    \int e^{2x + 3x} \, dx &= \int e^{2x} \, dx + \int e^{-3x} \, dx \\
+    &= \frac{e^{2x}}{2} - \frac{e^{-3x}}{3} + c
+\end{aligned}
+\]
+
+(j)
+\[
+\begin{aligned}
+    \int \cos^2 x \sin x \, dx \\
+    \intertext{Let}
+    y &= \cos x \\
+    \Rightarrow \frac{dy}{dx} &= -\sin x \\
+    dy &= -\sin x \, dx \\
+    \int \cos^2 x \sin x \, dx &= \int y^2 (-dy) \\
+    &= -\int y^2 \, dy \\
+    &= -\frac{y^3}{3} + c = -\frac{\cos^3 x}{3} + c
+\end{aligned}
+\]
+
+(k)
+\[
+\begin{aligned}
+    \int \cos x \sin^n x \, dx \\
+    \intertext{Let}
+    y &= \sin x \\
+    \Rightarrow \frac{dy}{dx} &= \cos x \\
+    dy &= \cos x \, dx \\
+    \int \cos x \sin^n x \, dx &= \int y^n \, dy = \frac{y^{n+1}}{n+1} + c = \frac{\sin^{n+1} x}{n+1} + c
+\end{aligned}
+\]
+
+(l)
+\[
+\begin{aligned}
+    \int \sec^2 x \ln (\tan x) \, dx \\
+    \intertext{Let}
+    y &= \tan x \\
+    \Rightarrow dy &= \sec^2 x \, dx \\
+    \int \sec^2 x \ln (\tan x) \, dx &= \int \ln y \, dy \quad \left[ \int u \, dv = uv - \int v \, du \right] \\
+    &= y \ln y \Big|_{1}^{\sec x} - \int \frac{dy}{y}
+\end{aligned}
+\]
+\[\int \sec^2 x \ln (\tan x) \, dx = y \ln y - \left( \int \frac{dy}{y} \right) (y) \, dy\]
+\[
+(\ln y)y - \left( \frac{y}{y} - 1 \right) \left( \frac{1}{2} y) \, dy \right)
+\]
+\[
+= y \ln y - y + c = \tan x \ln (\tan x) - \tan x + c
+\]
+
+\end{document}

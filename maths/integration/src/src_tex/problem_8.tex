@@ -1,0 +1,83 @@
+The image contains mathematical problems and solutions related to integrals from a textbook "Mathematics For Learning Physics," beginning from page 164. It features several integral examples, each labeled with letters (q), (r), (s), and (t). Below are the integral problems and their solutions as shown:
+
+1. **Question (q):**
+   \(\int \frac{dx}{\sqrt{1+x^2}}\)
+
+    **Solution:**
+    \[
+    \text{Let } x = \tan{\theta}
+    \]
+    \[
+    \Rightarrow \frac{dx}{d\theta} = \sec^2{\theta}
+    \]
+    \[
+    \Rightarrow dx = \sec^2{\theta} d\theta
+    \]
+    On substitution,
+    \[
+    \int \frac{dx}{\sqrt{1+x^2}} = \int \frac{\sec^2{\theta} d\theta}{\sqrt{1+\tan^2{\theta}}}
+    \]
+    \[
+    = \int \sec{\theta} d\theta = \ln(\sec{\theta} + \tan{\theta}) + c = \ln(x + \sqrt{1+x^2}) + c
+    \]
+
+2. **Question (r):**
+   \(\int \frac{dx}{\sqrt{2x+2-x^2}}\)
+
+    **Solution:**
+    \[
+    2x + 2 - x^2 =3 - (x-1)^2
+    \]
+    \[
+    \text{Let } x - 1 = \sqrt{3} \sin{\theta}
+    \]
+    \[
+    \Rightarrow \frac{dx}{d\theta} = \sqrt{3} \cos{\theta}
+    \]
+    \[
+    \Rightarrow dx = \sqrt{3} \cos{\theta} d\theta
+    \]
+    On substitution,
+    \[
+    \int \frac{dx}{\sqrt{2x+2-x^2}} = \int \frac{\sqrt{3} \cos{\theta} d\theta}{\sqrt{3 - 3\sin^2{\theta}}} = \int d\theta = \theta + c
+    \]
+    \[
+    = \sin^{-1}(\frac{x-1}{\sqrt{3}}) + c
+    \]
+
+3. **Question (s):**
+   \(\int \frac{dx}{x^2 - 2x + 5}\)
+
+    **Solution:**
+    \[
+    x^2 - 2x + 5 = (x - 1)^2 + 4
+    \]
+    \[
+    \text{Let } x - 1 = 2 \tan{\theta}
+    \]
+    \[
+    \Rightarrow \frac{dx}{d\theta} = 2 \sec^2{\theta}
+    \]
+    \[
+    \Rightarrow dx = 2 \sec^2{\theta} d\theta
+    \]
+    On substitution,
+    \[
+    \int \frac{dx}{x^2 - 2x + 5} = \int \frac{2 \sec^2{\theta} d\theta}{4 \sec^2{\theta}} = \int \frac{d\theta}{2} = \frac{\theta}{2} + c
+    \]
+    \[
+    = \frac{1}{2} \tan^{-1}(\frac{x-1}{2}) + c
+    \]
+
+4. **Question (t):**
+   \(\int x \ln x \, dx = ( \ln x) \int x \, dx - \int \left( \frac{d (\ln x)}{dx} \right) \left( \int x \, dx \right) dx\)
+
+    **Solution:**
+    \[
+    x \ln x \int x dx = x^2 \ln x - \int x \cdot x dx \Rightarrow x^2 \ln x - \int x^2 dx
+    \]
+    \[
+    = \frac{x^2 \ln x}{2} - \frac{x^3}{6} + c
+    \]
+
+This text involves the solutions with relevant substitutions and changes of variables to perform the integrations.

@@ -1,0 +1,36 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Integration}
+
+\begin{align*}
+    S &= \lim_{\Delta t \to 0} \sum_{t=t_1}^{t_1+(n-1)\Delta t} u(t) \cdot \Delta t \quad \text{where} \quad \Delta t = \frac{t_2 - t_1}{n} \tag{ii} \\
+    \intertext{Note that the term on the right-hand side is a sum of infinite series (as \( n \to \infty \)) with each term approaching zero (i.e. \( \Delta t \to 0 \)).}
+    \intertext{Summation of infinite series with each term approaching zero is called integration and denoted by symbol $\int$. We mentioned in chapter 10 that an infinitesimal change in x is denoted by $dx$. Using these notations and symbols, (i) can be written as}
+    S &= \int_{t_1}^{t_2}v(t)\cdot dt \\
+    \intertext{We call integral of \( u(t) \) over time interval \( t_1 \) to \( t_2 \).}
+    \text{Let} \; S(t) &= \text{distance travelled by the particle during time interval 0 to} \; t. \\
+    \text{By definition,} \quad u(t) &= \frac{dS(t)}{dt} \\
+    \text{Obviously,} \quad S &= S(t_2) - S(t_1) \\
+    \text{Hence,} \quad S(t_2) - S(t_1) &= \int_{t_1}^{t_2}\frac{dS(t)}{dt} \cdot dt \tag{ii} \\
+    \intertext{We can generalise this result to any function.}
+    \text{Let} \; f(x) \; &= \; \text{be a function which is defined in } [a, b]. \; \text{Also, assume that} \; f(x) \;  \text{is continuous in } [a, b]. \\
+    \text{Let} \; F(x) \; &= \; \text{be a function such that} \; F'(x) = f(x).\text{Now,}
+    \int_a^b f(x)dx &= \left. F(x) \right|_a^b = F(b) - F(a) \\
+    \intertext{(a and b are called lower limit and upper limit respectively of the integral.)}
+    \int_a^b f(x)dx &= \lim_{\Delta x \to 0} \sum_{x=a}^{a+(n-1)\Delta x} f(x) \cdot \Delta x \; \text{where} \quad \Delta x = \frac{b - a}{n} \\
+    \intertext{This is the fundamental theorem of calculus.}
+    F(x) \; &\text{is called indefinite integral of } f(x). \text{Note that} \; F(x) \; \text{is not unique}.  \\
+    \text{If} \quad F'(x) &= f(x) \\
+    \text{Then,} \quad (F(x) + c)' &= F'(x) + 0 = f(x) \quad (c \; \text{is a constant}) \\
+    \text{Hence,} \; F(x) \; \text{is called 'indefinite' integral of} \; f(x) \; \text{and it is denoted as} \\
+    F(x) &= \int f(x) \cdot dx \\
+    \intertext{Following results directly follow from the definition of integral.}
+    \text{(i)} \quad \int_a^b [f(x) + g(x)] \cdot dx &= \int_a^b f(x) \cdot dx + \int_a^b g(x) \cdot dx \\
+    \intertext{(Note that} \; \int [f(x) + g(x)] \cdot dx = \int f(x) \cdot dx + \int g(x) \cdot dx + c \\ \text{where c is an arbitrary constant})
+\end{align*}
+
+\end{document}

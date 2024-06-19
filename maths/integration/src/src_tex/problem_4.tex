@@ -1,0 +1,42 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{align*}
+&\text{Integration} \quad | \quad 159 \\
+&\frac{dy}{dx}=1 \cdots dy=dx\\
+&\text{On substitution,} \int(x+1)^2dx=\int y^2dy\\
+&\frac{y^3}{3}+c \quad \left( \because \int x^n dx (n \neq -1)=\frac{x^{n+1}}{n+1}+c \right) \\
+&\frac{(x+1)^3}{3}+c \\
+(ii) \quad &\int \sin^2 x \cdot \cos x dx \\
+&\text{Let} \quad y=\sin x \\
+&\frac{dy}{dx}=\cos x \\
+\Rightarrow \quad &dy=\cos x dx \\
+\intertext{On substitution,}
+&\int \sin^2 x \cdot \cos x dx = \int y^2 dy = \frac{y^3}{3} + c = \frac{\sin^3 x}{3}+c \\
+(iii) &\int x \cdot e^{x^2} dx \\
+&\text{Let} \quad y=x^2 \\
+&\frac{dy}{dx}=2x \\
+\Rightarrow \quad &dy=2x dx \\
+\intertext{On substitution,}
+&\int x \cdot e^{x^2} dx = \frac{1}{2} \int e^{x^2} (2x dx) = \frac{1}{2} \int e^y dy = \frac{1}{2} (e^y + c) = \frac{e^{x^2}}{2} + c' = \frac{e^{x^2}}{2} + c'\\
+\end{align*}
+
+\section*{Integration by Parts}
+\text{Let } u \text{ and } v \text{ be two functions of } x. \text{ Then,}
+\[
+\int u v \, dx = u \int v \, dx - \int \left( \frac{d u}{d x} \int v \, dx \right) dx
+\]
+\text{Illustration:} \quad (i) \quad \int x \sin x \, dx = x \int \sin x \, dx - \int \left( \frac{d}{d x} (x) \int \sin x \, dx \right) dx \\
+& \quad \text{(Let } u = x \text{ and } v = \sin x \text{)} \\
+& = -x \cos x - \int 1 \cdot (-\cos x) \, dx \\
+& = -x \cos x + \sin x + c \\
+\text{Note that the following expression is also correct.}
+\[
+\int x \sin x \, dx = \sin x \int x \, dx - \int \left( \frac{d (\sin x)}{d x} \int x \, dx \right) dx
+\]
+\text{However, we did not use this expression to calculate the integral. This is because the integral can be calculated only for the previous choice of expression. So, while using the method of integration by parts, we should choose the expression judiciously out of many possible expressions.}
+
+\end{document}

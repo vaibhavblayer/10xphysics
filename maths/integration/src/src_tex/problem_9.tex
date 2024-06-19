@@ -1,0 +1,61 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{align*}
+\text{(iii)} & \int x e^x dx = x^2 \int e^x dx - \int \left( \frac{d(x^2)}{dx} \right) \int e^x dx \\
+                & = x^2 e^x - 2 \int x e^x dx \\
+                & \Downarrow \\
+                & \int x e^x dx = x e^x - \int e^x dx \cdot x = x e^x - e^x \\
+                & \Downarrow \\
+                & \int x e^x dx = x e^x - 2 \left( (x e^x - e^x) = x e^x - 2 x e^x + 2e^x + c \right) \\
+\end{align*}
+
+\begin{align*}
+\text{(iv)} & \int \sin x \cdot \cos x \cdot e^{\sin x} dx \\
+\intertext{Let } y = \sin x \\
+            & \frac{dy}{dx} = \cos x \Rightarrow dy = \cos x dx \\
+\intertext{On substitution,}
+    \int \sin x \cdot \cos x \cdot e^{\sin x} dx &= \int y e^y dy \\
+                                                  &= y \int e^y dy - \int \left( \frac{dy}{dx} \right) \left( \int e^y dy dy \right) \\
+                                                  &= y e^y - \int e^y dy - y e^{-y} + c \\
+                                                  &= \sin x \cdot e^{\sin x} - e^{\sin x} + c
+\end{align*}
+
+\begin{align*}
+\text{(v)} & \int \sin^3 x \cdot \cos x \cdot e^{\sin^2 x} dx \\
+\intertext{Let } y = \sin^2 x \\
+              & \frac{dy}{dx} = 2 \sin x \cdot \cos x \Rightarrow dy = 2 \sin x \cos x dx \\
+\intertext{On Substitution,}
+    \int \sin^3 x \cdot \cos x \cdot e^{\sin^2 x} dx &= \frac{1}{2} \int y \cdot e^y dy \\
+                                                     &= \frac{1}{2} \left[ y e^y dy - \int \left(\frac{dy}{dx}\right) \left(e^y dy dy\right) \right] \\
+                                                     &= \frac{1}{2} \left[ y e^y - \int e^y dy \right] \\
+                                                     &= \frac{1}{2} \left[ y e^y - e^y \right] + c \\
+                                                     &= \frac{1}{2} \left[ \sin^2 x \cdot e^{\sin^2 x} - e^{\sin^2 x} \right] + c \\
+\end{align*}
+
+\begin{itemize}
+    \item[\text{*}] \text{Example 2. Find,}
+    \begin{align*}
+        & (a) \int_0^1 x^2 dx \\
+        & (b) \int_{0}^{\pi/2} \sin^2 x \cdot \cos x dx \\
+        & (c) \int_2^3 \ln 2 dx \\
+        & (d) \int_0^1 |x| dx \\
+        & (e) \int_{-\pi/4}^{\pi/4} 1 - \sin 2x \; dx \\
+        & (f) \int_0^3 (1 - |x - 1| + |x - 2| dx) \\
+        & (g) \int_{-2}^2 [x] dx \\
+        & (h) \int_0^1 \frac{dx}{1 + x^2} \\
+        & (i) \int_0^3 f(x) dx \\
+\end{align*}
+\intertext{where }
+    f(x) & = 
+	  \begin{cases}
+		  [x], & \text{for } x \geq 1 \\
+		  0, & \text{for } 0 \leq x < 1 \\
+		  -x, & \text{for } x < 0
+	  \end{cases}
+\end{itemize}
+
+\end{document}

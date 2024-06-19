@@ -1,11 +1,13 @@
 \documentclass{article}
 \usepackage{v-test-paper}
+\usepackage{import}
 \DeclareMathOperator{\cosec}{cosec}
 
-\title{\textsc{Calculus}}
+\title{\textsc{Functions \& Calculus}}
 
 
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\setcounter{tocdepth}{3}
 \usepackage{mathtools}
 \usepackage[pages=some]{background}
 
@@ -93,13 +95,12 @@
 \maketitle
 \tableofcontents
 
+\pagebreak
 
-\include{src_tex/limit.tex}
-\include{src_tex/differentiation_intro}
-\include{src_tex/differential_coefficient}
-\include{src_tex/rules_of_differentiation}
-\include{src_tex/illustrations_derivative}
-\addcontentsline{toc}{subsection}{Introduction}
+% \import{functions/}{function_main}
+\import{derivative/}{derivative_main}
+% \import{integral/}{integral_main}
+
 
 
 

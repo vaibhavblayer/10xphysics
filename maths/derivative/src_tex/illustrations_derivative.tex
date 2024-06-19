@@ -1,0 +1,107 @@
+\addcontentsline{toc}{subsection}{Illustrations: Derivatives}
+\vbtitle{\textbf{Illustrations: Derivatives}}
+\BgThispage
+\begin{enumerate}
+    \item Find the derivative of $y = x^2 \sin x$.
+        \begin{solution}
+            \begin{align*}
+                y & = x^2 \sin x \\
+                \frac{dy}{dx} & = \frac{d(x^2 \sin x)}{dx} \\[8pt]
+                & = x^2 \frac{d(\sin x)}{dx} + \sin x \cdot \frac{d(x^2)}{dx} \intertext{(See the rule for $\frac{d(uv)}{dx}$, $u = x^2$, $v = \sin x$)} \\[8pt]
+                & = x^2 \cos x + 2x \sin x
+            \end{align*}
+        \end{solution}
+
+    \item Find the derivative of $y = x \cdot e^{\sin x}$.
+        \begin{solution}
+            \begin{align*}
+                y & = x \cdot e^{\sin x} \\
+                \frac{dy}{dx} & = \frac{d(x \cdot e^{\sin x})}{dx} \\[8pt]
+                & = x \cdot \frac{d(e^{\sin x})}{dx} + e^{\sin x} \cdot \frac{d(x)}{dx} \\[8pt]
+                \intertext{Let $\sin x = z$}
+                \frac{d(e^{\sin x})}{d(\sin x)} & = \frac{d(e^z)}{dz} = e^z = e^{\sin x} \\[8pt]
+                \frac{dy}{dx} & = x \cdot \frac{e^{\sin x} \cdot \frac{d(\sin x)}{dx}}{d(\sin x)} + e^{\sin x} \cdot 1 \\[8pt]
+                & = x \cos x \cdot e^{\sin x} + e^{\sin x}
+            \end{align*}
+        \end{solution}
+
+    \item Find \(\frac{d(a^x)}{dx}\), \(a \in \mathbb{R}, a>0\).
+        \begin{solution}
+            \begin{align*}
+                a^x &= e^{x \ln a} \\
+                \intertext{Use logarithmic property ~$b^{\log_b a} = a$}\\
+                \frac{d(a^x)}{dx} &= \frac{d (e^{x \ln a})}{dx} \\
+                &= \frac{d (e^{x \ln a})}{d (x \ln a)} \cdot \frac{d (x \ln a)}{dx} \\
+                &= e^{x \ln a} \cdot \ln a \cdot \frac{dx}{dx} \\
+                &= \ln a \cdot e^{x \ln a} \\
+                &= \ln a \cdot a^x
+            \end{align*}
+        \end{solution}
+    
+    \item \(y = \sin (x^2 + y^2)\), Find \(\frac{dy}{dx}\).
+    \begin{solution}
+        \begin{align*}
+            y &= \sin (x^2 + y^2)\\
+            \intertext{Differentiating both sides with respect to \(x\),}
+            \frac{dy}{dx} &= \frac{d (\sin (x^2 + y^2))}{dx} \\
+            \frac{dy}{dx} &= \frac{d (\sin (x^2 + y^2))}{d (x^2 + y^2)} \cdot \frac{d (x^2 + y^2)}{dx} \\
+        &= \cos (x^2 + y^2) \cdot \left( 2x + 2y \frac{dy}{dx} \right)\\
+        \intertext{Treat \(\frac{dy}{dx}\) as a variable and solve for it.}
+        \frac{dy}{dx} &= \frac{2x \cos (x^2 + y^2)}{1 - 2y \cos (x^2 + y^2)}
+        \end{align*}
+    \end{solution}
+    \BgThispage
+    \item The position of a particle moving along \(x\)-axis varies with time \( t \) according as \[x = t^2 - t + 1\] Velocity \( v_x \) and acceleration \( a_x \) of the particles are defined as \[v_x = \frac{dx}{dt} \quad \text{and} \quad a_x = \frac{dv_x}{dt}\]
+    \begin{enumerate}
+        \item Find velocity and acceleration at \( t = 1 \).
+        \item When is the velocity of the particle zero?
+    \end{enumerate}
+        \begin{solution}
+            \begin{align*}
+                x &= t^2 - t + 1\\
+                v_x &= \frac{dx}{dt} = \frac{d(t^2 - t + 1)}{dt} = 2t - 1\\
+                a_x &= \frac{dv_x}{dt} = \frac{d(2t - 1)}{dt} = 2
+            \end{align*}
+            (i) At \( t = 1 \),
+            \begin{align*}
+                v_x &= 2 \times 1 - 1 = 1\\
+                a_x &= 2
+            \end{align*}
+            (ii) \( v_x = 0 \)
+            \begin{align*}
+                \Rightarrow & \quad 2t - 1 = 0 \\
+                \Rightarrow & \quad t = \frac{1}{2}\\
+            \end{align*}
+        \end{solution}
+
+
+    \item The position of a particle moving in \( xy \)-plane varies with time \( t \) according as \[ x = t + 1, \quad y = t - t^2 \] Find \(\frac{dy}{dx}\).
+    \begin{solution}
+        \begin{align*}
+            \frac{dx}{dt} &= 1 \tag{1}\\
+            \frac{dy}{dt} &= 1 - 2t \tag{2}\\
+            \intertext{We can write \(\frac{dy}{dx}\) in terms of $t$ as}
+            \frac{dy}{dx} &= \frac{dy}{dt} \bigg/ \frac{dx}{dt} \\
+            \intertext{From (1) and (2),}
+            \frac{dy}{dx} &= \frac{1 - 2t}{1} = 1 - 2t
+        \end{align*}
+    \end{solution}
+    \BgThispage
+    \item The velocity \( v_x \) of a particle moving along \( x \)-axis varies with its position \( x \) according as \( v_x = x^2 + 2x - 4 \) \\
+    Find acceleration \( a_x \) of the particle as a function of its position \( x \). \\
+    Velocity \( v_x \) and acceleration \( a_x \) of the particle are defined as \( v_x = \frac{dx}{dt}, \, a_x = \frac{dv_x}{dt} \) where \( t \) denotes time.
+    \begin{solution}
+        \begin{align*}
+            a_x &= \frac{dv_x}{dt} \\
+            &=\frac{dv_x}{dx} \cdot \frac{dx}{dt} \\
+            &= v_x \cdot \frac{dv_x}{dx} \\
+            &= (x^2 + 2x - 4) \cdot \frac{d (x^2 + 2x - 4)}{dx} \\
+            &= (x^2 + 2x - 4)(2x + 2) \\
+            &= 2 (x + 1) (x^2 + 2x - 4)
+        \end{align*}
+    \end{solution}
+
+
+\end{enumerate}
+
+

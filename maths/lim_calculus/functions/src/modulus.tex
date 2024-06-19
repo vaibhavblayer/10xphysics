@@ -1,0 +1,124 @@
+\addcontentsline{toc}{subsection}{Modulus Function}
+\vbtitle{Modulus Function}
+
+\vbdefinition{
+    Let's go back to definition of function for a moment. A function accepts an input and returns a unique output. So that we can reliably predict the output for a given input.\\[2mm]
+    Here, we have a situation where we want to find out the position of a number on the number line relative to zero or other numbers. We don't want direction here we only want to know how far the number is relative to any given number. It would be nice if we could have a function that returns the distance of a number from zero on the number line with consistent output for all numbers.\\[2mm]
+    This is where the modulus function comes in. The modulus function returns the absolute value of a number. The absolute value of a number is the distance of the number from zero on the number line. The modulus function is denoted by \( |x| \) and is defined as:
+    \begin{align*}
+        |x| = 
+        \begin{cases}
+            x & \text{if } x \geq 0\\
+            -x & \text{if } x < 0
+        \end{cases}
+    \end{align*}
+}
+
+\begin{enumerate}
+    \item[Q.] What does $|x|=2$ mean?
+        \begin{align*}
+            |x| &= 2\\
+            |x-0| &= 2\\
+        \end{align*}
+        \begin{center}
+            \begin{tikzpicture}
+                \tzline[<->](-3,0)(4,0)
+                \tzticks*{-2, -1, 0, 1, 2, 3}
+                \tzticks{-2, -1, 0, 1, 2, 3}
+                \tznode(1, -0.5){$\underbrace{\hspace{2cm}}_{2}$}[b]
+                \tznode(-1, 0.5){$\overbrace{\hspace{2cm}}^{2}$}[a]
+            \end{tikzpicture}
+        \end{center}
+        \begin{align*}
+            \intertext{This means that the distance of $x$ from zero is 2.}
+            \intertext{Here, its two possibilities:}
+            \intertext{Two numbers are 2 units away from zero. One is 2 and the other is -2.}
+            \intertext{So, we can break the modulus function like this:}
+            |x| &= 2\\
+            \Aboxed{x &= \pm 2}
+        \end{align*}
+
+    \item[Q.] What does $|x-1|=2$ mean?
+        \begin{align*}
+            |x-1| &= 2
+        \end{align*}
+        \begin{center}
+            \begin{tikzpicture}
+                \tzline[<->](-3,0)(4,0)
+                \tzticks*{-2, -1, 0, 1, 2, 3}
+                \tzticks{-2, -1, 0, 1, 2, 3}
+                \tznode(2, -0.5){$\underbrace{\hspace{2cm}}_{2}$}[b]
+                \tznode(0, 0.5){$\overbrace{\hspace{2cm}}^{2}$}[a]
+            \end{tikzpicture}
+        \end{center}
+        \begin{align*}
+            \intertext{This means that the distance of $x$ from 1 is 2.}
+            \intertext{Here, its two possibilities:}
+            \intertext{Two numbers are 2 units away from 1. One is 3 and the other is -1.}
+            \intertext{So, we can break the modulus function like this:}
+            |x-1| &= 2\\
+            x-1 &= \pm 2\\
+            x &= 1 \pm 2\\
+            \Aboxed{x &= 3, -1}
+        \end{align*}
+
+    \item[Q.] Let's analyze another one $|x-2|=|x+1|$
+        \begin{align*}
+            |x-2| &= |x+1|\\
+            |x-2| &= |x- (-1)|\\
+        \end{align*}
+        \begin{center}
+            \begin{tikzpicture}
+                \tzline[<->](-3,0)(4,0)
+                \tzticks*{-2, -1, 0, 1, 2, 3}
+                \tzticks{-2, -1, 0, 1, 2, 3}
+                \tznode(1.25, -0.5){$\underbrace{\hspace{1.5cm}}_{d}$}[b]
+                \tznode(-0.25, 0.5){$\overbrace{\hspace{1.5cm}}^{d}$}[a]
+                \tzdot*(0.5, 0)
+            \end{tikzpicture}
+        \end{center}
+        \begin{align*}
+            \intertext{This means that the distance of $x$ from 2 is equal to the distance of $x$ from -1.}
+            \intertext{In this case there is only one possibility which is $\frac{1}{2}$.}
+            \intertext{But, let's break it down algebraically.}
+            |x-2| &= |x+1|\\
+            x-2 &= \pm |x+1|\\
+            x-2 &= \pm \left(\pm(x+1)\right)\\
+        \end{align*}
+        \begin{align*}
+            \intertext{There are four possibilities:}
+            x-2 &= + \left(+(x+1)\right) && \text{ or } &&& x-2 &= - \left(+(x+1)\right) &&&& \text{ or }  &&&&& x-2 &= + \left(-(x+1)\right) &&&&&& \text{ or } &&&&&&& x-2 &= - \left(-(x+1)\right)\\
+            x-2 &= x+1 && \text{ or } &&& x-2 &= -x-1  &&&& \text{ or } &&&&& x-2 &= -x-1  &&&&&& \text{ or } &&&&&&& x-2 &= x+1\\
+            x-x &= 1+2 && \text{ or } &&& x+x &= -1+2  &&&& \text{ or } &&&&& x+x &= -1+2  &&&&&& \text{ or } &&&&&&& x-x &= 1+2\\
+            0 &= 3 && \text{ or } &&& 2x &= 1  &&&& \text{ or } &&&&& 2x &= 1  &&&&&& \text{ or } &&&&&&& 0 &= 3\\
+            &\textit{No solution} && \text{ or } &&& x &= \frac{1}{2}  &&&& \text{ or } &&&&& x &= \frac{1}{2}  &&&&&& \text{ or } &&&&&&& &\textit{No solution}
+            \intertext{We got the same answer, but see how we got there. To save yourself from this trouble, you can use the graphical method or other methods.}\\
+            \intertext{We could have solved using two equations because \( (-)(+) = -, (+)(-) = -, (+)(+)= +, (-)(-) = +\), so actually we had only two possibilities either \(x-2 = x+1\) or \(x-2 = -x-1\).}
+        \end{align*}
+        \begin{align*}
+            \intertext{Alternatively, we can square both sides to get rid of the modulus.}
+            |x-2| &= |x+1|\\
+            \intertext{$\because \qquad x^2=|x|^2$}
+            (x-2)^2 &= (x+1)^2\\
+            x^2-4x+4 &= x^2+2x+1\\
+            -4x+4 &= 2x+1\\
+            -4x-2x &= 1-4\\
+            -6x &= -3\\
+            x &= \frac{1}{2}
+        \end{align*}
+        \vbstarednote{I hope you get the idea why you should love geometry.}
+\end{enumerate}
+    
+% \end{multicols}
+
+
+% \vbdefinition{
+%     The modulus function is a function that returns the absolute value of a number. The absolute value of a number is the distance of the number from zero on the number line. The modulus function is denoted by \( |x| \) and is defined as:
+%     \begin{align*}
+%         |x| = 
+%         \begin{cases}
+%             x & \text{if } x \geq 0\\
+%             -x & \text{if } x < 0
+%         \end{cases}
+%     \end{align*}
+% }

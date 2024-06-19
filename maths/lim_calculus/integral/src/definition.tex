@@ -1,0 +1,195 @@
+\addcontentsline{toc}{section}{Integration}
+
+\vbtitle[\LARGE]{Integration}
+
+\vbdefinition{You have learned how the technique of differentiation makes the description of motion precise. Using the technique of differentiation, we can define speed \( v(t) \) of a particle where \( v(t) \) is a measure of how fast the particle is moving at time \( t \).\\[2mm]
+Suppose that a particle moves with speed \( v(t) \) where \( v(t) \) is a function of time \( t \).\\[2mm]
+What is the distance travelled by the particle during time interval \( t_1 \) to \( t_2 \)?\\[2mm]
+We know that if \( v(t) \) is constant during \( t_1 \) to \( t_2 \), then distance travelled during \( t_1 \) to \( t_2 \)
+\begin{align*}
+= v(t) (t_2 - t_1)
+\end{align*}
+But, if \( v(t) \) varies with time \( t \), then, this expression for distance will not be valid. In that case, we can use the following technique to find the distance travelled by the particle during a given time interval.\\[2mm]
+Divide time interval \( t_1 \) to \( t_2 \) into \( n \) parts.
+\begin{align*}
+\intertext{Let, }
+\Delta t = \frac{t_2 - t_1}{n}
+\end{align*}
+If \( \Delta t \) is very small, we can assume that \( v(t) \) is constant during time interval \( t \) to \( t + \Delta t \). Hence, distance travelled during time interval \( t \) to \( t + \Delta t \) is nearly equal to \( v(t) \cdot \Delta t \). We sum these distances over time interval \( t_1 \) to \( t_2 \).
+\begin{align*}
+    \intertext{Let,}
+    S' &= \sum v(t) \cdot \Delta t \text{ (over time interval \( t_1 \) to \( t_2 \))} \\[2mm]
+    &= \sum_{t = t_1}^{t_1 + (n-1)\Delta t} v(t) \cdot \Delta t
+\end{align*}
+Let \( S \) = actual distance travelled during the given time interval.
+It seems convincing that as \( \Delta t \to 0 \), \( S' \to S \).\\
+Hence, in the limiting case \( S' = S \)
+\[\therefore \quad S = \lim_{\Delta t \to 0} \sum_{t=t_1}^{t_1+(n-1)\Delta t} v(t) \cdot \Delta t \quad \text{where} \quad \Delta t = \frac{t_2 - t_1}{n} \tag{i} \]
+Note that the term on the right-hand side is a sum of infinite series (as \( n \to \infty \)) with each term approaching zero (i.e. \( \Delta t \to 0 \)).\\[2mm]
+Summation of infinite series with each term approaching zero is called integration and denoted by symbol $\int$. And an infinitesimal change in x is denoted by $dx$. Using these notations and symbols, (i) can be written as
+\[S = \int_{t_1}^{t_2}v(t)\cdot dt \]
+\[\text{where } \int_{t_1}^{t_2} v(t) dt = \lim_{\Delta t \to 0} \sum_{t=t_1}^{t_1+(n-1)\Delta t} v(t) \cdot \Delta t \qquad \qquad \left(\Delta t = \frac{t_2 - t_1}{n}\right) \]
+S is called integral of \( v(t) \) over time interval \( t_1 \) to \( t_2 \).\\[2mm]
+\vbstarednote{If you understood all this, it's enough from a physics point of view. However, let's continue to get the fundamental essence of integrals.}
+\begin{align*}
+    \intertext{Let  $S(t) = \text{distance travelled by the particle during time interval 0 to} t$.}
+    \intertext{By definition,} 
+    \quad v(t) &= \frac{dS(t)}{dt}\\
+    \intertext{Obviously,} 
+    \quad S &= S(t_2) - S(t_1)\\
+    \intertext{Hence,} 
+    \quad S(t_2) - S(t_1) &= \int_{t_1}^{t_2}\frac{dS(t)}{dt} \cdot dt \tag{ii}\\
+\end{align*}
+\addcontentsline{toc}{subsection}{Fundamental theorem of calculus}
+\begin{align*}
+    \intertext{We can generalise this result to any function.}
+    \intertext{Let  $f(x) =  \text{be a function which is defined in } [a, b].  \text{ Also, assume that}  f(x)   \text{ is continuous in } [a, b]$.} 
+    \intertext{Let \; $F(x) \; = \; \text{be a function such that} \; F'(x) = f(x).$}
+    \intertext{Now, }
+    \int_a^b f(x) dx &= \int_a^b F'(x) dx\\
+    \intertext{($a$ and $b$ are called lower limit and upper limit respectively of the integral.)}
+    &= \int_a^b \frac{dF(x)}{dx} dx\\[2mm]
+    \Aboxed{\int_a^b f(x) dx &= F(b) - F(a)}\\[2mm]
+    \text{where} \quad \int_{a}^{b} f(x) \cdot dx &= \lim_{\Delta x \to 0} \sum_{x=a}^{a+(n-1)\Delta x} f(x) \cdot \Delta x \; \qquad \qquad \left(\Delta x = \frac{b - a}{n}\right) \\
+    \intertext{\textbf{This is the fundamental theorem of calculus.}}
+    \intertext{$F(x)$ is called indefinite integral of $f(x)$.} 
+    \intertext{Note that $F(x)$ is not unique, because if $F(x)$ is an indefinite integral of $f(x)$, then $F(x) + c$ is also an indefinite integral of $f(x)$, where $c$ is a constant.}
+    \intertext{If,}
+    \quad F'(x) &= f(x)\\
+    \intertext{Then,}
+    \quad (F(x) + c)' &= F'(x) + 0 = f(x) \quad (c \; \text{is a constant})\\
+    \intertext{Hence, $F(x)$ is called 'indefinite' integral of $f(x)$ and it is denoted as}\\
+    \Aboxed{F(x) &= \int f(x) \cdot dx}
+\end{align*}
+}
+
+\pagebreak
+\vbsubtitle{Following results directly follow from the definition of integral.}
+\begin{enumerate}
+    \item $\int_a^b [f(x) + g(x)] \cdot dx = \int_a^b f(x) \cdot dx + \int_a^b g(x) \cdot dx$
+    \item $\int_a^b f(x) - g(x) \, dx = \int_a^b f(x) \, dx - \int_a^b g(x) \, dx $
+    \item $\int_a^b c f(x) \, dx = c \int_a^b f(x) \, dx, \text{ where } c \text{ is a constant.}$
+    \item $\int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$
+    \item $\int_a^c f(x) \, dx = c \int_a^c f(x) \, dx, \text{ where } c \text{ is a constant.}$\\
+\end{enumerate}
+    
+
+\vbsubtitle{Some Important Indefinite Integrals}
+\begin{enumerate}
+    \item $\int x^n dx = \frac{x^{n+1}}{n+1} + c, n \ne -1, \, n \text{ is a rational number and } c \text{ is a constant.}$
+        \begin{align*}
+            \intertext{Take derivative:}
+            \frac{d}{dx} \left( \frac{x^{n+1}}{n+1} + c \right) &= \frac{d}{dx} \left( \frac{x^{n+1}}{n+1} \right) + 0 = (n+1) \cdot \frac{x^{n+1-1}}{n+1} = x^n \\
+            \therefore \int x^n dx &= \frac{x^{n+1}}{n+1} + c
+        \end{align*}
+    
+    \item $\int \frac{1}{x} \, dx = \ln x + c$
+        \begin{align*}
+            \because \qquad\frac{d}{dx} \left( \ln x + c \right) &= \frac{1}{x}\\
+            \therefore \qquad\int \frac{1}{x} \, dx &= \ln x + c 
+        \end{align*}
+        Similarly, the following results can be proved.
+
+    \item $\int \sin x \, dx = -\cos x + c$
+    \item $\int \cos x \, dx = \sin x + c$
+    \item $\int \tan x \, dx = \ln (\sec x) + c $
+    \item $\int \cot x \, dx = \ln (\sin x) + c$
+    \item $\int \sec x \, dx = \ln (\sec x + \tan x) + c$
+    \item $\int \csc x \, dx = \ln (\csc x - \cot x) + c$
+    \item $\int e^x \, dx = e^x + c$
+\end{enumerate}
+
+\addcontentsline{toc}{subsection}{Techniques of Integration}
+\vbtitle[\large]{Techniques of Integration}
+\begin{enumerate}
+    \addcontentsline{toc}{subsubsection}{Substitution Method}
+    \item \textbf{Substitution Method}
+    \begin{enumerate}
+        \item $\int (x + 1)^2 \, dx$
+            \begin{align*}
+                \intertext{Let } 
+                y &= x + 1 \\
+                \frac{dy}{dx} &= 1\\
+                \therefore dy &= dx \\
+                \intertext{On substitution,}
+                \int (x + 1)^2 \, dx &= \int y^2 \, dy \\
+                &= \frac{y^3}{3} + c \quad \left( \because \int x^n \, dx (n \ne -1) = \frac{x^{n+1}}{n+1} + c \right) \\
+                &= \frac{(x + 1)^3}{3} + c
+            \end{align*}
+
+        \item $\int \sin^2 x \cdot \cos x \, dx$
+            \begin{align*}
+                \intertext{Let } 
+                y &= \sin x \\
+                \frac{dy}{dx} &= \cos x \\
+                \therefore dy &= \cos x \, dx \\
+                \intertext{On substitution,}
+                \int \sin^2 x \cdot \cos x \, dx &= \int y^2 \, dy \\
+                &= \frac{y^3}{3} + c \\
+                &= \frac{\sin^3 x}{3} + c
+            \end{align*}
+
+        \item $\int x \cdot e^{x^2} \, dx$
+            \begin{align*}
+                \intertext{Let } 
+                y &= x^2 \\
+                \frac{dy}{dx} &= 2x \\
+                \therefore dy &= 2x \, dx \\
+                \intertext{On substitution,}
+                \int x \cdot e^{x^2} \, dx &= \frac{1}{2} \int e^{x^2} (2x \, dx) \\
+                &= \frac{1}{2} \int e^y \, dy \\
+                &= \frac{1}{2} (e^y + c) \\
+                &= \frac{e^{x^2}}{2} + c
+            \end{align*}
+    \end{enumerate}
+
+    \addcontentsline{toc}{subsubsection}{Integration by Parts}
+    \item \textbf{Integration by Parts}\\
+    \text{Let } u \text{ and } v \text{ be two functions of } x. \text{ Then,}
+        \[
+        \int u v \, dx = u \int v \, dx - \int \left( \frac{d u}{d x} \int v \, dx \right) dx
+        \]
+        \begin{description}
+            \item Choose $u$ based on which of these comes first : It's not a rule, but a guideline.
+            \begin{description}
+                \item[I :] Inverse functions
+                \item[L :] Logarithmic functions
+                \item[A :] Algebraic functions
+                \item[T :] Trigonometric functions
+                \item[E :] Exponential functions
+            \end{description}
+            \end{description}
+            \begin{enumerate}
+                \item[Illustration: (i)] $\int x \sin x \, dx$
+                    \begin{align*}
+                        \intertext{Let } 
+                        u &= x \quad \text{and} \quad v = \sin x \\
+                        \frac{d u}{d x} &= 1 \quad \text{and} \quad \int v \, dx = -\cos x \\
+                        \int x \sin x \, dx &= x \int \sin x \, dx - \int \left( \frac{d}{d x} (x) \int \sin x \, dx \right) dx \\
+                        &= -x \cos x - \int 1 \cdot (-\cos x) \, dx \\
+                        &= -x \cos x + \sin x + c
+                        \intertext{Note that the following expression is also correct.}
+                        \int x \sin x \, dx &= \sin x \int x \, dx - \int \left( \frac{d (\sin x)}{d x} \int x \, dx \right) dx
+                    \end{align*}
+
+                \item[Illustration: (ii)] $\int \ln x \, dx$
+                    \begin{align*}
+                        \intertext{Let } 
+                        u &= \ln x \quad \text{and} \quad v = 1 \\
+                        \frac{d u}{d x} &= \frac{1}{x} \quad \text{and} \quad \int v \, dx = x \\
+                        \int \ln x \, dx &= \ln x \int 1 \, dx - \int \left( \frac{d (\ln x)}{d x} \int 1 \, dx \right) dx \\
+                        &= x \ln x - \int \frac{1}{x} \cdot x \, dx \\
+                        &= x \ln x - \int 1 \, dx \\
+                        &= x \ln x - x + c
+                    \end{align*}
+            \end{enumerate}
+\end{enumerate}
+    
+ 
+
+        
+        
+
+  
+        
+        

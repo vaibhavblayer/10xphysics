@@ -1,5 +1,5 @@
-\contentsline {section}{Introduction}{1}{section*.1}%
-\contentsline {paragraph}{Example 6.}{11}{section*.15}%
-\contentsline {paragraph}{Example 7.}{12}{section*.16}%
-\contentsline {paragraph}{Example 8.}{12}{section*.17}%
-\contentsline {subsection}{Introduction}{12}{section*.17}%
+\contentsline {section}{Limits}{2}{section*.1}%
+\contentsline {section}{Differentiation}{4}{Item.8}%
+\contentsline {subsection}{Differential Coefficient}{5}{section*.2}%
+\contentsline {subsection}{Some Rules of Differentiation}{8}{Item.23}%
+\contentsline {subsection}{Illustrations: Derivatives}{9}{Item.25}%
