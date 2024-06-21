@@ -1,0 +1,9 @@
+\contentsline {section}{Integration}{2}{section*.1}%
+\contentsline {subsection}{Fundamental theorem of calculus}{3}{AMS.4}%
+\contentsline {subsection}{Techniques of Integration}{4}{Item.14}%
+\contentsline {subsubsection}{Substitution Method}{4}{section*.5}%
+\contentsline {subsubsection}{Integration by Parts}{5}{Item.18}%
+\contentsline {subsection}{Illustrations: Integration}{7}{Item.19}%
+\contentsline {subsection}{Applications of Integration}{13}{AMS.9}%
+\contentsline {subsubsection}{Area under the curve}{15}{section*.10}%
+\contentsline {subsection}{Illustrations: Applications of Integration}{16}{section*.10}%

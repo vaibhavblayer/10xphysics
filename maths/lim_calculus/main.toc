@@ -1,7 +1,33 @@
-\contentsline {section}{Limits}{2}{section*.1}%
-\contentsline {section}{Differentiation}{3}{Item.8}%
-\contentsline {subsection}{Differential Coefficient}{4}{section*.2}%
-\contentsline {subsection}{Some Rules of Differentiation}{7}{Item.23}%
-\contentsline {subsection}{Illustrations: Derivatives}{9}{Item.25}%
-\contentsline {subsection}{Applications of Derivatives}{12}{Item.34}%
-\contentsline {subsubsection}{Illustrations: Applications of Derivatives}{13}{section*.10}%
+\contentsline {section}{Function}{2}{section*.1}%
+\contentsline {subsection}{Introduction}{2}{section*.2}%
+\contentsline {subsection}{Domain and Range}{2}{section*.2}%
+\contentsline {subsection}{Types of Functions}{3}{section*.2}%
+\contentsline {subsubsection}{Algebraic Functions}{3}{section*.3}%
+\contentsline {subsubsection}{Transcendental Functions}{3}{Item.4}%
+\contentsline {subsubsection}{Special Functions}{5}{Item.11}%
+\contentsline {subsection}{The Number \( e \)}{7}{Item.15}%
+\contentsline {subsection}{Logarithmic Functions}{7}{Item.15}%
+\contentsline {subsubsection}{Properties of Logarithms}{9}{section*.4}%
+\contentsline {subsection}{Modulus Function}{15}{Item.36}%
+\contentsline {subsubsection}{Graph Transformation: Modulus}{17}{section*.33}%
+\contentsline {subsubsection}{Illustrations: Modulus}{20}{Item.40}%
+\contentsline {section}{Limits}{22}{Item.43}%
+\contentsline {section}{Differentiation}{23}{Item.51}%
+\contentsline {subsection}{Differential Coefficient}{24}{section*.34}%
+\contentsline {subsection}{Some Rules of Differentiation}{28}{Item.66}%
+\contentsline {subsection}{Illustrations: Derivatives}{29}{Item.68}%
+\contentsline {subsection}{Applications of Derivatives}{32}{Item.77}%
+\contentsline {subsubsection}{Geometrical Interpretation of Derivative}{32}{section*.42}%
+\contentsline {subsubsection}{Rate of Change}{32}{section*.42}%
+\contentsline {subsubsection}{Increasing and Decreasing Functions}{33}{section*.42}%
+\contentsline {subsubsection}{Illustrations: Applications of Derivatives}{34}{section*.42}%
+\contentsline {section}{Integration}{36}{Item.81}%
+\contentsline {subsection}{Fundamental theorem of calculus}{37}{AMS.45}%
+\contentsline {subsection}{Techniques of Integration}{38}{Item.95}%
+\contentsline {subsubsection}{Substitution Method}{38}{section*.46}%
+\contentsline {subsubsection}{Integration by Parts}{39}{Item.99}%
+\contentsline {subsection}{Illustrations: Integration}{41}{Item.100}%
+\contentsline {subsection}{Applications of Integration}{47}{AMS.50}%
+\contentsline {subsubsection}{Area under the curve}{49}{section*.51}%
+\contentsline {subsubsection}{Illustrations: Applications of Integration}{50}{section*.51}%
+\contentsline {section}{$\odot $}{54}{Item.118}%

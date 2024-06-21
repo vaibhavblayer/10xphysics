@@ -1,0 +1,143 @@
+\addcontentsline{toc}{subsection}{Applications of Integration}
+\vbtitle[\Large]{Applications of Integration}
+
+
+
+\begin{center}
+    \begin{tikzpicture}[scale=1.5]
+        \tzaxes(-0.25, -0.25)(4, 1.5){$x$}{$f(x)=\sin x$}
+        \def\Fn{sin(deg(\x))}
+        \tzfn\Fn[0:pi]
+        \tzfnarea*[pattern=north east lines, opacity=0.5]{\Fn}[0:pi]
+        \tzline(0, 0)(pi, 0)
+        \tzticks{pi/$\pi$}
+    \end{tikzpicture}
+\end{center}
+\vbdefinition{
+    \begin{align*}
+        \intertext{What if you have to find the area under the curve $\sin x$ and the x-axis? It's not a rectangle, circle, or any known geometric shape for which you already know the area formula.}
+    \end{align*}
+}
+
+
+
+\begin{center}
+    \begin{tikzpicture}[scale=1.5]
+        \def\X{0}
+        \def\XX{3.14159}
+        \def\N{6}
+        \pgfmathsetmacro{\delx}{(\XX-\X)/\N}
+        \tzaxes(-0.25, -0.25)(4, 1.5){$x$}{$f(x)=\sin x$}
+        \def\Fn{sin(deg(\x))}
+        \tzfn\Fn[0:pi]
+        \tzline(0, 0)(pi, 0)
+        \tzticks{pi/$\pi$}
+        \foreach \x in {1,..., \N}
+        {
+            \tzvXpoint*{Fn}(\delx*\x, 0)(A)(2pt)
+            \tzrectangle[pattern=north east lines]($(\delx*\x, 0)+(-0.5*\delx, 0)$)($(A)+(0.5*\delx, 0)$)
+            % \tzrectangle[fill=gray!50]($(\delx*\x, 0)+(-\delx, 0)$)($(A)+(0*\delx, 0)$)
+        }
+        \tzline[|<->|](0, -0.25)(\delx, -0.25){$\Delta x$}[mb]
+        \tzline[|<->|]<1.5*\delx, 0>(0, -0.25)(\delx, -0.25){$\Delta x$}[mb]
+    \end{tikzpicture}
+\end{center}
+
+    \vbdefinition{
+        \begin{align*}
+            \intertext{Let's think about how we might approach this problem. Imagine breaking the area into several very narrow rectangles, each with a tiny width $\Delta x$ and a height determined by the function value $\sin(x)$ at that point. If we sum up the areas of all these small rectangles, we get an approximation of the area under the curve. The narrower we make each rectangle, the closer our approximation gets to the true area.}\\
+            \intertext{Let's try to calculate the area approximately. To do this, we divide the x-axis (base) into six equal parts, resulting in five rectangles with equal width and varying heights. The height of each rectangle can be calculated using the sine value at the corresponding point.}
+            \Delta x &= \frac{\pi-0}{6} = \frac{\pi}{6}\\
+            \intertext{Sum of area of all five rectangles:}
+            A &= \Delta x \cdot \sin\left(\Delta x\right) + \Delta x \cdot \sin\left(2\Delta x\right) + \cdots + \Delta x \cdot \sin\left(5\Delta x\right)\\
+            \intertext{Use AP formula to calculate the sum of the series.}
+            &= \Delta x \left(\frac{\sin\left(\frac{n\Delta x}{2}\right)}{\sin\left(\frac{\Delta x}{2}\right)} \sin\left(\frac{(n+1)\Delta x}{2}\right)\right)\\
+            &= \frac{\pi}{6} \left(\frac{\sin\left(\frac{5\pi}{12}\right)}{\sin\left(\frac{\pi}{12}\right)} \sin\left(\frac{6\pi}{12}\right)\right)\\
+            &= \frac{\pi}{6} \cot\left(\frac{\pi}{12}\right)\\
+            \Aboxed{A &= \eval{\frac{\pi}{6} \cot\left(\frac{\pi}{12}\right)}}
+            \intertext{This is very close actually, let's decrease the with of rectangles and increase the number of rectangles to 11.}
+        \end{align*}
+    }
+    
+  
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \def\X{0}
+            \def\XX{3.14159}
+            \def\N{12}
+            \tzaxes(-0.25, -0.25)(4, 1.5){$x$}{$f(x)=\sin x$}
+            \def\Fn{sin(deg(\x))}
+            \tzfn\Fn[0:pi]
+            \tzline(0, 0)(pi, 0)
+            \tzticks{pi/$\pi$}
+            \foreach \x [evaluate={\delx=((\XX-\X)/\N);}] in {1,..., \N}
+            {
+                \tzvXpoint*{Fn}(\delx*\x, 0)(A)(2pt)
+                \tzrectangle[pattern=north east lines]($(\delx*\x, 0)+(-0.5*\delx, 0)$)($(A)+(0.5*\delx, 0)$)
+            }
+        \end{tikzpicture}
+    \end{center}
+        \vbdefinition{
+            \begin{align*}
+                \intertext{This time we divided the base into $12$ equal parts resulting in $11$ rectangles.}
+                \Delta x &= \frac{\pi-0}{12} = \frac{\pi}{12}\\
+                \intertext{Sum of area of all five rectangles:}
+                A &= \Delta x \cdot \sin\left(\Delta x\right) + \Delta x \cdot \sin\left(2\Delta x\right) + \cdots + \Delta x \cdot \sin\left(11\Delta x\right)\\
+                \intertext{Use AP formula to calculate the sum of the series.}
+                &= \Delta x \left(\frac{\sin\left(\frac{n\Delta x}{2}\right)}{\sin\left(\frac{\Delta x}{2}\right)} \sin\left(\frac{(n+1)\Delta x}{2}\right)\right)\\
+                &= \frac{\pi}{12} \left(\frac{\sin\left(\frac{11\pi}{24}\right)}{\sin\left(\frac{\pi}{24}\right)} \sin\left(\frac{12\pi}{24}\right)\right)\\
+                \Aboxed{A &= \eval{\frac{\pi}{12} \left(\frac{\sin\left(\frac{11\pi}{24}\right)}{\sin\left(\frac{\pi}{24}\right)} \sin\left(\frac{12\pi}{24}\right)\right)}}
+                \intertext{This is a pretty close value; the actual area is 2 (we will see this shortly). The point of these two illustrations is that as we increase the number of rectangles, the accuracy gets higher and higher. As the number of rectangles increases, their width gets smaller and smaller. This means that if the number of rectangles tends to infinity and their width tends to zero, the area will tend to the true area. Integration does exactly what we wanted here: it sums up an infinite number of infinitesimally small areas.}
+            \end{align*}
+            \vspace*{\fill}
+            % \tcbset{highlight math style={enhanced, ,boxrule=1pt,arc=0mm,outer arc=0mm}}
+            \begin{tcolorbox}[colback=gray!20, colframe=black, boxrule=3pt, arc=5mm]
+                \begin{align*}
+                    A &= \int_0^\pi \sin(x) \, dx\\
+                    &= -\cos(x) \Big|_0^\pi\\
+                    &= -\cos(\pi) - (-\cos(0))\\
+                    &= 2
+                \end{align*}
+            \end{tcolorbox}
+        }
+        \pagebreak
+        \addcontentsline{toc}{subsubsection}{Area under the curve}
+        \vbsubtitle{Area under the curve:}
+
+\vbdefinition{
+        \begin{center}
+            \begin{tikzpicture}[scale=1.5]
+                \def\X{0.5}
+                \def\XX{3}
+                \def\N{20}
+                \tzaxes(-0.25, -0.25)(5, 3){$x$}{$y=f(x)$}
+                \def\Fn{0.6*\x*\x - 2*\x + 2}
+                \tzfn\Fn[0:3.5]
+                \tzline(0, 0)(pi, 0)
+                \tzticks{\X/$a$, \XX/$b$}
+                \foreach \x [evaluate={\delx=((\XX-\X)/\N);}] in {1,..., \N}
+                {
+                    \tzvXpoint*{Fn}(\delx*\x + \X, 0)(A)(2pt)
+                    \tzrectangle[pattern=north east lines]($(\delx*\x + \X, 0)+(-0.5*\delx, 0)$)($(A)+(0.5*\delx, 0)$)
+                }
+            \end{tikzpicture}
+        \end{center}
+\begin{align*}
+    \intertext{We want to express the area between the curve and the x-axis from x=a to x=b.}
+    \intertext{This time, we want to derive the expression, so we divide the x-axis (base) into n equal parts, resulting in n-1 rectangles. We can then add all these areas.}
+    \intertext{Width of a single rectangle:}
+    \Delta x &= \frac{b - a}{n}\\
+    \intertext{Area of a single rectangle:}
+    y \cdot \Delta x &= f(x) \cdot \Delta x\\
+    \intertext{Sum of area of all n-1 rectangles:}
+    &= \sum_{x = a}^{a + (n - 1) \Delta x} f(x) \cdot \Delta x  \\
+    \intertext{We want to find the true area, so we need to take the limit as n approaches infinity. As n approaches infinity, the width of each rectangle approaches zero.}
+    &= \lim_{n \to \infty} \sum_{x = a}^{a + (n - 1) \Delta x} f(x) \cdot \Delta x\\
+    &= \lim_{\Delta x \to 0} \sum_{x = a}^{b} f(x) \cdot \Delta x\\
+    \intertext{This is the definite integral of f(x) from a to b.}
+    \Aboxed{A &= \int_{a}^{b} f(x) \, dx}
+\end{align*}
+\vbstarednote{If the curve is below the x-axis, the area will be negative. The reason is that we used $f(x)$ value in calculating the area so when $f(x)$ is negative, the area will be negative. We will see few illustrations of this in the next section.
+}}
+
+

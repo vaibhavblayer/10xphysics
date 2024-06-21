@@ -1,6 +1,7 @@
 \addcontentsline{toc}{subsection}{Applications of Derivatives}
 \vbtitle[\Large]{Applications of Derivatives} 
 
+\addcontentsline{toc}{subsubsection}{Geometrical Interpretation of Derivative}
 \vbsubtitle{Geometrical Interpretation of Derivative:}
 
 \begin{center}
@@ -46,12 +47,19 @@
     \Aboxed{\frac{dy}{dx} &= \tan \theta }
 \end{align*}
 
+\addcontentsline{toc}{subsubsection}{Rate of Change}
 \vbsubtitle{$\frac{dy}{dx}$ as rate of change:}
 \vbdefinition{
-    a
+    From the slope of straight line you already know that $\frac{\Delta y}{ \Delta x}$ represents the rate of change of $y$ with respect to $x$. \\[2 mm]
+    \begin{align*}
+        \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} &= \frac{dy}{dx}\\
+        \intertext{This means that the derivative of a function at a point is the rate of change of the function at that point.}
+        \intertext{In Physics, we define many quantities in terms of rate of change. For example, velocity is the rate of change of displacement with respect to time. Acceleration is the rate of change of velocity with respect to time. Force is the rate of change of linear momentum with respect to time. So, all these quantities can be expressed in terms of derivatives.}
+    \end{align*}
 }
 
 \pagebreak
+\addcontentsline{toc}{subsubsection}{Increasing and Decreasing Functions}
 \vbsubtitle{Increasing and Decreasing Functions:}
 \vbdefinition{
     A function $f(x)$ may increase or decrease as $x$ increases. $f(x)$ is said to be increasing if $f(x_1) < f(x_2)$ for all $x_1 < x_2$. Similarly, $f(x)$ is said to be decreasing if $f(x_1) > f(x_2)$ for all $x_1 < x_2$.\\[2mm]
@@ -81,5 +89,30 @@ We can analyze it graphically as well.\\[2mm]
 As we move from \(x_1\) to \(x_2\), the slope of the tangent (derivative) is negative, indicating that the function is decreasing. Conversely, as we move from \(x_2\) to \(x_3\), the slope of the tangent (derivative) is positive, indicating that the function is increasing. At \(x_2\), the slope of the tangent is zero, meaning the function is neither increasing nor decreasing at that point.
 }
 
+% \addcontentsline{toc}{subsubsection}{Maxima and Minima}
+% \vbsubtitle{Maxima and Minima:}
+% \vbdefinition{
+%     a
+% }
 
-\vbsubtitle{Maxima and Minima:}
+% \begin{multicols}{2}
+% \begin{center}
+%     \begin{tikzpicture}
+%         \tzfn"CL"{0.5*\x*\x -2*\x}[0:4]{$f(x)$}[r]
+%         \tzvXpoint*{CL}(1,0)(A)
+%         \tzvXpoint*{CL}(3,0)(B)
+%         \tztangent{CL}(A)[0:2]
+%         \tztangent{CL}(B)[2:4]
+%     \end{tikzpicture}
+% \end{center}
+
+% \begin{center}
+%     \begin{tikzpicture}
+%         \tzfn"CR"{-0.5*\x*\x +2*\x}[0:4]{$f(x)$}[r]
+%         \tzvXpoint*{CR}(1.5,0)(A)
+%         \tzvXpoint*{CR}(3.5,0)(B)
+%         \tztangent{CR}(A)[0:2.5]
+%         \tztangent{CR}(B)[2.5:4]
+%     \end{tikzpicture}
+% \end{center}
+% \end{multicols}
