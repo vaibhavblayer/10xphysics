@@ -1,0 +1,132 @@
+\ProvidesPackage{vbcircle}[2024/06/23 v1.0 Custom circle drawing commands]
+
+\RequirePackage{tikz}
+\RequirePackage{xparse}
+% \RequirePackage{tzplot}
+
+\ExplSyntaxOn
+
+
+
+
+\keys_define:nn { vbdxcircle }
+{
+    
+    inner_radius .tl_set:N = \l_vbdxcircle_inner_radius_tl,
+    % inner_radius .initial:n = 0,
+    outer_radius .tl_set:N = \l_vbdxcircle_outer_radius_tl,
+    % outer_radius .initial:n = 1,
+    angle .tl_set:N = \l_vbdxcircle_angle_tl,
+    % angle .initial:n = 30,
+    start_angle .tl_set:N = \l_vbdxcircle_start_angle_tl,
+    % start_angle .initial:n = 30,
+
+}
+
+\NewDocumentCommand{\vbdxcircle}{s O{} O{} r() r() O{x}}
+{   
+    % #1: starred
+    % #2: options
+    % #3: keyword args
+    % #4: center
+    % #5: radius
+    % #6: label for radius
+
+    % keyword args: 
+        % inner_radius
+        % outer_radius
+        % angle
+        % start_angle
+
+
+    \IfBooleanTF{#1}{
+        \group_begin:
+            \keys_set:nn { vbdxcircle } {
+                inner_radius = 0,
+                outer_radius = #5,
+                angle = 15,
+                start_angle = 30,
+                #3
+            }  
+            \tl_if_empty:NTF \l_vbdxcircle_angle_tl {\tl_set:Nn \l_vbdxcircle_angle_tl {30}}
+            \tl_if_empty:NTF \l_vbdxcircle_start_angle_tl {\tl_set:Nn \l_vbdxcircle_start_angle_tl {30}}
+            \tl_if_empty:NTF \l_vbdxcircle_inner_radius_tl {\tl_set:Nn \l_vbdxcircle_inner_radius_tl {0}}
+            \tl_if_empty:NTF \l_vbdxcircle_outer_radius_tl {\tl_set:Nn \l_vbdxcircle_outer_radius_tl {1}}
+
+            \def\IR{\l_vbdxcircle_inner_radius_tl}
+            \def\OR{\l_vbdxcircle_outer_radius_tl}
+            \def\SA{\l_vbdxcircle_start_angle_tl}
+            \def\A{\l_vbdxcircle_angle_tl}
+
+
+                \tzcoor*[#2](#4)(O)
+                \tzcircle[#2](O)(#5)  
+                \tzline+[#2, ->](O)(#5*1.5, 0)
+                
+                \tzcoor($(O)+(#5*cos{\SA}, #5*sin{\SA})$)(A)%{$#5$}[ma]
+                \tzcoor($(O)+(#5*cos{(\SA+ \A)}, #5*sin{(\SA + \A)})$)(B)%{$#5$}[ma]
+                
+                \tzanglemark[#2]($(O)+(2, 0)$)(O)(A){$\theta$}[pos=2]
+                
+                \fp_compare:nNnTF { \IR } = { 0 }
+                    {
+                        \draw[#2, pattern=north~east~lines](O)-- ++(\OR*cos{\SA}, \OR*sin{\SA}) arc(\SA\c_colon_str\SA+\A\c_colon_str \OR) -- cycle;
+                    }
+                    {
+                        \draw[#2, pattern=north~east~lines](O) ++(\IR*cos{\SA}, \IR*sin{\SA})arc (\SA\c_colon_str\SA+\A\c_colon_str \IR) -- ++(\SA+\A\c_colon_str\OR-\IR) arc(\SA+\A\c_colon_str\SA\c_colon_str \OR) -- cycle;
+                    }
+                
+                \fp_compare:nNnTF { \IR } = { 0 }
+                    {
+                    \draw[#2, |<->|](O) ++(\SA\c_colon_str #5*1.15) arc (\SA\c_colon_str\SA+\A\c_colon_str #5*1.15)node[ma, sloped]{$d\!#6$};
+                    \tzanglemark[#2](A)(O)(B){$d\!\theta$}[pos=3]
+                    }
+                    {
+                    \draw[#2, dashed](O)--++(\SA\c_colon_str\IR) (O)--++(\SA+\A\c_colon_str\IR);
+                    \tzline+[#2, ->](O)(\SA+1.5*\A\c_colon_str\IR){$#6$}[ma]
+                    \tzline+[#2, |<->|]($(O)+(\SA+1.5*\A\c_colon_str\IR)$)(\SA+1.5*\A\c_colon_str\OR-\IR){$d\!#6$}[sloped, ma]
+                    \draw[#2, |<->|](O) ++(\SA\c_colon_str \OR*1.15) arc (\SA\c_colon_str\SA+\A\c_colon_str \OR*1.15)node[ma, sloped]{$#6d\!\theta$};
+                    }
+
+        \group_end:
+    }{
+        \group_begin:
+            \keys_set:nn { vbdxcircle } {
+                inner_radius = 1,
+                outer_radius = 1.2,
+                angle = 30,
+                start_angle = 30,
+                #3
+            }  
+            \tl_if_empty:NTF \l_vbdxcircle_angle_tl {\tl_set:Nn \l_vbdxcircle_angle_tl {30}}
+            \tl_if_empty:NTF \l_vbdxcircle_start_angle_tl {\tl_set:Nn \l_vbdxcircle_start_angle_tl {30}}
+            \tl_if_empty:NTF \l_vbdxcircle_inner_radius_tl {\tl_set:Nn \l_vbdxcircle_inner_radius_tl {1}}
+            \tl_if_empty:NTF \l_vbdxcircle_outer_radius_tl {\tl_set:Nn \l_vbdxcircle_outer_radius_tl {1.2}}
+            
+            \fp_set:Nn \l_vbdxcircle_gap_fp {\l_vbdxcircle_outer_radius_tl - \l_vbdxcircle_inner_radius_tl }
+            
+            \def\GAP{\fp_to_decimal:N\l_vbdxcircle_gap_fp}
+            \def\IR{\l_vbdxcircle_inner_radius_tl}
+            \def\OR{\l_vbdxcircle_outer_radius_tl}
+            \def\SA{\l_vbdxcircle_start_angle_tl}
+
+
+                \tzcoor*[#2](#4)(O)
+                \tzcircle[#2](O)(#5)
+                \tzring[#2, pattern=north~east~lines](O)(\l_vbdxcircle_inner_radius_tl)(O)(\l_vbdxcircle_outer_radius_tl)
+                \tzline+[#2, ->](O)(\IR*cos{\SA}, \IR*sin{\SA}){$#6$}[ma]
+                \tzline+[#2, <-]($(O)+(\OR*cos{\SA}, \OR*sin{\SA})$)(2*\GAP*cos{\SA}, 2*\GAP*sin{\SA}){$d\!#6$}[ma]
+                \tzrectangle+[#2, pattern=north~east~lines]($(O)+(-pi*\IR, -#5-2*\GAP)$)(2*\IR*pi,\GAP)
+                \tzline+[#2, |<->|]($(O)+(-pi*\IR, -#5 - 3.5*\GAP)$)(2*pi*\IR, 0){$2\pi #6$}[mb]
+                \tzline+[#2, |<-]($(O)+(pi*\IR + 1.5*\GAP, -#5 - \GAP)$)(0, 2*\GAP)
+                \tzline+[#2, |<-]($(O)+(pi*\IR + 1.5*\GAP, -#5 - 2*\GAP)$)(0, -2*\GAP)
+                \tznode[#2]($(O)+(pi*\IR + 2*\GAP, -#5 - 1.5*\GAP)$){$d\!#6$}[r]
+        \group_end:
+    }
+}
+
+
+
+\ExplSyntaxOff
+
+\endinput

@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{v-equation}
+\usepackage{minted}
+\usemintedstyle{staroffice}
+\vgeometry
+\begin{document}
+\def\gdrive{Link}
+
+
+\vspace*{\fill}
+\begin{center}
+    \input{tikz-2.tex}
+\end{center}
+\vspace*{\fill}
+\pagebreak
+
+
+\vspace*{\fill}
+\inputminted[tabsize=4, breaklines, linenos=true, fontsize=\small]{tex}{tikz-2.tex}
+\vspace*{\fill}
+
+\pagebreak
+"
+\vspace*{\fill}
+\begin{center}
+    \fbox{\qrcode[height=2cm]{\gdrive}}
+\end{center}
+\vspace*{\fill}
+
+\end{document}
